@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" data-dpr="1" style="font-size: 41.5px;">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<meta name="google" content="notranslate">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Rk.Win Rise Query</title>
+	<link rel="stylesheet" href="./index_files/modules-96c1e775.css">
+	<link rel="stylesheet" href="./index_files/page-activity-d48e62db.css">
+	<link rel="stylesheet" href="./index_files/index-96409872.css">
+	<link rel="stylesheet" href="./index_files/page-home-58543d87.css">
+	<link rel="stylesheet" href="./index_files/page-login-ef3d1f88.css">
+	<link rel="stylesheet" href="./index_files/index-676568a8.css">
+	<link rel="stylesheet" href="./index_files/page-main-ff2e7571.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<style>
+	 body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      /* border-radius: 8px; */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group textarea,
+    .form-group select,
+		.form-group input[type="text"],
+		.form-group input[type="number"],
+    .form-group input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d3d3d3;
+      border-radius: 2px;
+      font-size: 16px;
+      box-sizing: border-box;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+
+    .form-group textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      resize: none;
+      box-sizing: border-box;
+    }
+
+    .form-group input[type="file"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-group button.update:hover {
+      background-color: #45a049;
+    }
+
+    .button-group button.submit {
+      background-color: #ff9a8e;
+      color: white;
+    }
+
+    .button-group button.submit:hover {
+      background-color: #f95959;
+    }
+
+    .button-group button:focus {
+      outline: none;
+    }
+
+    .form-group .error {
+      color: red;
+      font-size: 14px;
+    }
+		span{
+			color: red;
+		}
+		#orderNumber, #orderAmount{
+			color: #b1adad;
+		}
+
+
+
+
+	</style>
+</head>
+
+<body style="font-size: 12px;">
+
+
+	<div id="app" data-v-app="" style="background: #ffffff">
+
+		<div data-v-28fadbec="" class="customer-container"
+			style="--7688837a: &#39;Roboto&#39; &#39;Inter&#39; sans-serif;">
+			<div data-v-28fadbec="" class="customer-container-header">
+				<div data-v-58c5e826="" data-v-28fadbec="" class="navbar">
+					<div data-v-58c5e826="" class="navbar-fixed"
+					style="background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%)">
+						<div data-v-58c5e826="" class="navbar__content">
+
+							<div data-v-58c5e826="" class="navbar__content-left" onclick="location.href='/keFuMenu'"><i
+									data-v-58c5e826="" class="van-badge__wrapper van-icon van-icon-arrow-left"></i>
+							</div>
+
+							<div data-v-58c5e826="" class="navbar__content-center">
+								<div data-v-58c5e826="" class="navbar__content-title" style="color: white;">Customer Service</div>
+							</div>
+							<div data-v-58c5e826="" class="navbar__content-right"></div>
+						</div>
+					</div>
+				</div>
+				<div data-v-28fadbec="" class="customer-container-header-belly"><img data-v-28fadbec="" alt="" class=""
+						data-origin="https://www.bigdaddygame2.com/assets/png/customerBg-1f590d5d.png"
+						src="./index_files/customerBg-1f590d5d.png"></div>
+			</div>
+			<div data-v-6a5413fb="" data-v-28fadbec="" class="content">
+				<div data-v-6a5413fb="" style="">
+					<div class="container">
+						<!-- <h1>Form with File Upload, Textarea, and Buttons</h1> -->
+						<form id="myForm" enctype="multipart/form-data">
+								<div class="form-group">
+										<label for="probleType">Select Problem Type</label>
+										<select name="problemType" id="probleType" required>
+
+												<option value="withdrawal_problem">Withdrawal Problem</option>
+
+										</select>
+								</div>
+
+								<div class="form-group">
+										<label for="orderNumber">Order Number <span>*</span></label>
+										<input required readonly disabled type="text" id="orderNumber" name="orderNumber">
+								</div>
+								<!-- <div class="form-group">
+										<label for="utrNumber">UTR Number <span>*</span></label>
+										<input required type="number" id="utrNumber" name="utrNumber">
+								</div> -->
+								<!-- <div class="form-group">
+										<label for="receiverUpiId">Receiver UPI ID <span>*</span></label>
+										<input required type="text" id="receiverUpiId" name="receiverUpiId">
+								</div> -->
+								<div class="form-group">
+										<label for="orderAmount">Order Amount <span>*</span></label>
+										<input required disabled readonly type="number" id="orderAmount" name="orderAmount">
+								</div>
+
+								<div class="form-group">
+										<label for="textarea">Explain the issue clearly and in detail</label>
+										<textarea id="textarea" name="textarea" maxlength="500" placeholder="Write here..." required></textarea>
+										<div class="error" id="errorMessage"></div>
+										<div id="charCount">0/500 characters</div>
+								</div>
+
+								<!-- File Upload Input -->
+								<div class="form-group">
+										<label for="file">Upload Your File (optional):</label>
+										<input type="file" id="file" name="file_path" accept=".jpg, .jpeg, .png, .gif, .pdf, .docx, .txt" required>
+								</div>
+
+								<div class="button-group">
+										<button type="submit" class="submit">Submit</button>
+								</div>
+						</form>
+				</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<script>
+    // Form validation
+    const form = document.getElementById('myForm');
+    const textarea = document.getElementById('textarea');
+    const fileInput = document.getElementById('file');
+    const errorMessage = document.getElementById('errorMessage');
+    const charCount = document.getElementById('charCount');
+
+    // Update character count and validate text
+    textarea.addEventListener('input', function () {
+        const currentLength = textarea.value.length;
+        charCount.textContent = `${currentLength}/500 characters`;
+
+        if (currentLength > 500) {
+            errorMessage.textContent = 'You can only enter up to 500 characters!';
+        } else {
+            errorMessage.textContent = '';
+        }
+    });
+
+    // Form submission event handler
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Check if character limit is exceeded
+        if (textarea.value.length > 500) {
+            errorMessage.textContent = 'You can only enter up to 500 characters!';
+            return; // Prevent form submission if error exists
+        } else {
+            errorMessage.textContent = ''; // Clear any existing error message
+        }
+
+        // Prepare form data to send to the server
+        const formData = new FormData(form);
+        const problemType = document.getElementById('probleType').value;
+        const orderNumber = document.getElementById('orderNumber').value;
+        // const utrNumber = document.getElementById('utrNumber').value;
+        const orderAmount = document.getElementById('orderAmount').value;
+        // const receiverUpiId = document.getElementById('receiverUpiId').value;
+        const description = textarea.value;
+
+        // Add the manual form fields to the FormData object
+        // formData.append('problem_type', problemType);
+        // formData.append('description', description);
+        formData.append('orderNumber', orderNumber);
+        // formData.append('utrNumber', utrNumber);
+        formData.append('orderAmount', orderAmount);
+        // formData.append('receiverUpiId', receiverUpiId)
+
+        // If a file is selected, append it to the FormData
+        const imageFile = fileInput.files[0];  // Get the selected file
+        if (imageFile) {
+            formData.append('file_path', imageFile);
+        }
+
+        // Log FormData (for debugging purposes)
+        console.log(formData);
+
+        // Send the form data to the server via Fetch API (AJAX)
+        fetch('/issue/report/withdrawal/create', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status) {
+                swal("Good job!", data.message, "success");
+                setTimeout(() => {
+                    window.location.href = "/myIssueReport";
+                }, 2000);
+
+                form.reset(); // Reset the form
+                charCount.textContent = '0/500 characters'; // Reset character count
+            } else {
+                swal("Error!", data.message, "warning");
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            alert('Error occurred while submitting the form');
+        });
+    });
+</script>
+
+<script>
+    // Get the query string from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Get the 'type', 'order_number', and 'amount' parameter values
+    const type = urlParams.get('type');
+    const order_number = urlParams.get('order_number');
+    const amount = urlParams.get('amount');
+
+    // Ensure parameters exist before setting values
+    if (order_number) {
+        document.getElementById("orderNumber").value = order_number;
+    }
+    if (amount) {
+        document.getElementById("orderAmount").value = amount;
+    }
+
+    // For debugging purposes, log the values
+    console.log("Type:", type); // Log 'type' to see the URL parameter value
+    console.log("Order Number:", order_number);
+    console.log("Amount:", amount);
+</script>
+
+	<script>
+		$(document).ready(function () {
+			// Select the overlay element
+			$('.van-overlay').fadeIn(10);
+		});
+		$(window).on('load', function () {
+			// Select the overlay element
+			$('.van-overlay').fadeIn(10);
+			setTimeout(function () {
+				$('.van-overlay').fadeOut(300);
+			}, 500);
+		});
+	</script>
+
+	<script>
+		document.getElementById('faq-item').addEventListener('click', function() {
+			const bottomSheet = document.getElementById('bottom-sheet');
+			bottomSheet.classList.add('show'); // Add the 'show' class
+		});
+
+		document.getElementById('faq-item-close').addEventListener('click', function() {
+			const bottomSheet = document.getElementById('bottom-sheet');
+			bottomSheet.classList.remove('show'); // Remove the 'show' class
+		});
+
+
+	</script>
+</body>
+
+</html>

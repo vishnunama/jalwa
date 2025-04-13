@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Open issue list</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <style>
+      .block-click {
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <%- include('../nav') %>
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Open issue</h1>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+
+        <div class="form-group" style="text-align: center">
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter the member you are looking for"
+          />
+        </div>
+
+        <!-- Main content -->
+        <section class="content">
+          <!-- Default box -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Open issue</h3>
+              <div class="card-tools">
+                <button
+                  type="button"
+                  class="btn btn-tool"
+                  data-card-widget="collapse"
+                  title="Collapse"
+                >
+                  <i class="fas fa-minus"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-tool"
+                  data-card-widget="remove"
+                  title="Remove"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0" style="overflow-y: hidden">
+              <table class="table table-striped projects" id="table1">
+                <thead>
+                  <tr>
+                    <th class="text-center">#</th>
+                    <th class="text-center">Phone </th>
+                    <th class="text-center">Name </th>
+                    <th class="text-center">Problem type</th>
+                    <th class="text-center">Description</th>
+                    <th class="text-center">Deposit Details</th>
+                    <th class="text-center">date</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Action</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- #region -->
+                </tbody>
+              </table>
+            </div>
+            <nav
+              aria-label="Page navigation example"
+              style="margin-top: 20px; display: flex; justify-content: center"
+            >
+              <ul class="pagination table1">
+                <li class="page-item previous" id="previous">
+                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <div id="numbers" style="display: flex">
+                  <li class="page-item">
+                    <a class="page-link active text-white" id="text-page"></a>
+                  </li>
+                </div>
+                <li class="page-item next" id="next">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/js/admin/admin.js"></script>
+    <script>
+        const Render = (datas) => {
+          let html = "";
+          if (!datas || datas.length === 0) {
+            $("tbody").html(html);
+            return;
+          }
+          datas.map((data) => {
+            html += `
+              <tr class="text-center">
+                <td>${data.id}</td>
+                <td><b style="color: #2003db">${data.phone_number}</b></td>
+                <td><b class="${data.level == 1 ? "text-danger" : ""}">${data.user_name}</b></td>
+                <td><b>${data.problem_type}</b></td>
+                <td class="project-state">
+                  ${data.description}
+                </td>
+              <td class="project-state">
+  <div>
+    <label>Order Number:</label>
+    <span>${data.orderNumber}</span>
+    <button class="copy-btn" data-clipboard-text="${data.orderNumber}">Copy</button>
+  </div>
+  <br>
+  <div>
+    <label>Order Amount:</label>
+    <span>${data.orderAmount}</span>
+    <button class="copy-btn" data-clipboard-text="${data.orderAmount}">Copy</button>
+  </div>
+  <br>
+  <div>
+    <label>UTR Number:</label>
+    <span>${data.utrNumber}</span>
+    <button class="copy-btn" data-clipboard-text="${data.utrNumber}">Copy</button>
+  </div>
+  <br>
+  <div>
+    <label>Receiver UPI ID:</label>
+    <span>${data.receiverUpiId}</span>
+    <button class="copy-btn" data-clipboard-text="${data.receiverUpiId}">Copy</button>
+  </div>
+</td>
+
+
+                <td><b style="color: #2003db">${data.submission_date}</b>
+                    </td>
+               <td class="project-state">
+                <a href="${data.file_path}" target="_blank">
+                    <img style="width: 80px; height: 60px" src="${data.file_path}" alt="">
+                </a>
+            </td>
+
+               <td class="project-actions text-center" style="min-width: 100px">
+                <a class="btn btn-warning btn-sm" href="javascript:void(0);" onclick="closeIssue(${data.id})">
+                    Close issue
+                </a>
+                </td>
+
+              </tr>`;
+          });
+          $("tbody").html(html);
+
+          // Lock up account
+          $(".btn-danger").click(function (e) {
+            e.preventDefault();
+            let check = confirm("Are you sure you want to lock this account?");
+            let id = $(this).attr("id");
+            if (check) {
+              $.ajax({
+                type: "POST",
+                url: "/api/webapi/admin/banned",
+                data: { id: id, type: "close" },
+                dataType: "json",
+                success: function (response) {
+                  alert(response.message);
+                  loadPage(pageno, searchMember);
+                },
+              });
+            }
+          });
+
+          // Open account
+          $(".btn-info1").click(function (e) {
+            e.preventDefault();
+            let check = confirm("Are you sure you want to unlock this account?");
+            let id = $(this).attr("id");
+            if (check) {
+              $.ajax({
+                type: "POST",
+                url: "/api/webapi/admin/banned",
+                data: { id: id, type: "open" },
+                dataType: "json",
+                success: function (response) {
+                  alert(response.message);
+                  loadPage(pageno, searchMember);
+                },
+              });
+            }
+          });
+        };
+
+        let pageno = 1;
+        let limit = 30;
+        let searchMember = "";
+
+        const loadPage = (page, search = "") => {
+          $.ajax({
+            type: "POST",
+            url: "/api/webapi/admin/getAllOpenIssue",
+            data: {
+              typeid: "open",
+              pageno: page,
+              limit: limit,
+              search: searchMember,
+              language: "vi",
+            },
+            dataType: "json",
+            success: function (response) {
+              pageno = page;
+              $("#text-page").text(`${page} / ${response.page_total}`);
+              if (response.status) {
+                Render(response.datas);
+              }
+            },
+          });
+        };
+
+        loadPage(pageno, searchMember);
+
+        $("#next").click(function (e) {
+          e.preventDefault();
+          loadPage(pageno + 1, searchMember);
+        });
+
+        $("#previous").click(function (e) {
+          e.preventDefault();
+          if (pageno > 1) loadPage(pageno - 1, searchMember);
+        });
+
+        const debounce = (func, wait) => {
+          let timeout;
+          return function (...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+          };
+        };
+
+        const searchTable = debounce(function () {
+          searchMember = $(this).val().toLowerCase().trim();
+          loadPage(1, searchMember);
+        }, 500);
+
+        $("#search").on("keyup", searchTable);
+      </script>
+
+      <script>
+        // Function to handle the "Close issue" button click
+function closeIssue(issueId) {
+  Swal.fire({
+    title: 'Resolve the issue',
+    text: "Please enter a resolution for closing this issue:",
+    input: 'textarea', // Textarea input field
+    inputPlaceholder: 'Enter resolution here...',
+    showCancelButton: true,
+    confirmButtonText: 'Submit',
+    cancelButtonText: 'Cancel',
+    inputValidator: (value) => {
+      if (!value) {
+        return 'You need to provide a resolution!';
+      }
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // If user clicked 'Submit', send the resolution to the server
+      let resolution = result.value;
+
+      // Perform the action to close the issue (e.g., an AJAX request)
+      $.ajax({
+        type: "POST",
+        url: "/api/webapi/admin/closeIssue", // Replace with your actual endpoint
+        data: {
+          issueId: issueId,
+          resolution: resolution
+        },
+        dataType: "json",
+        success: function (response) {
+          if (response.status) {
+            Swal.fire('Success', 'Issue closed successfully!', 'success');
+            location.reload(); // Reload the page or update the table
+          } else {
+            Swal.fire('Error', response.message, 'error');
+          }
+        },
+        error: function () {
+          Swal.fire('Error', 'Something went wrong, please try again later.', 'error');
+        }
+      });
+    }
+  });
+}
+
+      </script>
+
+      <script>
+        setTimeout(()=>{
+          // Initialize Clipboard.js
+const clipboard = new ClipboardJS('.copy-btn');
+
+// Optional: Provide feedback for successful copy
+clipboard.on('success', function(e) {
+  alert('Copied: ' + e.text);
+  e.clearSelection();
+});
+
+// Optional: Provide feedback for failure (if any)
+clipboard.on('error', function(e) {
+  alert('Copy failed. Please try again.');
+});
+
+        },2000)
+      </script>
+
+  </body>
+</html>
