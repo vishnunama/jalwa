@@ -6,8 +6,8 @@ import moment from "moment";
 import Joi from "joi";
 import bcrypt from "bcrypt";
 import _ from "lodash";
-import {sendOTPLess}  from "../helpers/sendOTPLess.js";
 import { verifyOtpLess } from "../helpers/verifyOtpLess.js";
+import { sendOtpLess } from "../helpers/sendOtpLess.js";
 
 const timeNow = Date.now();
 const saltRounds = parseInt(process.env.SALT_ROUNDS || 5);
@@ -171,39 +171,14 @@ const register = async (req, res) => {
 
     let { username, pwd, invitecode } = req.body;
 
-    const indianPhoneRegex = /^[6789]\d{9}$/; // Indian phone numbers start with 6, 7, 8, or 9 and have 10 digits
-
     if (!username || !pwd || !invitecode) {
-        return res.status(200).json({
-            message: 'ERROR!!! All fields are required.',
-            status: false
-        });
-    }
+      return res.status(200).json({
+          message: 'ERROR!!!',
+          status: false
+      });
+  }
 
-    if (!indianPhoneRegex.test(username)) {
-        return res.status(200).json({
-            message: 'Invalid phone number! Must be a 10-digit Indian number.',
-            status: false
-        });
-    }
-
-// Proceed with the rest of your logic...
-
-
-    let id_user = 70000
-
-    // while (true) {
-    //   const [rows] = await connection.query(
-    //     "SELECT `id_user` FROM users WHERE `id_user` = ?",
-    //     [id_user],
-    //   );
-
-    //   if (_.isEmpty(rows)) {
-    //     break;
-    //   }
-
-    //   id_user = utils.generateUniqueNumberCodeByDigit(7);
-    // }
+  let id_user = 100000
 
     const [result] = await connection.query(
       "SELECT MAX(id_user) AS lastId FROM users"
@@ -258,7 +233,7 @@ const register = async (req, res) => {
     let ctv = check_i[0].level == 2 ? check_i[0].phone : check_i[0].ctv;
     const hashedPassword = await bcrypt.hash(pwd, saltRounds);
     const sql =
-      "INSERT INTO users SET id_user = ?,phone = ?,name_user = ?,password = ?,plain_password = ?, money = ?,bonus_money = ?,code = ?,invite = ?,ctv = ?,veri = ?,otp = ?,ip_address = ?,status = ?,time = ?";
+      "INSERT INTO users SET id_user = ?,phone = ?,name_user = ?, password = ?, plain_password = ?, money = ?,bonus_money = ?,code = ?,invite = ?,ctv = ?,veri = ?,otp = ?,ip_address = ?,status = ?,time = ?";
     await connection.execute(sql, [
       id_user,
       username,
@@ -282,23 +257,34 @@ const register = async (req, res) => {
 
 
     let [check_code] = await connection.query(
-      "SELECT * FROM users WHERE invite = ? ",
-      [invitecode],
+      "SELECT * FROM users WHERE invite = ?",
+      [invitecode]
     );
 
-    if (check_i.name_user !== "Admin") {
-      let levels = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44];
+    if (check_code.length > 0) { // Ensure invite code exists
+      let levels = [2, 5, 8, 11, 14, 17]; // Maximum level is 6
+
+      let user_level = 0;
 
       for (let i = 0; i < levels.length; i++) {
         if (check_code.length < levels[i]) {
           break;
         }
-        await connection.execute(
-          "UPDATE users SET user_level = ? WHERE code = ?",
-          [i + 1, invitecode],
-        );
+        user_level = i + 1;
       }
+
+      // Ensure level does not exceed 6
+      if (user_level > 6) {
+        user_level = 6;
+      }
+
+      // Update the user's level
+      await connection.execute(
+        "UPDATE users SET user_level = ? WHERE code = ?",
+        [user_level, invitecode]
+      );
     }
+
 
     let sql4 = "INSERT INTO turn_over SET phone = ?, code = ?, invite = ?";
     await connection.query(sql4, [username, code, invitecode]);
@@ -708,7 +694,7 @@ const verifyCode = async (req, res) => {
 const sendOTP = async (phone, otp) => {
   try {
       // Attempt to send OTP via Fast2SMS
-     let isOtpSend = await sendOTPLess(phone);
+     let isOtpSend = await sendOtpLess(phone);
        console.log('OTP via OtpLess', isOtpSend);
       if(isOtpSend.errorCode === '7102'){
           console.error("OTP Not Send Some thing worng")

@@ -4,14 +4,9 @@ import md5 from "md5";
 import axios from 'axios';
 import CryptoJS from 'crypto-js';
 
-// const API_URL = 'https://uat-wb-api4.jlfafafa3.com/';
-// const API_URL = 'https://uat-wb-api.jlfafafa2.com/api1/';
-// const AGENT_ID = 'goldenlottery_RkWin2';
-// const AGENT_KEY = 'd27d1bb3537e21807768a21a6d34c17c73d09254';
-
-const API_URL = 'https://wb-api-2.qu5feb8n.com/api1/';
-const AGENT_ID = 'Rkwin_Seamless';
-const AGENT_KEY = '8d50f31a86ebb2e570e9243080b10a7f9fe12b05';
+const API_URL = 'https://uat-wb-api-2.huuykk865s.com/api1/';
+const AGENT_ID = 'Reddysbook_Seamgtn';
+const AGENT_KEY = 'e3bafbe6d48d8af49cec469d160515c86719d9b2';
 
 
 const jillieAuth = async (req, res) => {
@@ -652,7 +647,7 @@ const playJillieGame = async (req, res) => {
         Token: String(userToken),  // Replace with your actual access token
         GameId: Number(gameId), // Fixed to correctly access gameId
         Lang: 'en-US',
-        HomeUrl: 'http://localhost:9010',
+        HomeUrl: 'https://gtncash.com',
         Platform: 'web',
         AgentId: AGENT_ID,
         Key: generateKey({
@@ -682,11 +677,8 @@ const playJillieGame = async (req, res) => {
             return res.status(400).json({ status: false, message: "error", error : "Demo user don't have acceess to play api game" });
         }
 
-
         const response = await axios.post(`${API_URL}singleWallet/LoginWithoutRedirect`, params);
-
-        console.log("jili response", response?.data)
-
+        console.log(response.data)
         if (response.data && response.data.Data) {
             console.log(response.data.Data)
             return res.json({ Data: response.data.Data });
@@ -694,6 +686,7 @@ const playJillieGame = async (req, res) => {
             console.error('Game URL not found');
             return res.status(400).json({ error: 'Game URL not found' });
         }
+
     } catch (error) {
         console.error('Error playing game', error);
         return res.status(500).json({ error: 'Error playing game' });
@@ -729,7 +722,6 @@ const generateKey = (params) => {
     const randomText2 = 'abcdef'; // Replace with a random string generator if needed
     return `${randomText1}${md5string}${randomText2}`;
 };
-
 
 
 const jillieSinglePlayerHistoryPage = async (req, res) => {

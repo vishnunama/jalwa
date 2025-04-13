@@ -127,7 +127,7 @@ $(function () {
       name: "usa_states",
       zoom: {
         enabled: true,
-        maxLevel: 10,
+        maxLevel: 6,
       },
     },
   });

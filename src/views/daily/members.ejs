@@ -60,7 +60,7 @@
                     <th class="text-center">#</th>
                     <th class="text-center">Account</th>
                     <th class="text-center">Amount</th>
-                    <th class="text-center">Commision</th>
+                    <!-- <th class="text-center">Commision</th> -->
                     <th class="text-center">Status</th>
                     <th class="text-center">Time</th>
                     <th class="text-center">Action</th>
@@ -146,9 +146,9 @@
           <td>
             <b>${data.money}</b>
           </td>
-          <td>
+        <!--  <td>
             <b>${data.total_money}</b>
-          </td>
+          </td> -->
           <td class="project-state">
             ${(data.status == 1) ? '<span class="badge badge-success">Online</span>' : '<span class="badge badge-warning">Banded</span>'}
           </td>
@@ -185,7 +185,7 @@
 
     });
     let pageno = 0;
-    let limit = 30;
+    let limit = 10;
     let page = 1;
     $.ajax({
       type: "POST",

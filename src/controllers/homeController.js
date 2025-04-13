@@ -159,9 +159,6 @@ const changeAvatarPage = async (req, res) => {
 const promotionPage = async (req, res) => {
   return res.render("promotion/promotion.ejs");
 };
-const promotionPromotionSharePage = async (req, res) => {
-  return res.render("promotion/promotionShare.ejs");
-};
 
 const subordinatesPage = async (req, res) => {
   return res.render("promotion/subordinates.ejs");
@@ -262,18 +259,6 @@ const rsPayWithdrawalPage = async (req, res) => {
   );
 
   return res.render("manage/rsPay.ejs", {
-    NICKNAME: user[0].name_user,
-    USER_ID: user[0].id_user,
-  });
-};
-const cloudPayWithdrawalPage = async (req, res) => {
-  let auth = req.cookies.auth;
-  const [user] = await connection.query(
-    "SELECT * FROM users WHERE `token` = ? ",
-    [auth],
-  );
-
-  return res.render("manage/cloudPay.ejs", {
     NICKNAME: user[0].name_user,
     USER_ID: user[0].id_user,
   });
@@ -381,7 +366,6 @@ const homeController = {
   vipPage,
   activityPage,
   dailytaskPage,
-  promotionPromotionSharePage,
   promotionPage,
   subordinatesPage,
   promotion1Page,
@@ -424,7 +408,6 @@ const homeController = {
   promotionRebateRatioPage,
   settingsPage,
   rsPayWithdrawalPage,
-  cloudPayWithdrawalPage,
   rsPayWithdrawalHistoryPage,
   guidePage,
   feedbackPage,

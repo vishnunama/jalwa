@@ -70,6 +70,18 @@
                                                 <b>Roses today</b> <a class="float-right" id="roses_today">0</a>
                                             </li>
                                             <li class="list-group-item">
+                                                <b>Today gift code </b> <a class="float-right" id="today_gift_code ">0</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>Total gift code</b> <a class="float-right" id="total_gift_code">0</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>Today salary</b> <a class="float-right" id="today_salary">0</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>total salary</b> <a class="float-right" id="total_salary">0</a>
+                                            </li>
+                                            <li class="list-group-item">
                                                 <b>F1</b> <a class="float-right" id="f1">0</a>
                                             </li>
                                             <li class="list-group-item">
@@ -80,6 +92,12 @@
                                             </li>
                                             <li class="list-group-item">
                                                 <b>F4</b> <a class="float-right" id="f4">0</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>F5</b> <a class="float-right" id="f5">0</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>F6</b> <a class="float-right" id="f6">0</a>
                                             </li>
                                             <li class="list-group-item">
                                                 <b>Total member</b> <a class="float-right" id="total_mem">0</a>
@@ -204,32 +222,42 @@
             },
             dataType: "json",
             success: function (response) {
-                if (response.status === false) return false;
-                let user = response.datas;
+                if (response?.status === false) return false;
+                let user = response?.datas;
 
                 $('.profile-username').text(user.name_user);
                 $('#id_user').text("ID: " + user.id_user);
-                $('#money').text(user.money + ".0");
+                $('#money').text(user.money);
                 $('#roses_all').text(user.roses_f + user.roses_f1 + '.0');
                 $('#roses_today').text(user.roses_today + '.0');
 
-                $('#f1').text(response.f1 + " Members");
-                $('#f2').text(response.f2 + " Members");
-                $('#f3').text(response.f3 + " Members");
-                $('#f4').text(response.f4 + " Members");
-                $('#total_mem').text(response.f1 + response.f2 + response.f3 + response.f4);
+                $('#today_gift_code').text(response?.today_gift_code || 0);
+
+                $('#total_gift_code').text(response?.total_gift_code || 0);
+
+                $('#today_salary').text(response?.today_salary || 0);
+
+                $('#total_salary').text(response?.total_salary || 0);
+
+                $('#f1').text(response?.f1 + " Members");
+                $('#f2').text(response?.f2 + " Members");
+                $('#f3').text(response?.f3 + " Members");
+                $('#f4').text(response?.f4 + " Members");
+                $('#f5').text(response?.f5 + " Members");
+                $('#f6').text(response?.f6 + " Members");
+                $('#total_mem').text(response?.f1 + response?.f2 + response?.f3 + response?.f4 + response?.f5 + response?.f6 );
                 $('#ip').text(user.ip_address);
                 $('#level').text((user.level == 1) ? 'ADMIN' : (user.level == 2) ? "CTV" : "USER");
 
-                $('#total_money').text((response.total_r[0].total) ? response.total_r[0].total + '.0' : '0.0');
-                $('#total_withdraw').text((response.total_w[0].total) ? response.total_w[0].total + '.0' : '0.0');
+                $('#total_money').text((response?.total_r[0].total) ? response?.total_r[0].total : '0.0');
+                $('#total_withdraw').text((response?.total_w[0].total) ? (response?.total_w[0].total * 93).toFixed(2) : '0.0');
 
                 // bank
-                if (response.bank_user[0]) {
-                    $('#name').text(response.bank_user[0].name_user);
-                    $('#stk').text(response.bank_user[0].stk);
-                    $('#location').text(response.bank_user[0].tinh + " - " + response.bank_user[0].tp);
-                    $('#timeAddBank').text(timerJoin(response.bank_user[0].time));
+                if (response?.bank_user[0]) {
+                    $('#name').text(response?.bank_user[0].name_user);
+                    $('#stk').text(response?.bank_user[0].stk);
+                    $('#location').text(response?.bank_user[0].tinh + " - " + response?.bank_user[0].tp);
+                    $('#timeAddBank').text(timerJoin(response?.bank_user[0].time));
                 }
             }
         });
@@ -252,7 +280,7 @@
                     `
                 <tr class="text-center"  >
                     <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.id_order}</td>
-                    <td><b style="color: #3498db">${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #3498db">${(data.money * 93).toFixed(2)}</b></td>
                     <td style="min-width: 210px;"><b>${data.name_bank}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : 'danger')}">${(data.status == '1' ? 'success' : 'closed')}</span></td>
                     <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
@@ -276,8 +304,8 @@
             },
             dataType: "json",
             success: function (response) {
-                $('#text-withdraw').text(page + ' / ' + response.page_total);
-                if (response.status === true) return RenderWithdraw(response.datas);
+                $('#text-withdraw').text(page + ' / ' + response?.page_total);
+                if (response?.status === true) return RenderWithdraw(response?.datas);
             },
         });
 
@@ -295,12 +323,12 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    if (response.datas.length == 0) {
+                    if (response?.datas.length == 0) {
                         $('#nextRecharge').addClass('block-click');
                         return pageno -= limit
                     };
-                    $('#text-withdraw').text(++page + ' / ' + response.page_total);
-                    if (response.status === true) return RenderWithdraw(response.datas);
+                    $('#text-withdraw').text(++page + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderWithdraw(response?.datas);
                 }
             });
         });
@@ -321,8 +349,8 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    $('#text-withdraw').text(--page + ' / ' + response.page_total);
-                    if (response.status === true) return RenderWithdraw(response.datas);
+                    $('#text-withdraw').text(--page + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderWithdraw(response?.datas);
                 }
             });
         });
@@ -346,7 +374,7 @@
                     `
                 <tr class="text-center"  >
                     <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.transaction_id}</td>
-                    <td><b style="color: #3498db">${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #3498db">${(data.money)}</b></td>
                     <td style="min-width: 210px;"><b>${(data.type == "bank") ? "BANK" : "MOMO"}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : 'warning')}">${(data.status == '1' ? 'success' : 'closed')}</span></td>
                     <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
@@ -370,8 +398,8 @@
             },
             dataType: "json",
             success: function (response) {
-                $('#text-recharge').text(page1 + ' / ' + response.page_total);
-                if (response.status === true) return RenderRecharge(response.datas);
+                $('#text-recharge').text(page1 + ' / ' + response?.page_total);
+                if (response?.status === true) return RenderRecharge(response?.datas);
             },
         });
 
@@ -389,12 +417,12 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    if (response.datas.length == 0) {
+                    if (response?.datas.length == 0) {
                         $('#nextRecharge').addClass('block-click');
                         return pageno1 -= limit1
                     };
-                    $('#text-recharge').text(++page1 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderRecharge(response.datas);
+                    $('#text-recharge').text(++page1 + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderRecharge(response?.datas);
                 }
             });
         });
@@ -415,8 +443,8 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    $('#text-recharge').text(--page1 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderRecharge(response.datas);
+                    $('#text-recharge').text(--page1 + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderRecharge(response?.datas);
                 }
             });
         });
@@ -437,10 +465,10 @@
             let html = '';
             datas.map((data) => {
                 html +=
-                    ` 
+                    `
                 <tr class="text-center"  >
                     <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #3498db">${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #3498db">${(data.money)}</b></td>
                     <td style="min-width: 210px;"><b>${data.id_redenvelops}</b></td>
                     <td class="project-state"><span class="badge badge-success">success</span></td>
                     <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
@@ -464,15 +492,15 @@
             },
             dataType: "json",
             success: function (response) {
-                $('#text-redenvelope').text(page2 + ' / ' + response.page_total);
+                $('#text-redenvelope').text(page2 + ' / ' + response?.page_total);
                 let total = 0;
                 let amount = 0;
-                for (let i = 0; i < response.datas.length; i++) {
-                    total += response.datas[i].money;
+                for (let i = 0; i < response?.datas.length; i++) {
+                    total += response?.datas[i].money;
                     amount += 1;
                 }
                 $('#totlaide').text(total + ' đ ' + " / " + amount + ' Giftcode');
-                if (response.status === true) return RenderRedenvelopes(response.datas);
+                if (response?.status === true) return RenderRedenvelopes(response?.datas);
             },
         });
 
@@ -490,12 +518,12 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    if (response.datas.length == 0) {
+                    if (response?.datas.length == 0) {
                         $('#nextRedenvelope').addClass('block-click');
                         return pageno2 -= limit2
                     };
-                    $('#text-redenvelope').text(++page2 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderRedenvelopes(response.datas);
+                    $('#text-redenvelope').text(++page2 + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderRedenvelopes(response?.datas);
                 }
             });
         });
@@ -516,8 +544,8 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    $('#text-redenvelope').text(--page2 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderRedenvelopes(response.datas);
+                    $('#text-redenvelope').text(--page2 + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderRedenvelopes(response?.datas);
                 }
             });
         });
@@ -541,7 +569,7 @@
                     `
                 <tr class="text-center"  >
                     <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.stage}</td>
-                    <td><b style="color: #3498db">${(data.status == 1) ? "+" : "-"} ${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #3498db">${(data.status == 1) ? "+" : "-"} ${(data.money)}</b></td>
                     <td style="min-width: 210px;"><b>${(data.game.toUpperCase())}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : 'danger')}">${(data.status == '1' ? 'win' : 'loss')}</span></td>
                     <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
@@ -565,8 +593,8 @@
             },
             dataType: "json",
             success: function (response) {
-                $('#text-bet').text(page3 + ' / ' + response.page_total);
-                if (response.status === true) return RenderBet(response.datas);
+                $('#text-bet').text(page3 + ' / ' + response?.page_total);
+                if (response?.status === true) return RenderBet(response?.datas);
             },
         });
 
@@ -584,12 +612,12 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    if (response.datas.length == 0) {
+                    if (response?.datas.length == 0) {
                         $('#nextBet').addClass('block-click');
                         return pageno3 -= limit3
                     };
-                    $('#text-bet').text(++page3 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderBet(response.datas);
+                    $('#text-bet').text(++page3 + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderBet(response?.datas);
                 }
             });
         });
@@ -610,8 +638,8 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    $('#text-bet').text(--page3 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderBet(response.datas);
+                    $('#text-bet').text(--page3 + ' / ' + response?.page_total);
+                    if (response?.status === true) return RenderBet(response?.datas);
                 }
             });
         });

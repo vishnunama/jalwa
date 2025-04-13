@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statisticals</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin.css">
+
+    <style>
+        .info-box{
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+
+
+    </style>
+</head>
+
+<body class="light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <div class="wrapper">
+        <%- include('nav') %>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="container-fluid">
+                      <div class="row mb-3 align-items-center">
+                        <div class="col-md-6  ">
+                          <h1 class="mb-0">Agent Dashboard</h1>
+                        </div>
+                        <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                          <div class="d-flex align-items-center">
+                            <!-- <label class="me-2 fw-semibold">Date Range:</label> -->
+                            <div class="input-group">
+                              <input type="date" name="start-date" class="form-control">
+                              <div class="input-group-addon">to</div>
+                              <input type="date" name="end-date" class="form-control">
+                          </div>
+                            <button onclick="reload()" class="btn btn-primary btn-sm ms-2">
+                               <i class="fa fa-refresh ms-1"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+                                    <div class="card-body" style="background-color: #1c5834;">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold totalusers">0</h1>
+                                                <p>Total user</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #1f4422;">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+                                    <div class="card-body" style="background-color: #a4323a; color: white;">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h1 class="font-weight-bold totalwithdraw">0</h1>
+                                                <p>Total Withdrawal</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #7a3037;">
+                                        More info
+                                        <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+                                    <div class="card-body" style="background-color: #133E87; color: white">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold totalRecharge">0</h1>
+                                                <p>Total Recharge</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: rgb(16, 61, 104);">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+
+                                    <div class="card-body" style="background-color: #1c5834; color: white">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h1 class="font-weight-bold totalRechargeToday"></h1>
+                                                <p>Recharge Today</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #1f4422;">
+                                        More info
+                                        <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <!-- pen -->
+
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+                                    <div class="card-body" style="background-color: #FFB200; color: white;">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold totalwithdrawToday">0</h1>
+                                                <p>Withdraw Today</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #d89a07;">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+
+                                    <div class="card-body" style="background-color: #1e675e; color: white;">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h1 class="font-weight-bold clientWallet text-white">0</h1>
+                                                <p class="text-white">Client Wallet</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #355f59;">
+                                        More info
+                                        <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+                                    <div class="card-body" style="background-color: #FFB200; color: white">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold todayusers">0</h1>
+                                                <p>Today user</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #d89a07;">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <div class="card text-start">
+                                    <div class="card-body" style="background-color: #a4323a; color: white;">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold uplinedata">0</h1>
+                                                <p>Upline</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #7a3037;">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-3" id="pendingRecharge">
+
+                            </div>
+                            <div class="col-12 col-md-3" id="pendingWithdraw">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- /.content -->
+
+
+
+
+                <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
+    </div>
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+    <script src="/js/admin/admin.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.10.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.10.0/dist/css/bootstrap-datepicker3.min.css">
+    <script>
+
+
+function reload(){
+    // Get the values of the start and end dates from the input fields
+    var startDate = $('input[name="start-date"]').val();
+  var endDate = $('input[name="end-date"]').val();
+
+  const start = startDate ? new Date(startDate).getTime() : null;
+  const end = endDate ? new Date(endDate).setHours(23, 59, 59, 999) : null;
+
+    $.ajax({
+        type: "POST",
+        url: "/api/webapi/admin/agentWallet",
+        data: {
+            startDate: start,
+            endDate: end
+        },
+        dataType: "json",
+        success: function (response) {
+            let usersWallet = (response.usersWallet) ? response.usersWallet : 0;
+            let pRecharge = (response.pRecharge) ? response.pRecharge : 0;
+            let pWithdrawal = (response.pWithdrawal) ? response.pWithdrawal : 0;
+            let recharges = (response.recharges) ? response.recharges : 0;
+            let withdraws = (response.withdraws) ? (response.withdraws) : 0;
+            let rechargeToday = (response?.rechargeToday) ? response?.rechargeToday : 0;
+            let withdrawToday = (response?.withdrawToday) ? (response?.withdrawToday) : 0;
+            let totalUser = (response.totalUser) ? response.totalUser : 0;
+            let todayUser = (response.todayUser) ? response.todayUser : 0;
+
+            $('.clientWallet').text(usersWallet);
+            $('.precharge').text((pRecharge));
+            $('.pwithdraw').text((pWithdrawal));
+            $('.totalRecharge').text((recharges));
+            $('.totalwithdraw').text((withdraws).toFixed(2));
+            $('.totalRechargeToday').text((rechargeToday));
+            $('.totalwithdrawToday').text((withdrawToday));
+            $('.todayusers').text((todayUser));
+            $('.totalusers').text((totalUser));
+            $('.uplinedata').text((Number(recharges) - Number(usersWallet)));
+
+            if(pRecharge != 0){
+                document.getElementById("pendingRecharge").innerHTML =
+                `                <div class="card text-start">
+                                    <div class="card-body " style="background-color: #133E87; color: white">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold precharge">${pRecharge}</h1>
+                                                <p>Pending Recharge</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: rgb(16, 61, 104);">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                `
+            } else {
+                document.getElementById("pendingRecharge").innerHTML = ``;
+            }
+
+            if(pWithdrawal != 0){
+                document.getElementById("pendingWithdraw").innerHTML =
+                `                <div class="card text-start">
+                                    <div class="card-body "style="background-color: #a4323a; color: white;">
+                                        <div class="d-flex justify-content-between text-white ">
+                                            <div>
+                                                <h1 class="font-weight-bold pwithdraw">${pWithdrawal}</h1>
+                                                <p>Pending Withdraw</p>
+                                            </div>
+                                            <span class="info-box-money" style="font-size: 30px;"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-white text-center" style="background-color: #7a3037;">
+                                      More info
+                                      <span class="info-box-money"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                `
+            } else {
+                document.getElementById("pendingWithdraw").innerHTML = ``;
+            }
+        }
+    });
+}
+
+    </script>
+</body>
+
+</html>

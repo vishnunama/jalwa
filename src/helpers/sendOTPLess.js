@@ -1,4 +1,4 @@
-export async function sendOTPLess(phoneNo){
+export async function sendOtpLess(phoneNo){
     try {
         const options = {
             method: 'POST',

@@ -186,7 +186,7 @@ const releaseVIPLevel = async () => {
           phone,
           amount: currentVipLevel.levelUpReward,
           status: REWARD_STATUS_TYPES_MAP.SUCCESS,
-          time: moment().unix(),
+          time: moment().valueOf(),
         });
       } else {
         await connection.execute(
@@ -202,7 +202,7 @@ const releaseVIPLevel = async () => {
         phone,
         amount: currentVipLevel.monthlyReward,
         status: REWARD_STATUS_TYPES_MAP.SUCCESS,
-        time: moment().unix(),
+        time: moment().valueOf(),
       });
       await connection.execute(
         "UPDATE users SET money = money + ? WHERE phone = ?",

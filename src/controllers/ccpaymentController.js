@@ -227,10 +227,10 @@ const rechargeTable = {
     return moment().valueOf();
   },
   getCurrentTimeForTodayField: () => {
-    return moment().format("YYYY-DD-MM h:mm:ss A");
+    return moment().format("YYYY-MM-DD h:mm:ss A");
   },
   getDMYDateOfTodayFiled: (today) => {
-    return moment(today, "YYYY-DD-MM h:mm:ss A").format("DD-MM-YYYY");
+    return moment(today, "YYYY-MM-DD h:mm:ss A").format("DD-MM-YYYY");
   },
   create: async (newRecharge) => {
     if (newRecharge.url === undefined || newRecharge.url === null) {
@@ -239,12 +239,13 @@ const rechargeTable = {
 
   if(newRecharge.isDemo==1){
         await connection.query(
-      `INSERT INTO recharge SET id_order = ?, transaction_id = ?, phone = ?, money = ?, type = ?, status = ?, today = ?, url = ?, time = ?, time_remaining_bet = ?, utr = ?`,
+      `INSERT INTO recharge SET id_order = ?, transaction_id = ?, phone = ?, money = ?, userId = ?, type = ?, status = ?, today = ?, url = ?, time = ?, time_remaining_bet = ?, utr = ?`,
       [
         newRecharge.orderId,
         newRecharge.transactionId,
         newRecharge.phone,
         newRecharge.money,
+        newRecharge.userId,
         newRecharge.type,
         1,
         newRecharge.today,
@@ -262,12 +263,13 @@ const rechargeTable = {
 
   }else{
         await connection.query(
-      `INSERT INTO recharge SET id_order = ?, transaction_id = ?, phone = ?, money = ?, type = ?, status = ?, today = ?, url = ?, time = ?, time_remaining_bet = ?, utr = ?`,
+      `INSERT INTO recharge SET id_order = ?, transaction_id = ?, phone = ?, money = ?, userId = ?, type = ?, status = ?, today = ?, url = ?, time = ?, time_remaining_bet = ?, utr = ?`,
       [
         newRecharge.orderId,
         newRecharge.transactionId,
         newRecharge.phone,
         newRecharge.money,
+        newRecharge.userId,
         newRecharge.type,
         newRecharge.status,
         newRecharge.today,
@@ -435,18 +437,15 @@ const addUserAccountBalance = async ({ money, phone, invite, rechargeId }) => {
 
 
 // Ensure `appId` and `appSecret` are defined securely, e.g., from environment variables or a config file.
-const appId = "Pjwpnw4NnzQxQYMy"; // Replace with your actual appId
-const appSecret = "abf15bd9368bfaef4fe416db9d435a6d"; // Replace with your actual appSecret
+const appId = "llAgJGErf1aUw91h"; // Replace with your actual appId
+const appSecret = "f627357133623ac8ef6f3b34b33ed586"; // Replace with your actual appSecret
 
 // Fetch coin list from CCPayment API
 const fetchCoinList = async () => {
     try {
-
-
         const path = "https://ccpayment.com/ccpayment/v2/getCoinList";
         const timestamp = Math.floor(Date.now() / 1000);
-        let signText = appId + timestamp;
-
+        const signText = appId + timestamp;
 
         // Generate HMAC-SHA256 signature
         const sign = crypto
@@ -465,17 +464,15 @@ const fetchCoinList = async () => {
             url: path,
         };
 
-        console.log(options)
-
         // Send request to the API
         const response = await axios(options);
         return response.data; // Return the coin list data
     } catch (error) {
-      console.log(error)
         console.error("Error fetching coin list:", error.message);
         throw new Error("Failed to fetch coin list");
     }
 };
+
 // Route to get coin details by symbol
 const fetchCoinDetails = async (req, res) => {
     const { symbol } = req.body;
@@ -518,17 +515,16 @@ const createDeposit = async (req, res) => {
     console.log(money, "money")
     const userToken = req.userToken;
     // console.log(userToken)
-    const [user] = await connection.query('SELECT `phone`, `isDemo`, `id_user` FROM users WHERE token = ? LIMIT 1 ', [userToken]);
+    const [user] = await connection.query('SELECT `id_user`, `phone`, `isDemo`, `id_user` FROM users WHERE token = ? LIMIT 1 ', [userToken]);
 
     let userInfo = user[0];
 
-console.log(userInfo,"userInfo")
-    const chain = "TRX";
+    const chain = req.body.chainType == "TRC" ? "TRX" : "BSC"
     const coinId = 1280;
     const price = String(money)
     const orderId = generateOrderId();
     const generateCheckoutURL = true;
-    const returnUrl = "https://rk-win.com/wallet/rechargerecord";
+    const returnUrl = "https://gtncash.com/wallet/rechargerecord";
     const userid = String(userInfo.id_user);
 
 
@@ -587,21 +583,38 @@ console.log(userInfo,"userInfo")
 
             console.log(userInfo)
 
+            const now = moment();
+
+            // const newRecharge = {
+            //   orderId: orderId,
+            //   transactionId: "NULL",
+            //   utr: 0,
+            //   phone: userInfo.phone,
+            //   userId: userInfo.id_user,
+            //   money: Number(money) * 93,
+            //   isDemo: userInfo.isDemo,
+            //   type: "USDT",
+            //   status: 0,
+            //   today: rechargeTable.getCurrentTimeForTodayField(),
+            //   url: "NULL",
+            //   time: rechargeTable.getCurrentTimeForTimeField(),
+            // };
             const newRecharge = {
               orderId: orderId,
               transactionId: "NULL",
               utr: 0,
               phone: userInfo.phone,
+              userId: userInfo.id_user,
               money: Number(money) * 93,
               isDemo: userInfo.isDemo,
               type: "USDT",
               status: 0,
-              today: rechargeTable.getCurrentTimeForTodayField(),
+              today: now.format("YYYY-MM-DD h:mm:ss A"),
               url: "NULL",
-              time: rechargeTable.getCurrentTimeForTimeField(),
+              time: now.valueOf(),
             };
 
-            const recharge = await rechargeTable.create(newRecharge);
+            await rechargeTable.create(newRecharge);
 
 
             // Insert the deposit data into the ccdeposit table
@@ -695,295 +708,6 @@ const getUSDTtoINR = async () => {
         return null; // Return null if the API call fails
     }
 };
-
-// const ccpaymentNotify = async (req, res) => {
-//     console.log("first");
-//     const timestamp = req.header('Timestamp');
-//     const sign = req.header('Sign');
-//     const content = Object.keys(req.body).length === 0 ? "" : JSON.stringify(req.body);
-//     console.log(req.body);
-//     console.log("content", content)
-//     // Verify the signature
-//     if (verifySignature(content, sign, appId, appSecret, timestamp)) {
-//         const { type, msg } = req.body;
-//         console.log(type, msg, "type, msg")
-//         console.log("first1");
-//         if (type === 'ApiDeposit') {
-//             const { recordId, orderId, coinId, coinSymbol, status } = msg;
-
-//             try {
-//                 // Fetch the userId from the `ccdeposit` table
-//                 console.log("first2");
-//                 const depositQuery = 'SELECT userid FROM ccdeposit WHERE orderid = ? LIMIT 1';
-//                 const [depositResult] = await connection.query(depositQuery, [orderId]);
-
-//                 if (depositResult.length > 0) {
-//                     const userId = depositResult[0].userid;
-//                     console.log("first3");
-//                     const [userRows] = await connection.query('SELECT * FROM users WHERE id_user = ?', [userId]);
-
-//                     if (!userRows.length) {
-//                         console.log("first4");
-//                         return res.status(404).json({
-//                             errorCode: 4,
-//                             message: 'Token expired or invalid',
-//                         });
-//                     }
-
-//                     const user = userRows[0];
-
-//                     // Fetch order details
-//                     const orderInfo = await getOrderInfo(orderId);
-//                     console.log("first5");
-//                     if (orderInfo && orderInfo.data && orderInfo.data.paidList.length > 0) {
-//                         const payments = orderInfo.data.paidList;
-//                         console.log("first6");
-//                         // Process each payment
-//                         for (const payment of payments) {
-//                             if (payment.status === 'Success') {
-//                                 console.log("first7");
-//                                 const amount = parseFloat(payment.amount);
-//                                 const coinSymbolLower = coinSymbol.toLowerCase(); // Ensure proper column case
-//                                 // Update user's credits
-//                                 const updateUserWallet = `
-//                                     UPDATE users
-//                                     SET ${coinSymbolLower} = ${coinSymbolLower} + ?
-//                                     WHERE uid = ?
-//                                 `;
-//                                 // await connection.query(updateCreditsQuery, [amount, userId]);
-//                                 console.log(amount, "amount")
-
-//                                 console.log("first8");
-//                                 const currentUsdtPrice = await getUSDTtoINR();
-//                                 if (currentUsdtPrice === null) {
-//                                     return res.status(500).json({
-//                                         errorCode: 5,
-//                                         message: 'Unable to fetch current USDT to INR price',
-//                                     });
-//                                 }
-
-
-//                                 let [isData] =  await connection.query(`Select * from ccdeposit WHERE status = ? WHERE orderid = ?'`, ['Success', orderId]);
-
-//                                 if(data.length > 0){
-
-//                                 }
-
-//                                 console.log(currentUsdtPrice, "currentUsdtPrice");
-//                                 console.log("first10");
-//                                 const oldUserBalance = Number(user.money);
-//                                 const amountInUsdt = Number(amount);
-//                                 const updatedBalance = oldUserBalance + (amountInUsdt * currentUsdtPrice)
-//                                 console.log(updatedBalance, "updatedBalance")
-//                                 const depositAmountInUsdtToInr = (amountInUsdt * currentUsdtPrice)
-
-//                                 const oldActualDepositUserBalance = Number(user.actual_total_deposit_amount);
-//                                 const updatedBalance2 = oldActualDepositUserBalance + (amountInUsdt * currentUsdtPrice)
-
-//                                 // await connection.query('UPDATE users SET money = ?,actual_total_deposit_amount = ? WHERE id_user = ?', [updatedBalance,updatedBalance2, userId]);
-
-//                                 // console.log(`Updated ${coinSymbolLower} for user ${userId} by ${amount}`);
-//                                 console.log("added money in account")
-//                                 // Update deposit status
-//                                 console.log(orderId, "orderId")
-//                                 const updateDepositQuery = 'UPDATE ccdeposit SET status = ?, currentUsdtPrice = ? WHERE orderid = ?';
-//                                 let [data] =  await connection.query(updateDepositQuery, ['Success',currentUsdtPrice, orderId]);
-
-//                                 let [rechange_data] =  await connection.query("UPDATE recharge SET status = 1 WHERE id_order = ?", [
-//                                   orderId,
-//                                 ]);
-
-
-//                                 addUserAccountBalance({
-//                                     money: depositAmountInUsdtToInr,
-//                                     phone: user.phone,
-//                                     invite: user.invite,
-//                                     // rechargeId: rechange_data[0].id,
-//                                 })
-
-
-
-//                             } else if (payment.status === 'Processing') {
-//                                 console.log("first11");
-//                                 console.log("Processing")
-//                                 console.log(`Payment processing for order ${orderId}`);
-//                                 const updateDepositQuery = 'UPDATE ccdeposit SET status = ?,currentUsdtPrice = ?  WHERE orderid = ?';
-//                                 await connection.query(updateDepositQuery, ['Processing',currentUsdtPrice, orderId]);
-//                             } else if (payment.status === 'Failed') {
-//                                 console.log("first12");
-//                                 console.log("failed")
-//                                 console.log(`Payment failed for order ${orderId}`);
-//                                 const updateDepositQuery = 'UPDATE ccdeposit SET status = ?,currentUsdtPrice = ?  WHERE orderid = ?';
-//                                 await connection.query(updateDepositQuery, ['Failed',currentUsdtPrice, orderId]);
-//                             } else {
-//                                 console.log("first13");
-//                                 console.log(`Unhandled payment status: ${payment.status}`);
-//                             }
-//                         }
-//                     } else {
-//                         console.log("first14");
-//                         console.log('No payments found for this order');
-//                     }
-//                 } else {
-//                     console.log("first15");
-//                     console.log(`No matching deposit found for order ID: ${orderId}`);
-//                 }
-
-//                 res.status(200).send('success');
-//             } catch (error) {
-//                 console.log("first16");
-//                 console.error('Error handling notification:', error.message);
-//                 res.status(500).send('Internal server error');
-//             }
-//         } else {
-//             console.log("first17");
-//             res.status(200).json({msg: 'success'});
-//         }
-//     } else {
-//         console.log("first18");
-//         res.status(401).send('Invalid signature');
-//     }
-// };
-
-console.log("ccpayment")
-
-// const ccpaymentNotify = async (req, res) => {
-//   console.log("Received payment notification");
-
-//   const timestamp = req.header('Timestamp');
-//   const sign = req.header('Sign');
-//   const content = Object.keys(req.body).length === 0 ? "" : JSON.stringify(req.body);
-
-//   console.log("Request Body:", req.body);
-
-//   // Verify the signature
-//   if (!verifySignature(content, sign, appId, appSecret, timestamp)) {
-//       console.log("Invalid Signature");
-//       return res.status(401).send('Invalid signature');
-//   }
-
-//   const { type, msg } = req.body;
-//   console.log("Notification Type:", type, "Message:", msg);
-
-//   if (type !== 'ApiDeposit') {
-//       return res.status(200).json({ msg: 'success' });
-//   }
-
-//   const { recordId, orderId, coinId, coinSymbol, status } = req.body;
-
-//   try {
-//       console.log("Fetching user for orderId:", orderId);
-
-//       const depositQuery = 'SELECT userid FROM ccdeposit WHERE orderid = ? LIMIT 1';
-//       const [depositResult] = await connection.query(depositQuery, [orderId]);
-
-//       if (depositResult.length === 0) {
-//           console.log(`No matching deposit found for order ID: ${orderId}`);
-//           return res.status(404).json({ errorCode: 4, message: 'Deposit record not found' });
-//       }
-
-//       const userId = depositResult[0].userid;
-//       console.log("User ID found:", userId);
-
-//       const [userRows] = await connection.query('SELECT * FROM users WHERE id_user = ?', [userId]);
-
-//       if (userRows.length === 0) {
-//           console.log("User not found for ID:", userId);
-//           return res.status(404).json({ errorCode: 4, message: 'User not found' });
-//       }
-
-//       const user = userRows[0];
-
-//       console.log("Fetching order details...");
-//       // const orderInfo = await getOrderInfo(orderId);
-
-//       // if (!orderInfo?.data?.paidList?.length) {
-//       //     console.log("No payments found for this order");
-//       //     return res.status(200).json({ message: 'No payments found' });
-//       // }
-
-//       console.log("Processing payments...");
-//       // for (const payment of orderInfo.data.paidList) {
-//           // if (payment.status !== 'Success') {
-//           //     console.log(`Payment status is ${payment.status} for order ${orderId}`);
-//           //     await connection.query(
-//           //         'UPDATE ccdeposit SET status = ?, currentUsdtPrice = ? WHERE orderid = ?',
-//           //         [payment.status, 0, orderId]
-//           //     );
-//           //     // continue;
-//           // }
-
-//           console.log("Processing successful payment...");
-//           const amount = parseFloat(100);
-//           const coinSymbolLower = coinSymbol.toLowerCase();
-
-//           // Get USDT to INR conversion rate
-//           const currentUsdtPrice = await getUSDTtoINR();
-//           if (!currentUsdtPrice) {
-//               return res.status(500).json({
-//                   errorCode: 5,
-//                   message: 'Unable to fetch current USDT to INR price',
-//               });
-//           }
-
-//           // Ensure deposit is not already processed
-//           const [isData] = await connection.query(
-//               'SELECT * FROM ccdeposit WHERE status = ? AND orderid = ?',
-//               ['Success', orderId]
-//           );
-
-//           if (isData.length > 0) {
-//               console.log(`Deposit for orderId ${orderId} already processed.`);
-//               return res.status(200).json({ message: 'Deposit already processed' });
-//           }
-
-//           // Calculate new balance
-//           const depositAmountInUsdtToInr = amount * currentUsdtPrice;
-//           const updatedBalance = Number(user.money) + depositAmountInUsdtToInr;
-//           const updatedDepositBalance = Number(user.actual_total_deposit_amount) + depositAmountInUsdtToInr;
-
-//           // Update user balance
-//           await connection.query(
-//               'UPDATE users SET money = ?, actual_total_deposit_amount = ? WHERE id_user = ?',
-//               [updatedBalance, updatedDepositBalance, userId]
-//           );
-
-//           console.log(`Added ${depositAmountInUsdtToInr} INR to user ${userId}`);
-
-//           // Update deposit status
-//           await connection.query(
-//               'UPDATE ccdeposit SET status = ?, currentUsdtPrice = ? WHERE orderid = ?',
-//               ['Success', currentUsdtPrice, orderId]
-//           );
-
-//           // Update recharge status
-//             await connection.query(
-//               'UPDATE recharge SET status = ? WHERE id_order = ?',
-//               [1, orderId]
-//           );
-
-//           let [rechageId] = await connection.query(`SELECT * from recharge where id_order = ?`, [orderId])
-
-
-//           console.log(rechageId[0])
-
-//           // Add to user account balance tracking
-//           await addUserAccountBalance({
-//               money: depositAmountInUsdtToInr,
-//               phone: user.phone,
-//               invite: user.invite,
-//               rechageId: rechageId[0].id
-//           });
-
-//           console.log(`Deposit processed successfully for orderId: ${orderId}`);
-//       // }
-
-//       res.status(200).send('success');
-//   } catch (error) {
-//       console.error('Error handling payment notification:', error.message);
-//       res.status(500).send('Internal server error');
-//   }
-// };
 
 const ccpaymentNotify = async (req, res) => {
   console.log("Received payment notification");
@@ -1121,140 +845,6 @@ const ccpaymentNotify = async (req, res) => {
       res.status(500).send('Internal server error');
   }
 };
-
-// const ccpaymentNotify = async (req, res) => {
-//     console.log("first");
-//     const timestamp = req.header('Timestamp');
-//     const sign = req.header('Sign');
-//     const content = Object.keys(req.body).length === 0 ? "" : JSON.stringify(req.body);
-//     console.log(req.body);
-//     console.log("content", content)
-//     // Verify the signature
-//     let type = 'ApiDeposit'
-//     if (type) {
-//         if (type === 'ApiDeposit') {
-//             const { recordId, orderId, coinId, coinSymbol, status } = req.body;
-
-//             try {
-//                 // Fetch the userId from the `ccdeposit` table
-//                 console.log("first2");
-//                 const depositQuery = 'SELECT userid FROM ccdeposit WHERE orderid = ? LIMIT 1';
-//                 const [depositResult] = await connection.query(depositQuery, [orderId]);
-
-//                 if (depositResult.length > 0) {
-//                     const userId = depositResult[0].userid;
-//                     console.log("first3");
-//                     const [userRows] = await connection.query('SELECT * FROM users WHERE id_user = ?', [userId]);
-
-//                     if (!userRows.length) {
-//                         console.log("first4");
-//                         return res.status(404).json({
-//                             errorCode: 4,
-//                             message: 'Token expired or invalid',
-//                         });
-//                     }
-
-//                     const user = userRows[0];
-
-//                     let payment = {
-//                         status: "Success",
-//                         amount: 100
-//                     }
-
-//                     if (payment.status === 'Success') {
-//                         console.log("first7");
-//                         const amount = parseFloat(payment.amount);
-//                         // const coinSymbolLower = coinSymbol.toLowerCase(); // Ensure proper column case
-//                         // // Update user's credits
-//                         // const updateUserWallet = `
-//                         //     UPDATE users
-//                         //     SET ${coinSymbolLower} = ${coinSymbolLower} + ?
-//                         //     WHERE uid = ?
-//                         // `;
-//                         // await connection.query(updateCreditsQuery, [amount, userId]);
-//                         console.log(amount, "amount")
-
-//                         console.log("first8");
-//                         const currentUsdtPrice = await getUSDTtoINR();
-//                         if (currentUsdtPrice === null) {
-//                             return res.status(500).json({
-//                                 errorCode: 5,
-//                                 message: 'Unable to fetch current USDT to INR price',
-//                             });
-//                             console.log("first9");
-//                         }
-
-//                         console.log(currentUsdtPrice, "currentUsdtPrice");
-//                         console.log("first10");
-//                         const oldUserBalance = Number(user.money);
-//                         const amountInUsdt = Number(amount);
-//                         const updatedBalance = oldUserBalance + (amountInUsdt * currentUsdtPrice)
-//                         console.log(updatedBalance, "updatedBalance")
-//                         const depositAmountInUsdtToInr = (amountInUsdt * currentUsdtPrice)
-
-//                         const oldActualDepositUserBalance = Number(user.actual_total_deposit_amount);
-//                         const updatedBalance2 = oldActualDepositUserBalance + (amountInUsdt * currentUsdtPrice)
-
-//                         // await connection.query('UPDATE users SET money = ?,actual_total_deposit_amount = ? WHERE id_user = ?', [updatedBalance,updatedBalance2, userId]);
-
-//                         // console.log(`Updated ${coinSymbolLower} for user ${userId} by ${amount}`);
-//                         console.log("added money in account")
-//                         // Update deposit status
-//                         console.log(orderId, "orderId")
-//                         const updateDepositQuery = 'UPDATE ccdeposit SET status = ?,currentUsdtPrice = ? WHERE orderid = ?';
-//                         await connection.query(updateDepositQuery, ['Success',currentUsdtPrice, orderId]);
-
-//                         const [ccdeposit] = await connection.query(
-//                             `SELECT * FROM ccdeposit WHERE status = "Success" AND userid = ?`,
-//                             [user.id_user]
-//                           );
-
-//                           let rechargeLength = ccdeposit.length; // Correct way to get array length
-//                           console.log("rechargeLength", rechargeLength)
-
-//                         addUserAccountBalance({
-//                             money: depositAmountInUsdtToInr,
-//                             phone: user.phone,
-//                             invite: user.invite,
-//                             rechargeLength: rechargeLength
-//                         })
-
-//                     } else if (payment.status === 'Processing') {
-//                         console.log("first11");
-//                         console.log("Processing")
-//                         console.log(`Payment processing for order ${orderId}`);
-//                         const updateDepositQuery = 'UPDATE ccdeposit SET status = ?,currentUsdtPrice = ?  WHERE orderid = ?';
-//                         await connection.query(updateDepositQuery, ['Processing',currentUsdtPrice, orderId]);
-//                     } else if (payment.status === 'Failed') {
-//                         console.log("first12");
-//                         console.log("failed")
-//                         console.log(`Payment failed for order ${orderId}`);
-//                         const updateDepositQuery = 'UPDATE ccdeposit SET status = ?,currentUsdtPrice = ?  WHERE orderid = ?';
-//                         await connection.query(updateDepositQuery, ['Failed',currentUsdtPrice, orderId]);
-//                     } else {
-//                         console.log("first13");
-//                         console.log(`Unhandled payment status: ${payment.status}`);
-//                     }
-//                 } else {
-//                     console.log("first15");
-//                     console.log(`No matching deposit found for order ID: ${orderId}`);
-//                 }
-
-//                 res.status(200).send('success');
-//             } catch (error) {
-//                 console.log("first16");
-//                 console.error('Error handling notification:', error.message);
-//                 res.status(500).send('Internal server error');
-//             }
-//         } else {
-//             console.log("first17");
-//             res.status(200).json({msg: 'success'});
-//         }
-//     } else {
-//         console.log("first18");
-//         res.status(401).send('Invalid signature');
-//     }
-// };
 
 const ccpaymentController = {
   fetchCoinDetails,

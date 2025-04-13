@@ -155,7 +155,6 @@ const changeUser = async (req, res) => {
         status: true,
         timeStamp: timeNow,
       });
-      break;
 
     default:
       return res.status(200).json({
@@ -163,7 +162,6 @@ const changeUser = async (req, res) => {
         status: false,
         timeStamp: timeNow,
       });
-      break;
   }
 };
 
@@ -682,6 +680,30 @@ const promotion = async (req, res) => {
           const f4_time = f4s[i].time;
           let check_f4 = timerJoin(f4_time) == timerJoin() ? true : false;
           if (check_f4) f_all_today += 1;
+
+          // Total level-5 referrals today
+          const [f5s] = await connection.query(
+            "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
+            [f4_code],
+          );
+          for (let i = 0; i < f5s.length; i++) {
+            const f5_code = f5s[i].code;
+            const f5_time = f5s[i].time;
+            let check_f5 = timerJoin(f5_time) == timerJoin() ? true : false;
+            if (check_f5) f_all_today += 1;
+
+            // Total level-6 referrals today
+            const [f6s] = await connection.query(
+              "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
+              [f5_code],
+            );
+            for (let i = 0; i < f6s.length; i++) {
+              const f6_code = f6s[i].code;
+              const f6_time = f6[i].time;
+              let check_f6 = timerJoin(f6_time) == timerJoin() ? true : false;
+              if (check_f6) f_all_today += 1;
+            }
+          }
         }
       }
     }
@@ -1037,7 +1059,7 @@ const recharge = async (req, res) => {
     };
 
     if (type == "momo") {
-      const sql = `INSERT INTO recharge SET 
+      const sql = `INSERT INTO recharge SET
             id_order = ?,
             transaction_id = ?,
             phone = ?,
@@ -1091,7 +1113,7 @@ const recharge = async (req, res) => {
       );
 
       if (apiResponse.data.status == true) {
-        const sql = `INSERT INTO recharge SET 
+        const sql = `INSERT INTO recharge SET
                 id_order = ?,
                 transaction_id = ?,
                 phone = ?,
@@ -1252,7 +1274,7 @@ const addBank = async (req, res) => {
       [userInfo.phone],
     );
     if (user_bank.length == 0 && user_bank2.length == 0) {
-      const sql = `INSERT INTO user_bank SET 
+      const sql = `INSERT INTO user_bank SET
         phone = ?,
         name_bank = ?,
         name_user = ?,
@@ -1449,9 +1471,9 @@ const infoUserBank = async (req, res) => {
 
     const [claimRewards] = await connection.query(
       `
-         SELECT SUM(amount) AS totalClaimRewards 
-         FROM claimed_rewards 
-         WHERE phone = ? 
+         SELECT SUM(amount) AS totalClaimRewards
+         FROM claimed_rewards
+         WHERE phone = ?
          AND type IN (${rewardTypesString})
          ${betTimeInterval}
          `,
@@ -1497,16 +1519,16 @@ const infoUserBank = async (req, res) => {
 
       //added
     const [JilliApiGame] = await connection.query(
-        `SELECT 
-             COUNT(CASE WHEN betAmount > 0 THEN 1 END) AS jilliBetCount, 
+        `SELECT
+             COUNT(CASE WHEN betAmount > 0 THEN 1 END) AS jilliBetCount,
             SUM(betAmount) AS jilliTotalBetAmount
-         FROM 
-            jilliebethistory 
-         WHERE 
+         FROM
+            jilliebethistory
+         WHERE
             phone = ?`,
         [userInfo.phone]
       );
-      
+
       const jilliTotalBetAmount = JilliApiGame[0]?.jilliTotalBetAmount || 0.0;
 
     const totalLoss =
@@ -1522,7 +1544,12 @@ const infoUserBank = async (req, res) => {
       totalClaimRewards +
       giftCardTotalAmount -
       totalLoss;
+
+      console.log("calculation", calculation)
+
     const totalBetAmountRemaining = calculation < 0 ? 0 : calculation;
+
+    console.log("totalBetAmountRemaining", totalBetAmountRemaining)
     // console.log("lastRechargeId", lastRecharge[0].id)
     // const allowedWithdrawAmount = 1;
     const allowedWithdrawAmount = totalBetAmountRemaining;
@@ -1694,7 +1721,7 @@ const withdrawal3 = async (req, res) => {
             }
           } else {
             let infoBank = user_bank[0];
-            const sql = `INSERT INTO withdraw SET 
+            const sql = `INSERT INTO withdraw SET
                     id_order = ?,
                     phone = ?,
                     money = ?,
@@ -2214,38 +2241,39 @@ const constructTransactionsQuery = (
 ) => {
   const queries = {
     Bets: {
-      query: `SELECT id_product AS id, money, 'negative' AS type, 'Bet Charges' AS name, time FROM minutes_1 WHERE phone = ? AND time >= ?`,
+      query: `SELECT id_product AS id, money, 'negative' AS type, 'Bet Charges' AS name, time, NULL AS status FROM minutes_1 WHERE phone = ? AND time >= ?`,
       count: `SELECT COUNT(*) AS totalCount FROM minutes_1 WHERE phone = ? AND time >= ?`,
     },
     "Bet Win": {
-      query: `SELECT id_product AS id, get AS money, 'positive' AS type, 'Bet Win' AS name, time FROM minutes_1 WHERE phone = ? AND get > 0 AND time >= ?`,
+      query: `SELECT id_product AS id, get AS money, 'positive' AS type, 'Bet Win' AS name, time, NULL AS status FROM minutes_1 WHERE phone = ? AND get > 0 AND time >= ?`,
       count: `SELECT COUNT(*) AS totalCount FROM minutes_1 WHERE phone = ? AND get > 0 AND time >= ?`,
     },
     Recharge: {
-      query: `SELECT id_order AS id, money, 'positive' AS type, 'Recharge' AS name, time FROM recharge WHERE phone = ? AND status = 1 AND time >= ?`,
-      count: `SELECT COUNT(*) AS totalCount FROM recharge WHERE phone = ? AND status = 1 AND time >= ?`,
+      query: `SELECT id_order AS id, money, 'positive' AS type, 'Recharge' AS name, time, status FROM recharge WHERE phone = ? AND time >= ?`,
+      count: `SELECT COUNT(*) AS totalCount FROM recharge WHERE phone = ? AND time >= ?`,
     },
     Withdraw: {
-      query: `SELECT id_order AS id, money, 'negative' AS type, 'Withdraw' AS name, time FROM withdraw WHERE phone = ? AND status = 1 AND time >= ?`,
-      count: `SELECT COUNT(*) AS totalCount FROM withdraw WHERE phone = ? AND status = 1 AND time >= ?`,
+      query: `SELECT id_order AS id, money, 'negative' AS type, 'Withdraw' AS name, time, status FROM withdraw WHERE phone = ? AND time >= ?`,
+      count: `SELECT COUNT(*) AS totalCount FROM withdraw WHERE phone = ? AND time >= ?`,
     },
     Commissions: {
-      query: `SELECT commission_id AS id, SUM(money) AS money, 'positive' AS type, 'Commission' AS name, time FROM commissions WHERE phone = ? AND time >= ? GROUP BY time`,
+      query: `SELECT commission_id AS id, SUM(money) AS money, 'positive' AS type, 'Commission' AS name, time, NULL AS status FROM commissions WHERE phone = ? AND time >= ? GROUP BY time`,
       count: `SELECT COUNT(*) AS totalCount FROM (SELECT time FROM commissions WHERE phone = ? AND time >= ? GROUP BY time) AS grouped`,
     },
     "Gift Vouchers": {
-      query: `SELECT id_redenvelops AS id, money, 'positive' AS type, 'Red Envelopes' AS name, time FROM redenvelopes_used WHERE phone_used = ? AND time >= ?`,
+      query: `SELECT id_redenvelops AS id, money, 'positive' AS type, 'Red Envelopes' AS name, time, NULL AS status FROM redenvelopes_used WHERE phone_used = ? AND time >= ?`,
       count: `SELECT COUNT(*) AS totalCount FROM redenvelopes_used WHERE phone_used = ? AND time >= ?`,
     },
     Salary: {
-      query: `SELECT id, amount AS money, 'positive' AS type, CONCAT(type, ' Salary') AS name, time FROM salary WHERE phone = ? AND time >= ?`,
+      query: `SELECT id, amount AS money, 'positive' AS type, CONCAT(type, ' Salary') AS name, time, NULL AS status FROM salary WHERE phone = ? AND time >= ?`,
       count: `SELECT COUNT(*) AS totalCount FROM salary WHERE phone = ? AND time >= ?`,
     },
     "Claimed Rewards": {
-      query: `SELECT time AS id, amount AS money, 'positive' AS type, type AS name, time FROM claimed_rewards WHERE phone = ? AND time >= ?`,
+      query: `SELECT time AS id, amount AS money, 'positive' AS type, type AS name, time, NULL AS status FROM claimed_rewards WHERE phone = ? AND time >= ?`,
       count: `SELECT COUNT(*) AS totalCount FROM claimed_rewards WHERE phone = ? AND time >= ?`,
     },
   };
+
 
   if (filterType === "All") {
     // Construct combined queries and total count queries

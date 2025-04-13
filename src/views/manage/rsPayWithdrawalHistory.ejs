@@ -503,18 +503,18 @@
               </td>
               <td class="project-state">
               <span class="badge badge-warning">
-                ${data?.status === 0 && data?.rs_pay_status === 1
+                ${data?.status === 0
                 ? "Pending..."
-                : data?.status === 1 && data?.rs_pay_status === 1
+                : data?.status === 1
                   ? "Success"
                   : "Rejected"}
               </span>
             </td>
 
-           <td class="project-actions text-center" style="min-width: 160px;">
-                <!-- <button class="btn btn-sm confirm-rspay-withdrawal-btn mb-2 mt-2" style="background-color: blue; color: white;" data="${data.id}">Rs pay withdrawal</button> --!>
+             <!-- <td class="project-actions text-center" style="min-width: 160px;">
+                 <button class="btn btn-sm confirm-rspay-withdrawal-btn mb-2 mt-2" style="background-color: blue; color: white;" data="${data.id}">Rs pay withdrawal</button>
                 <button class="btn btn-success btn-sm confirm-btn" data="${data.id}"><i class="fa fa-check-circle"></i></button>
-                <button class="btn btn-danger btn-sm delete-btn" data="${data.id}"><i class="fas fa-times-circle"></i></button>
+                <button class="btn btn-danger btn-sm delete-btn" data="${data.id}"><i class="fas fa-times-circle"></i></button> --!>
               </td>
             </tr>`;
           }).join("")

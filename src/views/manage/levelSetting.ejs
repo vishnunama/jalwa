@@ -58,12 +58,16 @@
                     <th class="text-center">F2</th>
                     <th class="text-center">F3</th>
                     <th class="text-center">F4</th>
+                    <th class="text-center">F5</th>
+                    <th class="text-center">F6</th>
                     <th class="text-center">Update</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
+                    <td><input type="text" value="0"></td>
+                    <td><input type="text" value="0"></td>
                     <td><input type="text" value="0"></td>
                     <td><input type="text" value="0"></td>
                     <td><input type="text" value="0"></td>
@@ -116,6 +120,8 @@
               '<td class="text-center"><input type="text" name = "f2" value="' + item.f2 + '"></td>' +
               '<td class="text-center"><input type="text" name = "f3" value="' + item.f3 + '"></td>' +
               '<td class="text-center"><input type="text" name = "f4" value="' + item.f4 + '"></td>' +
+              '<td class="text-center"><input type="text" name = "f5" value="' + item.f5 + '"></td>' +
+              '<td class="text-center"><input type="text" name = "f6" value="' + item.f6 + '"></td>' +
               '<td class="text-center"><a class="btn btn-success btn-sm confirm-btn" href="" data-id="' + item.id + '"><i class="fa-solid fa-arrows-rotate"></i></a></td>' +
               // Add more columns as needed
               '</tr>';
@@ -143,6 +149,8 @@
       var f2 = row.find('input[name="f2"]').val();
       var f3 = row.find('input[name="f3"]').val();
       var f4 = row.find('input[name="f4"]').val();
+      var f5 = row.find('input[name="f5"]').val();
+      var f6 = row.find('input[name="f6"]').val();
 
       // Perform the update by making a POST request to the server
       $.ajax({
@@ -154,7 +162,9 @@
           f1: f1,
           f2: f2,
           f3: f3,
-          f4: f4
+          f4: f4,
+          f5: f5,
+          f6: f6
         },
         success: function (response) {
           // Handle success, for example, show a success message to the user

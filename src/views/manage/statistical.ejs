@@ -277,7 +277,7 @@
                 let loss = (response.loss) ? response.loss : 0;
                 let usersOffline = (response.usersOffline) ? response.usersOffline : 0;
                 let recharges = (response.recharges) ? response.recharges : 0;
-                let withdraws = (response.withdraws) ? response.withdraws : 0;
+                let withdraws = (response.withdraws) ? response.withdraws * 93 : 0;
                 let rechargeToday = (response.rechargeToday) ? response.rechargeToday : 0;
                 let withdrawToday = (response.withdrawToday) ? response.withdrawToday : 0;
                 $('.totalMember').text((usersOnline));

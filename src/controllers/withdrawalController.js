@@ -268,6 +268,7 @@ const createWithdrawalRequest = async (req, res) => {
     let AllowedWithdrawAmount = req.body.AllowedWithdrawAmount || false;
     let totalBetAmountRemaining = req.body.totalBetAmountRemaining || 0;
 
+    console.log("amount", amount)
     if (!withdrawalMethod) {
       return res.status(400).json({
         message: "Please select the Withdrawal Method of your choice!",
@@ -330,7 +331,7 @@ const createWithdrawalRequest = async (req, res) => {
     let actualAmount =
       withdrawalMethod === WITHDRAWAL_METHODS_MAP.BANK_CARD
         ? parseInt(amount)
-        : parseInt(amount) * parseInt(process.env.USDT_INR_EXCHANGE_RATE);
+        : parseFloat(amount) * parseFloat(process.env.USDT_INR_EXCHANGE_RATE);
 
     if (amount < minimumMoneyAllowed) {
       return res.status(400).json({
@@ -340,7 +341,7 @@ const createWithdrawalRequest = async (req, res) => {
       });
     }
 
-    if (Number(user.money) < Number(actualAmount)) {
+    if (parseFloat(user.money) < parseFloat(actualAmount)) {
       return res.status(400).json({
         message: "The balance is not enough to fulfill the request",
         status: false,
@@ -348,17 +349,57 @@ const createWithdrawalRequest = async (req, res) => {
       });
     }
 
-    // const totalBettingAmount = await gamesDB.getTotalBettingAmount({ userPhoneNumber: user.phone })
-    // const totalDepositAmount = await depositDB.getTotalDeposit({ userPhoneNumber: user.phone })
-    // const result = totalDepositAmount - totalBettingAmount > 0 ? totalDepositAmount - totalBettingAmount : 0
-
-    if (AllowedWithdrawAmount && user?.isDemo == "0") {
-      return res.status(400).json({
-        message: "You must bet ₹ " + totalBetAmountRemaining + " to withdraw",
-        status: false,
-        timeStamp: timeNow,
-      });
+    function formateT(params) {
+      let result = params < 10 ? "0" + params : params;
+      return result;
     }
+
+    function timerJoin(params = "", addHours = 0) {
+      let date = "";
+      if (params) {
+        date = new Date(Number(params));
+      } else {
+        date = new Date();
+      }
+
+      date.setHours(date.getHours() + addHours);
+
+      let years = formateT(date.getFullYear());
+      let months = formateT(date.getMonth() + 1);
+      let days = formateT(date.getDate());
+
+      let hours = date.getHours() % 12;
+      hours = hours === 0 ? 12 : hours;
+      let ampm = date.getHours() < 12 ? "AM" : "PM";
+
+      let minutes = formateT(date.getMinutes());
+      let seconds = formateT(date.getSeconds());
+
+      return (
+        years +
+        "-" +
+        months +
+        "-" +
+        days
+
+      );
+    }
+    let dates = new Date().getTime();
+    let checkTime = timerJoin(dates);
+    const [withdraw] = await connection.query(
+      "SELECT * FROM withdraw WHERE (status = 1 OR status = 0) AND phone = ? AND DATE(today) = ?",
+      [user.phone, checkTime]
+   );
+
+
+
+      if (withdraw.length >= 6) {
+        return res.status(200).json({
+          message: "You can only make 5 withdrawals per day",
+          status: false,
+          timeStamp: timeNow,
+        });
+      }
 
     if (withdrawalMethod === WITHDRAWAL_METHODS_MAP.BANK_CARD) {
       const withd = await connection.query(
@@ -369,6 +410,7 @@ const createWithdrawalRequest = async (req, res) => {
 
 
       await withdrawDB.createBankCardWithdrawalRequest({
+        userId: user.id_user,
         userPhoneNumber: user.phone,
         bankName: account.bankName,
         recipientName: account.recipientName,
@@ -386,6 +428,8 @@ const createWithdrawalRequest = async (req, res) => {
       });
     }
 
+    console.log(actualAmount, amount)
+
     if (withdrawalMethod === WITHDRAWAL_METHODS_MAP.USDT_ADDRESS) {
       const withd = await connection.query(
         "UPDATE users SET money = money - ?, total_money = total_money - ? WHERE `phone` = ? AND money >= ?",
@@ -395,6 +439,7 @@ const createWithdrawalRequest = async (req, res) => {
       console.log(withd);
 
       withdrawDB.createUSDTWithdrawalRequest({
+        userId: user.id_user,
         userPhoneNumber: user.phone,
         mainNetwork: account.mainNetwork,
         usdtAddress: account.usdtAddress,
@@ -589,7 +634,7 @@ const approveOrDenyWithdrawalRequest = async (req, res) => {
 // helpers ---------------
 const getUserDataByAuthToken = async (authToken) => {
   let [users] = await connection.query(
-    "SELECT `isDemo`, `phone`, `code`,`name_user`,`invite`,`money` FROM users WHERE `token` = ? ",
+    "SELECT `id_user`, `isDemo`, `phone`, `code`,`name_user`,`invite`,`money` FROM users WHERE `token` = ? ",
     [authToken],
   );
   const user = users?.[0];
@@ -605,6 +650,7 @@ const getUserDataByAuthToken = async (authToken) => {
     invite: user.invite,
     money: user.money,
     isDemo: user.isDemo,
+    id_user: user.id_user,
   };
 };
 
@@ -917,7 +963,7 @@ const withdrawDB = {
             [userPhoneNumber, status]
           )
         : await connection.query(
-            "SELECT * FROM withdraw WHERE `status` = ? AND rs_pay_status = '0' ORDER BY `time` DESC",
+            "SELECT * FROM withdraw WHERE `status` = ? ORDER BY `time` DESC",
             [status]
           );
 
@@ -934,6 +980,7 @@ const withdrawDB = {
           return {
             id: item.id,
             orderId: item.id_order,
+            userId: item.userId,
             phoneNumber: item.phone,
             status: item.status,
             bankName: item.name_bank,
@@ -951,6 +998,7 @@ const withdrawDB = {
           return {
             id: item.id,
             orderId: item.id_order,
+            userId: item.userId,
             phoneNumber: item.phone,
             status: item.status,
             mainNetwork: item.name_bank,
@@ -966,6 +1014,7 @@ const withdrawDB = {
           return {
             id: item.id,
             orderId: item.id_order,
+            userId: item.userId,
             phoneNumber: item.phone,
             status: item.status,
             bankName: item.name_bank,
@@ -996,7 +1045,7 @@ const withdrawDB = {
             [userPhoneNumber, status]
           )
         : await connection.query(
-            "SELECT * FROM withdraw WHERE `status` = ? AND rs_pay_status = '1' ORDER BY `time` DESC",
+            "SELECT * FROM withdraw WHERE `status` = ? ORDER BY `time` DESC",
             [status]
           );
 
@@ -1025,7 +1074,6 @@ const withdrawDB = {
             today: item.today,
             amount: item.money,
             remarks: item.remarks,
-            rs_pay_status: item.rs_pay_status
           };
         } else if (item.tp === WITHDRAWAL_METHODS_MAP.USDT_ADDRESS) {
           return {
@@ -1064,6 +1112,7 @@ const withdrawDB = {
     };
   },
   async createUSDTWithdrawalRequest({
+    userId,
     userPhoneNumber,
     mainNetwork,
     usdtAddress,
@@ -1075,15 +1124,16 @@ const withdrawDB = {
     const type = WITHDRAWAL_METHODS_MAP.USDT_ADDRESS;
     if(user?.isDemo){
       await connection.query(
-        `INSERT INTO withdraw SET id_order = '${getOrderId()}', phone = '${userPhoneNumber}', name_bank = '${mainNetwork}', stk = '${usdtAddress}', sdt = '${addressAlias}', tp = '${type}', time = '${time}', status = 1, today = '${getTodayString()}', money = '${amount}'`,
+        `INSERT INTO withdraw SET id_order = '${getOrderId()}', userId = '${userId}', phone = '${userPhoneNumber}', name_bank = '${mainNetwork}', stk = '${usdtAddress}', sdt = '${addressAlias}', tp = '${type}', time = '${time}', status = 1, today = '${getTodayString()}', money = '${amount}'`,
       );
     }else{
       await connection.query(
-        `INSERT INTO withdraw SET id_order = '${getOrderId()}', phone = '${userPhoneNumber}', name_bank = '${mainNetwork}', stk = '${usdtAddress}', sdt = '${addressAlias}', tp = '${type}', time = '${time}', today = '${getTodayString()}', money = '${amount}'`,
+        `INSERT INTO withdraw SET id_order = '${getOrderId()}',  userId = '${userId}', phone = '${userPhoneNumber}', name_bank = '${mainNetwork}', stk = '${usdtAddress}', sdt = '${addressAlias}', tp = '${type}', time = '${time}', today = '${getTodayString()}', money = '${amount}'`,
       );
     }
   },
   async createBankCardWithdrawalRequest({
+    userId,
     userPhoneNumber,
     bankName,
     recipientName,
@@ -1097,11 +1147,11 @@ const withdrawDB = {
     const type = WITHDRAWAL_METHODS_MAP.BANK_CARD;
     if(user?.isDemo){
       await connection.query(
-        `INSERT INTO withdraw SET id_order = '${getOrderId()}', phone = '${userPhoneNumber}', name_bank = '${bankName}', name_user = '${recipientName}', stk = '${bankAccountNumber}', ifsc = '${IFSC}', sdt = '${upiId}', tp = '${type}', time = '${time}', status = 1, today = '${getTodayString()}', money = '${amount}'`,
+        `INSERT INTO withdraw SET id_order = '${getOrderId()}',  userId = '${userId}', phone = '${userPhoneNumber}', name_bank = '${bankName}', name_user = '${recipientName}', stk = '${bankAccountNumber}', ifsc = '${IFSC}', sdt = '${upiId}', tp = '${type}', time = '${time}', status = 1, today = '${getTodayString()}', money = '${amount}'`,
       );
     }else{
       await connection.query(
-        `INSERT INTO withdraw SET id_order = '${getOrderId()}', phone = '${userPhoneNumber}', name_bank = '${bankName}', name_user = '${recipientName}', stk = '${bankAccountNumber}', ifsc = '${IFSC}', sdt = '${upiId}', tp = '${type}', time = '${time}', today = '${getTodayString()}', money = '${amount}'`,
+        `INSERT INTO withdraw SET id_order = '${getOrderId()}',  userId = '${userId}', phone = '${userPhoneNumber}', name_bank = '${bankName}', name_user = '${recipientName}', stk = '${bankAccountNumber}', ifsc = '${IFSC}', sdt = '${upiId}', tp = '${type}', time = '${time}', today = '${getTodayString()}', money = '${amount}'`,
       );
     }
   },
@@ -1148,7 +1198,77 @@ const depositDB = {
   },
 };
 
+const adminGetUSDTAddressInfo = async (req, res) => {
+  let timeNow = Date.now();
+  try {
+
+    console.log(req.query.phone)
+
+    let [users] = await connection.query(
+      "SELECT `phone`, `code`,`name_user`,`invite`,`money` FROM users WHERE `phone` = ? ",
+      [req.query.phone],
+    );
+
+    const account = await AccountDB.getUserUSDTAddress({
+      userPhoneNumber: users[0].phone,
+    });
+
+    return res.status(200).json({
+      account,
+      message: "Successfully fetched USDT Address",
+      status: true,
+      timeStamp: timeNow,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Something went wrong!",
+      status: false,
+      timeStamp: timeNow,
+    });
+  }
+};
+
+const adminUpdateUSDTAddress = async (req, res) => {
+  let timeNow = Date.now();
+  try {
+
+    let usdtAddress = req.query.usdtAddress;
+    let addressAlias = req.query.addressAlias;
+
+    if (!usdtAddress || !addressAlias) {
+      return res.status(400).json({
+        message: "Please fill the required fields",
+        status: false,
+        timeStamp: timeNow,
+      });
+    }
+
+    let time = new Date().getTime();
+    const type = WITHDRAWAL_METHODS_MAP.USDT_ADDRESS;
+
+    await connection.query(
+      `UPDATE user_bank SET stk = '${usdtAddress}', sdt = '${addressAlias}', time = '${time}' WHERE phone = '${req.query.phone}' AND tp = '${type}'`,
+    );
+
+      return res.status(200).json({
+        message: "Successfully USDT Address update",
+        status: true,
+        timeStamp: timeNow,
+      });
+
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Something went wrong!",
+      status: false,
+      timeStamp: timeNow,
+    });
+  }
+};
+
 const withdrawalController = {
+  adminGetUSDTAddressInfo,
   addBankCard,
   getBankCardInfo,
   addUSDTAddress,
@@ -1160,6 +1280,7 @@ const withdrawalController = {
   addBankCardPage,
   addUSDTAddressPage,
   selectBankPage,
+  adminUpdateUSDTAddress
 };
 
 export default withdrawalController;

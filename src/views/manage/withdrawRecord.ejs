@@ -51,7 +51,7 @@
             <table class="table table-striped projects" id="table1">
               <thead>
                 <tr>
-                  <th class="text-center">ID</th>
+                  <th class="text-center">Customer Id</th>
                   <th class="text-center">Account</th>
                   <th class="text-center">Bank</th>
                    <th class="text-center">UPI ID</th>
@@ -130,7 +130,7 @@
       params.map((data) => {
         html += `<tr class="text-center">
                   <td id="${data.id}">
-                    ${data.id}
+                    ${data?.userId}
                   </td>
                   <td>
                     <b>${data.phone}</b>
@@ -142,7 +142,7 @@
                     <b>${data.sdt}</b>
                   </td>
                   <td>
-                    <b>${(data.money)}</b>
+                    <b>${(data.money * 93).toFixed(2)}</b>
                   </td>
                   <td style="min-width: 190px;">
                     <b>${data.id_order}</b>

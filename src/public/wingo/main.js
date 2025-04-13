@@ -718,73 +718,99 @@ function initGameLogics({
     totalMoney();
   });
 
-  $(`#van-field-1-input`).off("change.input");
-  $(`#van-field-1-input`).on("change.input", function (e) {
+  // $(`#van-field-1-input`).off("change.input");
+  // $(`#van-field-1-input`).on("change.input", function (e) {
+  //   e.preventDefault();
+  //   const currentX = parseInt($("#van-field-1-input").val());
+
+  //   $(".Betting__Popup-body-x-btn").removeClass("bgcolor");
+  //   $(`.Betting__Popup-body-x-btn[data-x="${currentX}"]`).addClass("bgcolor");
+
+
+
+  //   totalMoney();
+  // });
+  $(`#van-field-1-input`).off("input.input");
+$(`#van-field-1-input`).on("input.input", function (e) {
     e.preventDefault();
-    const currentX = parseInt($("#van-field-1-input").val());
+    const currentX = parseInt($(this).val());
 
     $(".Betting__Popup-body-x-btn").removeClass("bgcolor");
     $(`.Betting__Popup-body-x-btn[data-x="${currentX}"]`).addClass("bgcolor");
 
     totalMoney();
+});
+
+
+$("#join_bet_btn").off("click.join_btn");
+$("#join_bet_btn").on("click.join_btn", function (event) {
+  event.preventDefault();
+  let join = $(this).attr("data-join");
+  const currentX = parseInt($("#van-field-1-input").val().trim());
+  let money = $(".Betting__Popup-body-money-main").attr("data-current-money");
+
+  if (!join || !currentX || !money) {
+    return;
+  }
+
+  $(this).addClass("block-click");
+  $.ajax({
+    type: "POST",
+    url: "/api/webapi/action/join",
+    data: {
+      typeid: GAME_TYPE_ID,
+      join: join,
+      x: currentX,
+      money: money,
+    },
+    dataType: "json",
+    success: function (response) {
+      alertMessage(response.message);
+      if (response.status === false) return;
+      $("#balance_amount").text(`₹ ${formatIndianNumber(response.money)} `);
+      $("#bonus_balance_amount").text(
+        `₹ ${formatIndianNumber(response.bonus_money)} `,
+      );
+
+      initMyBets();
+
+      socket.emit("data-server_2", {
+        money: currentX * money,
+        join,
+        time: Date.now(),
+        change: response.change,
+      });
+
+      // Reset only the bet number and set amount back to 1
+      $("#van-field-1-input").val("");
+      $(".Betting__Popup-body-money-main").attr("data-current-money", "1");
+      $(".Betting__Popup-body-line-item").removeClass("bgcolor");
+      $(".Betting__Popup-body-line-item[data-money='1']").addClass("bgcolor");
+    },
   });
 
-  $("#join_bet_btn").off("click.join_btn");
-  $("#join_bet_btn").on("click.join_btn", function (event) {
-    event.preventDefault();
-    let join = $(this).attr("data-join");
-    const currentX = parseInt($("#van-field-1-input").val().trim());
-    let money = $(".Betting__Popup-body-money-main").attr("data-current-money");
-
-    if (!join || !currentX || !money) {
-      return;
-    }
-
-    $(this).addClass("block-click");
-    $.ajax({
-      type: "POST",
-      url: "/api/webapi/action/join",
-      data: {
-        typeid: GAME_TYPE_ID,
-        join: join,
-        x: currentX,
-        money: money,
-      },
-      dataType: "json",
-      success: function (response) {
-        alertMessage(response.message);
-        if (response.status === false) return;
-        $("#balance_amount").text(`₹ ${formatIndianNumber(response.money)} `);
-        $("#bonus_balance_amount").text(
-          `₹ ${formatIndianNumber(response.bonus_money)} `,
-        );
-
-        initMyBets();
-
-        socket.emit("data-server_2", {
-          money: currentX * money,
-          join,
-          time: Date.now(),
-          change: response.change,
-        });
-      },
-    });
-
-    setTimeout(() => {
-      $(".van-overlay").fadeOut();
-      $(".popup-join").fadeOut();
-      $("#join_bet_btn").removeClass("block-click");
-    }, 500);
-  });
-
-  $("#cancel_bet_btn").off("click.cancel_btn");
-  $("#cancel_bet_btn").on("click.cancel_btn", function (event) {
-    event.preventDefault();
-
+  setTimeout(() => {
     $(".van-overlay").fadeOut();
     $(".popup-join").fadeOut();
     $("#join_bet_btn").removeClass("block-click");
-  });
+  }, 500);
+});
+
+$("#cancel_bet_btn").off("click.cancel_btn");
+$("#cancel_bet_btn").on("click.cancel_btn", function (event) {
+  event.preventDefault();
+
+  $(".van-overlay").fadeOut();
+  $(".popup-join").fadeOut();
+  $("#join_bet_btn").removeClass("block-click");
+
+  // Reset only the bet number and set amount back to 1
+  $("#van-field-1-input").val("");
+  $(".Betting__Popup-body-money-main").attr("data-current-money", "1");
+  $(".Betting__Popup-body-line-item").removeClass("bgcolor");
+  $(".Betting__Popup-body-line-item[data-money='1']").addClass("bgcolor");
+});
+
 
   //main button events
 

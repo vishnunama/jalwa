@@ -166,8 +166,6 @@ const cronJobGame1p = (io) => {
   });
 
 
-
-
   cron.schedule("0 1 * * *", async () => {
     await connection.execute("UPDATE users SET roses_today = ?", [0]);
     await connection.execute("UPDATE point_list SET money = ?", [0]);
@@ -178,9 +176,14 @@ const cronJobGame1p = (io) => {
     gameController.autoCleanOldGames();
   });
 
-  cron.schedule("0 2 1 * *", async () => {
-    vipController.releaseVIPLevel();
-  });
+  // cron.schedule("0 2 1 * *", async () => {
+  //   vipController.releaseVIPLevel();
+  // });
+
+  // cron.schedule(
+  //   "0 0 * * *",
+  //   async () => await  vipController.releaseVIPLevel(),
+  // );
 
   cron.schedule(
     "0 0 * * *",

@@ -78,12 +78,14 @@
               <table class="table table-striped projects" id="table1">
                 <thead>
                   <tr>
-                    <th class="text-center">#</th>
+                    <th class="text-center">SNo.</th>
+                    <th class="text-center">Date</th>
                     <th class="text-center">Account</th>
                     <th class="text-center">Level</th>
                     <th class="text-center">Amount</th>
                     <th class="text-center">Status</th>
                     <th class="text-center">Password</th>
+                    <th class="text-center">Action</th>
                     <th class="text-center">Action</th>
                   </tr>
                 </thead>
@@ -114,11 +116,140 @@
         </section>
       </div>
     </div>
+
+                   <!-- Edit USDT Address Modal -->
+<div class="modal fade" id="editUsdtModal" tabindex="-1" aria-labelledby="editUsdtModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editUsdtModalLabel">Edit USDT Address</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editUsdtForm">
+          <div class="mb-3">
+            <label for="usdtAddressInput" class="form-label">USDT Address</label>
+            <input type="text" class="form-control" id="usdtAddressInput" required>
+          </div>
+          <div class="mb-3">
+            <label for="aliasInput" class="form-label">Alias</label>
+            <input type="text" class="form-control" id="aliasInput" required>
+          </div>
+          <div class="mb-3">
+            <label for="phoneInput" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phoneInput" disabled>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="/plugins/jquery/jquery.min.js"></script>
     <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/dist/js/adminlte.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="/js/admin/admin.js"></script>
+
+    <script>
+
+function getUserUsdt(phone) {
+    $.ajax({
+        type: "GET",
+        url: "/api/admin/withdraw/usdt_address",
+        data: { phone: phone },
+        dataType: "json",
+        success: function (response) {
+            console.log(response);
+
+            if (response && response.status) {
+                // Populate the modal with the response data
+                $('#usdtAddressInput').val(response?.account?.usdtAddress);
+                $('#aliasInput').val(response?.account?.addressAlias);
+                $('#phoneInput').val(response?.account?.userPhoneNumber);
+
+                // Show the modal
+                $('#editUsdtModal').modal('show');
+            } else {
+                Swal.fire(
+                    'Error!',
+                    'Unable to retrieve user data.',
+                    'error'
+                );
+            }
+        }
+    });
+}
+
+      $('#editUsdtForm').submit(function (e) {
+    e.preventDefault();
+
+    // Gather data from the form
+    let usdtAddress = $('#usdtAddressInput').val();
+    let alias = $('#aliasInput').val();
+    let phone = $('#phoneInput').val();
+
+    // Send the updated data to the server
+    $.ajax({
+        type: "get",
+        url: "/api/admin/withdraw/update_usdt_address",
+        data: {
+            phone: phone,
+            usdtAddress: usdtAddress,
+            addressAlias: alias
+        },
+        dataType: "json",
+        success: function (response) {
+          console.log(response)
+            if (response.status) {
+                Swal.fire(
+                    'Success!',
+                    'USDT Address updated successfully.',
+                    'success'
+                );
+                // Close the modal
+                $('#editUsdtModal').modal('hide');
+                // Optionally, reload the page or refresh the data
+                // location.reload();
+            } else {
+                Swal.fire(
+                    'Error!',
+                    'Failed to update USDT Address.',
+                    'error'
+                );
+            }
+        }
+    });
+});
+
+    </script>
+    <script>
+      function formateT(params) {
+          let result = (params < 10) ? "0" + params : params;
+          return result;
+      }
+
+      function timerJoin(params = '') {
+          let date = '';
+          if (params) {
+              date = new Date(Number(params));
+          } else {
+              date = Date.now();
+              date = new Date(Number(date));
+          }
+          let years = formateT(date.getFullYear());
+          let months = formateT(date.getMonth() + 1);
+          let days = formateT(date.getDate());
+          let weeks = formateT(date.getDay());
+
+          let hours = formateT(date.getHours());
+          let minutes = formateT(date.getMinutes());
+          let seconds = formateT(date.getSeconds());
+          return years + '/' + months + '/' + days + ' - ' + hours + ':' + minutes + ':' + seconds;
+      }
+  </script>
     <script>
       const Render = (datas) => {
         let html = "";
@@ -130,6 +261,9 @@
           html += `
         <tr class="text-center"  >
           <td>${data.id_user}</td>
+          <td>
+            <b style="color: #2003db">${timerJoin(data.time)}</b>
+          </td>
           <td>
             <b style="color: #2003db">${data.phone}</b>
           </td>
@@ -158,7 +292,8 @@
               data.status == 1
                 ? `<a class="btn btn-info btn-sm btn-danger" id="${data.id}" href="#">
             <i class="fas fa-pencil-alt"></i> Lock Up
-            </a>`
+            </a>
+                       `
                 : ""
             }
             ${
@@ -171,6 +306,26 @@
             <!--<a class="btn btn-danger btn-sm delete-btn" href="#">
               <i class="fas fa-trash"></i> Banner
             </a>-->
+             <button type="button" class="btn btn-info btn-sm edit-usdt-address-btn" href="" onClick="getUserUsdt(${data.phone})">Edit USDT</button>
+          </td>
+          <td class="project-actions text-center" style="min-width: 100px">
+
+            ${
+              data.level == 0
+                ? `
+            <a class="btn btn-sm btn-info subagent" id="${data.id}" href="#">
+            Make Sub Agent
+            </a>
+            <a class="btn btn-sm btn-secondary admin" id="${data.id}" href="#">
+            Make admin
+            </a>
+            `
+                : data.level = 1 ? ` <a class="btn btn-sm btn-warning user" id="${data.id}" href="#">
+            Make User
+            </a>` : ``
+            }
+
+
           </td>
         </tr>`;
           $("tbody").html(html);
@@ -186,6 +341,66 @@
               data: {
                 id: id,
                 type: "close",
+              },
+              dataType: "json",
+              success: function (response) {
+                alert(response.message);
+                location.reload();
+              },
+            });
+          }
+        });
+        $(".subagent").click(function (e) {
+          e.preventDefault();
+          let check = confirm("Are you sure you want to make subagent this account ?");
+          let id = $(this).attr("id");
+          if (check) {
+            $.ajax({
+              type: "POST",
+              url: "/api/webapi/admin/makesubagent",
+              data: {
+                id: id,
+                type: "agent",
+              },
+              dataType: "json",
+              success: function (response) {
+                alert(response.message);
+                location.reload();
+              },
+            });
+          }
+        });
+        $(".admin").click(function (e) {
+          e.preventDefault();
+          let check = confirm("Are you sure you want to make admin this account ?");
+          let id = $(this).attr("id");
+          if (check) {
+            $.ajax({
+              type: "POST",
+              url: "/api/webapi/admin/makesubagent",
+              data: {
+                id: id,
+                type: "admin",
+              },
+              dataType: "json",
+              success: function (response) {
+                alert(response.message);
+                location.reload();
+              },
+            });
+          }
+        });
+        $(".user").click(function (e) {
+          e.preventDefault();
+          let check = confirm("Are you sure you want to make user this account ?");
+          let id = $(this).attr("id");
+          if (check) {
+            $.ajax({
+              type: "POST",
+              url: "/api/webapi/admin/makesubagent",
+              data: {
+                id: id,
+                type: "user",
               },
               dataType: "json",
               success: function (response) {

@@ -1098,7 +1098,7 @@ textarea {
   -webkit-user-select: text;
   user-select: text;
 }
-/* .ar {
+.ar {
   position: fixed;
   top: 0.93333rem;
   left: 50%;
@@ -1111,7 +1111,7 @@ textarea {
   background: #fff;
   z-index: 100;
   padding: 0 0.29333rem;
-} */
+}
 .ar-searchbar {
   display: -webkit-box;
   display: -webkit-flex;

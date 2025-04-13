@@ -1646,7 +1646,7 @@ html:lang(ar) .Recharge__container-intro__lists .item p[data-v-7cba6004]:after {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  background: url(https://okwin.bio/assets/svg/ArPayBackground-8c36eecc.svg) no-repeat center
+  background: url(/assets/svg/ArPayBackground-8c36eecc.svg) no-repeat center
     center;
   background-size: cover;
   width: -webkit-fit-content;
@@ -1664,7 +1664,7 @@ html:lang(ar) .Recharge__container-intro__lists .item p[data-v-7cba6004]:after {
   display: block;
   width: 0.29333rem;
   height: 0.29333rem;
-  background: url(https://okwin.bio/assets/svg/Ar_Gift-f96ba611.svg) no-repeat center center;
+  background: url(/assets/svg/Ar_Gift-f96ba611.svg) no-repeat center center;
   background-size: cover;
   margin-right: 0.13333rem;
 }

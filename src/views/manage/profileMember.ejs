@@ -59,16 +59,24 @@
 
                                             <ul class="list-group list-group-unbordered mb-3">
                                                 <li class="list-group-item">
-                                                    <b>Surplus</b> <a class="float-right"
+                                                    <b>Wallet Balance</b> <a class="float-right"
                                                        id="money">0</a>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <b>Total charge</b> <a class="float-right"
+                                                    <b>Total Recharge</b> <a class="float-right"
                                                        id="total_money">0</a>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <b>Total draw</b> <a class="float-right"
+                                                    <b>Today Recharge</b> <a class="float-right"
+                                                       id="today_recharge">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Total Withdraw</b> <a class="float-right"
                                                        id="total_withdraw">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Today Withdraw</b> <a class="float-right"
+                                                       id="today_withdrawal">0</a>
                                                 </li>
                                                 <li class="list-group-item">
                                                     <b>Total commission</b> <a class="float-right"
@@ -77,6 +85,18 @@
                                                 <li class="list-group-item">
                                                     <b>Roses today</b> <a class="float-right"
                                                        id="roses_today">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Today gift code </b> <a class="float-right" id="today_gift_code">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Total gift code</b> <a class="float-right" id="total_gift_code">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Today salary</b> <a class="float-right" id="today_salary">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>total salary</b> <a class="float-right" id="total_salary">0</a>
                                                 </li>
                                                 <li class="list-group-item">
                                                     <b>F1</b> <a class="float-right"
@@ -93,6 +113,14 @@
                                                 <li class="list-group-item">
                                                     <b>F4</b> <a class="float-right"
                                                        id="f4">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>F5</b> <a class="float-right"
+                                                       id="f5">0</a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>F6</b> <a class="float-right"
+                                                       id="f6">0</a>
                                                 </li>
                                                 <li class="list-group-item">
                                                     <b>General invitation</b> <a class="float-right"
@@ -130,10 +158,7 @@
                                     <!-- About Me Box -->
                                     <div class="card card-primary">
                                         <div class="card-header">
-                                            <div class="d-flex justify-content-between">
-                                                <h3 class="card-title">Bank information</h3>
-                                                <i class="fas fa-pencil-alt mr-1" onclick="editBankDetails()"></i>
-                                            </div>
+                                            <h3 class="card-title">Bank information</h3>
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body">
@@ -206,95 +231,12 @@
                         </div>
                     </section>
                 </div>
-                <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content" style="border-radius: 20px;">
-                            <div class="modal-header">
-                                <h5 class="modal-title text-dark" id="popupModalLabel">Update Account Details</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mt-2">
-                                        <label for="name" class="form-label" style="font-weight: 600;"> Account Holder Name</label>
-                                        <input type="text" class="form-control" id="accountHolderName" placeholder="" style="border-radius: 8px;">
-                                    </div>
-                                    <div class="mt-2">
-                                        <label for="name" class="form-label" style="font-weight: 600;"> Bank  Name</label>
-                                        <input type="text" class="form-control" id="bankName" placeholder="" style="border-radius: 8px;">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="name" class="form-label" style="font-weight: 600;"> Account Number</label>
-                                        <input type="text" class="form-control" id="accountNumber" placeholder="" style="border-radius: 8px;">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="name" class="form-label" style="font-weight: 600;"> IFSC Code</label>
-                                        <input type="text" class="form-control" id="ifscCode" placeholder="" style="border-radius: 8px;">
-                                    </div>
-                                   
-                                    <div class="mb-2">
-                                        <label for="phoneNo" class="form-label" style="font-weight: 600;">UPI Id</label>
-                                        <input type="text" class="form-control" id="upiId" placeholder="" style="border-radius: 8px;">
-                                    </div>
-                                    <div class="mb-4 d-none">
-                                        <label for="phoneNo" class="form-label" style="font-weight: 600;"></i> Phone no</label>
-                                        <input type="number" class="form-control" id="phoneNo" placeholder="Enter your phone no" style="border-radius: 8px;">
-                                    </div>
-            
-                                    <button type="submit" class="btn w-100 text-white btn-primary"">
-                                        Update
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
         </div>
         <script src="/plugins/jquery/jquery.min.js"></script>
         <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="/dist/js/adminlte.min.js"></script>
         <script src="/js/admin/admin.js"></script>
-
-
         <script>
-            $(document).ready(function () {
-                $("#popupModal form").submit(function (event) {
-                    event.preventDefault(); // Prevent form default submission
-        
-                    let url = window.location.pathname;
-                    let phones = url.split('/');
-                    let phone = phones[phones.length - 1];
-        
-                    $.ajax({
-                        type: "POST",
-                        url: `/api/webapi/admin/member/updateBank/${phone}`, // Replacing :phone dynamically
-                        data: {
-                            phone: $("#phoneNo").val(), 
-                            name_bank: $("#bankName").val(),
-                            name_user: $("#accountHolderName").val(),
-                            stk: $("#accountNumber").val(),
-                            email: $("#ifscCode").val(),
-                            sdt: $("#upiId").val()
-                        },
-                        dataType: "json",
-                        success: function (response) {
-                            alert("Account details updated successfully!");
-                            $("#popupModal").modal('hide'); // Hide modal on success
-                        },
-                        error: function () {
-                            alert("Failed to update account details. Please try again.");
-                        }
-                    });
-                });
-            });
-        </script>
-        
-        <script>
-
-function editBankDetails(){
-            var myModal = new bootstrap.Modal(document.getElementById('popupModal'));
-            myModal.show();
-        }
 
             function formateT(params) {
                 let result = (params < 10) ? "0" + params : params;
@@ -339,43 +281,44 @@ function editBankDetails(){
                 dataType: "json",
                 success: function (response) {
                     if (response.status === false) return false;
-                    let user = response.datas[0];
+                    let user = response?.datas[0];
                     // user
                     $('.profile-username').text(user?.name_user);
                     $('#telegram').text(response?.telegram?.telegram);
                     $('#telegram').attr('href', response?.telegram?.telegram);
                     $('#id_user').text("ID: " + user?.id_user);
-                    $('#money').text(user?.money + ".0");
-                    $('#roses_all').text(user?.roses_f + user?.roses_f1 + '.0');
-                    $('#roses_today').text(user?.roses_today + '.0');
-                    $('#invite').text(response?.ng_moi?.phone);
+                    $('#money').text(user?.money );
+                    $('#roses_all').text(user?.roses_f + user?.roses_f1);
+                    $('#roses_today').text(user?.roses_today );
+                    $('#invite').text(response?.ng_moi.phone);
                     $('#daily').text(response?.daily);
+                    $('#today_gift_code').text(response?.today_gift_code || 0);
+                    $('#total_gift_code').text(response?.total_gift_code || 0);
+                    $('#today_salary').text(response?.today_salary || 0);
+                    $('#total_salary').text(response?.total_salary || 0);
+                    $('#today_recharge').text(response?.today_recharge || 0);
+                    $('#today_withdrawal').text((response?.today_withdrawal * 93).toFixed(2) || 0);
+
 
                     $('#f1').text(response?.f1 + " member");
                     $('#f2').text(response?.f2 + " member");
                     $('#f3').text(response?.f3 + " member");
                     $('#f4').text(response?.f4 + " member");
+                    $('#f5').text(response?.f5 + " member");
+                    $('#f6').text(response?.f6 + " member");
                     $('#total_mem').text(response?.f1 + response?.f2 + response?.f3 + response?.f4);
                     $('#ip').text(user?.ip_address);
                     $('#level').text((user?.level == 1) ? 'ADMIN' : (user?.level == 2) ? "CTV" : "USER");
 
                     $('#total_money').text((response?.total_r[0]?.total) ? response?.total_r[0]?.total : '0.0');
-                    $('#total_withdraw').text((response?.total_w[0]?.total) ? response?.total_w[0]?.total : '0.0');
+                    $('#total_withdraw').text((response?.total_w[0]?.total) ? (response?.total_w[0]?.total * 93).toFixed(2) : '0.0');
 
                     // bank
                     if (response?.bank_user[0]) {
-                        console.log(response?.bank_user[0])
                         $('#name').text(response?.bank_user[0]?.name_user);
                         $('#stk').text(response?.bank_user[0]?.stk);
                         $('#location').text(response?.bank_user[0]?.tinh + " - " + response?.bank_user[0]?.tp);
                         $('#timeAddBank').text((response?.bank_user[0]?.today));
-
-                        $('#accountHolderName').val(response.bank_user[0].name_user);
-                        $('#accountNumber').val(response.bank_user[0].stk);
-                        $('#bankName').val(response.bank_user[0].name_bank);
-                        $('#ifscCode').val(response.bank_user[0].email);
-                        $('#upiId').val((response.bank_user[0].sdt));
-                        $('#phoneNo').val((response.bank_user[0].phone));
                     }
                 }
             });
@@ -398,10 +341,10 @@ function editBankDetails(){
                         `
                 <tr class="text-center"  >
                     <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.id_order}</td>
-                    <td><b style="color: #3498db">${(data.money)}</b></td>
+                    <td><b style="color: #3498db">${(data.money * 93).toFixed(2)}</b></td>
                     <td style="min-width: 210px;"><b>${data.name_bank}</b></td>
-                    <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : data.status == '2'  ? 'danger' : 'warning')}">${(data.status == '1' ? 'success' : data.status == '2' ? 'Refund' : "Pending")}</span></td>
-                    <td style="min-width: 210px;"><b>${(data.today)}</b></td>
+                    <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : 'danger')}">${(data.status == '1' ? 'success' : 'closed')}</span></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
                 `;
                 });
@@ -491,11 +434,11 @@ function editBankDetails(){
                     html +=
                         `
                 <tr class="text-center"  >
-                    <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.transaction_id}</td>
+                    <td style="color: #e74c3c;font-weight: 600;min-width: 210px">${data.id_order}</td>
                     <td><b style="color: #3498db">${(data.money)}</b></td>
                     <td style="min-width: 210px;"><b>${(data.type)}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : 'warning')}">${(data.status == '1' ? 'success' : 'closed')}</span></td>
-                    <td style="min-width: 210px;"><b>${(data.today)}</b></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
                 `;
                 });
@@ -589,7 +532,7 @@ function editBankDetails(){
                     <td><b style="color: #3498db">${(data.money)}</b></td>
                     <td style="min-width: 210px;"><b>${data.id_redenvelops}</b></td>
                     <td class="project-state"><span class="badge badge-success">success</span></td>
-                    <td style="min-width: 210px;"><b>${(data.today)}</b></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
                 `;
                 });
@@ -690,7 +633,7 @@ function editBankDetails(){
                     <td><b style="color: #3498db">${(data.status == 1) ? "+" : "-"} ${(data.money)}</b></td>
                     <td style="min-width: 210px;"><b>${(data.game.toUpperCase())}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.status == '1' ? 'success' : 'danger')}">${(data.status == '1' ? 'win' : 'loss')}</span></td>
-                    <td style="min-width: 210px;"><b>${(data.today)}</b></td>
+                    <td style="min-width: 210px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
                 `;
                 });
@@ -724,7 +667,7 @@ function editBankDetails(){
                     } else {
                         statusText = parseFloat(data.withdrawal_amount) > 0 ? 'loss' : 'win';
                         statusClass = statusText === 'win' ? 'success' : 'danger';
-                        formattedTime = timerJoin(data.today); // Format the date
+                        formattedTime = timerJoin(data.time); // Format the date
                         netResult = (parseFloat(data.withdrawal_amount) > 0 ? "-" : "+") + data.withdrawal_amount;
                         gameName = data.game.toUpperCase();
                     }
@@ -766,8 +709,8 @@ function editBankDetails(){
                 },
                 dataType: "json",
                 success: function (response) {
-                    $('#text-bet').text(page3 + ' / ' + response.page_total);
-                    if (response.status === true) return RenderBet(response.datas);
+                    $('#text-bet').text(page3 + ' / ' + response?.page_total);
+                    if (response.status === true) return RenderBet(response?.datas);
                 },
             });
 

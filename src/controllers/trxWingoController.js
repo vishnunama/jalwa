@@ -708,11 +708,9 @@ const addTrxWingo = async (game) => {
           method: "GET",
           url: "https://apilist.tronscanapi.com/api/block?sort=-balance&start=0&limit=20&producer=&number=&start_timestamp=&end_timestamp=",
           headers: {
-            "TRON-PRO-API-KEY": process.env.TRON_API_KEY || "73cff0e0-bc72-4aef-8c14-1a84c99513d5",
+            "TRON-PRO-API-KEY": process.env.TRON_API_KEY || "79fc9422-f6ab-40d6-b8c6-1b5950bb7722",
           },
         });
-
-        // console.log(response.data.data)
 
 
         const NextBlock = response.data.data

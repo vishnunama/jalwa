@@ -227,8 +227,16 @@
                     <div class="card">
                         <div class="card-header text-center">
                             <div class="text-center">
-                                <input type="date" id="sort-date">
+                                <input class="form-control" type="date" id="sort-date">
                             </div>
+                            <!-- <br>
+                            <div class="text-center">
+                                <input class="form-control" type="number" id="userid-search" placeholder="id search">
+                            </div>
+                            <br>
+                            <div class="text-center">
+                               <button class="form-control " id="searchId" >Search</button>
+                            </div> -->
                         </div>
                     </div>
                 </section>
@@ -287,6 +295,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">ID</th>
+                                        <th class="text-center">Level</th>
                                         <th class="text-center">Account</th>
                                         <th class="text-center">Amount</th>
                                         <th class="text-center">Loaded</th>
@@ -307,7 +316,8 @@
                     <!-- Default box -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Recharge Today</h3>
+                            <h3 class="card-title">Recharge Today<strong style="color: #e74c3c" id="selectedDateRechargeTotal"></strong></h3>
+
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i class="fas fa-minus"></i>
@@ -317,11 +327,16 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <input type="text" id="searchByIdInput" placeholder="Enter User ID" class="form-control" />
+                            <small id="filteredRechargeTotal" style="color: #2ecc71; font-weight: 600;"></small>
+                        </div>
                         <div class="card-body p-0" style="display: block; overflow-y: hidden;">
                             <table class="table table-striped projects" id="table1">
                                 <thead>
                                     <tr>
                                         <th class="text-center">ID</th>
+                                        <th class="text-center">Level</th>
                                         <th class="text-center">Account</th>
                                         <th class="text-center">Amount</th>
                                         <th class="text-center">Status</th>
@@ -333,6 +348,8 @@
                                 </tbody>
                             </table>
                         </div>
+
+
                     </div>
                 </section>
 
@@ -341,7 +358,7 @@
                     <!-- Default box -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Withdraw Money Today</h3>
+                            <h3 class="card-title">Withdraw Money Today<strong style="color: #e74c3c" id="selectedDateWithdrawalTotal"></strong></h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i class="fas fa-minus"></i>
@@ -351,12 +368,17 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <input type="text" id="searchByWithdrawIdInput" placeholder="Enter User ID for withdrawal" class="form-control" />
+                            <small id="filteredWithdrawalTotal" style="color: #2ecc71; font-weight: 600;"></small>
+                        </div>                        
                         <div class="card-body p-0" style="display: block; overflow-y: hidden;">
                             <table class="table table-striped projects" id="table1">
                                 <thead>
                                     <tr>
                                         <th class="text-center">ID</th>
                                         <th class="text-center">Account</th>
+                                        <th class="text-center">Level</th>
                                         <th class="text-center">Amount</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Time</th>
@@ -454,67 +476,159 @@
                 html +=
                     `
                 <tr class="text-center"  >
-                    <td>${data.id_user}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #e74c3c">${(data.total_money)}</b></td>
-                    <td class="project-state"><span class="badge badge-${(data.total_money > 0 ? 'success' : 'warning')}">${(data.total_money > 0 ? 'success' : 'pending')}</span></td>
-                    <td style="min-width: 110px;"><b>${data.ip_address}</b></td>
-                    <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
+                    <td>${data?.id_user}</td>
+                    <td>${data?.u_level}</td>
+                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                    <td><b style="color: #e74c3c">${(data?.money)}</b></td>
+                    <td class="project-state"><span class="badge badge-${(data?.total_money > 0 ? 'success' : 'warning')}">${(data?.total_money > 0 ? 'success' : 'pending')}</span></td>
+                    <td style="min-width: 110px;"><b>${data?.ip_address}</b></td>
+                    <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
                 </tr>
                 `;
             });
             $("#list-mem-news").html(html);
         }
 
+        let totalRechargeTodayBySelectedDate = 0;
+        let allRechargeData = []; // store all data globally
+
         const RenderRechargeNews = (datas) => {
-            if (datas.length == 0) {
+            allRechargeData = datas; // save the full dataset
+            totalRechargeTodayBySelectedDate = 0;
+
+            if (datas.length === 0) {
                 $('#list-recharge-news').html(`
                     <tr class="text-center">
                     <td colspan="7">no data...</td>
                     </tr>
                 `);
+                $("#selectedDateRechargeTotal").html(` Total:- (0)`);
                 return;
             }
-            let html = '';
-            datas.map((data) => {
-                html +=
-                    `
-                <tr class="text-center"  >
-                    <td>${data.id}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #e74c3c">${(data.money)}</b></td>
-                    <td class="project-state"><span class="badge badge-success">success</span></td>
-                    <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
-                </tr>
-                `;
-            });
-            $("#list-recharge-news").html(html);
-        }
 
-        const RenderWithdrawNews = (datas) => {
-            if (datas.length == 0) {
-                $('#list-withdraw-news').html(`
-                    <tr class="text-center">
-                    <td colspan="7">no data...</td>
-                    </tr>
-                `);
-                return;
-            }
             let html = '';
             datas.map((data) => {
-                html +=
-                    `
-                <tr class="text-center"  >
-                    <td>${data.id}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #e74c3c">${(data.money)}</b></td>
-                    <td class="project-state"><span class="badge badge-success">success</span></td>
-                    <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
-                </tr>
+                totalRechargeTodayBySelectedDate += parseFloat(data?.money);
+                html += `
+                    <tr class="text-center">
+                        <td>${data?.userId}</td>
+                        <td>${data?.r_level}</td>
+                        <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                        <td><b style="color: #e74c3c">${(data?.money)}</b></td>
+                        <td class="project-state"><span class="badge badge-success">success</span></td>
+                        <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
+                    </tr>
                 `;
             });
-            $("#list-withdraw-news").html(html);
-        }
+
+            $("#list-recharge-news").html(html);
+            $("#selectedDateRechargeTotal").html(` Total:- (${totalRechargeTodayBySelectedDate})`);
+            $("#filteredRechargeTotal").html(""); // clear filtered total if any
+        };
+
+        // 🔍 Handle search
+        $('#searchByIdInput').on('input', function () {
+            const searchId = $(this).val().trim();
+            if (searchId === "") {
+                RenderRechargeNews(allRechargeData); // restore full data
+                return;
+            }
+
+            let filtered = allRechargeData.filter(item => item?.userId?.toString().includes(searchId));
+            let filteredTotal = filtered.reduce((acc, curr) => acc + parseFloat(curr.money), 0);
+
+            // re-render filtered data
+            let html = '';
+            filtered.map((data) => {
+                html += `
+                    <tr class="text-center">
+                        <td>${data?.userId}</td>
+                        <td>${data?.r_level}</td>
+                        <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                        <td><b style="color: #e74c3c">${(data?.money)}</b></td>
+                        <td class="project-state"><span class="badge badge-success">success</span></td>
+                        <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
+                    </tr>
+                `;
+            });
+
+            $("#list-recharge-news").html(html);
+            $("#filteredRechargeTotal").html(`Filtered Total for ID: (${filteredTotal})`);
+        });
+
+
+        let totalwithdrawTodayBySelectedDate = 0;
+let allWithdrawData = []; // to store all withdrawal data
+
+const RenderWithdrawNews = (datas) => {
+    allWithdrawData = datas; // keep original data
+    totalwithdrawTodayBySelectedDate = 0;
+
+    if (datas.length === 0) {
+        $('#list-withdraw-news').html(`
+            <tr class="text-center">
+            <td colspan="7">no data...</td>
+            </tr>
+        `);
+        $("#selectedDateWithdrawalTotal").html(` Total:- (0)`);
+        $("#filteredWithdrawalTotal").html(""); // clear filter result
+        return;
+    }
+
+    let html = '';
+    datas.forEach((data) => {
+        const amount = parseFloat((data?.money * 93).toFixed(2));
+        totalwithdrawTodayBySelectedDate += amount;
+
+        html += `
+            <tr class="text-center">
+                <td>${data?.userId}</td>
+                <td>${data?.w_level}</td>
+                <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                <td><b style="color: #e74c3c">${amount}</b></td>
+                <td class="project-state"><span class="badge badge-success">success</span></td>
+                <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
+            </tr>
+        `;
+    });
+
+    $("#list-withdraw-news").html(html);
+    $("#selectedDateWithdrawalTotal").html(` Total:- (${totalwithdrawTodayBySelectedDate})`);
+    $("#filteredWithdrawalTotal").html(""); // reset filter result
+};
+
+// 🔍 Handle withdrawal ID search
+$('#searchByWithdrawIdInput').on('input', function () {
+    const searchId = $(this).val().trim();
+    if (searchId === "") {
+        RenderWithdrawNews(allWithdrawData); // restore all if input is cleared
+        return;
+    }
+
+    let filtered = allWithdrawData.filter(item => item?.userId?.toString().includes(searchId));
+    let filteredTotal = filtered.reduce((acc, curr) => {
+        return acc + parseFloat((curr.money * 93).toFixed(2));
+    }, 0);
+
+    let html = '';
+    filtered.forEach((data) => {
+        const amount = parseFloat((data?.money * 93).toFixed(2));
+        html += `
+            <tr class="text-center">
+                <td>${data?.userId}</td>
+                <td>${data?.w_level}</td>
+                <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                <td><b style="color: #e74c3c">${amount}</b></td>
+                <td class="project-state"><span class="badge badge-success">success</span></td>
+                <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
+            </tr>
+        `;
+    });
+
+    $("#list-withdraw-news").html(html);
+    $("#filteredWithdrawalTotal").html(`Filtered Total for ID: (${filteredTotal})`);
+});
+
 
         const redenvelopesUsed = (datas) => {
             if (datas.length == 0) {
@@ -530,11 +644,11 @@
                 html +=
                     `
                 <tr class="text-center"  >
-                    <td>${data.id_redenvelops}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone_used}</td>
-                    <td><b style="color: #e74c3c">+${(data.money)}</b></td>
-                    <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
+                    <td>${data?.id_redenvelops}</td>
+                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone_used}</td>
+                    <td><b style="color: #e74c3c">+${(data?.money)}</b></td>
+                    <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
                 </tr>
                 `;
             });
@@ -555,11 +669,11 @@
                 html +=
                     `
                 <tr class="text-center"  >
-                    <td>${data.id}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone_used}</td>
-                    <td><b style="color: #e74c3c">${(data.type == '1') ? '+' : '-'} ${(data.money)}</b></td>
-                    <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
+                    <td>${data?.id}</td>
+                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone}</td>
+                    <td style="color: #3498db;font-weight: 600;min-width: 210px">${data?.phone_used}</td>
+                    <td><b style="color: #e74c3c">${(data?.type == '1') ? '+' : '-'} ${(data?.money)}</b></td>
+                    <td style="min-width: 110px;"><b>${timerJoin(data?.time)}</b></td>
                 </tr>
                 `;
                 $("#financial_details").html(html);
@@ -569,6 +683,8 @@
     <script>
         $('#sort-date').change(function (e) {
             e.preventDefault();
+            totalRechargeTodayBySelectedDate = 0;
+            totalwithdrawTodayBySelectedDate = 0
             let timeDate = $(this).val();
             $.ajax({
                 type: "POST",
@@ -587,6 +703,7 @@
                 }
             });
         });
+
         $.ajax({
             type: "POST",
             url: "/admin/manager/infoCtv",
@@ -601,7 +718,7 @@
                 redenvelopesUsed(response.redenvelopes_used);
                 financial_details(response.financial_details_today);
 
-                $('.totalMember').text((response.f1 + response.f2 + response.f3 + response.f4));
+                $('.totalMember').text((response.f1 + response.f2 + response.f3 + response.f4 + response.f5 + response.f6));
                 $('.totalRoses').text((response.datas[0].roses_f + response.datas[0].roses_f1));
                 $('.totalRosesToday').text((response.datas[0].roses_today));
                 $('.totalRosesF1').text((response.datas[0].roses_f1));
@@ -609,9 +726,9 @@
                 $('#ip_address').text(' - IP Address ( ' + response.datas[0].ip_address + ' )');
 
                 $('.totalRecharge').text((response.total_recharge));
-                $('.totalwithdraw').text((response.total_withdraw));
+                $('.totalwithdraw').text((response.total_withdraw * 93).toFixed(2));
                 $('.totalRechargeToday').text((response.total_recharge_today));
-                $('.totalwithdrawToday').text((response.total_withdraw_today));
+                $('.totalwithdrawToday').text((response.total_withdraw_today * 93).toFixed(2));
                 $('.totalMemberFail').text((response.list_mem_baned));
 
                 $('.totalWin').text((response.win));

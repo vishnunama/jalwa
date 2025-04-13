@@ -38,7 +38,7 @@
             <div class="card-body">
               <form id="salaryForm" method="POST">
                 <div class="mb-3">
-                  <label for="phoneNumber" class="form-label">Phone Number</label>
+                  <label for="phoneNumber" class="form-label">UID Number</label>
                   <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
                 </div>
 
@@ -69,6 +69,7 @@
                 <thead>
                   <tr>
                     <!-- <th>#</th> -->
+                    <th class="text-center">UID</th>
                     <th class="text-center">Phone</th>
                     <th class="text-center">Amount</th>
                     <th class="text-center">Type</th>
@@ -181,11 +182,10 @@
       success: function (response) {
         // Update the table with the new data
         updateTable(response);
-        
+
       },
       error: function (xhr, status, error) {
         console.log('Error fetching data:', error);
-        
       }
     });
   }
@@ -198,6 +198,7 @@
 
       data.rows.forEach(function (item) {
         var row = '<tr>' +
+          '<td class="text-center">' + item.userId + '</td>' +
           '<td class="text-center">' + item.phone + '</td>' +
           '<td class="text-center">' + item.amount + '</td>' +
           '<td class="text-center">' + item.type + '</td>' +

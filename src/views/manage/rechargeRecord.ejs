@@ -52,9 +52,10 @@
             <table class="table table-striped projects" id="table1">
               <thead>
                 <tr>
-                  <th class="text-center">#</th>
+                  <!-- <th class="text-center">#</th> -->
+                  <th class="text-center">Customer Id</th>
                   <th class="text-center">Account</th>
-                  <th class="text-center">Type</th>
+
                   <th class="text-center">Amount</th>
                   <th class="text-center">Code</th>
                   <th class="text-center">UTR</th>
@@ -65,7 +66,7 @@
                 </tr>
               </thead>
               <tbody>
-                
+
               </tbody>
             </table>
           </div>
@@ -106,7 +107,7 @@
       wow_pay: "WOW Pay",
       usdt: "USDT",
     }
-    
+
     function timerJoin(params = '', addHours = 0) {
         let date = '';
         if (params) {
@@ -114,20 +115,20 @@
         } else {
             date = new Date();
         }
-    
+
         date.setHours(date.getHours() + addHours);
-    
+
         let years = formateT(date.getFullYear());
         let months = formateT(date.getMonth() + 1);
         let days = formateT(date.getDate());
-    
+
         let hours = date.getHours() % 12;
         hours = hours === 0 ? 12 : hours;
         let ampm = date.getHours() < 12 ? "AM" : "PM";
-    
+
         let minutes = formateT(date.getMinutes());
         let seconds = formateT(date.getSeconds());
-    
+
         return years + '-' + months + '-' + days + ' ' + hours + ':' + minutes + ':' + seconds + ' ' + ampm;
     }
     function show(params) {
@@ -143,15 +144,16 @@
       params.map((data) => {
         console.log(data);
         html += `<tr class="text-center">
-                  <td id="${data.id}">
+                  <!--<td id="${data.id}">
                     ${data.id}
+                  </td> --!>
+                   <td>
+                    <b>${data?.userId}</b>
                   </td>
                   <td>
                     <b>${data.phone}</b>
                   </td>
-                  <td>
-                    ${(data.type == 'bank') ? '<b style="color: #3498db">BANKING</b>' : '<b style="color: #a50064">UPI</b>'}
-                  </td>
+
                   <td>
                     <b>${(data.money)}</b>
                   </td>
@@ -165,7 +167,7 @@
                     <b>${PaymentMethodsMap?.[data.type] ? PaymentMethodsMap?.[data.type] : data.type}</b>
                   </td>
                   <td style="min-width: 190px;">
-                    <b>${timerJoin(data.time)}</b>
+                    <b>${data?.today}</b>
                   </td>
                   <td class="project-state">
                     <span class="badge badge-${(data.status == 1) ? 'success' : 'danger'}">${(data.status == 1) ? 'Success' : 'Closed'}</span>
@@ -178,7 +180,7 @@
                 </tr>`;
               })
           $('tbody').html(html);
-          $('.btn-success').click(function (e) { 
+          $('.btn-success').click(function (e) {
             e.preventDefault();
             let id = $(this).attr('data');
             $.ajax({
@@ -201,7 +203,7 @@
               }
             });
           });
-          $('.btn-danger').click(function (e) { 
+          $('.btn-danger').click(function (e) {
             e.preventDefault();
             let id = $(this).attr('data');
             $.ajax({
@@ -229,7 +231,7 @@
       type: "POST",
       url: "/api/webapi/admin/recharge",
       data: {
-        
+
       },
       dataType: "json",
       success: function (response) {

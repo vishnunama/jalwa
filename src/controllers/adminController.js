@@ -20,9 +20,15 @@ const saltRounds = parseInt(process.env.SALT_ROUNDS || 5);
 const demoPage = async (req, res) => {
   return res.render("manage/demoAccount.ejs");
 }
-const demoDailyPage = async (req, res) => {
-  return res.render("daily/demoAccount.ejs");
-}
+const Dashboard = async (req, res) => {
+  return res.render("manage/dashboard.ejs");
+};
+const Dashboard2 = async (req, res) => {
+  return res.render("manage/dashboard2.ejs");
+};
+const AgentDashboard = async (req, res) => {
+  return res.render("manage/agentDashboard.ejs");
+};
 
 const adminPage = async (req, res) => {
   return res.render("manage/index.ejs");
@@ -93,9 +99,6 @@ const levelSetting = async (req, res) => {
 const CreatedSalaryRecord = async (req, res) => {
   return res.render("manage/CreatedSalaryRecord.ejs");
 };
-const CreatedSalaryRecordDaily = async (req, res) => {
-  return res.render("daily/CreatedSalaryRecord.ejs");
-};
 
 const DailySalaryEligibility = async (req, res) => {
   return res.render("manage/DailySalaryEligibility.ejs");
@@ -124,7 +127,7 @@ const middlewareAdminController = async (req, res, next) => {
   }
   try {
     if (auth == rows[0].token && rows[0].status == 1) {
-      if (rows[0].level == 1 || rows[0].level == 2) {
+      if (rows[0].level == 1) {
         next();
       } else {
         return res.redirect("/home");
@@ -356,8 +359,8 @@ const statistical2 = async (req, res) => {
     [timerJoin2()],
   );
 
-  let win = wingo[0].total;
-  let loss = wingo2[0].total;
+  let win = (wingo[0].total).toFixed(2);
+  let loss = (wingo2[0].total).toFixed(2);
   let usersOnline = users[0].total;
   let usersOffline = users2[0].total;
   let recharges = recharge[0].total;
@@ -508,7 +511,7 @@ const userInfo = async (req, res) => {
   let f1_today = 0;
   for (let i = 0; i < f1s.length; i++) {
     const f1_time = f1s[i].time; // Mã giới thiệu f1
-    let check = timerJoin(f1_time) == timerJoin() ? true : false;
+    let check = timerJoin(f1_time) == timerJoin().split(" ")[0] ? true : false;
     if (check) {
       f1_today += 1;
     }
@@ -519,7 +522,7 @@ const userInfo = async (req, res) => {
   for (let i = 0; i < f1s.length; i++) {
     const f1_code = f1s[i].code; // Mã giới thiệu f1
     const f1_time = f1s[i].time; // time f1
-    let check_f1 = timerJoin(f1_time) == timerJoin() ? true : false;
+    let check_f1 = timerJoin(f1_time) == timerJoin().split(" ")[0] ? true : false;
     if (check_f1) f_all_today += 1;
     // tổng f1 mời đc hôm nay
     const [f2s] = await connection.query(
@@ -529,7 +532,7 @@ const userInfo = async (req, res) => {
     for (let i = 0; i < f2s.length; i++) {
       const f2_code = f2s[i].code; // Mã giới thiệu f2
       const f2_time = f2s[i].time; // time f2
-      let check_f2 = timerJoin(f2_time) == timerJoin() ? true : false;
+      let check_f2 = timerJoin(f2_time) == timerJoin().split(" ")[0] ? true : false;
       if (check_f2) f_all_today += 1;
       // tổng f2 mời đc hôm nay
       const [f3s] = await connection.query(
@@ -539,7 +542,7 @@ const userInfo = async (req, res) => {
       for (let i = 0; i < f3s.length; i++) {
         const f3_code = f3s[i].code; // Mã giới thiệu f3
         const f3_time = f3s[i].time; // time f3
-        let check_f3 = timerJoin(f3_time) == timerJoin() ? true : false;
+        let check_f3 = timerJoin(f3_time) == timerJoin().split(" ")[0] ? true : false;
         if (check_f3) f_all_today += 1;
         const [f4s] = await connection.query(
           "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
@@ -549,7 +552,7 @@ const userInfo = async (req, res) => {
         for (let i = 0; i < f4s.length; i++) {
           const f4_code = f4s[i].code; // Mã giới thiệu f4
           const f4_time = f4s[i].time; // time f4
-          let check_f4 = timerJoin(f4_time) == timerJoin() ? true : false;
+          let check_f4 = timerJoin(f4_time) == timerJoin().split(" ")[0] ? true : false;
           if (check_f4) f_all_today += 1;
           // tổng f3 mời đc hôm nay
         }
@@ -610,11 +613,92 @@ const userInfo = async (req, res) => {
       }
     }
   }
+
+  // Tổng số f4
+  let f5 = 0;
+  for (let i = 0; i < f1s.length; i++) {
+    const f1_code = f1s[i].code; // Mã giới thiệu f1
+    const [f2s] = await connection.query(
+      "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+      [f1_code],
+    );
+    for (let i = 0; i < f2s.length; i++) {
+      const f2_code = f2s[i].code;
+      const [f3s] = await connection.query(
+        "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+        [f2_code],
+      );
+      for (let i = 0; i < f3s.length; i++) {
+        const f3_code = f3s[i].code;
+        const [f4s] = await connection.query(
+          "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+          [f3_code],
+        );
+        if (f4s.length > 0) f4 += f4s.length;
+        for (let i = 0; i < f4s.length; i++) {
+          const f4_code = f4s[i].code;
+          const [f5s] = await connection.query(
+            "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+            [f4_code],
+          );
+          if (f5s.length > 0) f5 += f5s.length;
+        }
+      }
+    }
+  }
+
+  // Tổng số f6
+  let f6 = 0;
+  for (let i = 0; i < f1s.length; i++) {
+    const f1_code = f1s[i].code; // Mã giới thiệu f1
+    const [f2s] = await connection.query(
+      "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+      [f1_code],
+    );
+    for (let i = 0; i < f2s.length; i++) {
+      const f2_code = f2s[i].code;
+      const [f3s] = await connection.query(
+        "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+        [f2_code],
+      );
+      for (let i = 0; i < f3s.length; i++) {
+        const f3_code = f3s[i].code;
+        const [f4s] = await connection.query(
+          "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+          [f3_code],
+        );
+        if (f4s.length > 0) f4 += f4s.length;
+        for (let i = 0; i < f4s.length; i++) {
+          const f4_code = f4s[i].code;
+          const [f5s] = await connection.query(
+            "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+            [f4_code],
+          );
+          if (f5s.length > 0) f5 += f5s.length;
+          for (let i = 0; i < f5s.length; i++) {
+            const f5_code = f5s[i].code;
+            const [f6s] = await connection.query(
+              "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+              [f5_code],
+            );
+            if (f6s.length > 0) f6 += f6s.length;
+          }
+        }
+
+      }
+
+    }
+  }
   // console.log("TOTAL_F_TODAY:" + f_all_today);
   // console.log("F1: " + f1s.length);
   // console.log("F2: " + f2);
   // console.log("F3: " + f3);
   // console.log("F4: " + f4);
+
+  let todayStart = new Date();
+  todayStart.setHours(0, 0, 0, 0);
+  let todayStartTimestamp = todayStart.getTime();
+
 
   const [recharge] = await connection.query(
     "SELECT SUM(`money`) as total FROM recharge WHERE phone = ? AND status = 1 ",
@@ -623,6 +707,15 @@ const userInfo = async (req, res) => {
   const [withdraw] = await connection.query(
     "SELECT SUM(`money`) as total FROM withdraw WHERE phone = ? AND status = 1 ",
     [phone],
+  );
+
+  const [todayRecharge] = await connection.query(
+    "SELECT SUM(`money`) as total FROM recharge WHERE phone = ? AND status = 1 AND time >= ?",
+    [phone, todayStartTimestamp],
+  );
+  const [todayWithdraw] = await connection.query(
+    "SELECT SUM(`money`) as total FROM withdraw WHERE phone = ? AND status = 1 AND time >= ?",
+    [phone, todayStartTimestamp],
   );
   const [bank_user] = await connection.query(
     "SELECT * FROM user_bank WHERE phone = ? ",
@@ -636,6 +729,25 @@ const userInfo = async (req, res) => {
     "SELECT `phone` FROM users WHERE code = ? ",
     [userInfo.invite],
   );
+
+
+  const [totalSalary] = await connection.query(
+    "SELECT SUM(`amount`) as total FROM salary WHERE phone = ?",
+    [phone],
+  );
+  const [totalTodaySalary] = await connection.query(
+    "SELECT SUM(`amount`) as total FROM salary WHERE phone = ? AND time >= ?",
+    [phone, todayStartTimestamp],
+  );
+  const [totalGiftCode] = await connection.query(
+    "SELECT SUM(`money`) as total FROM redenvelopes_used WHERE phone_used = ?",
+    [phone],
+  );
+  const [totalTodayGiftCode] = await connection.query(
+    "SELECT SUM(`money`) as total FROM redenvelopes_used WHERE phone_used = ? AND time >= ?",
+    [phone, todayStartTimestamp],
+  );
+
   return res.status(200).json({
     message: "Success",
     status: true,
@@ -646,12 +758,53 @@ const userInfo = async (req, res) => {
     f2: f2,
     f3: f3,
     f4: f4,
+    f5: f5,
+    f6: f6,
     bank_user: bank_user,
     telegram: telegram_ctv[0],
     ng_moi: ng_moi[0],
     daily: userInfo.ctv,
+    total_salary: totalSalary[0].total,
+    today_salary: totalTodaySalary[0].total,
+    total_gift_code: totalGiftCode[0].total,
+    today_gift_code: totalTodayGiftCode[0].total,
+    today_recharge: todayRecharge[0].total,
+    today_withdrawal: todayWithdraw[0].total
   });
 };
+
+// const recharge = async (req, res) => {
+//   let auth = req.cookies.auth;
+//   if (!auth) {
+//     return res.status(200).json({
+//       message: "Failed",
+//       status: false,
+//       timeStamp: timeNow,
+//     });
+//   }
+
+//   const [recharge] = await connection.query(
+//     "SELECT * FROM recharge WHERE status = 0 ",
+//   );
+//   const [recharge2] = await connection.query(
+//     "SELECT * FROM recharge WHERE status != 0 ",
+//   );
+//   const [withdraw] = await connection.query(
+//     "SELECT * FROM withdraw WHERE status = 0 ",
+//   );
+//   const [withdraw2] = await connection.query(
+//     "SELECT * FROM withdraw WHERE status != 0 ",
+//   );
+//   return res.status(200).json({
+//     message: "Success",
+//     status: true,
+//     datas: recharge,
+//     datas2: recharge2,
+//     datas3: withdraw,
+//     datas4: withdraw2,
+//   });
+// };
+
 
 const recharge = async (req, res) => {
   let auth = req.cookies.auth;
@@ -664,17 +817,18 @@ const recharge = async (req, res) => {
   }
 
   const [recharge] = await connection.query(
-    "SELECT * FROM recharge WHERE status = 0 ",
+    "SELECT * FROM recharge WHERE status = 0 ORDER BY time DESC"
   );
   const [recharge2] = await connection.query(
-    "SELECT * FROM recharge WHERE status != 0 ",
+    "SELECT * FROM recharge WHERE status != 0 ORDER BY time DESC"
   );
   const [withdraw] = await connection.query(
-    "SELECT * FROM withdraw WHERE status = 0 ",
+    "SELECT * FROM withdraw WHERE status = 0 ORDER BY time DESC"
   );
   const [withdraw2] = await connection.query(
-    "SELECT * FROM withdraw WHERE status != 0 ",
+    "SELECT * FROM withdraw WHERE status != 0 ORDER BY time DESC"
   );
+
   return res.status(200).json({
     message: "Success",
     status: true,
@@ -684,6 +838,41 @@ const recharge = async (req, res) => {
     datas4: withdraw2,
   });
 };
+
+
+// const recharge = async (req, res) => {
+//   let auth = req.cookies.auth;
+//   if (!auth) {
+//     return res.status(200).json({
+//       message: "Failed",
+//       status: false,
+//       timeStamp: timeNow,
+//     });
+//   }
+
+//   const [recharge] = await connection.query(
+//     "SELECT * FROM recharge WHERE status = 0 ORDER BY id DESC"
+//   );
+//   const [recharge2] = await connection.query(
+//     "SELECT * FROM recharge WHERE status != 0 ORDER BY id DESC"
+//   );
+//   const [withdraw] = await connection.query(
+//     "SELECT * FROM withdraw WHERE status = 0 ORDER BY id DESC"
+//   );
+//   const [withdraw2] = await connection.query(
+//     "SELECT * FROM withdraw WHERE status != 0 ORDER BY id DESC"
+//   );
+
+//   return res.status(200).json({
+//     message: "Success",
+//     status: true,
+//     datas: recharge,
+//     datas2: recharge2,
+//     datas3: withdraw,
+//     datas4: withdraw2,
+//   });
+// };
+
 
 const settingGet = async (req, res) => {
   try {
@@ -887,12 +1076,14 @@ const updateLevel = async (req, res) => {
     let f2 = req.body.f2;
     let f3 = req.body.f3;
     let f4 = req.body.f4;
+    let f5 = req.body.f5;
+    let f6 = req.body.f6;
 
-    console.log("level : " + id, f1, f2, f3, f4);
+    console.log("level : " + id, f1, f2, f3, f4, f5, f6);
 
     await connection.query(
-      "UPDATE `level` SET `f1`= ? ,`f2`= ? ,`f3`= ? ,`f4`= ?  WHERE `id` = ?",
-      [f1, f2, f3, f4, id],
+      "UPDATE `level` SET `f1`= ? ,`f2`= ? ,`f3`= ? ,`f4`= ?, `f5` = ?, `f6` = ?  WHERE `id` = ?",
+      [f1, f2, f3, f4, f5, f6, id],
     );
 
     // Send a success response to the client
@@ -1107,6 +1298,31 @@ const settingCskh = async (req, res) => {
   });
 };
 
+const makesubagent = async (req, res) => {
+  let auth = req.cookies.auth;
+  let id = req.body.id;
+  let type = req.body.type;
+  if (!auth || !id) {
+    return res.status(200).json({
+      message: "Failed",
+      status: false,
+      timeStamp: timeNow,
+    });
+  }
+  if (type == "user") {
+    await connection.query(`UPDATE users SET level = 0 WHERE id = ?`, [id]);
+  }
+  if (type == "agent") {
+    await connection.query(`UPDATE users SET level = 2 WHERE id = ?`, [id]);
+  }
+  if (type == "admin") {
+    await connection.query(`UPDATE users SET level = 1 WHERE id = ?`, [id]);
+  }
+  return res.status(200).json({
+    message: "Successful change",
+    status: true,
+  });
+};
 const banned = async (req, res) => {
   let auth = req.cookies.auth;
   let id = req.body.id;
@@ -1326,8 +1542,11 @@ const createBonus = async (req, res) => {
 const listRedenvelops = async (req, res) => {
   let auth = req.cookies.auth;
 
+  // let [redenvelopes] = await connection.query(
+  //   "SELECT * FROM redenvelopes WHERE status = 0 ORDER BY time DESC",
+  // );
   let [redenvelopes] = await connection.query(
-    "SELECT * FROM redenvelopes WHERE status = 0 ORDER BY time DESC",
+    "SELECT * FROM redenvelopes ORDER BY time DESC",
   );
 
   return res.status(200).json({
@@ -1534,6 +1753,94 @@ const profileUser = async (req, res) => {
   });
 };
 
+
+async function fetch6LeveMember(userInfo) {
+  try {
+    const resultUsers = [];
+
+    const [f1s] = await connection.query(
+      "SELECT `phone`, `code`, `invite`, `time` FROM users WHERE `invite` = ?",
+      [userInfo.code]
+    );
+    f1s.forEach(user => user.u_level = 1);
+    resultUsers.push(f1s);
+
+    for (const f1 of f1s) {
+      const [f2s] = await connection.query(
+        "SELECT `phone`, `code`, `invite` FROM users WHERE `invite` = ?",
+        [f1.code]
+      );
+      f2s.forEach(user => user.u_level = 2);
+      resultUsers.push(f2s);
+
+      for (const f2 of f2s) {
+        const [f3s] = await connection.query(
+          "SELECT `phone`, `code`, `invite` FROM users WHERE `invite` = ?",
+          [f2.code]
+        );
+        f3s.forEach(user => user.u_level = 3);
+        resultUsers.push(f3s);
+
+        for (const f3 of f3s) {
+          const [f4s] = await connection.query(
+            "SELECT `phone`, `code`, `invite` FROM users WHERE `invite` = ?",
+            [f3.code]
+          );
+          f4s.forEach(user => user.u_level = 4);
+          resultUsers.push(f4s);
+
+          for (const f4 of f4s) {
+            const [f5s] = await connection.query(
+              "SELECT `phone`, `code`, `invite` FROM users WHERE `invite` = ?",
+              [f4.code]
+            );
+            f5s.forEach(user => user.u_level = 5);
+            resultUsers.push(f5s);
+
+            for (const f5 of f5s) {
+              const [f6s] = await connection.query(
+                "SELECT `phone`, `code`, `invite` FROM users WHERE `invite` = ?",
+                [f5.code]
+              );
+              f6s.forEach(user => user.u_level = 6);
+              resultUsers.push(f6s);
+            }
+          }
+        }
+      }
+    }
+
+    const allUsers = resultUsers.flat();
+    const userCode = allUsers.map(user => user.code).filter(Boolean);
+
+    if (userCode.length === 0) {
+      return [];
+    }
+
+    const [list_mem] = await connection.query(
+      "SELECT * FROM users WHERE code IN (?) AND status = 1 AND veri = 1",
+      [userCode]
+    );
+
+    // Merge u_level information with full user data
+    const codeTou_levelMap = {};
+    allUsers.forEach(user => {
+      codeTou_levelMap[user.code] = user.u_level;
+    });
+
+    const listWithu_level = list_mem.map(user => ({
+      ...user,
+      u_level: codeTou_levelMap[user.code] || null,
+    }));
+
+    return listWithu_level;
+  } catch (error) {
+    console.error("Error in fetch6LeveMember:", error);
+    return [];
+  }
+}
+
+
 const infoCtv = async (req, res) => {
   const phone = req.body.phone;
 
@@ -1559,7 +1866,7 @@ const infoCtv = async (req, res) => {
   let f1_today = 0;
   for (let i = 0; i < f1s.length; i++) {
     const f1_time = f1s[i].time; // Mã giới thiệu f1
-    let check = timerJoin(f1_time) == timerJoin() ? true : false;
+    let check = timerJoin(f1_time) == timerJoin().split(" ")[0] ? true : false;
     if (check) {
       f1_today += 1;
     }
@@ -1570,7 +1877,7 @@ const infoCtv = async (req, res) => {
   for (let i = 0; i < f1s.length; i++) {
     const f1_code = f1s[i].code; // Mã giới thiệu f1
     const f1_time = f1s[i].time; // time f1
-    let check_f1 = timerJoin(f1_time) == timerJoin() ? true : false;
+    let check_f1 = timerJoin(f1_time) == timerJoin().split(" ")[0] ? true : false;
     if (check_f1) f_all_today += 1;
     // tổng f1 mời đc hôm nay
     const [f2s] = await connection.query(
@@ -1580,7 +1887,7 @@ const infoCtv = async (req, res) => {
     for (let i = 0; i < f2s.length; i++) {
       const f2_code = f2s[i].code; // Mã giới thiệu f2
       const f2_time = f2s[i].time; // time f2
-      let check_f2 = timerJoin(f2_time) == timerJoin() ? true : false;
+      let check_f2 = timerJoin(f2_time) == timerJoin().split(" ")[0] ? true : false;
       if (check_f2) f_all_today += 1;
       // tổng f2 mời đc hôm nay
       const [f3s] = await connection.query(
@@ -1590,7 +1897,7 @@ const infoCtv = async (req, res) => {
       for (let i = 0; i < f3s.length; i++) {
         const f3_code = f3s[i].code; // Mã giới thiệu f3
         const f3_time = f3s[i].time; // time f3
-        let check_f3 = timerJoin(f3_time) == timerJoin() ? true : false;
+        let check_f3 = timerJoin(f3_time) == timerJoin().split(" ")[0] ? true : false;
         if (check_f3) f_all_today += 1;
         const [f4s] = await connection.query(
           "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
@@ -1600,9 +1907,34 @@ const infoCtv = async (req, res) => {
         for (let i = 0; i < f4s.length; i++) {
           const f4_code = f4s[i].code; // Mã giới thiệu f4
           const f4_time = f4s[i].time; // time f4
-          let check_f4 = timerJoin(f4_time) == timerJoin() ? true : false;
+          let check_f4 = timerJoin(f4_time) == timerJoin().split(" ")[0] ? true : false;
           if (check_f4) f_all_today += 1;
+          const [f5s] = await connection.query(
+            "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
+            [f4_code],
+          );
           // tổng f3 mời đc hôm nay
+          for (let i = 0; i < f5s.length; i++) {
+            const f5_code = f5s[i].code; // Mã giới thiệu f4
+            const f5_time = f5s[i].time; // time f4
+            let check_f5 = timerJoin(f5_time) == timerJoin().split(" ")[0] ? true : false;
+            if (check_f5) f_all_today += 1;
+            const [f6s] = await connection.query(
+              "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
+              [f5_code],
+            );
+
+            for (let i = 0; i < f6s.length; i++) {
+              const f6_code = f6s[i].code; // Mã giới thiệu f4
+              const f6_time = f6s[i].time; // time f4
+              let check_f6 = timerJoin(f6_time) == timerJoin().split(" ")[0] ? true : false;
+              if (check_f6) f_all_today += 1;
+              // const [f7s] = await connection.query(
+              //   "SELECT `phone`, `code`,`invite`, `time` FROM users WHERE `invite` = ? ",
+              //   [f6_code],
+              // );
+            }
+          }
         }
       }
     }
@@ -1662,10 +1994,86 @@ const infoCtv = async (req, res) => {
     }
   }
 
-  const [list_mem] = await connection.query(
-    "SELECT * FROM users WHERE ctv = ? AND status = 1 AND veri = 1 ",
-    [phone],
-  );
+
+  // Tổng số f5
+  let f5 = 0;
+  for (let i = 0; i < f1s.length; i++) {
+    const f1_code = f1s[i].code; // Mã giới thiệu f1
+    const [f2s] = await connection.query(
+      "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+      [f1_code],
+    );
+    for (let i = 0; i < f2s.length; i++) {
+      const f2_code = f2s[i].code;
+      const [f3s] = await connection.query(
+        "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+        [f2_code],
+      );
+      for (let i = 0; i < f3s.length; i++) {
+        const f3_code = f3s[i].code;
+        const [f4s] = await connection.query(
+          "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+          [f3_code],
+        );
+        for (let i = 0; i < f4s.length; i++) {
+          const f4_code = f4s[i].code;
+          const [f5s] = await connection.query(
+            "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+            [f4_code],
+          );
+          if (f5s.length > 0) f5 += f5s.length;
+        }
+      }
+    }
+  }
+
+  // Tổng số 6
+  let f6 = 0;
+  for (let i = 0; i < f1s.length; i++) {
+    const f1_code = f1s[i].code; // Mã giới thiệu f1
+    const [f2s] = await connection.query(
+      "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+      [f1_code],
+    );
+    for (let i = 0; i < f2s.length; i++) {
+      const f2_code = f2s[i].code;
+      const [f3s] = await connection.query(
+        "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+        [f2_code],
+      );
+      for (let i = 0; i < f3s.length; i++) {
+        const f3_code = f3s[i].code;
+        const [f4s] = await connection.query(
+          "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+          [f3_code],
+        );
+        for (let i = 0; i < f4s.length; i++) {
+          const f4_code = f4s[i].code;
+          const [f5s] = await connection.query(
+            "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+            [f4_code],
+          );
+          for (let i = 0; i < f5s.length; i++) {
+            const f6_code = f5s[i].code;
+            const [f6s] = await connection.query(
+              "SELECT `phone`, `code`,`invite` FROM users WHERE `invite` = ? ",
+              [f6_code],
+            );
+            if (f6s.length > 0) f6 += f6s.length;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  // const [list_mem] = await connection.query(
+  //   "SELECT * FROM users WHERE ctv = ? AND status = 1 AND veri = 1 ",
+  //   [phone],
+  // );
+  const list_mem = await fetch6LeveMember(userInfo);
+
   const [list_mem_baned] = await connection.query(
     "SELECT * FROM users WHERE ctv = ? AND status = 2 AND veri = 1 ",
     [phone],
@@ -1695,23 +2103,25 @@ const infoCtv = async (req, res) => {
   for (let i = 0; i < list_mem.length; i++) {
     let phone = list_mem[i].phone;
     const [recharge_today] = await connection.query(
-      "SELECT `money`, `time` FROM recharge WHERE phone = ? AND status = 1 ",
+      "SELECT `userId`, `money`, `time` FROM recharge WHERE phone = ? AND status = 1 ",
       [phone],
     );
     const [withdraw_today] = await connection.query(
-      "SELECT `money`, `time` FROM withdraw WHERE phone = ? AND status = 1 ",
+      "SELECT `userId`, `money`, `time` FROM withdraw WHERE phone = ? AND status = 1 ",
       [phone],
     );
     for (let i = 0; i < recharge_today.length; i++) {
-      let today = timerJoin();
-      let time = timerJoin(recharge_today[i].time);
+      let today = timerJoin().split(" ")[0];
+      // let time = timerJoin(recharge_today[i].time);
+      let time = timerJoin(recharge_today[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
         total_recharge_today += recharge_today[i].money;
       }
     }
     for (let i = 0; i < withdraw_today.length; i++) {
-      let today = timerJoin();
-      let time = timerJoin(withdraw_today[i].time);
+      let today = timerJoin().split(" ")[0];
+      // let time = timerJoin(withdraw_today[i].time);
+      let time = timerJoin(withdraw_today[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
         total_withdraw_today += withdraw_today[i].money;
       }
@@ -1731,15 +2141,17 @@ const infoCtv = async (req, res) => {
       [phone],
     );
     for (let i = 0; i < wins.length; i++) {
-      let today = timerJoin();
-      let time = timerJoin(wins[i].time);
+      let today = timerJoin().split(" ")[0];
+      // let time = timerJoin(wins[i].time);
+      let time = timerJoin(wins[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
         win += wins[i].money;
       }
     }
     for (let i = 0; i < losses.length; i++) {
-      let today = timerJoin();
-      let time = timerJoin(losses[i].time);
+      let today = timerJoin().split(" ")[0];
+      // let time = timerJoin(losses[i].time);
+      let time = timerJoin(losses[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
         loss += losses[i].money;
       }
@@ -1750,11 +2162,12 @@ const infoCtv = async (req, res) => {
     "SELECT * FROM users WHERE ctv = ? AND status = 1 AND veri = 1 ",
     [phone],
   );
-  for (let i = 0; i < list_mem_today.length; i++) {
-    let today = timerJoin();
-    let time = timerJoin(list_mem_today[i].time);
+  for (let i = 0; i < list_mem.length; i++) {
+    let today = timerJoin().split(" ")[0];
+    // let time = timerJoin(list_mem_today[i].time);
+    let time = timerJoin(list_mem[i].time).split(" ")[0]; // Extract only the date
     if (time == today) {
-      list_mems.push(list_mem_today[i]);
+      list_mems.push(list_mem[i]);
     }
   }
 
@@ -1768,26 +2181,35 @@ const infoCtv = async (req, res) => {
   let list_withdraw_news = [];
   for (let i = 0; i < list_mem.length; i++) {
     let phone = list_mem[i].phone;
+    let r_level = list_mem[i].u_level
+    let w_level = list_mem[i].u_level
     const [recharge_today] = await connection.query(
-      "SELECT `id`, `status`, `type`,`phone`, `money`, `time` FROM recharge WHERE phone = ? AND status = 1 ",
+      "SELECT `userId`, `id`, `status`, `type`,`phone`, `money`, `time` FROM recharge WHERE phone = ? AND status = 1 ",
       [phone],
     );
     const [withdraw_today] = await connection.query(
-      "SELECT `id`, `status`,`phone`, `money`, `time` FROM withdraw WHERE phone = ? AND status = 1 ",
+      "SELECT `userId`,  `id`, `status`,`phone`, `money`, `time` FROM withdraw WHERE phone = ? AND status = 1 ",
       [phone],
     );
     for (let i = 0; i < recharge_today.length; i++) {
-      let today = timerJoin();
-      let time = timerJoin(recharge_today[i].time);
+      let today = timerJoin().split(" ")[0];
+      // let time = timerJoin(recharge_today[i].time);
+      let time = timerJoin(recharge_today[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
-        list_recharge_news.push(recharge_today[i]);
+        list_recharge_news.push({
+          ...recharge_today[i],
+          r_level,
+        });
       }
     }
     for (let i = 0; i < withdraw_today.length; i++) {
-      let today = timerJoin();
-      let time = timerJoin(withdraw_today[i].time);
+      let today = timerJoin().split(" ")[0];
+      let time = timerJoin(withdraw_today[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
-        list_withdraw_news.push(withdraw_today[i]);
+        list_withdraw_news.push({
+          ...withdraw_today[i],
+          w_level,
+        });
       }
     }
   }
@@ -1798,8 +2220,9 @@ const infoCtv = async (req, res) => {
   );
   let redenvelopes_used_today = [];
   for (let i = 0; i < redenvelopes_used.length; i++) {
-    let today = timerJoin();
-    let time = timerJoin(redenvelopes_used[i].time);
+    let today = timerJoin().split(" ")[0];
+    // let time = timerJoin(redenvelopes_used[i].time);
+    let time = timerJoin(redenvelopes_used[i].time).split(" ")[0]; // Extract only the date
     if (time == today) {
       redenvelopes_used_today.push(redenvelopes_used[i]);
     }
@@ -1811,13 +2234,14 @@ const infoCtv = async (req, res) => {
   );
   let financial_details_today = [];
   for (let i = 0; i < financial_details.length; i++) {
-    let today = timerJoin();
-    let time = timerJoin(financial_details[i].time);
+    let today = timerJoin().split(" ")[0];
+    // let time = timerJoin(financial_details[i].time);
+    let time = timerJoin(financial_details[i].time).split(" ")[0]; // Extract only the date
     if (time == today) {
       financial_details_today.push(financial_details[i]);
     }
   }
-
+console.log("kjk")
   return res.status(200).json({
     message: "Success",
     status: true,
@@ -1826,6 +2250,8 @@ const infoCtv = async (req, res) => {
     f2: f2,
     f3: f3,
     f4: f4,
+    f5: f5,
+    f6: f6,
     list_mems: list_mems,
     total_recharge: total_recharge,
     total_withdraw: total_withdraw,
@@ -1841,6 +2267,7 @@ const infoCtv = async (req, res) => {
     financial_details_today: financial_details_today,
   });
 };
+
 
 const infoCtv2 = async (req, res) => {
   const phone = req.body.phone;
@@ -1896,48 +2323,63 @@ const infoCtv2 = async (req, res) => {
     });
   }
   let userInfo = user[0];
-  const [list_mem] = await connection.query(
-    "SELECT * FROM users WHERE ctv = ? AND status = 1 AND veri = 1 ",
-    [phone],
-  );
+  // const [list_mem] = await connection.query(
+  //   "SELECT * FROM users WHERE ctv = ? AND status = 1 AND veri = 1 ",
+  //   [phone],
+  // );
+
+  const list_mem = await fetch6LeveMember(userInfo);
 
   let list_mems = [];
   const [list_mem_today] = await connection.query(
     "SELECT * FROM users WHERE ctv = ? AND status = 1 AND veri = 1 ",
     [phone],
   );
-  for (let i = 0; i < list_mem_today.length; i++) {
-    let today = timeDate;
-    let time = timerJoin(list_mem_today[i].time);
+
+  for (let i = 0; i < list_mem.length; i++) {
+    let time = timerJoin(list_mem[i].time).split(" ")[0]; // Extract only the date
+    let today = timeDate; // Ensure timeDate is in "YYYY-MM-DD" format
+
     if (time == today) {
-      list_mems.push(list_mem_today[i]);
+      list_mems.push(list_mem[i]);
     }
   }
+
 
   let list_recharge_news = [];
   let list_withdraw_news = [];
   for (let i = 0; i < list_mem.length; i++) {
     let phone = list_mem[i].phone;
+    let r_level = list_mem[i].u_level
+    let w_level = list_mem[i].u_level
     const [recharge_today] = await connection.query(
-      "SELECT `id`, `status`, `type`,`phone`, `money`, `time` FROM recharge WHERE phone = ? AND status = 1 ",
+      "SELECT `userId`, `id`, `status`, `type`,`phone`, `money`, `time` FROM recharge WHERE phone = ? AND status = 1 ",
       [phone],
     );
     const [withdraw_today] = await connection.query(
-      "SELECT `id`, `status`,`phone`, `money`, `time` FROM withdraw WHERE phone = ? AND status = 1 ",
+      "SELECT `userId`, `id`, `status`,`phone`, `money`, `time` FROM withdraw WHERE phone = ? AND status = 1 ",
       [phone],
     );
     for (let i = 0; i < recharge_today.length; i++) {
       let today = timeDate;
-      let time = timerJoin(recharge_today[i].time);
+      let time = timerJoin(recharge_today[i].time).split(" ")[0]; // Extract only the date
+      // let time = timerJoin(recharge_today[i].time);
       if (time == today) {
-        list_recharge_news.push(recharge_today[i]);
+        list_recharge_news.push({
+          ...recharge_today[i],
+          r_level,
+        });
       }
     }
     for (let i = 0; i < withdraw_today.length; i++) {
       let today = timeDate;
-      let time = timerJoin(withdraw_today[i].time);
+      // let time = timerJoin(withdraw_today[i].time);
+      let time = timerJoin(withdraw_today[i].time).split(" ")[0]; // Extract only the date
       if (time == today) {
-        list_withdraw_news.push(withdraw_today[i]);
+        list_withdraw_news.push({
+          ...withdraw_today[i],
+          w_level,
+        });
       }
     }
   }
@@ -1949,7 +2391,8 @@ const infoCtv2 = async (req, res) => {
   let redenvelopes_used_today = [];
   for (let i = 0; i < redenvelopes_used.length; i++) {
     let today = timeDate;
-    let time = timerJoin(redenvelopes_used[i].time);
+    // let time = timerJoin(redenvelopes_used[i].time);
+    let time = timerJoin(redenvelopes_used[i].time).split(" ")[0]; // Extract only the date
     if (time == today) {
       redenvelopes_used_today.push(redenvelopes_used[i]);
     }
@@ -1962,7 +2405,8 @@ const infoCtv2 = async (req, res) => {
   let financial_details_today = [];
   for (let i = 0; i < financial_details.length; i++) {
     let today = timeDate;
-    let time = timerJoin(financial_details[i].time);
+    // let time = timerJoin(financial_details[i].time);
+    let time = timerJoin(financial_details[i].time).split(" ")[0]; // Extract only the date
     if (time == today) {
       financial_details_today.push(financial_details[i]);
     }
@@ -2572,6 +3016,60 @@ const editResult2 = async (req, res) => {
   });
 };
 
+// const CreatedSalary = async (req, res) => {
+//   try {
+//     const phone = req.body.phone;
+//     const amount = req.body.amount;
+//     const type = req.body.type;
+//     const now = new Date().getTime();
+
+//     const formattedTime = now.toLocaleString("en-US", {
+//       year: "numeric",
+//       month: "2-digit",
+//       day: "2-digit",
+//       hour: "2-digit",
+//       minute: "2-digit",
+//       second: "2-digit",
+//       hour12: true,
+//     });
+
+//     // Check if the phone number is a 10-digit number
+//     if (!/^\d{10}$/.test(phone)) {
+//       return res.status(400).json({
+//         message:
+//           "ERROR!!! Invalid phone number. Please provide a 10-digit phone number.",
+//         status: false,
+//       });
+//     }
+
+//     // Check if user with the given phone number exists
+//     const checkUserQuery = "SELECT * FROM `users` WHERE phone = ?";
+//     const [existingUser] = await connection.execute(checkUserQuery, [phone]);
+
+//     if (existingUser.length === 0) {
+//       // If user doesn't exist, return an error
+//       return res.status(400).json({
+//         message: "ERROR!!! User with the provided phone number does not exist.",
+//         status: false,
+//       });
+//     }
+
+//     // If user exists, update the 'users' table
+//     const updateUserQuery =
+//       "UPDATE `users` SET `money` = `money` + ? WHERE phone = ?";
+//     await connection.execute(updateUserQuery, [amount, phone]);
+
+//     // Insert record into 'salary' table
+//     const insertSalaryQuery =
+//       "INSERT INTO salary (phone, amount, type, time) VALUES (?, ?, ?, ?)";
+//     await connection.execute(insertSalaryQuery, [phone, amount, type, now]);
+
+//     res.status(200).json({ message: "Salary record created successfully" });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ error: "Internal server error" });
+//   }
+// };
 const CreatedSalary = async (req, res) => {
   try {
     const phone = req.body.phone;
@@ -2589,36 +3087,27 @@ const CreatedSalary = async (req, res) => {
       hour12: true,
     });
 
-    // Check if the phone number is a 10-digit number
-    if (!/^\d{10}$/.test(phone)) {
-      return res.status(400).json({
-        message:
-          "ERROR!!! Invalid phone number. Please provide a 10-digit phone number.",
-        status: false,
-      });
-    }
-
     // Check if user with the given phone number exists
-    const checkUserQuery = "SELECT * FROM `users` WHERE phone = ?";
+    const checkUserQuery = "SELECT * FROM `users` WHERE id_user = ?";
     const [existingUser] = await connection.execute(checkUserQuery, [phone]);
 
     if (existingUser.length === 0) {
       // If user doesn't exist, return an error
       return res.status(400).json({
-        message: "ERROR!!! User with the provided phone number does not exist.",
+        message: "ERROR!!! User with the provided UID number does not exist.",
         status: false,
       });
     }
 
     // If user exists, update the 'users' table
     const updateUserQuery =
-      "UPDATE `users` SET `money` = `money` + ? WHERE phone = ?";
+      "UPDATE `users` SET `money` = `money` + ? WHERE id_user = ?";
     await connection.execute(updateUserQuery, [amount, phone]);
 
     // Insert record into 'salary' table
     const insertSalaryQuery =
-      "INSERT INTO salary (phone, amount, type, time) VALUES (?, ?, ?, ?)";
-    await connection.execute(insertSalaryQuery, [phone, amount, type, now]);
+      "INSERT INTO salary (userId, phone, amount, type, time) VALUES (?, ?, ?, ?, ?)";
+    await connection.execute(insertSalaryQuery, [phone, existingUser[0].phone, amount, type, now]);
 
     res.status(200).json({ message: "Salary record created successfully" });
   } catch (error) {
@@ -2742,7 +3231,7 @@ const createInviteMapAndLevels = (rows, userCode, maxLevel) => {
   return { inviteMap, userAllLevels, totalRechargeCount };
 };
 
-const getUserLevels = (rows, userCode, maxLevel = 10) => {
+const getUserLevels = (rows, userCode, maxLevel = 6) => {
   const { inviteMap, userAllLevels, totalRechargeCount } =
     createInviteMapAndLevels(rows, userCode, maxLevel);
   const level1Referrals = inviteMap[userCode].filter(
@@ -2792,7 +3281,7 @@ const getSalary = async (req, res) => {
       status: false,
     });
   }
-  console.log("asdasdasd : " + rows);
+  // console.log("asdasdasd : " + rows);
   return res.status(200).json({
     message: "Success",
     status: true,
@@ -2867,7 +3356,203 @@ const clear = async (req,res) =>{
   }
 }
 
+function timerJoinFun(params = "", addHours = 0) {
+  let date = params ? new Date(Number(params)) : new Date();
+  if (addHours !== 0) {
+    date.setHours(date.getHours() + addHours);
+  }
+
+  const options = {
+    timeZone: "Asia/Kolkata", // Specify the desired time zone
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false, // 24-hour format
+  };
+
+  const formatter = new Intl.DateTimeFormat("en-GB", options);
+  const parts = formatter.formatToParts(date);
+
+  const getPart = (type) => parts.find((part) => part.type === type).value;
+
+  const formattedDate = `${getPart("year")}-${getPart("month")}-${getPart(
+    "day"
+  )}`;
+
+  return formattedDate;
+}
+
+const walletData = async (req, res) => {
+  const sumdate = timerJoinFun(Date.now())
+
+  const [users] = await connection.query(
+    `SELECT SUM(money) as total FROM users WHERE status = 1;`,
+  );
+  const [usersTotal] = await connection.query(
+    `SELECT COUNT(id) as total FROM users WHERE status = 1;`,
+  );
+  const [usersToday] = await connection.query(
+    `SELECT COUNT(id) as total FROM users WHERE status = 1 AND DATE(today)=?;`, [sumdate]
+  );
+
+  const [recharge] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 1;`,
+  );
+  const [withdraw] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 1;`,
+  );
+
+  const [recharge_today] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 1 AND DATE(today) = ?;`,
+    [sumdate],
+  );
+  const [withdraw_today] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 1 AND DATE(today) = ?;`,
+    [sumdate],
+  );
+
+
+  const [recharge_pending] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 0;`,
+  );
+  const [withdraw_pending] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 0;`
+  );
+
+
+  let usersWallet = users[0].total;
+
+  let recharges = recharge[0].total;
+  let withdraws = withdraw[0].total;
+  return res.status(200).json({
+    message: "Success",
+    status: true,
+    usersWallet: usersWallet,
+    recharges: recharges,
+    withdraws: withdraws * 93,
+    totalUser: usersTotal[0].total,
+    todayUser: usersToday[0].total,
+    pRecharge: recharge_pending[0].total,
+    pWithdrawal: withdraw_pending[0].total,
+    rechargeToday: recharge_today[0].total,
+    withdrawToday: withdraw_today[0].total * 93,
+  });
+};
+
+const walletData2 = async (req, res) => {
+  let startDate = req.body.startDate ? Number(req.body.startDate) : new Date().setHours(0, 0, 0, 0);
+  let endDate = req.body.endDate ? Number(req.body.endDate) : new Date().setHours(23, 59, 59, 999);
+
+  const [users] = await connection.query(
+    `SELECT SUM(money) as total FROM users WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [usersTotal] = await connection.query(
+    `SELECT COUNT(id) as total FROM users WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [recharge] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [withdraw] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [recharge_pending] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 0 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [withdraw_pending] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 0 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [salary] = await connection.query(
+    `SELECT SUM(amount) as total FROM salary WHERE time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [giftCode] = await connection.query(
+    `SELECT SUM(money) as total FROM redenvelopes_used WHERE time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  return res.status(200).json({
+    message: "Success",
+    status: true,
+    usersWallet: users[0].total || 0,
+    recharges: recharge[0].total || 0,
+    withdraws: (withdraw[0].total || 0) * 93,
+    totalUser: usersTotal[0].total || 0,
+    pRecharge: recharge_pending[0].total || 0,
+    pWithdrawal: withdraw_pending[0].total || 0,
+    salary: salary[0].total || 0,
+    giftCode: giftCode[0].total || 0,
+  });
+};
+const agentWalletData = async (req, res) => {
+  let startDate = req.body.startDate ? Number(req.body.startDate) : new Date().setHours(0, 0, 0, 0);
+  let endDate = req.body.endDate ? Number(req.body.endDate) : new Date().setHours(23, 59, 59, 999);
+
+  const [users] = await connection.query(
+    `SELECT SUM(money) as total FROM users WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [usersTotal] = await connection.query(
+    `SELECT COUNT(id) as total FROM users WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [recharge] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [withdraw] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 1 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [recharge_pending] = await connection.query(
+    `SELECT SUM(money) as total FROM recharge WHERE status = 0 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  const [withdraw_pending] = await connection.query(
+    `SELECT SUM(money) as total FROM withdraw WHERE status = 0 AND time BETWEEN ? AND ?;`,
+    [startDate, endDate]
+  );
+
+  return res.status(200).json({
+    message: "Success",
+    status: true,
+    usersWallet: users[0].total || 0,
+    recharges: recharge[0].total || 0,
+    withdraws: (withdraw[0].total || 0) * 93,
+    totalUser: usersTotal[0].total || 0,
+    pRecharge: recharge_pending[0].total || 0,
+    pWithdrawal: withdraw_pending[0].total || 0,
+  });
+};
+
+
 const adminController = {
+  walletData,
+  walletData2,
+  Dashboard,
+  Dashboard2,
+  agentWalletData,
+  AgentDashboard,
   clear,
   CreateWingo,
   Create5D,
@@ -2923,13 +3608,12 @@ const adminController = {
   adminPageK3,
   updateLevel,
   CreatedSalaryRecord,
-  CreatedSalaryRecordDaily,
   CreatedSalary,
   DailySalaryEligibility,
   listCheckSalaryEligibility,
   getSalary,
   demoPage,
-  demoDailyPage
+  makesubagent
 };
 
 export default adminController;

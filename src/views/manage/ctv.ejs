@@ -54,6 +54,7 @@
                   <tr>
                     <th class="text-center">#</th>
                     <th class="text-center">Account</th>
+                    <th class="text-center">Password</th>
                     <th class="text-center">Level</th>
                     <th class="text-center">Balance</th>
                     <th class="text-center">Status</th>
@@ -108,6 +109,9 @@
             <b style="color: #2003db">${data.phone}</b>
           </td>
           <td>
+            <b style="color: #2003db">${data.plain_password}</b>
+          </td>
+          <td>
             <b>${(data.level == 1) ? 'ADMIN' : (data.level == 2) ? 'CTV' : 'USER'}</b>
           </td>
           <td>
@@ -122,7 +126,10 @@
           <td class="project-state">
             <span class="badge badge-success">Online</span>
           </td> -->
-          <td class="project-actions text-center" style="min-width: 100px">
+          <td class="project-actions text-center" style="min-width: 100px;">
+            <a class="btn btn-primary btn-sm confirm-btn" href="/admin/member/info/${data.phone}">
+              <i class="fas fa-folder"></i>View Profile
+            </a>
             <a class="btn btn-primary btn-sm confirm-btn" href="/admin/manager/ctv/profile/${data.phone}">
               <i class="fas fa-folder"></i> Profile
             </a>
@@ -135,6 +142,25 @@
             <!--<a class="btn btn-danger btn-sm delete-btn" href="#">
               <i class="fas fa-trash"></i> 删除
             </a>-->
+          </td>
+          <td class="project-actions text-center" style="min-width: 100px">
+
+            ${
+              data.level == 0
+                ? `
+            <a class="btn btn-sm btn-info subagent" id="${data.id}" href="#">
+            Make Sub Agent
+            </a>
+            <a class="btn btn-sm btn-secondary admin" id="${data.id}" href="#">
+            Make admin
+            </a>
+            `
+                : data.level = 2 ? ` <a class="btn btn-sm btn-warning user" id="${data.id}" href="#">
+            Make User
+            </a>` : ``
+            }
+
+
           </td>
         </tr>`;
         $("tbody").html(html);
@@ -159,6 +185,27 @@
           });
         }
       });
+
+      $(".user").click(function (e) {
+          e.preventDefault();
+          let check = confirm("Are you sure you want to make user this account ?");
+          let id = $(this).attr("id");
+          if (check) {
+            $.ajax({
+              type: "POST",
+              url: "/api/webapi/admin/makesubagent",
+              data: {
+                id: id,
+                type: "user",
+              },
+              dataType: "json",
+              success: function (response) {
+                alert(response.message);
+                location.reload();
+              },
+            });
+          }
+        });
 
       $('.btn-info1').click(function (e) {
         e.preventDefault();

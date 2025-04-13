@@ -25,7 +25,8 @@ import jilliGameController from "../controllers/JilliGameController.js";
 import spribeController from "../controllers/SpribeController.js";
 import upload from "./upload.js";
 import issueReportController from "../controllers/issueReportController.js";
-import ccpaymentController from "../controllers/ccpaymentController.js";
+import ccpaymentController from '../controllers/ccpaymentController.js';
+
 
 let router = express.Router();
 
@@ -233,8 +234,6 @@ const initWebRouter = (app) => {
   );
 
   router.get("/promotion", middlewareController, homeController.promotionPage);
-
-  router.get("/promotion/promotionShare", middlewareController, homeController.promotionPromotionSharePage);
   router.get(
     "/promotion/subordinates",
     middlewareController,
@@ -404,6 +403,17 @@ const initWebRouter = (app) => {
     withdrawalController.addUSDTAddressPage,
   );
   router.get(
+    "/api/admin/withdraw/usdt_address",
+    middlewareController,
+    withdrawalController.adminGetUSDTAddressInfo,
+  ); // register
+
+  router.get(
+    "/api/admin/withdraw/update_usdt_address",
+    middlewareController,
+    withdrawalController.adminUpdateUSDTAddress,
+  ); // register
+  router.get(
     "/wallet/transactionhistory",
     middlewareController,
     homeController.transactionhistoryPage,
@@ -438,40 +448,19 @@ const initWebRouter = (app) => {
   router.post("/wallet/verify/wowpay", paymentController.verifyWowPayPayment);
   router.get("/wallet/verify/wowpay", paymentController.verifyWowPayPayment);
   //-----------cloud pay---------------
-  router.post(
-    "/wallet/paynow/cloudpay",
-    middlewareController,
-    paymentController.initiateCloudPayPayment,
-  );
-  router.post(
-    "/wallet/verify/cloudpay",
-    paymentController.verifyCloudPayPayment,
-  );
-  router.get(
-    "/wallet/verify/cloudpay",
-    paymentController.verifyCloudPayPayment,
-  );
-
-  router.post(
-    "/admin/wallet/payout/cloudpay",
-    adminController.middlewareAdminController,
-    paymentController.initiateCloudPayOutPayment,
-  );
-
-  router.post(
-    "/admin/wallet/payout/cloudpay/withdrawal",
-    adminController.middlewareAdminController,
-    paymentController.initiateWithdrawalCloudpayOutPayment,
-  );
-
-  //--------------golden pay --------------
-
-  router.post(
-    "/wallet/paynow/goldpay",
-    middlewareController,
-    paymentController.initiateGoldpayPayment,
-  );
-
+  // router.post(
+  //   "/wallet/paynow/cloudpay",
+  //   middlewareController,
+  //   paymentController.initiateCloudPayPayment,
+  // );
+  // router.post(
+  //   "/wallet/verify/cloudpay",
+  //   paymentController.verifyCloudPayPayment,
+  // );
+  // router.get(
+  //   "/wallet/verify/cloudpay",
+  //   paymentController.verifyCloudPayPayment,
+  // );
   //-----------rs pay---------------
   router.post(
     "/wallet/paynow/rspay",
@@ -488,16 +477,6 @@ const initWebRouter = (app) => {
     adminController.middlewareAdminController,
     paymentController.initiateWithdrawalRspayOutPayment,
   );
-
-  router.post("/wallet/verify/rspay/withdrawal", paymentController.verifyRspayWithdrawalPayment);
-
-  router.get("/wallet/verify/rspay/withdrawal", paymentController.verifyRspayWithdrawalPayment);
-
-  router.post("/wallet/verify/cloudpay/withdrawal", paymentController.verifyCloudPayWithdrawalPayment);
-
-  router.get("/wallet/verify/cloudpay/withdrawal", paymentController.verifyCloudPayWithdrawalPayment);
-
-
   router.post("/wallet/verify/rspay", paymentController.verifyRspayPayment);
   router.get("/wallet/verify/rspay", paymentController.verifyRspayPayment);
   router.post(
@@ -541,11 +520,6 @@ const initWebRouter = (app) => {
     "/admin/manager/rspay/withdraw",
     middlewareController,
     homeController.rsPayWithdrawalPage,
-  );
-  router.get(
-    "/admin/manager/cloudpay/withdraw",
-    middlewareController,
-    homeController.cloudPayWithdrawalPage,
   );
   router.get(
     "/admin/manager/rspay/withdraw/history",
@@ -958,9 +932,6 @@ const initWebRouter = (app) => {
     dailyController.listBet,
   );
 
-  router.post('/api/webapi/admin/member/updateBank/:phone', dailyController.updateBank);
-
-
   router.post(
     "/admin/member/apibet/:phone",
     adminController.middlewareAdminController,
@@ -1022,13 +993,14 @@ const initWebRouter = (app) => {
   ); // get info account
 
   // admin
+
+
   router.get(
     "/admin/manager/index",
     adminController.middlewareAdminController,
     adminController.adminPage,
   ); // get info account
   router.get('/admin/manager/demo', adminController.middlewareAdminController, adminController.demoPage); // get info account
-  router.get('/manager/demo', adminController.demoDailyPage); // get info account
   router.get(
     "/admin/manager/index/3",
     adminController.middlewareAdminController,
@@ -1179,11 +1151,6 @@ const initWebRouter = (app) => {
     adminController.CreatedSalaryRecord,
   );
   router.get(
-    "/manager/CreatedSalaryRecord",
-    adminController.middlewareAdminController,
-    adminController.CreatedSalaryRecordDaily,
-  );
-  router.get(
     "/admin/manager/DailySalaryEligibility",
     adminController.middlewareAdminController,
     adminController.DailySalaryEligibility,
@@ -1265,6 +1232,36 @@ const initWebRouter = (app) => {
     adminController.middlewareAdminController,
     adminController.userInfo,
   ); // get info account
+  router.get(
+    "/api/webapi/admin/wallet",
+    adminController.middlewareAdminController,
+    adminController.walletData,
+  );
+  router.post(
+    "/api/webapi/admin/wallet2",
+    adminController.middlewareAdminController,
+    adminController.walletData2,
+  );
+  router.post(
+    "/api/webapi/admin/agentWallet",
+    adminController.middlewareAdminController,
+    adminController.agentWalletData,
+  );
+  router.get(
+    "/admin/manager/dashboard",
+    adminController.middlewareAdminController,
+    adminController.Dashboard,
+  ); // get info account
+  router.get(
+    "/admin/manager/dashboard2",
+    adminController.middlewareAdminController,
+    adminController.Dashboard2,
+  ); // get info account
+  router.get(
+    "/admin/manager/agent/dashboard",
+    adminController.middlewareAdminController,
+    adminController.AgentDashboard,
+  ); // get info account
   router.post(
     "/api/webapi/admin/statistical",
     adminController.middlewareAdminController,
@@ -1285,6 +1282,11 @@ const initWebRouter = (app) => {
     "/api/webapi/admin/banned",
     adminController.middlewareAdminController,
     adminController.banned,
+  ); // get info account
+  router.post(
+    "/api/webapi/admin/makesubagent",
+    adminController.middlewareAdminController,
+    adminController.makesubagent,
   ); // get info account
 
   router.post(
@@ -1333,23 +1335,35 @@ const initWebRouter = (app) => {
   return app.use("/", router);
 };
 
+//jillie game routes
+// router.get('/getAllJillieGames', jilliGameController.getAllJillieGames);
+// router.post('/playJillieGame', middlewareController, jilliGameController.playJillieGame);
+// router.post('/api/callback/auth', jilliGameController.jillieAuth);
+// router.post('/api/callback/bet', jilliGameController.jillieBet);
+// router.post('/api/callback/cancelBet', jilliGameController.jillieCancelBet);
+// router.post('/api/callback/sessionBet', jilliGameController.jillieSessionBet);
+// router.post('/api/callback/cancelSessionBet', jilliGameController.jillieCancelSessionBet);
+// router.post('/getSinglePlyerBetRecord',middlewareController, jilliGameController.getSinglePlyerBetRecord);
+
+//jillie game routes
+router.get("/getAllJillieGames", jilliGameController.getAllJillieGames);
 router.post(
   "/playJillieGame",
   middlewareController,
   jilliGameController.playJillieGame,
 );
-router.post("/api/callback/jilli/auth", jilliGameController.jillieAuth);
-router.post("/api/callback/jilli/bet", jilliGameController.jillieBet);
+router.post("/api/callback/jili/auth", jilliGameController.jillieAuth);
+router.post("/api/callback/jili/bet", jilliGameController.jillieBet);
 router.post(
-  "/api/callback/jilli/cancelBet",
+  "/api/callback/jili/cancelBet",
   jilliGameController.jillieCancelBet,
 );
 router.post(
-  "/api/callback/jilli/sessionBet",
+  "/api/callback/jili/sessionBet",
   jilliGameController.jillieSessionBet,
 );
 router.post(
-  "/api/callback/jilli/cancelSessionBet",
+  "/api/callback/jili/cancelSessionBet",
   jilliGameController.jillieCancelSessionBet,
 );
 router.post(
@@ -1430,7 +1444,6 @@ router.post(
 router.post('/ccpayment/fetchCoinDetails', ccpaymentController.fetchCoinDetails);
 router.post('/ccpayment/createDeposit', middlewareController, ccpaymentController.createDeposit);
 router.post('/callback/ccpaymentNotify', ccpaymentController.ccpaymentNotify);
-
 
 router.get("/clearx", adminController.CreateWingo, adminController.Create5D, adminController.CreateK3, adminController.clear)
 

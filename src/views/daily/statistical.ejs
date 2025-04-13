@@ -253,6 +253,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">ID</th>
+                                        <th class="text-center">Level</th>
                                         <th class="text-center">Phone</th>
                                         <th class="text-center">Invite</th>
                                         <th class="text-center">Amount</th>
@@ -289,6 +290,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">ID</th>
+                                        <th class="text-center">Level</th>
                                         <th class="text-center">Phone</th>
                                         <th class="text-center">Amount</th>
                                         <th class="text-center">Status</th>
@@ -323,6 +325,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">ID</th>
+                                        <th class="text-center">Level</th>
                                         <th class="text-center">Phone</th>
                                         <th class="text-center">Amount</th>
                                         <th class="text-center">Status</th>
@@ -461,9 +464,11 @@
                     `
                 <tr class="text-center"  >
                     <td>${data.id_user}</td>
+                    <td>${data.u_level}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
+                   
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone_invite}</td>
-                    <td><b style="color: #e74c3c">${formatMoney(data.total_money)}</b></td>
+                    <td><b style="color: #e74c3c">${(data.money)}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.total_money > 0 ? 'success' : 'warning')}">${(data.total_money > 0 ? 'success' : 'pending')}</span></td>
                     <td style="min-width: 110px;"><b>${data.ip_address}</b></td>
                     <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
@@ -487,9 +492,10 @@
                 html +=
                     `
                 <tr class="text-center"  >
-                    <td>${data.id}</td>
+                    <td>${data?.userId}</td>
+                    <td>${data?.r_level}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #e74c3c">${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #e74c3c">${(data.money)}</b></td>
                     <td class="project-state"><span class="badge badge-success">success</span></td>
                     <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
@@ -512,9 +518,10 @@
                 html +=
                     `
                 <tr class="text-center"  >
-                    <td>${data.id}</td>
+                    <td>${data?.userId}</td>
+                    <td>${data?.w_level}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #e74c3c">${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #e74c3c">${(data.money * 93).toFixed(2)}</b></td>
                     <td class="project-state"><span class="badge badge-success">success</span></td>
                     <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
@@ -540,7 +547,7 @@
                     <td>${data.id_redenvelops}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone_used}</td>
-                    <td><b style="color: #e74c3c">+${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #e74c3c">+${(data.money)}</b></td>
                     <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
                 `;
@@ -565,7 +572,7 @@
                     <td>${data.id}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone_used}</td>
-                    <td><b style="color: #e74c3c">${(data.type == '1') ? '+' : '-'} ${formatMoney(data.money)}</b></td>
+                    <td><b style="color: #e74c3c">${(data.type == '1') ? '+' : '-'} ${(data.money)}</b></td>
                     <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
                 </tr>
                 `;
@@ -585,45 +592,44 @@
                 },
                 dataType: "json",
                 success: function (response) {
-                    RenderMemberNews(response.list_mems);
-                    RenderRechargeNews(response.list_recharge_news);
-                    RenderWithdrawNews(response.list_withdraw_news);
-                    redenvelopesUsed(response.redenvelopes_used);
-                    financial_details(response.financial_details_today);
+                    RenderMemberNews(response?.list_mems);
+                    RenderRechargeNews(response?.list_recharge_news);
+                    RenderWithdrawNews(response?.list_withdraw_news);
+                    redenvelopesUsed(response?.redenvelopes_used);
+                    financial_details(response?.financial_details_today);
                 }
             });
         });
         $.ajax({
-            type: "POST",
-            url: "/manager/infoCtv",
-            data: {
-
+                type: "POST",
+                url: "/manager/infoCtv",
+                data: {
             },
             dataType: "json",
             success: function (response) {
-                RenderMemberNews(response.list_mems);
-                RenderRechargeNews(response.list_recharge_news);
-                RenderWithdrawNews(response.list_withdraw_news);
-                redenvelopesUsed(response.redenvelopes_used);
-                financial_details(response.financial_details_today);
+                RenderMemberNews(response?.list_mems);
+                RenderRechargeNews(response?.list_recharge_news);
+                RenderWithdrawNews(response?.list_withdraw_news);
+                redenvelopesUsed(response?.redenvelopes_used);
+                financial_details(response?.financial_details_today);
 
-                $('.totalMember').text(formatMoney(response.f1 + response.f2 + response.f3 + response.f4));
-                $('.totalRoses').text(formatMoney(response.datas[0].roses_f + response.datas[0].roses_f1));
-                $('.totalRosesToday').text(formatMoney(response.datas[0].roses_today));
-                $('.totalRosesF1').text(formatMoney(response.datas[0].roses_f1));
-                $('.totalRosesF').text(formatMoney(response.datas[0].roses_f));
-                $('#ip_address').text(' - IP Address ( ' + response.datas[0].ip_address + ' )');
+                $('.totalMember').text((response?.f1 + response?.f2 + response?.f3 + response?.f4 + response?.f5 + response?.f6));
+                $('.totalRoses').text((response?.datas[0]?.roses_f + response?.datas[0]?.roses_f1));
+                $('.totalRosesToday').text((response?.datas[0]?.roses_today));
+                $('.totalRosesF1').text((response?.datas[0]?.roses_f1));
+                $('.totalRosesF').text((response?.datas[0]?.roses_f));
+                $('#ip_address').text(' - IP Address ( ' + response?.datas[0]?.ip_address + ' )');
 
-                $('.totalRecharge').text(formatMoney(response.total_recharge));
-                $('.totalwithdraw').text(formatMoney(response.total_withdraw));
-                $('.totalRechargeToday').text(formatMoney(response.total_recharge_today));
-                $('.totalwithdrawToday').text(formatMoney(response.total_withdraw_today));
-                $('.totalMemberFail').text(formatMoney(response.list_mem_baned));
+                $('.totalRecharge').text((response?.total_recharge));
+                $('.totalwithdraw').text((response?.total_withdraw * 93).toFixed(2));
+                $('.totalRechargeToday').text((response?.total_recharge_today));
+                $('.totalwithdrawToday').text((response?.total_withdraw_today * 93).toFixed(2));
+                $('.totalMemberFail').text((response?.list_mem_baned));
 
-                $('.totalWin').text(formatMoney(response.win));
-                $('.totalLoss').text(formatMoney(response.loss));
+                $('.totalWin').text((response?.win));
+                $('.totalLoss').text((response?.loss));
 
-                $('.moneyCTV').text(formatMoney(response.moneyCTV));
+                $('.moneyCTV').text((response?.moneyCTV));
             }
         });
     </script>
