@@ -456,7 +456,7 @@
                 <tr class="text-center"  >
                     <td>${data.id_user}</td>
                     <td style="color: #3498db;font-weight: 600;min-width: 210px">${data.phone}</td>
-                    <td><b style="color: #e74c3c">${(data.money)}</b></td>
+                    <td><b style="color: #e74c3c">${(data.total_money)}</b></td>
                     <td class="project-state"><span class="badge badge-${(data.total_money > 0 ? 'success' : 'warning')}">${(data.total_money > 0 ? 'success' : 'pending')}</span></td>
                     <td style="min-width: 110px;"><b>${data.ip_address}</b></td>
                     <td style="min-width: 110px;"><b>${timerJoin(data.time)}</b></td>
