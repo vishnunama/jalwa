@@ -6,8 +6,8 @@ import moment from "moment";
 import Joi from "joi";
 import bcrypt from "bcrypt";
 import _ from "lodash";
-import  verifyOtpLess  from "../helpers/verifyOtpLess.js";
-import  sendOtpLess  from "../helpers/sendOtpLess.js";
+import { verifyOtpLess } from "../helpers/verifyOtpLess.js";
+import { sendOtpLess } from "../helpers/sendOTPLess.js";
 
 const timeNow = Date.now();
 const saltRounds = parseInt(process.env.SALT_ROUNDS || 5);
