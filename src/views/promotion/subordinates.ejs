@@ -18,7 +18,7 @@
 
     <!--Select configuration files dynamically-->
     <link rel="manifest" />
-    <title>GtnCash</title>
+    <title>Rupeeclub</title>
     <script type="module"
             crossorigin=""
             src="/assets/js/index-a812a803.js"></script>
@@ -2956,7 +2956,7 @@
           crossorigin="anonymous"
           referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
+
      <script>
       function formateT(params) {
       let result = (params < 10) ? "0" + params : params;
@@ -2970,20 +2970,20 @@
         } else {
             date = new Date();
         }
-    
+
         date.setHours(date.getHours() + addHours);
-    
+
         let years = formateT(date.getFullYear());
         let months = formateT(date.getMonth() + 1);
         let days = formateT(date.getDate());
-    
+
         let hours = date.getHours() % 12;
         hours = hours === 0 ? 12 : hours;
         let ampm = date.getHours() < 12 ? "AM" : "PM";
-    
+
         let minutes = formateT(date.getMinutes());
         let seconds = formateT(date.getSeconds());
-    
+
         return years + '-' + months + '-' + days + ' ' + hours + ':' + minutes + ':' + seconds + ' ' + ampm;
     }
      </script>

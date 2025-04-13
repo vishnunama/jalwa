@@ -647,7 +647,7 @@ const playJillieGame = async (req, res) => {
         Token: String(userToken),  // Replace with your actual access token
         GameId: Number(gameId), // Fixed to correctly access gameId
         Lang: 'en-US',
-        HomeUrl: 'https://gtncash.com',
+        HomeUrl: 'https://Rupeeclub.com',
         Platform: 'web',
         AgentId: AGENT_ID,
         Key: generateKey({
