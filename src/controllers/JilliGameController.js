@@ -5,7 +5,7 @@ import axios from 'axios';
 import CryptoJS from 'crypto-js';
 
 const API_URL = 'https://uat-wb-api-2.huuykk865s.com/api1/';
-const AGENT_ID = 'Reddysbook_Seamrupeeclub';
+const AGENT_ID = 'Reddysbook_Seamrupeeclubs';
 const AGENT_KEY = 'e3bafbe6d48d8af49cec469d160515c86719d9b2';
 
 
