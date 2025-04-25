@@ -25,7 +25,7 @@ const PaymentMethodsMap = {
   UPI_GATEWAY: "upi_gateway",
   UPI_MANUAL: "upi_manual",
   USDT_MANUAL: "usdt_manual",
-  WOW_PAY: "wow_pay",
+  LG_PAY: "lg_pay",
   RS_PAY: "rs_pay",
   CLOUD_PAY: "cloud_pay",
   USDT: "usdt",
@@ -628,9 +628,17 @@ function generateOrderNumber(phone) {
   return "LG" + "xx" + phone + "xx" + randomNumber;
 }
 
+// RS PAY Payment integration ---------------
+const RS_PAY_PAYMENT_STATE = {
+  SUCCESS: 1,
+  PROCESSING: 2,
+  FAILED: 3,
+  PARTIALLY_SUCCESS: 4,
+};
+
 //Lg pau / WOW PAY Payment Integration --------------- Deprecated
 const initiateWowPayPayment = async (req, res) => {
-  const type = PaymentMethodsMap.WOW_PAY;
+  const type = PaymentMethodsMap.LG_PAY;
   let auth = req.cookies.auth;
   let money = parseInt(req.query.money);
 
@@ -733,113 +741,6 @@ const initiateWowPayPayment = async (req, res) => {
   }
 };
 
-// const verifyWowPayPayment = async (req, res) => {
-//   try {
-//       const type = PaymentMethodsMap.WOW_PAY
-//       const data = req.body;
-
-//       console.log(data)
-
-//       if (!data.status) {
-//           return res.status(400).json({
-//                           message: "Payment Failed",
-//                           status: false,
-//                           timeStamp: timeNow,
-//                       })
-//         }
-
-//         // Extract values from query parameters
-//      // Validate required fields
-//       if (!data.order_sn || !data.money ) {
-//           return res.status(400).json({
-//               message: "Invalid request parameters",
-//               status: false,
-//               timeStamp: timeNow,
-//           });
-//       }
-
-//       // Extract phone number from out_trade_no
-//           let phone = null;
-//           if (data.order_sn.includes('xx')) {
-//               const parts = data.order_sn.split('xx');
-//               if (parts.length >= 3) {
-//                   // Extract the part that is supposed to be the phone number
-//                   const potentialPhone = parts[1];
-//                   // Ensure it's a 10-digit number
-//                   if (/^\d{10}$/.test(potentialPhone)) {
-//                       phone = potentialPhone;
-//                   }
-//               }
-//           }
-
-//           // Validate phone number
-//           if (!phone) {
-//               return res.status(400).json({
-//                   message: "Invalid phone number",
-//                   status: false,
-//                   timeStamp: timeNow,
-//               });
-//           }
-
-//       const newRechargeParams = {
-//           orderId: data.order_sn,
-//           transactionId: 'NULL',
-//           utr: null,
-//           phone: phone,
-//           money: Number(data.money) / 100,
-//           type: type,
-//           status: PaymentStatusMap.SUCCESS,
-//           today: rechargeTable.getCurrentTimeForTodayField(),
-//           url: 'NULL',
-//           time: timeNow,
-//       }
-
-//       const [recharge] = await connection.query('SELECT * FROM recharge WHERE id_order = ?', newRechargeParams.orderId);
-
-//       if (recharge.length != 0) {
-//           return res.redirect("/wallet/rechargerecord")
-//           // return res.status(200).json({status: false, message: "Duplicate order request", data: recharge})
-//       }
-
-//       const newRecharge = await rechargeTable.create(newRechargeParams)
-
-//       let [user] =  await connection.query('SELECT `phone`, `code`,`name_user`,`invite` FROM users WHERE `phone` = ? ', [phone]);
-
-//       await addUserAccountBalance({
-//           phone: user[0].phone,
-//           money: Number(data.money) / 100,
-//           code: user[0].code,
-//           invite: user[0].invite,
-//       })
-
-//       // return res.status(200).json(newRecharge)
-
-//       return res.redirect("/wallet/rechargerecord")
-//   } catch (error) {
-//       console.log(error)
-//       console.log({
-//           status: false,
-//           message: "Something went wrong!",
-//           timestamp: timeNow
-//       })
-//       return res.status(500).json({
-//           status: false,
-//           message: "Something went wrong!",
-//           timestamp: timeNow
-//       })
-//   }
-// }
-
-// -------------------------------------------- Deprecated
-
-// RS PAY Payment integration ---------------
-const RS_PAY_PAYMENT_STATE = {
-  SUCCESS: 1,
-  PROCESSING: 2,
-  FAILED: 3,
-  PARTIALLY_SUCCESS: 4,
-};
-
 const verifyWowPayPayment = async (req, res) => {
   try {
     // const type = PaymentMethodsMap.RS_PAY;
@@ -933,6 +834,9 @@ const verifyWowPayPayment = async (req, res) => {
     return res.status(500).send("failed");
   }
 };
+// -------------------------------------------- Deprecated
+
+
 
 const initiateUpayPayment = async (req, res) => {
   try {

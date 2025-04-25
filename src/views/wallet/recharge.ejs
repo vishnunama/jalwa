@@ -6240,25 +6240,8 @@
                                          class="Recharge__container-tabcard"
                                          id="payment_methods_options">
 
-                                          <!-- <div data-v-4f3d8608=""
+                                          <div data-v-4f3d8608=""
                                                class="Recharge__container-tabcard__items active"
-                                               type="rs_pay">
-                                                <div data-v-4f3d8608=""
-                                                     class="centers">
-                                                      <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__top"><img
-                                                                 data-v-4f3d8608=""
-                                                                 class="img"
-                                                                 src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/payNameIcon2_202403072247296e17.png"
-                                                                 alt=""></div>
-                                                      <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__bot">Expert UPI-QR
-
-                                                      </div>
-                                                </div>
-                                          </div> -->
-                                          <!-- <div data-v-4f3d8608=""
-                                               class="Recharge__container-tabcard__items "
                                                type="lg_pay">
                                                 <div data-v-4f3d8608=""
                                                      class="centers">
@@ -6273,26 +6256,9 @@
 
                                                       </div>
                                                 </div>
-                                          </div> -->
+                                          </div>
 
-                                          <!-- <div data-v-4f3d8608=""
-                                               class="Recharge__container-tabcard__items "
-                                               type="cloud_pay">
-                                                <div data-v-4f3d8608=""
-                                                     class="centers">
-                                                      <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__top"><img
-                                                                 data-v-4f3d8608=""
-                                                                 class="img"
-                                                                 src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/payNameIcon2_202403072247296e17.png"
-                                                                 alt=""></div>
-                                                      <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__bot">Innate UPI-QR
-
-                                                      </div>
-                                                </div>
-                                          </div> -->
-
+                                          
                                           <div data-v-4f3d8608=""
                                                class="Recharge__container-tabcard__items"
                                                type="upi_manual">
@@ -6320,7 +6286,7 @@
                                 </div>
                             </div>
                         </div> -->
-                                          <div data-v-4f3d8608=""
+                                          <!-- <div data-v-4f3d8608=""
                                                class="Recharge__container-tabcard__items active"
                                                type="usdt_manual_trc">
                                                 <div data-v-4f3d8608=""
@@ -6333,10 +6299,10 @@
                                                                  alt=""></div>
                                                       <div data-v-4f3d8608=""
                                                            class="Recharge__container-tabcard__bot">USDT(TRC20)
-                                                            <!-- <span v-if="item.maxRechargeRifts && item.maxRechargeRifts > 0">{{ item?.maxRechargeRifts * 100 }}%</span> -->
+                                                            
                                                       </div>
                                                 </div>
-                                          </div>
+                                          </div> -->
                                           <div data-v-4f3d8608=""
                                                class="Recharge__container-tabcard__items "
                                                type="usdt_manual_bep">
@@ -6349,8 +6315,8 @@
                                                                  src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/payNameIcon_202308241247227g2d.png"
                                                                  alt=""></div>
                                                       <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__bot">USDT(BEP20)
-                                                            <!-- <span v-if="item.maxRechargeRifts && item.maxRechargeRifts > 0">{{ item?.maxRechargeRifts * 100 }}%</span> -->
+                                                           class="Recharge__container-tabcard__bot">USDT
+                                                      
                                                       </div>
                                                 </div>
                                           </div>
@@ -7222,16 +7188,16 @@
                                           alertMessage(`Money is Required and it should be USDT ${minimumMoneyAllowedUSDT} or above!`)
                                           return
                                     }
-                                    // handleManualUSDTPaymentRequest(inputMoney)
-                                    handleUSDTPaymentRequest(inputMoney, "BSC")
+                                    handleManualUSDTPaymentRequest(inputMoney)
+                                    // handleUSDTPaymentRequest(inputMoney, "BSC")
                                     break;
                               case PaymentMethodsMap.USDT_MANUAL_TRC:
                                     if (!inputMoney || !(inputMoney >= minimumMoneyAllowedUSDT)) {
                                           alertMessage(`Money is Required and it should be USDT ${minimumMoneyAllowedUSDT} or above!`)
                                           return
                                     }
-                                    // handleManualUSDTPaymentRequest(inputMoney)
-                                    handleUSDTPaymentRequest(inputMoney, "TRC")
+                                     handleManualUSDTPaymentRequest(inputMoney)
+                                    // handleUSDTPaymentRequest(inputMoney, "TRC")
                                     break;
                               case PaymentMethodsMap.UPI_MANUAL:
                                     if (!inputMoney || !(inputMoney >= minimumMoneyAllowedINR)) {
