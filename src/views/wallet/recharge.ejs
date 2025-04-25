@@ -19,7 +19,7 @@
                   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
             <link rel="manifest">
-            <title>Rupeeclub</title>
+            <title>911club.co.in</title>
             <script type="module"
                     crossorigin=""
                     src="/assets/js/index-00d20e8e.js"></script>
@@ -6240,6 +6240,23 @@
                                          class="Recharge__container-tabcard"
                                          id="payment_methods_options">
 
+                                          <!-- <div data-v-4f3d8608=""
+                                               class="Recharge__container-tabcard__items active"
+                                               type="rs_pay">
+                                                <div data-v-4f3d8608=""
+                                                     class="centers">
+                                                      <div data-v-4f3d8608=""
+                                                           class="Recharge__container-tabcard__top"><img
+                                                                 data-v-4f3d8608=""
+                                                                 class="img"
+                                                                 src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/payNameIcon2_202403072247296e17.png"
+                                                                 alt=""></div>
+                                                      <div data-v-4f3d8608=""
+                                                           class="Recharge__container-tabcard__bot">Expert UPI-QR
+
+                                                      </div>
+                                                </div>
+                                          </div> -->
                                           <div data-v-4f3d8608=""
                                                class="Recharge__container-tabcard__items active"
                                                type="lg_pay">
@@ -6258,9 +6275,10 @@
                                                 </div>
                                           </div>
 
-                                          
+                                         
+
                                           <div data-v-4f3d8608=""
-                                               class="Recharge__container-tabcard__items"
+                                               class="Recharge__container-tabcard__items "
                                                type="upi_manual">
                                                 <div data-v-4f3d8608=""
                                                      class="centers">
@@ -6286,8 +6304,8 @@
                                 </div>
                             </div>
                         </div> -->
-                                          <!-- <div data-v-4f3d8608=""
-                                               class="Recharge__container-tabcard__items active"
+                                          <div data-v-4f3d8608=""
+                                               class="Recharge__container-tabcard__items "
                                                type="usdt_manual_trc">
                                                 <div data-v-4f3d8608=""
                                                      class="centers">
@@ -6298,12 +6316,11 @@
                                                                  src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/payNameIcon_202308241247227g2d.png"
                                                                  alt=""></div>
                                                       <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__bot">USDT(TRC20)
-                                                            
+                                                           class="Recharge__container-tabcard__bot">USDT
                                                       </div>
                                                 </div>
-                                          </div> -->
-                                          <div data-v-4f3d8608=""
+                                          </div>
+                                          <!-- <div data-v-4f3d8608=""
                                                class="Recharge__container-tabcard__items "
                                                type="usdt_manual_bep">
                                                 <div data-v-4f3d8608=""
@@ -6315,11 +6332,11 @@
                                                                  src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/payNameIcon_202308241247227g2d.png"
                                                                  alt=""></div>
                                                       <div data-v-4f3d8608=""
-                                                           class="Recharge__container-tabcard__bot">USDT
-                                                      
+                                                           class="Recharge__container-tabcard__bot">USDT(BEP20)
+                                                           
                                                       </div>
                                                 </div>
-                                          </div>
+                                          </div> -->
                                     </div>
                               </div><!-- 支付方式组件 -->
                               <div data-v-9e03166f=""
@@ -6450,7 +6467,7 @@
                                                            src="/assets/png/clean-82487515.png"
                                                            alt=""></div>
                                           </div>
-                                          <div data-v-9e03166f=""
+                                          <div data-v-9e03166f="" id="usdtIndicator" style="display: none;"
                                                class="Recharge__content-paymoney__money-input">
                                                 <div data-v-9e03166f=""
                                                      class="place-div"
@@ -6987,6 +7004,7 @@
                                     selectedPaymentMethod = PaymentMethodsMap.UPI_MANUAL
                                     QuickMoneyOptions.innerHTML = QuickMoneyForRegular
                                     document.querySelector("#currency_indicator").innerHTML = "₹"
+                                    document.querySelector("#usdtIndicator").style.display = "none"
                                     break;
                               case PaymentMethodsMap.USDT_MANUAL_BEP:
                                     inputMoney = '10'
@@ -6994,6 +7012,7 @@
                                     MoneyAmountUsdtInput.value = inputMoney * name_bank
                                     selectedPaymentMethod = PaymentMethodsMap.USDT_MANUAL_BEP
                                     QuickMoneyOptions.innerHTML = QuickMoneyForUSDT
+                                    document.querySelector("#usdtIndicator").style.display = "block"
                                     document.querySelector("#currency_indicator").innerHTML = `<img
                   data-v-4f3d8608=""
                   class="img"
@@ -7006,6 +7025,7 @@
                                     MoneyAmountUsdtInput.value = inputMoney * name_bank
                                     selectedPaymentMethod = PaymentMethodsMap.USDT_MANUAL_TRC
                                     QuickMoneyOptions.innerHTML = QuickMoneyForUSDT
+                                    document.querySelector("#usdtIndicator").style.display = "block"
                                     document.querySelector("#currency_indicator").innerHTML = `<img
                   data-v-4f3d8608=""
                   class="img"
@@ -7197,7 +7217,7 @@
                                           return
                                     }
                                      handleManualUSDTPaymentRequest(inputMoney)
-                                    // handleUSDTPaymentRequest(inputMoney, "TRC")
+                                    //handleUSDTPaymentRequest(inputMoney, "TRC")
                                     break;
                               case PaymentMethodsMap.UPI_MANUAL:
                                     if (!inputMoney || !(inputMoney >= minimumMoneyAllowedINR)) {
