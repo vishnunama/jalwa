@@ -48,7 +48,7 @@ export const spribeLaunchGame = async (req, res) => {
         const hashSignature = generateHashSignature(token, timestamp);
 
         await connection.query('UPDATE users SET spribeLaunchToken = ? WHERE phone = ?', [token, playerId]);
-        console.log(token, "token")
+        console.log(token, "token", "playerId", playerId)
         // Create launch URL
         const launchUrl = `${API_URL}/${game}?user=${userId}&token=${token}&currency=${currency}&lang=EN&return_url=${return_url}&operator=${OPERATOR_KEY}`;
         console.log(launchUrl)
