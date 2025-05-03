@@ -13,7 +13,6 @@ const generateToken = (playerId, timestamp) => {
     const payload = `${playerId}:${timestamp}`;
     return crypto.createHmac('sha256', SECRET_TOKEN).update(payload).digest('hex');
 };
-
 const generateHashSignature = (token, timestamp) => {
     const payload = `${token}:${timestamp}`;
     return crypto.createHmac('sha256', SECRET_TOKEN).update(payload).digest('base64');
@@ -23,8 +22,6 @@ export const spribeLaunchGame = async (req, res) => {
     const userToken = req.userToken;
     const { gameName } = req.body
     const game = gameName;
-
-    console.log(userToken, gameName, game)
 
     try {
         const [userRows] = await connection.query('SELECT * FROM users WHERE token = ?', [userToken]);
@@ -59,60 +56,11 @@ export const spribeLaunchGame = async (req, res) => {
     }
 };
 
-export const spribeInfo = async (req, res) => {
-    const { session_token, currency, user_id } = req.body;
-    console.log("spribeInfo", req.body)
-    console.log("spribeAuth", req.headers)
 
-    try {
-        // Find the user in the database using the provided token
-        const [userRows] = await connection.query('SELECT * FROM users WHERE id_user = ?', [user_id]);
-
-        // Check if user exists
-        if (!userRows.length) {
-            console.log("first")
-            return res.status(200).json({
-                code: 401,
-                message: 'User token is invalid',
-            });
-        }
-        console.log("second")
-        const user = userRows[0];
-        // Send a success response with INR currency
-
-        // 1000 stands for 1
-        // 500 = 500000 units
-        // 0.5 = 500 units
-        // 0.05 = 50 units
-
-        const response = {
-            code: 200,
-            message: "ok",
-            data: {
-                user_id: user.id_user,
-                username: user.name_user,
-                balance: Math.round(user.money) * 1000, // Convert to the correct unit by dividing by 1000
-                currency: currency // Use the currency provided in the request
-            }
-        };
-
-        console.log("third", response)
-        return res.json(response);
-
-    } catch (error) {
-        console.log("four")
-        console.log(error)
-        return res.status(200).json({
-            code: 500,
-            message: 'Internal error',
-        });
-    }
-};
 
 export const spribeAuth = async (req, res) => {
     const { user_token, session_token, platform, currency } = req.body;
     console.log("spribeAuth", req.body)
-    console.log("spribeAuth", req.headers)
 
     try {
         // Find the user in the database using the provided token
@@ -123,29 +71,22 @@ export const spribeAuth = async (req, res) => {
             console.log("first")
             return res.status(200).json({
                 code: 401,
-                message: 'User token is invalid',
+                message: 'Token expired or invalid',
             });
         }
         console.log("second")
         const user = userRows[0];
         // Send a success response with INR currency
-
-        // 1000 stands for 1
-        // 500 = 500000 units
-        // 0.5 = 500 units
-        // 0.05 = 50 units
-
         const response = {
             code: 200,
             message: "Success",
             data: {
                 user_id: user.id_user,
                 username: user.name_user,
-                balance: Math.round(user.money) * 1000, // Convert to the correct unit by dividing by 1000
+                balance: user.money, // Assuming the balance is stored in user table
                 currency: currency // Use the currency provided in the request
             }
         };
-
         console.log("third", response)
         return res.json(response);
 
@@ -161,7 +102,6 @@ export const spribeAuth = async (req, res) => {
 
 export const spribeDeposit = async (req, res) => {
     console.log(req.body,"spribeDeposit");
-    console.log("spribeAuth", req.headers)
 
     const {
         user_id, currency, amount, provider, provider_tx_id, game, action, action_id, session_token, platform, withdraw_provider_tx_id
@@ -200,7 +140,7 @@ export const spribeDeposit = async (req, res) => {
         }
 
         const user = userRows[0];
-        const old_balance = Math.round(user.money * 1000);
+        const old_balance = Number(user.money);
         if (amount > old_balance) {
             return res.status(402).json({
                 code: 402,
@@ -213,17 +153,17 @@ export const spribeDeposit = async (req, res) => {
                 }
             });
         }
-        let new_balance = Math.round(old_balance) - Math.round(amount);
+        const new_balance = Number(old_balance) - Number(amount);
 
         // Update the user's balance
-        await connection.query('UPDATE users SET money = ? WHERE id_user = ?', [(new_balance / 1000), user_id]);
+        await connection.query('UPDATE users SET money = ? WHERE id_user = ?', [new_balance, user_id]);
 
         // Generate a unique operator transaction ID
         const operator_tx_id = `OP_TX_${Date.now()}`;
 
         // Record the deposit transaction in the database
         await connection.query('INSERT INTO spribetransaction (id_user,type, phone, name_user, provider, provider_tx_id, operator_tx_id, old_balance, new_balance, currency, deposit_amount, game, action, action_id, session_token) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)', [
-            user_id, 0, user.phone, user.name_user, provider, provider_tx_id, operator_tx_id, (old_balance / 1000), (new_balance / 1000), currency, (amount / 1000), game, action, action_id, session_token
+            user_id, 0, user.phone, user.name_user, provider, provider_tx_id, operator_tx_id, old_balance, new_balance, currency, amount, game, action, action_id, session_token
         ]);
 
         const successResponse = {
@@ -252,10 +192,8 @@ export const spribeDeposit = async (req, res) => {
 };
 
 
-
 export const spribeWithdraw = async (req, res) => {
     console.log(req.body,"spribeWithdraw");
-    console.log("spribeAuth", req.headers)
 
     const {
         user_id, currency, amount, provider, provider_tx_id, game, action, action_id, session_token, platform
@@ -274,7 +212,7 @@ export const spribeWithdraw = async (req, res) => {
         }
 
         const user = userRows[0];
-        const old_balance = Math.round(user.money * 1000);
+        const old_balance = Number(user.money);
 
         // Check if user has sufficient funds
         if (old_balance < amount) {
@@ -284,22 +222,22 @@ export const spribeWithdraw = async (req, res) => {
             });
         }
 
-        const new_balance = Math.round(old_balance) + Math.round(amount);
+        const new_balance = Number(old_balance) + Number(amount);
 
         // Update the user's balance
-        await connection.query('UPDATE users SET money = ? WHERE id_user = ?', [(new_balance / 1000), user_id]);
+        await connection.query('UPDATE users SET money = ? WHERE id_user = ?', [new_balance, user_id]);
 
         // Generate a unique operator transaction ID
         const operator_tx_id = `OP_TX_${Date.now()}`;
 
         // Record the withdrawal transaction in the database
         await connection.query('INSERT INTO spribetransaction (id_user,type, phone, name_user, provider, provider_tx_id, operator_tx_id, old_balance, new_balance, currency, withdrawal_amount, game, action, action_id, session_token) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)', [
-            user_id, 1, user.phone, user.name_user, provider, provider_tx_id, operator_tx_id, (old_balance / 1000), (new_balance / 1000), currency, (amount / 1000), game, action, action_id, session_token
+            user_id, 1, user.phone, user.name_user, provider, provider_tx_id, operator_tx_id, old_balance, new_balance, currency, amount, game, action, action_id, session_token
         ]);
 
         const successResponse = {
             code: 200,
-            message: "ok",
+            message: "Success",
             data: {
                 user_id,
                 operator_tx_id,
@@ -321,11 +259,8 @@ export const spribeWithdraw = async (req, res) => {
     }
 };
 
-
-
 export const spribeRollback = async (req, res) => {
     console.log(req.body, "spribeRollback");
-    console.log("spribeAuth", req.headers)
 
     const {
         user_id, amount, provider, rollback_provider_tx_id, provider_tx_id, game, session_token, action, action_id
@@ -345,8 +280,8 @@ export const spribeRollback = async (req, res) => {
         console.log("Transaction found")
         const transaction = existingTransaction[0];
         const user_id = transaction.id_user;
-        const old_balance = Math.round(transaction.new_balance);
-        const new_balance = Math.round(old_balance) + Math.round(amount); // Rollback the amount
+        const old_balance = Number(transaction.new_balance);
+        const new_balance = Number(old_balance) + Number(amount); // Rollback the amount
 
         console.log("old_balance", old_balance)
         console.log("new_balance", new_balance)
@@ -365,7 +300,7 @@ export const spribeRollback = async (req, res) => {
         const user = userRows[0];
 
         // Update the user's balance to reflect the rollback
-        await connection.query('UPDATE users SET money = ? WHERE id_user = ?', [(new_balance / 1000), user_id]);
+        await connection.query('UPDATE users SET money = ? WHERE id_user = ?', [new_balance, user_id]);
         console.log("first2")
         // Check for duplicate rollback using the provider_tx_id
         const [duplicateTransaction] = await connection.query('SELECT * FROM spribetransaction WHERE provider_tx_id = ?', [provider_tx_id]);
@@ -392,7 +327,7 @@ export const spribeRollback = async (req, res) => {
 
         // Record the rollback transaction in the database
         await connection.query('INSERT INTO spribetransaction (id_user, phone, name_user, provider, provider_tx_id, operator_tx_id, old_balance, new_balance, currency, withdrawal_amount, game, action, action_id, session_token, type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [
-            user_id, user.phone, user.name_user, provider, provider_tx_id, operator_tx_id, (old_balance / 1000), (new_balance / 1000), transaction.currency, (amount / 1000), game, action, action_id, session_token, 2 // type 2 for rollback
+            user_id, user.phone, user.name_user, provider, provider_tx_id, operator_tx_id, old_balance, new_balance, transaction.currency, amount, game, action, action_id, session_token, 2 // type 2 for rollback
         ]);
 
         const successResponse = {
@@ -423,7 +358,6 @@ export const spribeRollback = async (req, res) => {
 
 
 const spribeGameController = {
-    spribeInfo,
     spribeLaunchGame,
     spribeAuth,
     spribeDeposit,

@@ -1380,15 +1380,13 @@ router.get(
 );
 
 //spribe api
-router.post(
-  "/playSpribeGame",
-  middlewareController,
-  spribeController.spribeLaunchGame,
-);
-router.post("/api/callback/spribe/auth", spribeController.spribeAuth);
-router.post("/api/callback/spribe/deposit", spribeController.spribeWithdraw);
-router.post("/api/callback/spribe/withdraw", spribeController.spribeDeposit);
-router.post("/api/callback/spribe/rollback", spribeController.spribeRollback);
+//spribe api game
+router.post('/playSpribeGame', middlewareController, spribeController.spribeLaunchGame);
+router.post('/api/callback/spribe/info', spribeController.spribeInfo);
+router.post('/api/callback/spribe/auth', spribeController.spribeAuth);
+router.post('/api/callback/spribe/deposit', spribeController.spribeWithdraw);
+router.post('/api/callback/spribe/withdraw', spribeController.spribeDeposit);
+router.post('/api/callback/spribe/rollback', spribeController.spribeRollback);
 
 router.post("/watchpay/create_order", watchpayController.watchpay_createOrder);
 
