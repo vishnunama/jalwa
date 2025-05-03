@@ -2,10 +2,10 @@ import axios from 'axios';
 import connection from "../config/connectDB.js";
 import crypto from 'crypto';
 
-const SECRET_TOKEN = 'hPz6OU1mYaSlNWWTR1ysFTWg6zxsZf3G';
-const OPERATOR_KEY = 'rkwinstg';
+const SECRET_TOKEN = 'MCFdIH6eDuIA7jOkLoY6XXyk7cyHkj8E';
+const OPERATOR_KEY = 'rupeeclubinstg';
 const API_URL = "https://dev-test.spribe.io/games/launch"
-const return_url = "https://rk-win.com"
+const return_url = "https://rupeeclub.in"
 const currency = "INR"
 
 
@@ -36,8 +36,8 @@ export const spribeLaunchGame = async (req, res) => {
 
         const playerId = userRows[0].phone; // Get the actual player ID from the database
         const userId = userRows[0].id_user; // Get the actual player ID from the database
-        
-       
+
+
 
         // Generate the token and hash signature
         const timestamp = Date.now();
@@ -66,7 +66,7 @@ export const spribeAuth = async (req, res) => {
         // Find the user in the database using the provided token
         const [userRows] = await connection.query('SELECT * FROM users WHERE spribeLaunchToken = ?', [user_token]);
 
-        // Check if user exists 
+        // Check if user exists
         if (!userRows.length) {
             console.log("first")
             return res.status(200).json({

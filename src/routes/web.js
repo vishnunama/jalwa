@@ -1380,11 +1380,11 @@ router.get(
 );
 
 //spribe api
-// router.post(
-//   "/playSpribeGame",
-//   middlewareController,
-//   spribeController.spribeLaunchGame,
-// );
+router.post(
+  "/playSpribeGame",
+  middlewareController,
+  spribeController.spribeLaunchGame,
+);
 router.post("/api/callback/spribe/auth", spribeController.spribeAuth);
 router.post("/api/callback/spribe/deposit", spribeController.spribeWithdraw);
 router.post("/api/callback/spribe/withdraw", spribeController.spribeDeposit);
