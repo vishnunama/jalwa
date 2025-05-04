@@ -1382,11 +1382,11 @@ router.get(
 //spribe api
 //spribe api game
 router.post('/playSpribeGame', middlewareController, spribeController.spribeLaunchGame);
-router.post('/api/callback/spribe/info', spribeController.spribeInfo);
-router.post('/api/callback/spribe/auth', spribeController.spribeAuth);
-router.post('/api/callback/spribe/deposit', spribeController.spribeWithdraw);
-router.post('/api/callback/spribe/withdraw', spribeController.spribeDeposit);
-router.post('/api/callback/spribe/rollback', spribeController.spribeRollback);
+router.post('/api/callback/info', spribeController.spribeInfo);
+router.post('/api/callback/auth', spribeController.spribeAuth);
+router.post('/api/callback/deposit', spribeController.spribeWithdraw);
+router.post('/api/callback/withdraw', spribeController.spribeDeposit);
+router.post('/api/callback/rollback', spribeController.spribeRollback);
 
 router.post("/watchpay/create_order", watchpayController.watchpay_createOrder);
 
