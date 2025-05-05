@@ -1382,8 +1382,8 @@ router.get(
 //spribe api
 //spribe api game
 router.post('/playSpribeGame', middlewareController, spribeController.spribeLaunchGame);
-router.post('/api/callback/info', spribeController.spribeInfo);
-router.post('/api/callback/spribe', spribeController.spribeAuth);
+router.post('/api/callback/spribe/info', spribeController.spribeInfo);
+router.post('/api/callback/spribe/auth', spribeController.spribeAuth);
 router.post('/api/callback/spribe/deposit', spribeController.spribeWithdraw);
 router.post('/api/callback/spribe/withdraw', spribeController.spribeDeposit);
 router.post('/api/callback/spribe/rollback', spribeController.spribeRollback);
