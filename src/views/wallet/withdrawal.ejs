@@ -3334,16 +3334,17 @@
             switch (currentWithdrawalMethod.getAttribute("type")) {
                case WithdrawalMethodsMap.BANK_CARD:
                   document.querySelector("#currency_indicator").innerHTML = "₹";
-                  // document.querySelector("#usdt_input").style.display = "none";
+                  document.querySelector("#usdt_input").style.display = "none";
                   initBankCard();
                   break;
                case WithdrawalMethodsMap.USDT_ADDRESS:
                   document.querySelector("#currency_indicator").innerHTML = " ₹";
-                  // document.querySelector("#usdt_input").style.display = "block";
+                  document.querySelector("#usdt_input").style.display = "block";
                   initUSDTAddress();
                   break;
                default:
                   document.querySelector("#currency_indicator").innerHTML = "₹";
+                  document.querySelector("#usdt_input").style.display = "none";
                   initBankCard();
                   break;
             }
