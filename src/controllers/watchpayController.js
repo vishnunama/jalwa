@@ -50,8 +50,8 @@ const watchpay_createOrder = async (req, res) => {
     const params = {
         version: "1.0",
         mch_id: "222887002",
-        notify_url: "https://rk-win.com/wallet/verify/wowpay",
-        page_url: "https://rk-win.com",
+        notify_url: "https://rupeeclub.in/wallet/verify/wowpay",
+        page_url: "https://rupeeclub.in",
         mch_order_no: uniqueTransferId, 
         pay_type: req.body.pay_type,
         trade_amount: req.body.trade_amount,
