@@ -560,7 +560,7 @@
                         total += response.datas[i].money;
                         amount += 1;
                     }
-                    $('#totlaide').text(' ₹ ' + total + " / " + amount + ' Lixi');
+                    $('#totlaide').text(' Rs ' + total + " / " + amount + ' Lixi');
                     if (response.status === true) return RenderRedenvelopes(response.datas);
                 },
             });

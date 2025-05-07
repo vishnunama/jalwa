@@ -8079,7 +8079,7 @@ function _s() {
       je.emit("register");
     },
     onTriggerPurchase: (o, i) => {
-      je.emit(i ? "first_purchase" : "purchase", { currency: "₹", value: 0 });
+      je.emit(i ? "first_purchase" : "purchase", { currency: "Rs", value: 0 });
     },
     onTriggerRecharege: (o) => {
       je.emit("recharge");
@@ -8976,7 +8976,7 @@ const df = Me({
       projectLogo: "https://img.ergwrgwer.com/GoagamesWebImg/logo.png",
       languages: "en",
       webIco: "",
-      dollarSign: "₹",
+      dollarSign: "Rs",
       upperOrLower: "1",
       defaultCurrentLanguage: "",
       isSplitLocalEWallet: !1,

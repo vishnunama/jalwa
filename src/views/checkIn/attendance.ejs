@@ -289,7 +289,7 @@
                   <p data-v-3ba0459b="">Attended consecutively <span data-v-3ba0459b=""
                            id="attendance_days_display">0</span> Day</p>
                   <h1 data-v-3ba0459b="">Accumulated <span data-v-3ba0459b=""
-                           id="accumulated_amount_display">₹0.00</span>
+                           id="accumulated_amount_display">Rs0.00</span>
                   </h1>
                </div>
                <div data-v-3ba0459b=""
@@ -312,7 +312,7 @@
                         <div data-v-3ba0459b=""
                              class="daySevenGift"></div>
                         <span data-v-3ba0459b=""
-                              class="dayHeader">₹5.00</span>
+                              class="dayHeader">Rs5.00</span>
                      </div>
                      <img data-v-3ba0459b=""
                           class=""
@@ -327,7 +327,7 @@
                         <div data-v-3ba0459b=""
                              class="daySevenGift"></div>
                         <span data-v-3ba0459b=""
-                              class="dayHeader">₹18.00</span>
+                              class="dayHeader">Rs18.00</span>
                      </div>
                      <img data-v-3ba0459b=""
                           class=""
@@ -342,7 +342,7 @@
                         <div data-v-3ba0459b=""
                              class="daySevenGift"></div>
                         <span data-v-3ba0459b=""
-                              class="dayHeader">₹100.00</span>
+                              class="dayHeader">Rs100.00</span>
                      </div>
                      <img data-v-3ba0459b=""
                           class=""
@@ -357,7 +357,7 @@
                         <div data-v-3ba0459b=""
                              class="daySevenGift"></div>
                         <span data-v-3ba0459b=""
-                              class="dayHeader">₹200.00</span>
+                              class="dayHeader">Rs200.00</span>
                      </div>
                      <img data-v-3ba0459b=""
                           class=""
@@ -372,7 +372,7 @@
                         <div data-v-3ba0459b=""
                              class="daySevenGift"></div>
                         <span data-v-3ba0459b=""
-                              class="dayHeader">₹400.00</span>
+                              class="dayHeader">Rs400.00</span>
                      </div>
                      <img data-v-3ba0459b=""
                           class=""
@@ -387,7 +387,7 @@
                         <div data-v-3ba0459b=""
                              class="daySevenGift"></div>
                         <span data-v-3ba0459b=""
-                              class="dayHeader">₹3,000.00</span>
+                              class="dayHeader">Rs3,000.00</span>
                      </div>
                      <img data-v-3ba0459b=""
                           class=""
@@ -402,7 +402,7 @@
                              data-origin="/assets/png/day7Bg-ada1d750.png"
                              src="/assets/png/day7Bg-ada1d750.png"></span>
                      <div data-v-f1e983bd=""><span
-                              data-v-f1e983bd="">₹7,000.00</span><!-- {{ $t('continuous') }} --><span
+                              data-v-f1e983bd="">Rs7,000.00</span><!-- {{ $t('continuous') }} --><span
                               data-v-f1e983bd="">7 Day</span></div>
                   </div>
                </div>
@@ -471,7 +471,7 @@
                const response2 = await axios.get("/api/webapi/GetUserInfo")
 
                if (response2.data.status === true) {
-                  $("#accumulated_amount_display").html(`₹${formatIndianNumber(response2?.data?.data?.money_user)}`)
+                  $("#accumulated_amount_display").html(`Rs${formatIndianNumber(response2?.data?.data?.money_user)}`)
                }
             } catch (error) {
                console.log(error)

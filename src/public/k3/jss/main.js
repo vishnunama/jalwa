@@ -202,7 +202,7 @@ function reload_money() {
         unsetCookie();
         return false;
       }
-      $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
+      $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
       $(".Loading").fadeOut(0);
     });
 }
@@ -912,7 +912,7 @@ function sendGame1() {
       alertMess(response.message);
       let change = String(response.change);
       if (response.status) {
-        $(".moneyU").text("₹ " + response.money + ".00");
+        $(".moneyU").text("Rs " + response.money + ".00");
         socket.emit("data-server-3", {
           change,
           gameJoin: 1,
@@ -962,7 +962,7 @@ function sendGame2() {
       alertMess(response.message);
       let change = String(response.change);
       if (response.status) {
-        $(".moneyU").text("₹ " + response.money + "");
+        $(".moneyU").text("Rs " + response.money + "");
         socket.emit("data-server-3", {
           change,
           gameJoin: 2,
@@ -1008,7 +1008,7 @@ function sendGame3() {
       alertMess(response.message);
       let change = String(response.change);
       if (response.status) {
-        $(".moneyU").text("₹ " + response.money + ".00");
+        $(".moneyU").text("Rs " + response.money + ".00");
         socket.emit("data-server-3", {
           change,
           gameJoin: 3,
@@ -1063,7 +1063,7 @@ function sendGame4() {
       alertMess(response.message);
       let change = String(response.change);
       if (response.status) {
-        $(".moneyU").text("₹ " + response.money + ".00");
+        $(".moneyU").text("Rs " + response.money + ".00");
         socket.emit("data-server-3", {
           change,
           gameJoin: 4,

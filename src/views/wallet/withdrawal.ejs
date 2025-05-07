@@ -2751,7 +2751,7 @@
                   <div data-v-dd83897d=""
                        class="balanceAssets__main">
                      <p data-v-dd83897d="">
-                        ₹
+                        Rs
                         <span id="money_amount_display">0.00</span>
                      </p>
                      <img id="reload_money_amount_button"
@@ -2772,9 +2772,17 @@
                        class="select"
                        type="BANK_CARD">
                      <div data-v-c5cd6c1c=""><img data-v-c5cd6c1c=""
-                             src="https://ossimg.Big-Mumadmin888.com/bigmumbai/payNameIcon/WithBeforeImgIcon2_20230914143646f3it.png" />
+                             src="https://ossimg.92pkrimg.com/92pkr/payNameIcon/WithBeforeImgIcon2_20241130142229g6hc.png" />
                      </div>
-                     <span data-v-c5cd6c1c="">BANK CARD</span>
+                     <span data-v-c5cd6c1c="">EASYPAISA</span>
+                  </div>
+                  <div data-v-c5cd6c1c="" style=""
+                       class=""
+                       type="JAZZCASH">
+                     <div data-v-c5cd6c1c=""><img data-v-c5cd6c1c=""
+                             src="https://ossimg.92pkrimg.com/92pkr/payNameIcon/WithBeforeImgIcon_2024113014223877ia.png" />
+                     </div>
+                     <span data-v-c5cd6c1c="">JAZZCASH</span>
                   </div>
                   <div data-v-c5cd6c1c=""
                        class=""
@@ -2807,7 +2815,7 @@
                        class="input">
                      <div data-v-2eb72b3e=""
                           class="place-div"
-                          id="currency_indicator"> ₹</div>
+                          id="currency_indicator"> Rs</div>
                      <input oninput="calculateInrToUsdt()"
                             data-v-2eb72b3e=""
                             placeholder="Please enter the Amount"
@@ -2837,7 +2845,7 @@
                        class="input">
                      <div data-v-2eb72b3e=""
                           class="place-div"
-                          id="currency_indicator">₹</div>
+                          id="currency_indicator">Rs</div>
                      <input readonly
                             data-v-2eb72b3e=""
                             placeholder="INR Rupee"
@@ -2864,7 +2872,7 @@
                   <div data-v-2eb72b3e=""
                        class="input">
                      <div data-v-2eb72b3e=""
-                          class="place-div">₹</div>
+                          class="place-div">Rs</div>
                      <input data-v-2eb72b3e=""
                             type="number"
                             placeholder="Please enter withdrawal amount"
@@ -3130,6 +3138,8 @@
          const WithdrawalMethodsMap = {
             USDT_ADDRESS: "USDT_ADDRESS",
             BANK_CARD: "BANK_CARD",
+            JAZZCASH: "JAZZCASH",
+            EASYPAISA: "EASYPAISA",
          };
 
          const userInfoTypes = {
@@ -3258,7 +3268,7 @@
                             </div>-->
 
                             <div class="account_change_info" onclick="handleOpenAddMethod()">
-                                Change Bank Card Information
+                                Change EASYPAISA Information
                             </div>
                         </div
                     `;
@@ -3334,17 +3344,27 @@
 
             switch (currentWithdrawalMethod.getAttribute("type")) {
                case WithdrawalMethodsMap.BANK_CARD:
-                  document.querySelector("#currency_indicator").innerHTML = "₹";
+                  document.querySelector("#currency_indicator").innerHTML = "Rs";
+                  document.querySelector("#usdt_input").style.display = "none";
+                  initBankCard();
+                  break;
+               case WithdrawalMethodsMap.JAZZCASH:
+                  document.querySelector("#currency_indicator").innerHTML = "Rs";
+                  document.querySelector("#usdt_input").style.display = "none";
+                  initBankCard();
+                  break;
+               case WithdrawalMethodsMap.EASYPAISA:
+                  document.querySelector("#currency_indicator").innerHTML = "Rs";
                   document.querySelector("#usdt_input").style.display = "none";
                   initBankCard();
                   break;
                case WithdrawalMethodsMap.USDT_ADDRESS:
-                  document.querySelector("#currency_indicator").innerHTML = " ₹";
+                  document.querySelector("#currency_indicator").innerHTML = " Rs";
                   document.querySelector("#usdt_input").style.display = "block";
                   initUSDTAddress();
                   break;
                default:
-                  document.querySelector("#currency_indicator").innerHTML = "₹";
+                  document.querySelector("#currency_indicator").innerHTML = "Rs";
                   initBankCard();
                   break;
             }
@@ -3419,6 +3439,12 @@
                case WithdrawalMethodsMap.BANK_CARD:
                   window.location.href = "/wallet/addBank";
                   break;
+               case WithdrawalMethodsMap.JAZZCASH:
+                  window.location.href = "/wallet/addBank";
+                  break;
+               case WithdrawalMethodsMap.EASYPAISA:
+                  window.location.href = "/wallet/addBank";
+                  break;
                case WithdrawalMethodsMap.USDT_ADDRESS:
                   window.location.href = "/wallet/addAddress";
                   break;
@@ -3468,7 +3494,7 @@
          handleCheckAndSelectWithdrawalMethod();
          fetchUser().then(() => {
             setUserInfoDisplay("money_amount_display", userInfoTypes.balance);
-            setUserNeedToBet(`₹ ${totalBetAmountRemaining.toFixed(2)}`);
+            setUserNeedToBet(`Rs ${totalBetAmountRemaining.toFixed(2)}`);
          });
          // --------------------------------
 

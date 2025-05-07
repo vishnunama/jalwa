@@ -244,7 +244,7 @@ function reload_money() {
         unsetCookie();
         return false;
       }
-      $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
+      $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
       $(".Loading").fadeOut(0);
     });
 }
@@ -564,7 +564,7 @@ $(".foot .right").click(function (e) {
         $(".foot .right").removeClass("block-click");
       }, 500);
       if (response.status == true) {
-        $("#money_show").text("₹ " + response.money + ".00");
+        $("#money_show").text("Rs " + response.money + ".00");
         showMeJoin();
       }
     },
@@ -676,7 +676,7 @@ function GetMyEmerdList(datas) {
           join += `
                   <div data-v-42f27458="">
                       <span data-v-42f27458="" style="color: rgb(0, 0, 0);">
-                        <span data-v-42f27458="" class="li circle-black" style="color: rgb(0, 0, 0);">${arr2[i]}</span>  
+                        <span data-v-42f27458="" class="li circle-black" style="color: rgb(0, 0, 0);">${arr2[i]}</span>
                       </span>
                   </div>`;
         } else {
@@ -698,7 +698,7 @@ function GetMyEmerdList(datas) {
               data.status !== 0
                 ? `<div data-v-b4b99df8="" class="MyGameRecordList__C-item-r ${data.status == 1 ? "success" : ""}">
                         <div data-v-b4b99df8="" class="${data.status == 1 ? "success" : ""}">${data.status == 1 ? "Success" : "Failed"}</div>
-                        <span data-v-b4b99df8="">${data.status == 1 ? `₹${data.get}.00` : `-₹${data.money}.00`}</span>
+                        <span data-v-b4b99df8="">${data.status == 1 ? `Rs${data.get}.00` : `-Rs${data.money}.00`}</span>
                      </div>`
                 : ""
             }
@@ -716,7 +716,7 @@ function GetMyEmerdList(datas) {
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line">
                Purchase amount
-               <div data-v-b4b99df8="">₹${data.money}.00</div>
+               <div data-v-b4b99df8="">Rs${data.money}.00</div>
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line">
                Quantity
@@ -724,11 +724,11 @@ function GetMyEmerdList(datas) {
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line">
                Amount after tax
-               <div data-v-b4b99df8="" class="red">₹${data.price}.00</div>
+               <div data-v-b4b99df8="" class="red">Rs${data.price}.00</div>
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line">
                Tax
-               <div data-v-b4b99df8="">₹${data.fee}.00</div>
+               <div data-v-b4b99df8="">Rs${data.fee}.00</div>
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line" style="display: ${data.status == 0 ? "none" : ""}">
                Result
@@ -749,7 +749,7 @@ function GetMyEmerdList(datas) {
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line" style="display:${data.status == 0 ? "none" : ""};">
                Win/lose
-               <div data-v-b4b99df8="" class="${data.status == 1 ? "green" : "red"}">${data.status == 1 ? `₹${data.get}` : `- ₹${data.price}`}</div>
+               <div data-v-b4b99df8="" class="${data.status == 1 ? "green" : "red"}">${data.status == 1 ? `Rs${data.get}` : `- Rs${data.price}`}</div>
             </div>
             <div data-v-b4b99df8="" class="MyGameRecordList__C-detail-line">
                Order time
@@ -793,7 +793,7 @@ const displayResultHandler = ({ status, amount, period, result }) => {
   const tabList = ["A", "B", "C", "D", "E"];
   let numberStatusContent = total
     .map((item, index) => {
-      return `   
+      return `
          <div data-v-e2a7b350="">
             <div data-v-e2a7b350="" class="title">${tabList[index]}</div>
             <div data-v-e2a7b350="" class="num">${item}</div>
@@ -813,7 +813,7 @@ const displayResultHandler = ({ status, amount, period, result }) => {
   $("#popup_game_details").html(`Period:5D ${GAME_TYPE} minute ${period}`);
 
   if (status === STATUS_MAP.WIN) {
-    $("#popup_win_rupees_display").html(`₹${amount}.00`);
+    $("#popup_win_rupees_display").html(`Rs${amount}.00`);
     $("#popup_greeting_display").html(`Congratulations`);
     $("#popup_background").removeClass("isL");
     $("#popup_greeting_display").removeClass("isL");

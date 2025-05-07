@@ -202,9 +202,9 @@ fetch("/api/webapi/GetUserInfo")
       unsetCookie();
       return false;
     }
-    $("#balance_amount").text(`₹ ${formatIndianNumber(data.data.money_user)} `);
+    $("#balance_amount").text(`Rs ${formatIndianNumber(data.data.money_user)} `);
     $("#bonus_balance_amount").text(
-      `₹ ${formatIndianNumber(data.data.bonus_money)} `,
+      `Rs ${formatIndianNumber(data.data.bonus_money)} `,
     );
   });
 
@@ -222,10 +222,10 @@ $(".reload_money").click(function (e) {
         return false;
       }
       $("#balance_amount").text(
-        `₹ ${formatIndianNumber(data.data.money_user)} `,
+        `Rs ${formatIndianNumber(data.data.money_user)} `,
       );
       $("#bonus_balance_amount").text(
-        `₹ ${formatIndianNumber(data.data.bonus_money)} `,
+        `Rs ${formatIndianNumber(data.data.bonus_money)} `,
       );
     });
 });
@@ -302,7 +302,7 @@ const displayResultHandler = ({ status, amount, period, result }) => {
   }
 
   if (status === STATUS_MAP.WIN) {
-    $("#popup_win_rupees_display").html(`₹${formatIndianNumber(amount)}`);
+    $("#popup_win_rupees_display").html(`Rs${formatIndianNumber(amount)}`);
     $("#popup_greeting_display").html(`Congratulations`);
     $("#popup_background").removeClass("isL");
     $("#popup_greeting_display").removeClass("isL");
@@ -529,33 +529,33 @@ function showMyBetsData(list_orders) {
                   <div data-v-373b3197="" class="${list_order.status === 1 ? "success" : ""}">${list_order.status == 1 ? "Succeed" : list_order.status == 2 ? "Failed" : ""}</div>
                   <span data-v-373b3197="">${
                     // list_order.status == 1 && list_order.bet == 0
-                    //    ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 4.5 + " </span>"
+                    //    ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 4.5 + " </span>"
                     //    : list_order.status == 1 && list_order.bet == 5
-                    //      ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 4.5 + " </span>"
+                    //      ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 4.5 + " </span>"
                     //      : list_order.status == 1 && list_order.result == 0 && list_order.bet == "d"
-                    //        ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 1.5 + " </span>"
+                    //        ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 1.5 + " </span>"
                     //        : list_order.status == 1 && list_order.bet == "d"
-                    //          ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 2 + " </span>"
+                    //          ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 2 + " </span>"
                     //          : list_order.status == 1 && list_order.bet == "t"
-                    //            ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 4.5 + " </span>"
+                    //            ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 4.5 + " </span>"
                     //            : list_order.status == 1 && list_order.result == 5 && list_order.bet == "x"
-                    //              ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 1.5 + " </span>"
+                    //              ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 1.5 + " </span>"
                     //              : list_order.status == 1 && list_order.bet == "x"
-                    //                ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 2 + " </span>"
+                    //                ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 2 + " </span>"
                     //                : list_order.status == 1 && list_order.bet == "l"
-                    //                  ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 2 + " </span>"
+                    //                  ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 2 + " </span>"
                     //                  : list_order.status == 1 && list_order.bet == "n"
-                    //                    ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 2 + " </span>"
+                    //                    ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 2 + " </span>"
                     //                    : list_order.status == 1
-                    //                      ? '<span data-v-a9660e98="" class="success"> + ₹' + list_order.money * 9 + " </span>"
+                    //                      ? '<span data-v-a9660e98="" class="success"> + Rs' + list_order.money * 9 + " </span>"
                     //                      : list_order.status == 2
-                    //                        ? '<span data-v-a9660e98="" class="fail"> - ₹' + list_order.money + ".00</span>"
+                    //                        ? '<span data-v-a9660e98="" class="fail"> - Rs' + list_order.money + ".00</span>"
                     //                        : ""
                     list_order.status === 1
-                      ? '<span data-v-a9660e98="" class="success"> + ₹ ' +
+                      ? '<span data-v-a9660e98="" class="success"> + Rs ' +
                         formatIndianNumber(list_order.get) +
                         " </span>"
-                      : '<span data-v-a9660e98="" class="fail"> - ₹ ' +
+                      : '<span data-v-a9660e98="" class="fail"> - Rs ' +
                         formatIndianNumber(list_order.money) +
                         "</span>"
                   }</span>
@@ -574,7 +574,7 @@ function showMyBetsData(list_orders) {
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                   Purchase amount
-                  <div data-v-373b3197="">₹${parseFloat(list_order.fee + list_order.money).toFixed(2)}</div>
+                  <div data-v-373b3197="">Rs${parseFloat(list_order.fee + list_order.money).toFixed(2)}</div>
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                   Quantity
@@ -582,11 +582,11 @@ function showMyBetsData(list_orders) {
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                   Amount after tax
-                  <div data-v-373b3197="" class="red">₹${parseFloat(list_order.money).toFixed(2)}</div>
+                  <div data-v-373b3197="" class="red">Rs${parseFloat(list_order.money).toFixed(2)}</div>
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                   Tax
-                  <div data-v-373b3197="">₹${parseFloat(list_order.fee).toFixed(2)}</div>
+                  <div data-v-373b3197="">Rs${parseFloat(list_order.fee).toFixed(2)}</div>
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line" style="display: ${list_order.status == 0 ? "none" : ""}">
                   Result
@@ -606,7 +606,7 @@ function showMyBetsData(list_orders) {
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line" style="display:${list_order.status == 0 ? "none" : ""};">
                   Win/lose
-                  <div data-v-373b3197="" class="${list_order.status == 1 ? "green" : "red"}">${list_order.status == 1 ? `₹${list_order.get}` : `- ₹${list_order.fee + list_order.money}`}</div>
+                  <div data-v-373b3197="" class="${list_order.status == 1 ? "green" : "red"}">${list_order.status == 1 ? `Rs${list_order.get}` : `- Rs${list_order.fee + list_order.money}`}</div>
                </div>
                <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                   Order time
@@ -767,9 +767,9 @@ $("#join_bet_btn").on("click.join_btn", function (event) {
     success: function (response) {
       alertMessage(response.message);
       if (response.status === false) return;
-      $("#balance_amount").text(`₹ ${formatIndianNumber(response.money)} `);
+      $("#balance_amount").text(`Rs ${formatIndianNumber(response.money)} `);
       $("#bonus_balance_amount").text(
-        `₹ ${formatIndianNumber(response.bonus_money)} `,
+        `Rs ${formatIndianNumber(response.bonus_money)} `,
       );
 
       initMyBets();
@@ -1407,10 +1407,10 @@ socket.on("data-server", async function (msg) {
           return false;
         }
         $("#balance_amount").text(
-          `₹ ${formatIndianNumber(data.data.money_user)} `,
+          `Rs ${formatIndianNumber(data.data.money_user)} `,
         );
         $("#bonus_balance_amount").text(
-          `₹ ${formatIndianNumber(data.data.bonus_money)} `,
+          `Rs ${formatIndianNumber(data.data.bonus_money)} `,
         );
       });
 

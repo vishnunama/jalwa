@@ -335,7 +335,7 @@ const createWithdrawalRequest = async (req, res) => {
 
     if (amount < minimumMoneyAllowed) {
       return res.status(400).json({
-        message: `You can withdraw minimum balance of ${withdrawalMethod === WITHDRAWAL_METHODS_MAP.BANK_CARD ? "₹" : "$"} ${minimumMoneyAllowed}`,
+        message: `You can withdraw minimum balance of ${withdrawalMethod === WITHDRAWAL_METHODS_MAP.BANK_CARD ? "Rs" : "$"} ${minimumMoneyAllowed}`,
         status: false,
         timeStamp: timeNow,
       });

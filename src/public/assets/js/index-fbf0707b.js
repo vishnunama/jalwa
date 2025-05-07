@@ -39212,7 +39212,7 @@ const _4 = () =>
     t &&
       le({
         message:
-          `Error: ${c || ""} 
+          `Error: ${c || ""}
  ` + t,
         wordBreak: "break-word",
       });
@@ -44331,7 +44331,7 @@ const i = fe({
       },
       jn = async () => {
         var T;
-        if (he().getDollarSign === "₹" && B.value === 9) {
+        if (he().getDollarSign === "Rs" && B.value === 9) {
           let C = {
             type: 1,
             tranrefId: i.bankUTR,
@@ -44924,7 +44924,7 @@ function ft() {
     },
     onTriggerPurchase: (n, o) => {
       oa.emit(o ? "first_purchase" : "purchase", {
-        currency: "₹",
+        currency: "Rs",
         value: 0,
       });
     },
@@ -45405,7 +45405,7 @@ const Ba = f(),
       projectLogo: "",
       languages: "en",
       webIco: "",
-      dollarSign: "₹",
+      dollarSign: "Rs",
       upperOrLower: "0",
       defaultCurrentLanguage: "",
       isSplitLocalEWallet: !1,

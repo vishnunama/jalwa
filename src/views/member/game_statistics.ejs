@@ -2723,7 +2723,7 @@
             <div data-v-dc01f921=""
                  class="gamestats-container-banner">
                <h1 data-v-dc01f921=""
-                   id="total_bet_amount_display">₹3.00</h1>
+                   id="total_bet_amount_display">Rs3.00</h1>
                <span data-v-dc01f921="">Total bet</span>
             </div>
             <div data-v-dc01f921=""
@@ -2745,7 +2745,7 @@
                const response = await axios.get(`/game/statistics?type=${tab}`);
 
                const totalBetAmount = response.data.totalBetAmount;
-               $("#total_bet_amount_display").text(`₹${totalBetAmount}`);
+               $("#total_bet_amount_display").text(`Rs${totalBetAmount}`);
                const list = response.data.list;
 
                const html = list
@@ -2758,7 +2758,7 @@
                         <div data-v-dc01f921="" class="gamestats-container-item-content-list">
                            <div data-v-dc01f921="">
                               <h4 data-v-dc01f921="">Total bet</h4>
-                              <h5 data-v-dc01f921="">₹${item.totalBetAmount}.00</h5>
+                              <h5 data-v-dc01f921="">Rs${item.totalBetAmount}.00</h5>
                            </div>
                            <div data-v-dc01f921="">
                               <h4 data-v-dc01f921="">Number of bets</h4>
@@ -2766,7 +2766,7 @@
                            </div>
                            <div data-v-dc01f921="">
                               <h4 data-v-dc01f921="">Winning amount</h4>
-                              <span data-v-dc01f921="">₹${item.totalWinAmount}.00</span>
+                              <span data-v-dc01f921="">Rs${item.totalWinAmount}.00</span>
                            </div>
                         </div>
                      </div>

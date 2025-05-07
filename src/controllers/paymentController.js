@@ -184,7 +184,7 @@ const addManualUPIPaymentRequest = async (req, res) => {
 
     if (!money || !(money >= minimumMoneyAllowed)) {
       return res.status(400).json({
-        message: `Money is Required and it should be ₹${minimumMoneyAllowed} or above!`,
+        message: `Money is Required and it should be Rs${minimumMoneyAllowed} or above!`,
         status: false,
         timeStamp: timeNow,
       });
@@ -441,7 +441,7 @@ const initiateUPIPayment = async (req, res) => {
 
   if (!money || !(money >= minimumMoneyAllowed)) {
     return res.status(400).json({
-      message: `Money is Required and it should be ₹${minimumMoneyAllowed} or above!`,
+      message: `Money is Required and it should be Rs${minimumMoneyAllowed} or above!`,
       status: false,
       timeStamp: timeNow,
     });
@@ -646,7 +646,7 @@ const initiateWowPayPayment = async (req, res) => {
 
   if (!money || !(money >= minimumMoneyAllowed)) {
     return res.status(400).json({
-      message: `Money is Required and it should be ₹${minimumMoneyAllowed} or above!`,
+      message: `Money is Required and it should be Rs${minimumMoneyAllowed} or above!`,
       status: false,
       timeStamp: timeNow,
     });
@@ -1042,7 +1042,7 @@ const initiateRspayPayment = async (req, res) => {
 
   if (!amount || !(amount >= minimumMoneyAllowed)) {
     return res.status(400).json({
-      message: `Money is Required and it should be ₹${minimumMoneyAllowed} or above!`,
+      message: `Money is Required and it should be Rs${minimumMoneyAllowed} or above!`,
       status: false,
       timeStamp: timeNow,
     });
@@ -1224,8 +1224,8 @@ const browseRechargeRecord = async (req, res) => {
     }
 
     const [recharge] = await connection.query(
-      `SELECT * FROM recharge 
-       WHERE status = 0 
+      `SELECT * FROM recharge
+       WHERE status = 0
        AND (type = '${PaymentMethodsMap.UPI_MANUAL}' OR type = '${PaymentMethodsMap.USDT_MANUAL}')
        ORDER BY id DESC`, // Sorting in descending order
       []

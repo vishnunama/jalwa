@@ -276,13 +276,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total1}.00`,
+          message: `You just received Rs ${point_list.total1}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total1 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹ 300 to claim gift.",
+          message: "Please Recharge Rs 300 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -319,13 +319,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total2}.00`,
+          message: `You just received Rs ${point_list.total2}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total2 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹ 3000 to claim gift.",
+          message: "Please Recharge Rs 3000 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -362,13 +362,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total3}.00`,
+          message: `You just received Rs ${point_list.total3}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total3 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹ 6000 to claim gift.",
+          message: "Please Recharge Rs 6000 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -405,13 +405,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total4}.00`,
+          message: `You just received Rs ${point_list.total4}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total4 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹ 12000 to claim gift.",
+          message: "Please Recharge Rs 12000 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -448,13 +448,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total5}.00`,
+          message: `You just received Rs ${point_list.total5}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total5 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹ 28000 to claim gift.",
+          message: "Please Recharge Rs 28000 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -491,13 +491,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total6}.00`,
+          message: `You just received Rs ${point_list.total6}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total6 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹ 100000 to claim gift.",
+          message: "Please Recharge Rs 100000 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -534,13 +534,13 @@ const checkInHandling = async (req, res) => {
           [0, rows[0].phone],
         );
         return res.status(200).json({
-          message: `You just received ₹ ${point_list.total7}.00`,
+          message: `You just received Rs ${point_list.total7}.00`,
           status: true,
           timeStamp: timeNow,
         });
       } else if (check < get && point_list.total7 != 0) {
         return res.status(200).json({
-          message: "Please Recharge ₹200000 to claim gift.",
+          message: "Please Recharge Rs200000 to claim gift.",
           status: false,
           timeStamp: timeNow,
         });
@@ -2499,7 +2499,7 @@ const useRedenvelope = async (req, res) => {
     }
 
     return res.status(200).json({
-      message: `Received successfully + ₹${redenvelope.money}`,
+      message: `Received successfully + Rs${redenvelope.money}`,
       status: true,
       timeStamp: timeNow,
     });

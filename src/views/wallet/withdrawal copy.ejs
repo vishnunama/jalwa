@@ -2751,7 +2751,7 @@
                   <div data-v-dd83897d=""
                        class="balanceAssets__main">
                      <p data-v-dd83897d="">
-                        ₹
+                        Rs
                         <span id="money_amount_display">0.00</span>
                      </p>
                      <img id="reload_money_amount_button"
@@ -2807,7 +2807,7 @@
                        class="input">
                      <div data-v-2eb72b3e=""
                           class="place-div"
-                          id="currency_indicator">₹</div>
+                          id="currency_indicator">Rs</div>
                      <input oninput="calculateUsdt()"
                             data-v-2eb72b3e=""
                             placeholder="Please enter the Amount"
@@ -2820,7 +2820,7 @@
                        class="input">
                      <div data-v-2eb72b3e=""
                           class="place-div"
-                          id="currency_indicator">₹</div>
+                          id="currency_indicator">Rs</div>
                      <input readonly
                             data-v-2eb72b3e=""
                             placeholder="INR Rupee"
@@ -2830,10 +2830,10 @@
                   <div data-v-2eb72b3e=""
                        class="balance bank">
                      <!-- <div data-v-2eb72b3e=""><span data-v-2eb72b3e="">Withdrawable balance <h6 data-v-2eb72b3e=""
-                                    class="red">₹0.00</h6></span><input data-v-2eb72b3e="" type="button" value="All">
+                                    class="red">Rs0.00</h6></span><input data-v-2eb72b3e="" type="button" value="All">
                         </div> -->
                      <!-- <div data-v-2eb72b3e=""><span data-v-2eb72b3e="">Withdrawal amount received</span>
-                            <div data-v-2eb72b3e="" class="rightD"><span data-v-2eb72b3e="" class="yellow">₹0.00</span>
+                            <div data-v-2eb72b3e="" class="rightD"><span data-v-2eb72b3e="" class="yellow">Rs0.00</span>
                             </div>
                         </div> -->
                   </div>
@@ -2847,7 +2847,7 @@
                   <div data-v-2eb72b3e=""
                        class="input">
                      <div data-v-2eb72b3e=""
-                          class="place-div">₹</div>
+                          class="place-div">Rs</div>
                      <input data-v-2eb72b3e=""
                             type="number"
                             placeholder="Please enter withdrawal amount"
@@ -2859,7 +2859,7 @@
                         <span data-v-2eb72b3e="">
                            Withdrawable balance
                            <h6 data-v-2eb72b3e=""
-                               class="yellow">₹0.00</h6>
+                               class="yellow">Rs0.00</h6>
                         </span>
                         <input data-v-2eb72b3e=""
                                type="button"
@@ -2878,7 +2878,7 @@
                      Need to bet
                      <span data-v-470caa86=""
                            id="need_to_bet"
-                           class="red">₹0.00</span>
+                           class="red">Rs0.00</span>
                      to be able to withdraw
                   </p>
                   <p data-v-5af6a797="">
@@ -2894,7 +2894,7 @@
                   <p data-v-5af6a797="">
                      Withdrawal amount range
                      <span data-v-5af6a797=""
-                           class="red">₹930.00-₹200,000.00</span>
+                           class="red">Rs930.00-Rs200,000.00</span>
                   </p>
                   <p data-v-5af6a797="">Please confirm your beneficial account information before withdrawing. If your
                      information is incorrect, our company will not be liable for the amount of loss</p>
@@ -3317,7 +3317,7 @@
 
             switch (currentWithdrawalMethod.getAttribute("type")) {
                case WithdrawalMethodsMap.BANK_CARD:
-                  document.querySelector("#currency_indicator").innerHTML = "₹";
+                  document.querySelector("#currency_indicator").innerHTML = "Rs";
                   document.querySelector("#usdt_input").style.display = "none";
                   initBankCard();
                   break;
@@ -3327,7 +3327,7 @@
                   initUSDTAddress();
                   break;
                default:
-                  document.querySelector("#currency_indicator").innerHTML = "₹";
+                  document.querySelector("#currency_indicator").innerHTML = "Rs";
                   initBankCard();
                   break;
             }
@@ -3451,7 +3451,7 @@
          handleCheckAndSelectWithdrawalMethod();
          fetchUser().then(() => {
             setUserInfoDisplay("money_amount_display", userInfoTypes.balance);
-            setUserNeedToBet(`₹ ${totalBetAmountRemaining.toFixed(2)}`);
+            setUserNeedToBet(`Rs ${totalBetAmountRemaining.toFixed(2)}`);
          });
          // --------------------------------
 

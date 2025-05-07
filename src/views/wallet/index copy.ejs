@@ -8113,7 +8113,7 @@
                     First deposit<span data-v-48dabef8=""> 100</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹18.00</div>
+                       class="orange">+ Rs18.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8153,7 +8153,7 @@
                     First deposit<span data-v-48dabef8=""> 200</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹28.00</div>
+                       class="orange">+ Rs28.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8193,7 +8193,7 @@
                     First deposit<span data-v-48dabef8=""> 500</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹108.00</div>
+                       class="orange">+ Rs108.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8233,7 +8233,7 @@
                     First deposit<span data-v-48dabef8=""> 1000</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹188.00</div>
+                       class="orange">+ Rs188.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8273,7 +8273,7 @@
                     First deposit<span data-v-48dabef8=""> 5000</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹288.00</div>
+                       class="orange">+ Rs288.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8313,7 +8313,7 @@
                     First deposit<span data-v-48dabef8=""> 10000</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹488.00</div>
+                       class="orange">+ Rs488.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8354,7 +8354,7 @@
                     First deposit<span data-v-48dabef8=""> 50000</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹2,888.00</div>
+                       class="orange">+ Rs2,888.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -8395,7 +8395,7 @@
                     First deposit<span data-v-48dabef8=""> 100000</span>
                   </div>
                   <div data-v-48dabef8=""
-                       class="orange">+ ₹5,888.00</div>
+                       class="orange">+ Rs5,888.00</div>
                 </div>
                 <div data-v-48dabef8=""
                      class="description">
@@ -14648,7 +14648,7 @@
               <use xlink:href="#icon-wallet1"></use>
             </svg>
             <div data-v-0dabd3fc=""
-                 id="money_amount_display">₹0.00</div>
+                 id="money_amount_display">Rs0.00</div>
             <span data-v-0dabd3fc="">Total balance</span>
             <!-- <div data-v-0dabd3fc="">
                      <div data-v-0dabd3fc="">
@@ -14685,7 +14685,7 @@
                        id="total_withdraw_amount_per">100%</div>
                 </div>
                 <h3 data-v-0dabd3fc=""
-                    id="total_withdraw_amount_display">₹0.00</h3>
+                    id="total_withdraw_amount_display">Rs0.00</h3>
                 <span data-v-0dabd3fc="">Total withdraw amount</span>
               </div>
               <div data-v-0dabd3fc=""
@@ -14705,7 +14705,7 @@
                        id="total_deposit_amount_per">0%</div>
                 </div>
                 <h3 data-v-0dabd3fc=""
-                    id="total_deposit_amount_display">₹0.00</h3>
+                    id="total_deposit_amount_display">Rs0.00</h3>
                 <span data-v-0dabd3fc="">Total deposit amount</span>
               </div>
             </div>
@@ -15114,16 +15114,16 @@
           };
 
           fetchUser().then(() => {
-            setUserInfoDisplay("money_amount_display", userInfoTypes.balance, value => `₹${formatIndianNumber(value)}`);
-            // setUserInfoDisplay("money_amount_display2", userInfoTypes.balance, value => `₹${value}`)
+            setUserInfoDisplay("money_amount_display", userInfoTypes.balance, value => `Rs${formatIndianNumber(value)}`);
+            // setUserInfoDisplay("money_amount_display2", userInfoTypes.balance, value => `Rs${value}`)
             // total_deposit_amount_display
             // total_amount_display
-            $(".money").text(`₹ ${formatIndianNumber(userData.money_user)}`);
-            $("#total_withdraw_amount_display").text(`₹ ${formatIndianNumber(userDataFull.totalWithdraw)}`);
+            $(".money").text(`Rs ${formatIndianNumber(userData.money_user)}`);
+            $("#total_withdraw_amount_display").text(`Rs ${formatIndianNumber(userDataFull.totalWithdraw)}`);
             $("#total_withdraw_amount_per").text(`${Math.round((userDataFull.totalWithdraw / userData.money_user) * 100)}%`);
             $("#total_withdraw_amount_pie").css("stroke-dasharray", `${(userDataFull.totalWithdraw / userData.money_user) * 3140}px, 3140px`);
 
-            $("#total_deposit_amount_display").text(`₹ ${formatIndianNumber(userDataFull.totalRecharge)}`);
+            $("#total_deposit_amount_display").text(`Rs ${formatIndianNumber(userDataFull.totalRecharge)}`);
             $("#total_deposit_amount_per").text(`${Math.round((userDataFull.totalRecharge / userData.money_user) * 100)}%`);
             $("#total_deposit_amount_pie").css("stroke-dasharray", `${(userDataFull.totalRecharge / userData.money_user) * 3140}px, 3140px`);
 

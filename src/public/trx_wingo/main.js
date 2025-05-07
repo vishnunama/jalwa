@@ -166,7 +166,7 @@ fetch("/api/webapi/GetUserInfo")
       unsetCookie();
       return false;
     }
-    $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
+    $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
   });
 
 $(".reload_money").click(function (e) {
@@ -182,7 +182,7 @@ $(".reload_money").click(function (e) {
         unsetCookie();
         return false;
       }
-      $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
+      $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
     });
 });
 
@@ -287,7 +287,7 @@ const displayResultHandler = ({ status, amount, period, result }) => {
   );
 
   if (status === STATUS_MAP.WIN) {
-    $("#popup_win_rupees_display").html(`₹${amount}.00`);
+    $("#popup_win_rupees_display").html(`Rs${amount}.00`);
     $("#popup_greeting_display").html(`Congratulations`);
     $("#popup_background").removeClass("isL");
     $("#popup_greeting_display").removeClass("isL");
@@ -334,7 +334,7 @@ function showGameHistoryData(list_orders) {
          <div data-v-a9b34bec="" class="van-row">
             <div data-v-a9b34bec="" class="van-col van-col--6">${list_order.period.slice(0, 2)}**${list_order.period.slice(list_order.period.length - 4, list_order.period.length)}</div>
             <div data-v-a9b34bec="" class="van-col van-col--4">
-               ${list_order.block_id} 
+               ${list_order.block_id}
                <div data-v-a9b34bec="" class="Binquire" onclick="location.href = '/trx_block?block_id=${list_order.block_id}'"></div>
             </div>
             <div data-v-a9b34bec="" class="van-col van-col--5">${formateTimeHHmmss(list_order.block_time)}</div>
@@ -489,7 +489,7 @@ function showMyBetsData(list_orders) {
                   : `
                     <div data-v-373b3197="" class="MyGameRecordList__C-item-r ${list_order.status == 1 ? "success" : ""}">
                         <div data-v-373b3197="" class="${list_order.status == 1 ? "success" : ""}">${list_order.status == 1 ? "Success" : list_order.status == 2 ? "Failed" : ""}</div>
-                        <span data-v-373b3197="">${list_order.status === 1 ? '<span data-v-a9660e98="" class="success"> + ₹ ' + parseFloat(list_order.get).toFixed(2) + " </span>" : '<span data-v-a9660e98="" class="fail"> - ₹ ' + parseFloat(list_order.money).toFixed(2) + "</span>"}</span>
+                        <span data-v-373b3197="">${list_order.status === 1 ? '<span data-v-a9660e98="" class="success"> + Rs ' + parseFloat(list_order.get).toFixed(2) + " </span>" : '<span data-v-a9660e98="" class="fail"> - Rs ' + parseFloat(list_order.money).toFixed(2) + "</span>"}</span>
                   </div>`
               }
          </div>
@@ -505,7 +505,7 @@ function showMyBetsData(list_orders) {
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                Purchase amount
-               <div data-v-373b3197="">₹${parseFloat(list_order.fee + list_order.money).toFixed(2)}</div>
+               <div data-v-373b3197="">Rs${parseFloat(list_order.fee + list_order.money).toFixed(2)}</div>
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                Quantity
@@ -513,11 +513,11 @@ function showMyBetsData(list_orders) {
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                Amount after tax
-               <div data-v-373b3197="" class="red">₹${parseFloat(list_order.money).toFixed(2)}</div>
+               <div data-v-373b3197="" class="red">Rs${parseFloat(list_order.money).toFixed(2)}</div>
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                Tax
-               <div data-v-373b3197="">₹${parseFloat(list_order.fee).toFixed(2)}</div>
+               <div data-v-373b3197="">Rs${parseFloat(list_order.fee).toFixed(2)}</div>
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line" style="display: ${list_order.status == 0 ? "none" : ""}">
                Result
@@ -537,7 +537,7 @@ function showMyBetsData(list_orders) {
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line" style="display:${list_order.status == 0 ? "none" : ""};">
                Win/lose
-               <div data-v-373b3197="" class="${list_order.status == 1 ? "green" : "red"}">${list_order.status == 1 ? `₹${list_order.get}` : `- ₹${list_order.fee + list_order.money}`}</div>
+               <div data-v-373b3197="" class="${list_order.status == 1 ? "green" : "red"}">${list_order.status == 1 ? `Rs${list_order.get}` : `- Rs${list_order.fee + list_order.money}`}</div>
             </div>
             <div data-v-373b3197="" class="MyGameRecordList__C-detail-line">
                Order time
@@ -685,7 +685,7 @@ function initGameLogics({
       success: function (response) {
         alertMessage(response.message);
         if (response.status === false) return;
-        $("#balance_amount").text("₹ " + response.money + ".00");
+        $("#balance_amount").text("Rs " + response.money + ".00");
         socket.emit("data-server_2", {
           money: currentX * money,
           join,
@@ -1311,7 +1311,7 @@ socket.on("data-server-trx-wingo", async function (msg) {
           unsetCookie();
           return false;
         }
-        $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
+        $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
       });
 
     $(".Loading").fadeOut(0);

@@ -167,10 +167,10 @@ function handleMyEmerdList() {
         $(".modal-popup__period").text(period);
         if (status === STATUS_MAP.WIN) {
           $(".modal-popup__title").text("Congratulations");
-          $(".modal-popup__amount").text(`₹ ${amount}`);
+          $(".modal-popup__amount").text(`Rs ${amount}`);
         } else if (status === STATUS_MAP.LOSS) {
           $(".modal-popup__title").text("So Said");
-          $(".modal-popup__amount").text(`₹ -${amount}`);
+          $(".modal-popup__amount").text(`Rs -${amount}`);
         } else {
           $(".modal-popup__title").text("Result");
           $(".modal-popup__amount").text(`No Bets !`);
