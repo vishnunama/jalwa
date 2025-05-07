@@ -5,7 +5,7 @@ import crypto from 'crypto';
 const SECRET_TOKEN = 'MCFdIH6eDuIA7jOkLoY6XXyk7cyHkj8E';
 const OPERATOR_KEY = 'rupeeclubinstg';
 const API_URL = "https://dev-test.spribe.io/games/launch"
-const return_url = "https://rupeeclub.in"
+const return_url = "https://paklottery.site"
 const currency = "INR"
 
 

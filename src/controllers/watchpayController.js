@@ -50,9 +50,9 @@ const watchpay_createOrder = async (req, res) => {
     const params = {
         version: "1.0",
         mch_id: "222887002",
-        notify_url: "https://rupeeclub.in/wallet/verify/wowpay",
-        page_url: "https://rupeeclub.in",
-        mch_order_no: uniqueTransferId, 
+        notify_url: "https://paklottery.site/wallet/verify/wowpay",
+        page_url: "https://paklottery.site",
+        mch_order_no: uniqueTransferId,
         pay_type: req.body.pay_type,
         trade_amount: req.body.trade_amount,
         order_date: getCurrentDateTime(),  //
@@ -63,7 +63,7 @@ const watchpay_createOrder = async (req, res) => {
     // Generate the sign using the generateSignature function
     params.sign = generateSignature(params);
 
-    
+
     const body = new URLSearchParams(params).toString();
     console.log(body,"body")
 
@@ -73,9 +73,9 @@ const watchpay_createOrder = async (req, res) => {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
         });
-   
+
         console.log("Response Data:", response.data);  // Log the full response
-   
+
         if (response.data.respCode === "SUCCESS") {
             const responseData = response.data;
             return res.status(200).json({status: true, msg: responseData.respCode, data: responseData});
