@@ -524,7 +524,7 @@ const createDeposit = async (req, res) => {
     const price = String(money)
     const orderId = generateOrderId();
     const generateCheckoutURL = true;
-    const returnUrl = "https://Rupeeclub.com/wallet/rechargerecord";
+    const returnUrl = "https://1015game.com/wallet/rechargerecord";
     const userid = String(userInfo.id_user);
 
 
