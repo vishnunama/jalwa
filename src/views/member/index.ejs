@@ -11012,10 +11012,57 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <script>
+            let UID = "";
 
-            document.write(unescape("%3Cscript%3E%0A%20%20%20%20%20%20%20%20let%20UID%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20function%20alertMess%28text%2C%20sic%2C%20type%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28type%20%3D%3D%20%27success%27%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27body%27%29.append%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%60%3Cdiv%20role%3D%22dialog%22%20tabindex%3D%220%22%20class%3D%22msg%20van-popup%20van-popup--center%20van-toast%20van-toast--middle%20van-toast--success%22%20style%3D%22z-index%3A%202001%3B%20display%3Ane%3B%22%3E%3Ci%20class%3D%22van-badge__wrapper%20van-icon%20van-icon-success%20van-toast__icon%22%3E%3C%21----%3E%3C%21----%3E%3C%21----%3E%3C/i%3E%3Cdiv%20class%3D%22van-toast__text%22%3E%24%7Btext%7D%3C/div%3E%3C%21----%3E%3C/div%3E%60%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7Delse%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27body%27%29.append%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%60%3Cdiv%20role%3D%22dialog%22%20tabindex%3D%220%22%20class%3D%22msg%20van-popup%20van-popup--center%20van-toast%20van-toast--middle%20van-toast--success%22%20style%3D%22z-index%3A%202001%3B%20display%3Ane%3B%22%3E%3Ci%20class%3D%22van-badge__wrapper%20van-icon%20van-icon-fail%20van-toast__icon%22%3E%3C%21----%3E%3C%21----%3E%3C%21----%3E%3C/i%3E%3Cdiv%20class%3D%22van-toast__text%22%3E%24%7Btext%7D%3C/div%3E%3C%21----%3E%3C/div%3E%60%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20setTimeout%28%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27.msg%27%29.removeClass%28%27v-enter-active%20v-enter-to%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27.msg%27%29.addClass%28%27v-leave-active%20v-leave-to%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20setTimeout%28%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27.msg%27%29.remove%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%20100%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sic.removeClass%28%27block-click%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%201000%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%24.ajax%28%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3A%20%22GET%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20url%3A%20%22/api/webapi/GetUserInfo%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20dataType%3A%20%22json%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20success%3A%20function%20%28response%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20let%20data%20%3D%20response.data%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20UID%20%3D%20data.id_user%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23UID%27%29.text%28data.id_user%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23LT%27%29.text%28data.login_time%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23user_balance%27%29.text%28%27%u20B9%27%20+%20data.money_user%20+%20%27%27%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23user_member%27%29.text%28data.name_user%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20var%20copyToClipboard%20%3D%20%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20%24temp%20%3D%20%24%28%22%3Ctextarea%3E%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24temp.val%28UID%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%22body%22%29.append%28%24temp%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24temp.select%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20document.execCommand%28%22copy%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24temp.remove%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20alertMess%28%27Copied%20Successfully%27%2C%20null%2C%20%27success%27%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20showCustomAlert%20%3D%20%28text%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23app%27%29.append%28%60%3Cspan%20class%3D%22alert%22%3E%24%7Btext%7D%3C/span%3E%60%29%0A%20%20%20%20%20%20%20%20%20%20%20%20setTimeout%28%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27.alert%27%29.fadeOut%28500%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%202000%2C%20%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27.alert%27%29.remove%28%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20logout%20%3D%20%28id%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23%27+id%29.removeClass%28%27inactive%27%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20logoutCancel%20%3D%20%28id%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24%28%27%23%27+id%29.addClass%28%27inactive%27%29%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%3C/script%3E"));
+            function alertMess(text, sic, type) {
+                if (type == 'success') {
+                    $('body').append(`
+                        <div role="dialog" tabindex="0" class="msg van-popup van-popup--center van-toast van-toast--middle van-toast--success" style="z-index: 2001; display:ne;">
+                            <i class="van-badge__wrapper van-icon van-icon-success van-toast__icon"></i>
+                            <div class="van-toast__text">${text}</div>
+                        </div>`);
+                } else {
+                    $('body').append(`
+                        <div role="dialog" tabindex="0" class="msg van-popup van-popup--center van-toast van-toast--middle van-toast--success" style="z-index: 2001; display:ne;">
+                            <i class="van-badge__wrapper van-icon van-icon-fail van-toast__icon"></i>
+                            <div class="van-toast__text">${text}</div>
+                        </div>`);
+                }
 
+                setTimeout(() => {
+                    $('.msg').removeClass('v-enter-active v-enter-to');
+                    $('.msg').addClass('v-leave-active v-leave-to');
+                    setTimeout(() => {
+                        $('.msg').remove();
+                    }, 100);
+                    sic.removeClass('block-click');
+                }, 1000);
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/api/webapi/GetUserInfo",
+                dataType: "json",
+                success: function (response) {
+                    let data = response.data;
+                    UID = data.id_user;
+                    $('#UID').text(data.id_user);
+                    $('#LT').text(data.login_time);
+                    $('#user_balance').text('Rs' + data.money_user);
+                    $('#user_member').text(data.name_user);
+                }
+            });
+
+            var copyToClipboard = () => {
+                var $temp = $("<textarea>");
+                $temp.val(UID);
+                $("body").append($temp);
+                $temp.select();
+                document.execCommand("copy");
+                $temp.remove();
+            };
         </script>
+
         <script>
             function showPopupActivity() {
                 var popupActivity = document.getElementById("welcomePopupActivity");
