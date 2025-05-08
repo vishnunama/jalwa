@@ -11080,7 +11080,7 @@ const $e = $(GR, [["__scopeId", "data-v-68975d75"]]),
     in: {
       code: "in",
       name: "India (भारत)",
-      dialCode: "+91",
+      dialCode: "+92",
       phoneFormat: "099876 54321",
     },
     ir: {
