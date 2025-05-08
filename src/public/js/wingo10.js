@@ -762,15 +762,18 @@ window.onload = function () {
       var distance = countDownDate - now;
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var minute = Math.ceil(minutes / 20 - 2);
-      var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
+      var seconds1 = Math.floor((distance % (1000 * 30)) / 10000);
       var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
       $(".TimeLeft__C-time div:eq(3)").text(seconds1);
       $(".TimeLeft__C-time div:eq(4)").text(seconds2);
     }, 0);
+
+
+
     setInterval(() => {
       var now = new Date().getTime();
       var distance = countDownDate - now;
-      var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
+      var seconds1 = Math.floor((distance % (1000 * 30)) / 10000);
       var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
       if (seconds1 == 0 && seconds2 <= 5) {
         if (clicked) {
@@ -786,7 +789,7 @@ window.onload = function () {
     setInterval(function () {
       var now = new Date().getTime();
       var distance = countDownDate - now;
-      var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
+      var seconds1 = Math.floor((distance % (1000 * 30)) / 10000);
       var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
       if (seconds1 == 0 && seconds2 <= 5) {
         $(".van-overlay").fadeOut();
