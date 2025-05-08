@@ -21,7 +21,7 @@ export function generatePeriod(gameRepresentationId) {
 
   // Check if the game is wingo10 to determine the interval type
   let nthIntervalSinceDayStart;
-  if (gameRepresentationId === '44') {
+  if (gameRepresentationId === '10') {
     nthIntervalSinceDayStart = getNthHalfMinuteSinceDayStart() + 1;
   } else {
     nthIntervalSinceDayStart = getNthMinuteSinceDayStart() + 1;
