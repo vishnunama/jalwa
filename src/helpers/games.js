@@ -1,7 +1,6 @@
 import moment from "moment";
 // import GameRepresentationIds from "../constants/game_representation_id"
 import _ from "lodash";
-import axios from "axios";
 
 export function getNthMinuteSinceDayStart() {
   const now = moment();
@@ -68,23 +67,6 @@ export const yesterdayTime = () => {
   };
 };
 
-// export const yesterdayTime = () => {
-//   const now = new Date();
-
-//   // Start of today
-//   const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-
-//   // Start and end of yesterday
-//   const startOfYesterday = new Date(startOfToday.getTime() - 24 * 60 * 60 * 1000);
-//   const endOfYesterday = new Date(startOfToday.getTime() - 1); // 23:59:59.999 yesterday
-
-//   return {
-//     startOfYesterdayTimestamp: startOfYesterday.getTime(),
-//     endOfYesterdayTimestamp: endOfYesterday.getTime(),
-//   };
-// };
-
-
 export const monthTime = () => {
   const currentDate = new Date();
   const startOfMonth = new Date(currentDate);
@@ -107,25 +89,15 @@ export function generateCommissionId() {
 }
 
 export function getBonuses(amount) {
-  // const bonusTable = {
-  //   100: { selfBonus: 28, uplineBonus: 28 },
-  //   200: { selfBonus: 48, uplineBonus: 58 },
-  //   500: { selfBonus: 108, uplineBonus: 128 },
-  //   1000: { selfBonus: 188, uplineBonus: 208 },
-  //   5000: { selfBonus: 288, uplineBonus: 768 },
-  //   10000: { selfBonus: 488, uplineBonus: 1288 },
-  //   50000: { selfBonus: 2888, uplineBonus: 6888 },
-  //   100000: { selfBonus: 5008, uplineBonus: 9999 },
-  // };
   const bonusTable = {
-    100: { selfBonus: 0, uplineBonus: 0 },
-    200: { selfBonus: 0, uplineBonus: 0 },
-    500: { selfBonus: 0, uplineBonus: 0 },
-    1000: { selfBonus: 0, uplineBonus: 0 },
-    5000: { selfBonus: 0, uplineBonus: 0 },
-    10000: { selfBonus: 0, uplineBonus: 0 },
-    50000: { selfBonus: 0, uplineBonus: 0 },
-    100000: { selfBonus: 0, uplineBonus: 0 },
+    100: { selfBonus: 28, uplineBonus: 28 },
+    200: { selfBonus: 48, uplineBonus: 58 },
+    500: { selfBonus: 108, uplineBonus: 128 },
+    1000: { selfBonus: 188, uplineBonus: 208 },
+    5000: { selfBonus: 288, uplineBonus: 768 },
+    10000: { selfBonus: 488, uplineBonus: 1288 },
+    50000: { selfBonus: 2888, uplineBonus: 6888 },
+    100000: { selfBonus: 5008, uplineBonus: 9999 },
   };
 
   if (amount >= 100 && amount < 200) {
@@ -146,110 +118,5 @@ export function getBonuses(amount) {
     return bonusTable[100000];
   } else {
     return { selfBonus: 0, uplineBonus: 0 };
-  }
-}
-
-let period = 0;
-let result = 0;
-/**
- * Fetches the Wingo period from the API based on the provided game type
- * @param {number|string} typeid - The game type ID
- * @returns {Promise<string|null>} - Returns period number or null
- */
-
-
-export async function getWingoPeriod(typeid) {
-  try {
-    // Input validation
-    if (!typeid) {
-      throw new Error('Game type ID is required');
-    }
-
-    // Type mapping
-    const typeIdMapping = {
-      '10': 30,
-      '5': 3,
-      '3': 2,
-      '1': 1
-    };
-
-
-    // Convert typeid to mapped value if exists
-    const mappedTypeId = typeIdMapping[typeid] || typeid;
-
-    const config = {
-      method: 'get',
-      maxBodyLength: Infinity,
-      url: `https://91club.adda124.com/api/v1/wingo?type=${mappedTypeId}`,
-      headers: {},
-      timeout: 5000 // 5 second timeout
-    };
-
-    const response = await axios.request(config);
-    const { data } = response;
-
-    if (!data?.status) {
-      console.warn('API request was not successful');
-      return null;
-    }
-
-    const issueNumber = data?.data?.data?.issueNumber;
-    if (!issueNumber) {
-      console.warn('No issueNumber number found in response');
-      return null;
-    }
-
-    return issueNumber;
-
-  } catch (error) {
-    console.error('Error fetching Wingo period:', error);
-    return null;
-  }
-}
-export async function getWingoResult(typeid) {
-  try {
-    // Input validation
-    if (!typeid) {
-      throw new Error('Game type ID is required');
-    }
-
-    // Type mapping
-    const typeIdMapping = {
-      '10': 30,
-      '5': 3,
-      '3': 2,
-      '1': 1
-    };
-
-    // Convert typeid to mapped value if exists
-    const mappedTypeId = typeIdMapping[typeid] || typeid;
-
-    const config = {
-      method: 'get',
-      maxBodyLength: Infinity,
-      url: `https://91club.adda124.com/api/v1/wingo/result?type=${mappedTypeId}`,
-      headers: {},
-      timeout: 5000 // 5 second timeout
-    };
-
-    const response = await axios.request(config);
-    const { data } = response;
-
-    if (!data?.status) {
-      console.warn('API request was not successful');
-      return null;
-    }
-
-    const issueResult = data?.data?.data?.list[0]?.number || 0;
-    if (!issueResult) {
-      console.warn('No issueResult number found in response');
-      return null;
-    }
-
-    return issueResult;
-
-  } catch (error) {
-    console.error('Error fetching Wingo period:', error);
-    return null;
   }
 }

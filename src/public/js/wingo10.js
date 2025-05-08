@@ -78,15 +78,15 @@ function showTrendData(list_orders) {
        transform-origin: center;
      }
    </style>
-
+ 
    <canvas id="graphCanvas" width="380" height="400"></canvas>
-
+  
    <script>
       labels1 = ${JSON.stringify(labels)};
       amounts1 = [${amounts.join(", ")}];
       labels1.reverse();
       amounts1.reverse();
-
+     
       data = {
         labels: labels1,
         values: amounts1
@@ -226,13 +226,13 @@ function showMyBetsData(list_orders) {
                <div data-v-a9660e98="" class="item c-row">
                   <div data-v-a9660e98="" class="result">
                      <div data-v-a9660e98="" class="select select-${color}">
-                        ${checkJoin}
+                        ${checkJoin}    
                      </div>
                   </div>
                   <div data-v-a9660e98="" class="c-row c-row-between info">
                      <div data-v-a9660e98="">
                         <div data-v-a9660e98="" class="issueName">
-                           ${list_order.stage}
+                           ${list_order.stage} 
                            ${list_order.status == 1 ? '<span data-v-a9660e98="" class="state green">Success</span>' : list_order.status == 2 ? '<span data-v-a9660e98="" class="state red">Fail</span>' : ""}
                         </div>
                         <div data-v-a9660e98="" class="tiem">${timerJoin(list_order.time)}</div>
@@ -295,7 +295,7 @@ function showMyBetsData(list_orders) {
                                                 : ""
                         }
                      </div>
-
+                  
                      </div>
                </div>
                <div data-v-a9660e98="" class="details" style="display: none">
@@ -351,8 +351,8 @@ function showMyBetsData(list_orders) {
                      </div>
                      <div data-v-a9660e98="" class="li c-row c-row-between c-row-middle">
                          <div data-v-a9660e98="">Win Or Loss</div>
-                         <div data-v-a9660e98="" class="${list_order.status == 1 ? "green" : list_order.status == 2 ? "red" : ""}">
-                         ${list_order.status == 1 ? "+" : list_order.status == 2 ? "-" : ""}
+                         <div data-v-a9660e98="" class="${list_order.status == 1 ? "green" : list_order.status == 2 ? "red" : ""}"> 
+                         ${list_order.status == 1 ? "+" : list_order.status == 2 ? "-" : ""} 
                          ${list_order.status == 0 ? "" : list_order.status == 1 && list_order.bet == 0 ? list_order.money * 4.5 : list_order.status == 1 && list_order.bet == 5 ? list_order.money * 1.5 : list_order.status == 1 && list_order.bet == "t" ? list_order.money * 4.5 : list_order.status == 1 && list_order.result == 0 && list_order.bet == "d" ? list_order.money * 1.5 : list_order.status == 1 && list_order.bet == "d" ? list_order.money * 2 : list_order.status == 1 && list_order.bet == "x" ? list_order.money * 1.5 : list_order.status == 1 && list_order.result == 5 && list_order.bet == "x" ? list_order.money * 1.5 : list_order.status == 1 && list_order.bet == "l" ? list_order.money * 2 : list_order.status == 1 && list_order.bet == "n" ? list_order.money * 2 : list_order.status == 1 ? list_order.money * 9 : list_order.money}
                      </div>
                   </div>
@@ -411,7 +411,7 @@ fetch("/api/webapi/GetUserInfo")
       unsetCookie();
       return false;
     }
-    $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
+    $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
   });
 
 $(".reload_money").click(function (e) {
@@ -427,7 +427,7 @@ $(".reload_money").click(function (e) {
         unsetCookie();
         return false;
       }
-      $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
+      $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
     });
 });
 
@@ -545,7 +545,7 @@ $("#join_bet_btn").click(function (event) {
     success: function (response) {
       alertMessJoin(response.message);
       if (response.status === false) return;
-      $("#balance_amount").text("Rs " + response.money + ".00");
+      $("#balance_amount").text("₹ " + response.money + ".00");
       socket.emit("data-server_2", {
         money: currentX * money,
         join,
@@ -762,18 +762,15 @@ window.onload = function () {
       var distance = countDownDate - now;
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var minute = Math.ceil(minutes / 20 - 2);
-      var seconds1 = Math.floor((distance % (1000 * 30)) / 10000);
+      var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
       var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
       $(".TimeLeft__C-time div:eq(3)").text(seconds1);
       $(".TimeLeft__C-time div:eq(4)").text(seconds2);
     }, 0);
-
-
-
     setInterval(() => {
       var now = new Date().getTime();
       var distance = countDownDate - now;
-      var seconds1 = Math.floor((distance % (1000 * 30)) / 10000);
+      var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
       var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
       if (seconds1 == 0 && seconds2 <= 5) {
         if (clicked) {
@@ -789,7 +786,7 @@ window.onload = function () {
     setInterval(function () {
       var now = new Date().getTime();
       var distance = countDownDate - now;
-      var seconds1 = Math.floor((distance % (1000 * 30)) / 10000);
+      var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
       var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
       if (seconds1 == 0 && seconds2 <= 5) {
         $(".van-overlay").fadeOut();
@@ -1036,10 +1033,10 @@ socket.on("data-server", function (msg) {
         $(".modal-popup__period").text(period);
         if (status === STATUS_MAP.WIN) {
           $(".modal-popup__title").text("Congratulations");
-          $(".modal-popup__amount").text(`Rs ${amount}`);
+          $(".modal-popup__amount").text(`₹ ${amount}`);
         } else if (status === STATUS_MAP.LOSS) {
           $(".modal-popup__title").text("So Said");
-          $(".modal-popup__amount").text(`Rs -${amount}`);
+          $(".modal-popup__amount").text(`₹ -${amount}`);
         } else {
           $(".modal-popup__title").text("Result");
           $(".modal-popup__amount").text(`No Bets !`);
@@ -1118,7 +1115,7 @@ socket.on("data-server", function (msg) {
         unsetCookie();
         return false;
       }
-      $("#balance_amount").text(`Rs ${data.data.money_user}.00 `);
+      $("#balance_amount").text(`₹ ${data.data.money_user}.00 `);
     });
 
   $(".Loading").fadeOut(0);

@@ -511,7 +511,7 @@ const betWinGo = async (req, res) => {
   let checkTime = timerJoin(date.getTime());
 
   if (check >= 0) {
-    const sql = `INSERT INTO minutes_1 SET
+    const sql = `INSERT INTO minutes_1 SET 
         id_product = ?,
         phone = ?,
         code = ?,
