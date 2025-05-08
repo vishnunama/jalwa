@@ -9,16 +9,32 @@ export function getNthMinuteSinceDayStart() {
   return diff;
 }
 
+export function getNthHalfMinuteSinceDayStart() {
+  const now = moment();
+  const startOfDay = moment().startOf("day");
+  const diff = now.diff(startOfDay, "seconds");
+  return Math.floor(diff / 30); // 30-second intervals
+}
+
 export function generatePeriod(gameRepresentationId) {
   const TodayPeriod = moment().format("YYYYMMDD");
-  const nthMinuteSinceDayStart = getNthMinuteSinceDayStart() + 1;
-  const paddedNthMinuteSinceDayStart = _.padStart(
-    nthMinuteSinceDayStart.toString(),
+
+  // Check if the game is wingo10 to determine the interval type
+  let nthIntervalSinceDayStart;
+  if (gameRepresentationId === '44') {
+    nthIntervalSinceDayStart = getNthHalfMinuteSinceDayStart() + 1;
+  } else {
+    nthIntervalSinceDayStart = getNthMinuteSinceDayStart() + 1;
+  }
+
+  const paddedNthIntervalSinceDayStart = _.padStart(
+    nthIntervalSinceDayStart.toString(),
     4,
-    "0",
+    "0"
   );
 
-  let NewGamePeriod = `${TodayPeriod}${gameRepresentationId}${paddedNthMinuteSinceDayStart}`;
+  let NewGamePeriod = `${TodayPeriod}${gameRepresentationId}${paddedNthIntervalSinceDayStart}`;
+//   console.log("NewGamePeriodfff", NewGamePeriod, gameRepresentationId);
 
   return parseInt(NewGamePeriod);
 }
