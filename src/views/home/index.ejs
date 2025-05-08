@@ -1,4 +1,4 @@
-<html lang="en" translate="no" data-dpr="1" style="font-size: 36px">
+<html lang="en" translate="no" data-dpr="1" >
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="ccpayment-site-verification" content="f428ed8209a04774dd294d6dc12ae201"/>
@@ -9,6 +9,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+
+    <script>
+      function updateFontSize() {
+        requestAnimationFrame(() => {
+          const screenWidth = window.innerWidth;
+          const fontSize = screenWidth / 10;
+          document.documentElement.style.fontSize = fontSize + 'px';
+        });
+      }
+
+      window.addEventListener('DOMContentLoaded', updateFontSize);
+      window.addEventListener('resize', updateFontSize);
+    </script>
+
 
     <link rel="manifest" />
    <title>paklottery.site</title>
