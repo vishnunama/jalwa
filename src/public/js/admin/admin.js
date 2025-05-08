@@ -37,12 +37,27 @@ function cownDownTimer() {
     var minute = Math.ceil(minutes % i);
     var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
     var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
-    if (checkID != 1) {
+    
+    if(checkID==4){
+        
+        
+         var seconds11 = Math.floor((distance % (1000 * 30)) / 10000);
+    var seconds22 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
+        
+               $(".time .time-sub:eq(1)").text(0);
+    $(".time .time-sub:eq(2)").text(seconds11);
+    $(".time .time-sub:eq(3)").text(seconds22);
+    
+    }else{
+        if (checkID != 1) {
       $(".time .time-sub:eq(1)").text(minute);
     }
 
     $(".time .time-sub:eq(2)").text(seconds1);
-    $(".time .time-sub:eq(3)").text(seconds2);
+    $(".time .time-sub:eq(3)").text(seconds2);  
+    }
+    
+  
   }, 0);
 }
 
