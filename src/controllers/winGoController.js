@@ -4,8 +4,6 @@ import {
   generateCommissionId,
   generatePeriod,
   yesterdayTime,
-  getWingoPeriod,
-  getWingoResult
 } from "../helpers/games.js";
 
 // helper functions
@@ -152,14 +150,10 @@ const rosesPlus = async (phone, money, levels = [], timeNow = "") => {
 
     if (usersToUpdate.length > 0) {
       const updatePromises = usersToUpdate.map(([money, phone]) =>
-        // connection.query("UPDATE users SET money = money + ? WHERE phone = ?", [
-        //   money,
-        //   phone,
-        // ]),
-        connection.query(
-          "UPDATE users SET money = money + ?, roses_f1 = roses_f1 + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ?",
-          [money, money, money, money, phone]
-        )
+        connection.query("UPDATE users SET money = money + ? WHERE phone = ?", [
+          money,
+          phone,
+        ]),
       );
       await Promise.all(updatePromises);
     }
@@ -217,65 +211,6 @@ const distributeCommission = async () => {
     return { success: false, message: error.message };
   }
 };
-
-
-const rosesPluss = async (auth, money) => {
-  console.log("welcome in roses plus")
-  
-  const [user] = await connection.query('SELECT `phone`,`user_level`, `code`, `invite` FROM users WHERE token = ? AND veri = 1  LIMIT 1 ', [auth]);
-  let userInfo = user[0];
-  const betPersonLevel = userInfo.user_level
-  const [level] = await connection.query('SELECT * FROM level ');
-  let level0 = level[betPersonLevel];
-
-
-  //here i am getting inviter f1
-  const [f1] = await connection.query('SELECT `phone`, `code`, `invite`, `rank` FROM users WHERE code = ? AND veri = 1  LIMIT 1 ', [userInfo.invite]);
-  // if (money >= 10000) {
-  if (f1.length > 0) {
-      let infoF1 = f1[0];
-      let rosesF1 = (money / 100) * level0.f1;
-      await connection.query('UPDATE users SET money = money + ?, roses_f1 = roses_f1 + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ? ', [rosesF1, rosesF1, rosesF1, rosesF1, infoF1.phone]);
-      const [f2] = await connection.query('SELECT `phone`, `code`, `invite`, `rank` FROM users WHERE code = ? AND veri = 1  LIMIT 1 ', [infoF1.invite]);
-      if (f2.length > 0) {
-          let infoF2 = f2[0];
-          let rosesF2 = (money / 100) * level0.f2;
-          await connection.query('UPDATE users SET money = money + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ? ', [rosesF2, rosesF2, rosesF2, infoF2.phone]);
-          const [f3] = await connection.query('SELECT `phone`, `code`, `invite`, `rank` FROM users WHERE code = ? AND veri = 1  LIMIT 1 ', [infoF2.invite]);
-
-          if (f3.length > 0) {
-              let infoF3 = f3[0];
-              let rosesF3 = (money / 100) * level0.f3;
-              await connection.query('UPDATE users SET money = money + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ? ', [rosesF3, rosesF3, rosesF3, infoF3.phone]);
-              const [f4] = await connection.query('SELECT `phone`, `code`, `invite`, `rank` FROM users WHERE code = ? AND veri = 1  LIMIT 1 ', [infoF3.invite]);
-
-              if (f4.length > 0) {
-                  let infoF4 = f4[0];
-                  let rosesF4 = (money / 100) * level0.f4;
-                  await connection.query('UPDATE users SET money = money + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ? ', [rosesF4, rosesF4, rosesF4, infoF4.phone]);
-
-                  const [f5] = await connection.query('SELECT `phone`, `code`, `invite`, `rank` FROM users WHERE code = ? AND veri = 1  LIMIT 1 ', [infoF4.invite]);
-
-                  if (f5.length > 0) {
-                      let infoF5 = f5[0];
-                      let rosesF5 = (money / 100) * level0.f5;
-                      await connection.query('UPDATE users SET money = money + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ? ', [rosesF5, rosesF5, rosesF5, infoF5.phone]);
-
-                      const [f6] = await connection.query('SELECT `phone`, `code`, `invite`, `rank` FROM users WHERE code = ? AND veri = 1  LIMIT 1 ', [infoF5.invite]);
-
-                      if (f6.length > 0) {
-                          let infoF6 = f6[0];
-                          let rosesF6 = (money / 100) * level0.f6;
-                          await connection.query('UPDATE users SET money = money + ?, roses_f = roses_f + ?, roses_today = roses_today + ? WHERE phone = ? ', [rosesF6, rosesF6, rosesF6, infoF6.phone]);
-                      }
-                  }
-              }
-          }
-      }
-
-  }
-  // }
-}
 
 // const distributeCommission = async () => {
 //   const timeNow = new Date();
@@ -459,17 +394,6 @@ const betWinGo = async (req, res) => {
   }
 
   let userInfo = user[0];
-
-  console.log("userInfo", userInfo?.money);
-  console.log("x", x);
-
-  if (parseFloat(userInfo?.money) < parseFloat(x * money)) {
-    return res.status(200).json({
-        message: "The amount is not enough",
-        status: false,
-    });
-}
-
   let period = winGoNow[0].period;
   let fee = x * money * 0.02;
   let total = x * money - fee;
@@ -624,21 +548,8 @@ const betWinGo = async (req, res) => {
     const previous_bonus_money = userInfo.bonus_money;
 
     const totalBetMoney = money * x;
-
-    // let mainWalletBetMoney = totalBetMoney * 0.97;
-    // let bonusWalletBetMoney = totalBetMoney * 0.03;
-
-    // if (!(previous_bonus_money >= bonusWalletBetMoney)) {
-    //   mainWalletBetMoney = totalBetMoney;
-    //   bonusWalletBetMoney = 0;
-    // }
-
-    const isBonusWalletEnabled = process.env.ENABLE_BONUS_MONEY === "true";
-
-    let mainWalletBetMoney = isBonusWalletEnabled
-      ? totalBetMoney * 0.97
-      : totalBetMoney;
-    let bonusWalletBetMoney = isBonusWalletEnabled ? totalBetMoney * 0.03 : 0;
+    let mainWalletBetMoney = totalBetMoney * 0.97;
+    let bonusWalletBetMoney = totalBetMoney * 0.03;
 
     if (!(previous_bonus_money >= bonusWalletBetMoney)) {
       mainWalletBetMoney = totalBetMoney;
@@ -1014,11 +925,9 @@ const addWinGo = async (game) => {
       let newArr = "";
       if (nextResult == "-1") {
         // game algorithm generate result
-        let result = await getWingoResult(game)
-        const finalResult = result || amount;
         await connection.query(
           "UPDATE wingo SET amount = ?, status = 1, release_status = 1 WHERE period = ? AND game = ?",
-          [finalResult, previousPeriod, join],
+          [amount, previousPeriod, join],
         );
         newArr = "-1";
       } else {
@@ -1053,21 +962,18 @@ const addWinGo = async (game) => {
     }
 
     let timeNow = Date.now();
+    let gameRepresentationId = GameRepresentationIds.WINGO[game];
+    let NewGamePeriod = generatePeriod(gameRepresentationId);
 
-     // Get period from API
-    const period = await getWingoPeriod(game);
+    //console.log(NewGamePeriod, join);
 
-    // Prepare the insert query
-    const query = `
-      INSERT INTO wingo (period, amount, game, status, time)
-      VALUES (?, 0, ?, 0, ?)
-    `;
-
-    // If no period from API, generate a new one
-    const finalPeriod = period || generatePeriod(GameRepresentationIds.WINGO[game]);
-
-    // Execute the query with prepared statement
-    await connection.query(query, [finalPeriod, join, timeNow]);
+    await connection.query(
+      `
+         INSERT INTO wingo
+         SET period = ?, amount = 0, game = ?, status = 0, time = ?
+      `,
+      [NewGamePeriod, join, timeNow],
+    );
   } catch (error) {
     if (error) {
       console.log(error);
@@ -1105,7 +1011,12 @@ const handlingWinGo1P = async (typeid) => {
 
     switch (result) {
       case 0:
-        await connection.execute(`UPDATE minutes_1 SET status = 2 WHERE status = 0 AND game = "${game}" AND bet != "l" AND bet != "n" AND bet != "d" AND bet != "0" AND bet != "t" `, []);
+        await connection.query(updateStatusSQL, [game, "l", "n", "d", "0"]);
+        if (!["t"].includes(result.toString()))
+          await connection.query(
+            "UPDATE minutes_1 SET status = 2 WHERE status = 0 AND game = ? AND bet = ?",
+            [game, "t"],
+          );
         break;
       case 1:
         await connection.query(updateStatusSQL, [game, "l", "n", "x", "1"]);
@@ -1120,7 +1031,12 @@ const handlingWinGo1P = async (typeid) => {
         await connection.query(updateStatusSQL, [game, "l", "n", "d", "4"]);
         break;
       case 5:
-        await connection.query(`UPDATE minutes_1 SET status = 2 WHERE status = 0 AND game = "${game}" AND bet != "l" AND bet != "n" AND bet != "x" AND bet != "5" AND bet != "t" `, []);
+        await connection.query(updateStatusSQL, [game, "l", "n", "x", "5"]);
+        if (!["t"].includes(result.toString()))
+          await connection.query(
+            "UPDATE minutes_1 SET status = 2 WHERE status = 0 AND game = ? AND bet = ?",
+            [game, "t"],
+          );
         break;
       case 6:
         await connection.query(updateStatusSQL, [game, "l", "n", "d", "6"]);
@@ -1180,10 +1096,8 @@ const handlingWinGo1P = async (typeid) => {
             nhan_duoc = total * 1.5;
           } else if (bet == "t") {
             nhan_duoc = total * 4.5;
-          } else if (bet == "5") {
+          } else if (bet == "0" || bet == "5") {
             nhan_duoc = total * 4.5;
-          } else if (bet == "0") {
-            nhan_duoc = total * 9;
           }
         } else {
           if (result == 1 && bet == "1") {
