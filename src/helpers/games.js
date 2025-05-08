@@ -68,6 +68,23 @@ export const yesterdayTime = () => {
   };
 };
 
+// export const yesterdayTime = () => {
+//   const now = new Date();
+
+//   // Start of today
+//   const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+//   // Start and end of yesterday
+//   const startOfYesterday = new Date(startOfToday.getTime() - 24 * 60 * 60 * 1000);
+//   const endOfYesterday = new Date(startOfToday.getTime() - 1); // 23:59:59.999 yesterday
+
+//   return {
+//     startOfYesterdayTimestamp: startOfYesterday.getTime(),
+//     endOfYesterdayTimestamp: endOfYesterday.getTime(),
+//   };
+// };
+
+
 export const monthTime = () => {
   const currentDate = new Date();
   const startOfMonth = new Date(currentDate);

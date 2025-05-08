@@ -271,12 +271,12 @@ const userStats = async (startTime, endTime, phone = "") => {
           ) r ON u.phone = r.phone
       LEFT JOIN
           (
-              SELECT 
+              SELECT
                   phone,
                   COALESCE(SUM(total_bet_amount), 0) AS total_bet_amount,
                   COALESCE(SUM(total_bets), 0) AS total_bets
               FROM (
-                  SELECT 
+                  SELECT
                       phone,
                       SUM(money + fee) AS total_bet_amount,
                       COUNT(*) AS total_bets
@@ -284,7 +284,7 @@ const userStats = async (startTime, endTime, phone = "") => {
                   WHERE time > ? AND time < ?
                   GROUP BY phone
                   UNION ALL
-                  SELECT 
+                  SELECT
                       phone,
                       SUM(money + fee) AS total_bet_amount,
                       COUNT(*) AS total_bets
@@ -335,15 +335,15 @@ const getCommissionStatsByTime = async (time, phone) => {
       SELECT
           time,
           SUM(COALESCE(c.money, 0)) AS total_commission,
-          SUM(CASE 
-              WHEN c.time >= ? 
+          SUM(CASE
+              WHEN c.time >= ?
               THEN COALESCE(c.money, 0)
-              ELSE 0 
+              ELSE 0
           END) AS last_week_commission,
-          SUM(CASE 
+          SUM(CASE
               WHEN c.time > ? AND c.time <= ?
               THEN COALESCE(c.money, 0)
-              ELSE 0 
+              ELSE 0
           END) AS yesterday_commission
       FROM
           commissions c
@@ -385,8 +385,11 @@ const subordinatesDataAPI = async (req, res) => {
 
     const directSubordinatesCount = level1Referrals.length;
     const noOfRegisteredSubordinates = level1Referrals.filter(
-      (user) => user.time >= startOfYesterdayTimestamp,
+      (user) =>
+        user.time >= startOfYesterdayTimestamp &&
+        user.time <= endOfYesterdayTimestamp
     ).length;
+
     const directSubordinatesRechargeQuantity = level1Referrals.reduce(
       (acc, curr) => acc + curr.total_deposit_number,
       0,
@@ -401,8 +404,9 @@ const subordinatesDataAPI = async (req, res) => {
 
     const teamSubordinatesCount = usersByLevels.length;
     const noOfRegisterAll = usersByLevels.filter(
-      (user) => user.time >= startOfYesterdayTimestamp,
-    );
+      (user) => user.time >= startOfYesterdayTimestamp &&
+      user.time <= endOfYesterdayTimestamp
+    ).length;
     const noOfRegisterAllSubordinates = noOfRegisterAll.length;
     const teamSubordinatesRechargeQuantity = usersByLevels.reduce(
       (acc, curr) => acc + curr.total_deposit_number,
@@ -1705,14 +1709,14 @@ const getAttendanceBonusRecord = async (req, res) => {
 //     const user = userRow?.[0];
 //     const startDate = req.query.startDate;
 //     const endDate = new Date().getTime();
-   
+
 
 //     if (!user) {
 //       return res.status(401).json({ message: "Unauthorized" });
 //     }
 
-    
-    
+
+
 //     const userStatsData = await userStats(startDate, endDate, user.phone);
 //     // console.time('getUserLevels'); // Start the timer
 //     const { usersByLevels = [] } = getUserLevels(userStatsData, user.code);
@@ -1724,7 +1728,7 @@ const getAttendanceBonusRecord = async (req, res) => {
 //     const commissions = await getCommissionStatsByTime(startDate, user.phone);
 
 //     const subordinatesWithTotalCommissions = commissions?.total_commission || 0;
-   
+
 
 //     /**********************for bets ********************************** */
 //     const subordinatesWithBetting = filteredUsers.filter(
@@ -1761,9 +1765,9 @@ const GetCommissionDetails = async (req, res) => {
       "SELECT `code`, `phone`, `invite` FROM `users` WHERE `token` = ? AND `veri` = 1",
       [authToken]
     );
-    
+
     const user = userRow?.[0];
-    
+
     // If no user found, return unauthorized
     if (!user) {
       return res.status(401).json({ message: "Unauthorized" });
@@ -1796,7 +1800,7 @@ const GetCommissionDetails = async (req, res) => {
 
     /********************** For Bets ********************************** */
     const subordinatesWithBetting = filteredUsers.filter(user => user.total_bets > 0);
-    
+
     // Count subordinates with bets and calculate total bet amounts
     const subordinatesWithBettingCount = subordinatesWithBetting.length;
     const subordinatesBettingAmount = subordinatesWithBetting
