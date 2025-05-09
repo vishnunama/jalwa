@@ -34,7 +34,38 @@
 
 
 
-
+            <style>
+                  .bank-select {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: flex
+                ;
+                    -webkit-box-pack: justify;
+                    -webkit-justify-content: space-between;
+                    justify-content: space-between;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                    font-size: .37333rem;
+                    height: .93333rem;
+                    border-radius: .13333rem;
+                    padding: 0 .26667rem;
+                    width: 100%;
+                    background: -webkit-linear-gradient(top, #cfd1de 0%, #c7c9d9 100%);
+                    background: linear-gradient(90deg, #f95959 0%, #f95959 100%);
+                    color: white !important;
+        
+                    border: none;
+                    color: #ee0a24;
+        
+        
+                  }
+                  .bank-select:focus {
+                    outline: none;
+                    border-color: #007bff; /* Highlight color on focus */
+                  }
+        
+                </style>
 
 
 
@@ -2842,7 +2873,8 @@
          $(document).ready(function () {
             const bankName = localStorage.getItem("bankName")
             if (bankName) {
-               $("#bank_name_display").text(bankName)
+            //    $("#bank_name_display").text(bankName)
+               $("#bankName").text("bankName")
             }
          })
 
@@ -2878,8 +2910,9 @@
                })
 
                if (response?.data?.account?.isAvailable) {
-                  $("input:eq(0)").val(response?.data?.account?.bankName)
-                  $("#bank_name_display").text(response?.data?.account?.bankName)
+                  // $("input:eq(0)").val(response?.data?.account?.bankName)
+                  $("#bankName").val(response?.data?.account?.bankName);
+
                   $("input:eq(0)").val(response?.data?.account?.recipientName)
                   $("input:eq(1)").val(response?.data?.account?.bankAccountNumber)
                   $("input:eq(2)").val(response?.data?.account?.phoneNumber)
