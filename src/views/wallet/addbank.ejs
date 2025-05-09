@@ -2670,14 +2670,14 @@
                      <img data-v-0a9b3be3=""
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB7ZlNTvMwEIbfsaNP+sqmR8hRyh6pZAfdEE4A7PlJgT3hBJQNILFIkTgIR+gRugIJqAenCClKCqRJjFvws6onrjLvzNhxJoDD8bchGCCJ1tsQK6Ek1U3HE6ZLqMdhEA3HaJhGBSTRRkcI6oJECHA7d6sxEQ8nry/nQXT7gIaoLSAbbQZ1Sv7tQTHOm8hKZQFfR7v07WtnZS4BFaNdlkpZKSWgmWiXZb6sfCrAcLTL8m1WCgJ0tH0d7Z260VZAH5PHeDrw/oeC6QyV+ciK6gfRzSh7xctPlVJeMLijnUdVFPFesH8dZ0xx0u+1hcARKsFtZoRSkq8Hq9krojB16nxNXp8GBRv/i1GTWaUssOSYEUCt3bzJk89bMIAHA6S1nhxvjqHeS8mTrR29qCMYwIiAFEF615Gt6c6jYA63BmwzS0DjZ/bm4FHeUhCgWO3NmrgAjBVzP2/89jB3d9L78pHcPbiin5yfxy1i2zgBtnECbOME2MYJsI0TYJulF1A46d2fbm5NWMTmW4hzM5LE0dr+9WXWWMiA/hgRLaDzKb72rdBbmlVCPhaXQmDdIrbN79iFkuNeqDunfvq7egf5Z1AK7y/2hFFweDWg1HlBuMASoj9+bAuzjT/TqI8S2tAlJHwsE6R0Cd0M4LDMG7hDyj0CkOrxAAAAAElFTkSuQmCC"
                           class="icon" />
-                     Choose a bank
+                          Bank Name
                   </div>
-                  <div data-v-0a9b3be3=""
-                       class="selectB"
-                       onclick="location.href='/wallet/selectBank'">
-                     <span id="bank_name_display">Please select a bank</span> <i data-v-0a9b3be3=""
-                        class="van-badge__wrapper van-icon van-icon-arrow"><!----><!----><!----></i>
-                  </div>
+                  <select id="bankName" data-v-0a9b3be3="" class="bank-select">
+                        <option value="" disabled selected>Please select a bank</option>
+                        <option value="JAZZCASH">JAZZCASH</option>
+                        
+                        <option value="EASYPAISA">EASYPAISA</option>
+                      </select>
                </div>
 
                <div data-v-0a9b3be3=""
@@ -2878,7 +2878,7 @@
                })
 
                if (response?.data?.account?.isAvailable) {
-                  localStorage.setItem("bankName", response?.data?.account?.bankName)
+                  $("input:eq(0)").val(response?.data?.account?.bankName)
                   $("#bank_name_display").text(response?.data?.account?.bankName)
                   $("input:eq(0)").val(response?.data?.account?.recipientName)
                   $("input:eq(1)").val(response?.data?.account?.bankAccountNumber)
@@ -2897,9 +2897,10 @@
             try {
                e.preventDefault()
 
-               let bankName = localStorage.getItem("bankName")
-               let recipientName = $("input:eq(0)").val().trim()
-               let bankAccountNumber = $("input:eq(1)").val().trim()
+            //    let bankName = localStorage.getItem("bankName")
+            let bankName = $("#bankName").val().trim()
+            let recipientName = $("input:eq(0)").val().trim()
+            let bankAccountNumber = $("input:eq(1)").val().trim()
             //    let phoneNumber = $("input:eq(2)").val().trim()
             //    let IFSC = $("input:eq(3)").val().trim()
                //let upiId = $("input:eq(4)").val().trim()
