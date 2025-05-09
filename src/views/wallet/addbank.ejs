@@ -2703,7 +2703,7 @@
                          placeholder="Please enter your bank account number"
                          maxlength="25" />
                </div>
-               <div data-v-0a9b3be3=""
+               <!-- <div data-v-0a9b3be3=""
                     class="addBankCard__container-content-item">
                   <div data-v-0a9b3be3=""
                        class="label"><img data-v-0a9b3be3=""
@@ -2712,8 +2712,8 @@
                   <input data-v-0a9b3be3=""
                          placeholder="Please enter your phone number"
                          maxlength="12" />
-               </div>
-               <div data-v-0a9b3be3=""
+               </div> -->
+               <!-- <div data-v-0a9b3be3=""
                     class="addBankCard__container-content-item">
                   <div data-v-0a9b3be3=""
                        class="label"><img data-v-0a9b3be3=""
@@ -2722,7 +2722,7 @@
                   <input data-v-0a9b3be3=""
                          placeholder="Please enter IFSC code"
                          maxlength="11" />
-               </div>
+               </div> -->
                <!-- <div data-v-0a9b3be3="" class="addBankCard__container-content-item">
                <div data-v-0a9b3be3="" class="label">
                   <img data-v-0a9b3be3=""
@@ -2900,11 +2900,11 @@
                let bankName = localStorage.getItem("bankName")
                let recipientName = $("input:eq(0)").val().trim()
                let bankAccountNumber = $("input:eq(1)").val().trim()
-               let phoneNumber = $("input:eq(2)").val().trim()
-               let IFSC = $("input:eq(3)").val().trim()
+            //    let phoneNumber = $("input:eq(2)").val().trim()
+            //    let IFSC = $("input:eq(3)").val().trim()
                //let upiId = $("input:eq(4)").val().trim()
 
-               if (bankName && recipientName && bankAccountNumber && phoneNumber && IFSC) {
+               if (bankName && recipientName && bankAccountNumber) {
                   const response = await axios({
                      method: "POST",
                      url: "/api/webapi/withdraw/add_bank_card",
@@ -2912,8 +2912,8 @@
                         bankName,
                         recipientName,
                         bankAccountNumber,
-                        phoneNumber,
-                        IFSC,
+                        phoneNumber: "00000000000",
+                        IFSC: "000000000000",
                         upiId: "--",
                      },
                   })
