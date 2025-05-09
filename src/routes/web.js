@@ -393,6 +393,11 @@ const initWebRouter = (app) => {
     withdrawalController.addBankCardPage,
   );
   router.get(
+    "/wallet/addBank1",
+    middlewareController,
+    withdrawalController.addBankCardPage1,
+  );
+  router.get(
     "/wallet/selectBank",
     middlewareController,
     withdrawalController.selectBankPage,

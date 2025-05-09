@@ -16,27 +16,16 @@ export function getNthHalfMinuteSinceDayStart() {
   return Math.floor(diff / 30); // 30-second intervals
 }
 
-export function generatePeriod(gameRepresentationId) {
+export function generatePeriod(gameRepresentationId, gameDurationInSeconds) {
+  const now = moment();
+  const startOfDay = moment().startOf("day");
+  const elapsedSecondsSinceStartOfDay = now.diff(startOfDay, "seconds");
+
+  const periodIncrement = Math.floor(elapsedSecondsSinceStartOfDay / gameDurationInSeconds);
   const TodayPeriod = moment().format("YYYYMMDD");
+  const paddedPeriodIncrement = _.padStart(periodIncrement.toString(), 4, "0");
 
-  // Check if the game is wingo10 to determine the interval type
-  let nthIntervalSinceDayStart;
-  if (gameRepresentationId === '04') {
-    nthIntervalSinceDayStart = getNthHalfMinuteSinceDayStart() + 1;
-  } else {
-    nthIntervalSinceDayStart = getNthMinuteSinceDayStart() + 1;
-  }
-
-  const paddedNthIntervalSinceDayStart = _.padStart(
-    nthIntervalSinceDayStart.toString(),
-    4,
-    "0"
-  );
-
-  let NewGamePeriod = `${TodayPeriod}${gameRepresentationId}${paddedNthIntervalSinceDayStart}`;
-//   console.log("NewGamePeriodfff", NewGamePeriod, gameRepresentationId);
-
-  return parseInt(NewGamePeriod);
+  return parseInt(`${TodayPeriod}${gameRepresentationId}${paddedPeriodIncrement}`);
 }
 
 export const generateClaimRewardID = () => {

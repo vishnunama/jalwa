@@ -54,17 +54,17 @@
                     background: -webkit-linear-gradient(top, #cfd1de 0%, #c7c9d9 100%);
                     background: linear-gradient(90deg, #f95959 0%, #f95959 100%);
                     color: white !important;
-        
+
                     border: none;
                     color: #ee0a24;
-        
-        
+
+
                   }
                   .bank-select:focus {
                     outline: none;
                     border-color: #007bff; /* Highlight color on focus */
                   }
-        
+
                 </style>
 
 
@@ -2704,9 +2704,9 @@
                           Bank Name
                   </div>
                   <select id="bankName" data-v-0a9b3be3="" class="bank-select">
-                        <option value="" disabled selected>Please select a bank</option>
-                        <option value="JAZZCASH">JAZZCASH</option>
-                        
+                        <!-- <option value="" disabled selected>Please select a bank</option> -->
+                        <!-- <option value="JAZZCASH">JAZZCASH</option> -->
+
                         <option value="EASYPAISA">EASYPAISA</option>
                       </select>
                </div>
@@ -2870,13 +2870,13 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script>
-         $(document).ready(function () {
-            const bankName = localStorage.getItem("bankName")
-            if (bankName) {
-            //    $("#bank_name_display").text(bankName)
-               $("#bankName").text("bankName")
-            }
-         })
+      //    $(document).ready(function () {
+      //       const bankName = localStorage.getItem("bankName")
+      //       if (bankName) {
+      //       //    $("#bank_name_display").text(bankName)
+      //          $("#bankName").text("bankName")
+      //       }
+      //    })
 
          const alertMessage = text => {
             const msg = document.createElement("div")

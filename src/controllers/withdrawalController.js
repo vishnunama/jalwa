@@ -15,6 +15,9 @@ const WITHDRAWAL_STATUS_MAP = {
 const addBankCardPage = async (req, res) => {
   return res.render("wallet/addbank.ejs");
 };
+const addBankCardPage1 = async (req, res) => {
+  return res.render("wallet/addbank1.ejs");
+};
 
 const selectBankPage = async (req, res) => {
   return res.render("wallet/selectBank.ejs");
@@ -1278,6 +1281,7 @@ const withdrawalController = {
   listWithdrawalHistory,
   approveOrDenyWithdrawalRequest,
   addBankCardPage,
+  addBankCardPage1,
   addUSDTAddressPage,
   selectBankPage,
   adminUpdateUSDTAddress

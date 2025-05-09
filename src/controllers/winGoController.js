@@ -511,7 +511,7 @@ const betWinGo = async (req, res) => {
   let checkTime = timerJoin(date.getTime());
 
   if (check >= 0) {
-    const sql = `INSERT INTO minutes_1 SET 
+    const sql = `INSERT INTO minutes_1 SET
         id_product = ?,
         phone = ?,
         code = ?,
@@ -757,6 +757,12 @@ const addWinGo = async (game) => {
     if (game == 5) join = "wingo5";
     if (game == 10) join = "wingo10";
 
+    let gameDurationInSeconds;
+    if (game == 1) gameDurationInSeconds = 60; // 1 minute
+    if (game == 3) gameDurationInSeconds = 180; // 3 minutes
+    if (game == 5) gameDurationInSeconds = 300; // 5 minutes
+    if (game == 10) gameDurationInSeconds = 30; // 30 seconds
+
     const [winGoNow] = await connection.query(
       "SELECT period FROM wingo WHERE status = 0 AND game = ? ORDER BY id DESC LIMIT 1",
       [join],
@@ -963,7 +969,7 @@ const addWinGo = async (game) => {
 
     let timeNow = Date.now();
     let gameRepresentationId = GameRepresentationIds.WINGO[game];
-    let NewGamePeriod = generatePeriod(gameRepresentationId);
+    let NewGamePeriod = generatePeriod(gameRepresentationId, gameDurationInSeconds);
 
     //console.log(NewGamePeriod, join);
 
