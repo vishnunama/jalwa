@@ -23,7 +23,7 @@
   --whiteBg: #011341;
   --whiteBg1: #001C54;
   --gray-color-1: #e1e1e1;
-  --text1: #E3EFFF;
+  --text1: #011341;
   --text2: #92A8E3;
   --text3: #b6bcc8;
   --text5: #011341;
@@ -248,7 +248,7 @@
   --activityTxt1: #011341;
   --activityBg3: #05012b;
   --home-color1: var(--textW);
-  --home-winp: #fa5d5d;
+  --home-winp: #00ECBE;
   --home-odds: #e6e6e6;
   --message-color: #ff867a;
   --winTips: rgba(255, 255, 255, 0.26);

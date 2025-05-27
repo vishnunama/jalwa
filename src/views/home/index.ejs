@@ -9214,7 +9214,7 @@
                       data-v-d6fe61e8=""
                       data-v-94f8731b=""
                       class="point point-flicker point"
-                      style="display:"
+                     
                     ></div>
                   </div>
 
@@ -9378,7 +9378,7 @@
           </div>
           <!----><!----><!---->
         </div>
-        <div data-v-b4633b52="" data-v-94f8731b="" class="noticeBar__container">
+        <!-- <div data-v-b4633b52="" data-v-94f8731b="" class="noticeBar__container">
           <svg
           
             data-v-b4633b52=""
@@ -9488,7 +9488,7 @@
             </svg>
             Detail
           </button>
-        </div>
+        </div> -->
 
 
 
@@ -9612,7 +9612,15 @@
           .item {
             cursor: pointer;
           }
-        
+          #gameGrid .item .lottery-text {
+    color: #6F80A4;
+    font-size: .32rem;
+    cursor: pointer;
+  }
+
+  #gameGrid .item.active .lottery-text {
+    color: #00ffd0;
+  }
           .bg-img.default {
             display: block;
           }
@@ -9641,17 +9649,22 @@
           </style>
 
           <div id="gameGrid"
-    style="display: grid; grid-template-columns: repeat(4, 1fr); gap: .16rem; color: white; text-align: center; font-family: sans-serif;">
+    style="display: grid; grid-template-columns: repeat(4, 1fr); gap: .16rem; color: white; text-align: center; font-family: sans-serif; margin: 30px 0px;">
 
     <!-- 1: Lottery -->
-    <div class="item" onclick="setActive(this); openCity(event, 'wingo')">
+    <div class="item active" onclick="setActive(this); openCity(event, 'wingo')">
       <div class="icon-box">
         <img src="https://www.jalwa.org/assets/png/icon_bg-f97e2540.png" class="bg-img default">
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
-        <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_202503131718208r77.png" class="icon-img" alt="Lottery">
+        <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_202503131718208r77.png" class="icon-img"
+          alt="Lottery">
       </div>
-      <div>Lottery</div>
+      <div class="lottery-text">
+        Lottery
+      </div>
     </div>
+    
+    
 
     <!-- 2: Mini games -->
     <div class="item" onclick="setActive(this); openCity(event, 'Tokyop')">
@@ -9660,7 +9673,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_20250313171619xdvp.png" class="icon-img" alt="Mini games">
       </div>
-      <div style="color: #00ffd0;">Mini games</div>
+      <div class="lottery-text">Mini games</div>
     </div>
 
     <!-- 3: Hot Slots -->
@@ -9670,7 +9683,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_20250313171546obyl.png" class="icon-img" alt="Hot Slots">
       </div>
-      <div>Hot Slots</div>
+      <div class="lottery-text">Hot Slots</div>
     </div>
 
     <!-- 4: Slots -->
@@ -9680,7 +9693,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_202503131718274ean.png" class="icon-img" alt="Slots">
       </div>
-      <div>Slots</div>
+      <div class="lottery-text">Slots</div>
     </div>
 
     <!-- 5: Fishing -->
@@ -9690,7 +9703,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_202503131716285jqk.png" class="icon-img" alt="Fishing">
       </div>
-      <div>Fishing</div>
+      <div class="lottery-text">Fishing</div>
     </div>
 
     <!-- 6: PVC -->
@@ -9700,7 +9713,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_202503131717268awj.png" class="icon-img" alt="PVC">
       </div>
-      <div>PVC</div>
+      <div class="lottery-text">PVC</div>
     </div>
 
     <!-- 7: Casino -->
@@ -9710,7 +9723,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_202503131718032ig4.png" class="icon-img" alt="Casino">
       </div>
-      <div>Casino</div>
+      <div class="lottery-text">Casino</div>
     </div>
 
     <!-- 8: Sports -->
@@ -9720,7 +9733,7 @@
         <img src="https://www.jalwa.org/assets/png/icon_bg_select-cc5606e6.png" class="bg-img-1 active">
         <img src="https://jalwaimg.jalwa-jalwa.com/Jalwa/gamecategory/gamecategory_20250315182024qtyt.png" class="icon-img" alt="Sports">
       </div>
-      <div>Sports</div>
+      <div class="lottery-text">Sports</div>
     </div>
 
   </div>
@@ -9730,12 +9743,31 @@
       const items = document.querySelectorAll('#gameGrid .item');
       items.forEach(item => item.classList.remove('active'));
       clickedItem.classList.add('active');
+
+      // Store index of clicked item
+      const index = Array.from(items).indexOf(clickedItem);
+      localStorage.setItem('activeItemIndex', index);
     }
 
+    // Run on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('#gameGrid .item');
+      const savedIndex = localStorage.getItem('activeItemIndex');
+
+      if (savedIndex !== null && items[savedIndex]) {
+        items.forEach(item => item.classList.remove('active'));
+        items[savedIndex].classList.add('active');
+      } else {
+        // Default: make first item active
+        if (items[0]) items[0].classList.add('active');
+      }
+    });
+
     function openCity(event, id) {
-      console.log("Open city:", id); // Replace this with your real logic
+      console.log("Open city:", id);
     }
   </script>
+  
         
         <div data-v-6c5117cd="" data-v-94f8731b="" class="">
           
@@ -9747,6 +9779,11 @@
              
              
             >
+            <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+              <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+              <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Fishing</h1>
+            </div>
+            
               <div
                 style="
                   grid-template-columns: repeat(3, 1fr);
@@ -9918,11 +9955,11 @@
                 data-v-df3cc798=""
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -9934,6 +9971,10 @@
               data-v-c9ec78ed=""
               style=""
             >
+            <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+              <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+              <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Slots</h1>
+            </div>
               <!--v-if--><!--v-if--><!--v-if-->
               <div
                 style="grid-template-columns: repeat(3, 1fr)"
@@ -10115,11 +10156,11 @@
                 data-v-df3cc798=""
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -10131,7 +10172,10 @@
               data-v-c9ec78ed=""
             >
               <!--v-if--><!--v-if--><!--v-if--><!--v-if--><!-- 小游戏、捕鱼 -->
-
+              <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+                <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+                <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Mini Games</h1>
+              </div>
               <div
                 data-v-860d7030=""
                 data-v-df3cc798=""
@@ -10298,11 +10342,11 @@
                 onclick="window.location.href=&#39;/slotjili&#39;"
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -10314,9 +10358,14 @@
               data-v-c9ec78ed=""
               style=""
             >
+            <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+              <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+              <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Platform recommendation</h1>
+            </div>
+
               <div data-v-d06787cb="" data-v-df3cc798="" class="hot_container">
                 <div data-v-d06787cb="" class="platform">
-                  <div data-v-d06787cb="" class="title">
+                  <!-- <div data-v-d06787cb="" class="title">
                     <svg
                       data-v-d06787cb=""
                       width="37"
@@ -10336,7 +10385,7 @@
                       ></path>
                     </svg>
                     <span data-v-d06787cb="">Platform recommendation</span>
-                  </div>
+                  </div> -->
                   <div data-v-d06787cb="" class="list">
                     <div data-v-d06787cb="">
                       <div
@@ -10556,11 +10605,11 @@
                 data-v-df3cc798=""
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -10572,6 +10621,11 @@
               data-v-c9ec78ed=""
               style=""
             >
+            <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+              <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+              <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Sports</h1>
+            </div>
+
               <div
                 style="grid-template-columns: repeat(3, 1fr)"
                 data-v-df3cc798=""
@@ -10685,11 +10739,11 @@
                 data-v-df3cc798=""
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -10701,6 +10755,10 @@
               data-v-c9ec78ed=""
               style=""
             >
+            <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+              <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+              <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">PVC</h1>
+            </div>
               <div data-v-df3cc798="" class="otherGame">
                 <div
                   onclick="openGameById(111)"
@@ -10804,11 +10862,11 @@
                 data-v-df3cc798=""
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -10820,6 +10878,10 @@
               data-v-c9ec78ed=""
               style=""
             >
+            <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+              <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+              <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Casino</h1>
+            </div>
               <div data-v-df3cc798="" class="otherGame">
                 <div
                   onclick="openGameById(80)"
@@ -10859,11 +10921,11 @@
                 data-v-df3cc798=""
                 class="look_all"
               >
-                <img
+               <!-- <img
                   data-v-df3cc798=""
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD5Wlr3WFj6WVn6WFj5V1f6WVn5WVn5WVn4V1f5WVnpXZn/AAAACnRSTlMA72C/v1DP329wWe0twgAAAKNJREFUOMtjoA/gMFwFAkkgdrMUiLlMASyhtQoCGhgYmKDMFWCJLCivgIGBDcpcDpZYBQULGBi4YOwRLlEF5SQwMLBDmcvAErOgPGBYc0KZi8ASTI4g9kIjEFsFHB/CCgyDF7AaIpwbjHAuIvkEIJLPUrCEF5RnwMDAAmUuBktIQXkCDAyMUObCgY9BGkvg9Dn+sIpCJB9WbMnHFCn5BDDQBQAAbjlnhYlIhpEAAAAASUVORK5CYII="
                   alt=""
-                />
+                /> -->
                 View All
               </button>
             </div>
@@ -10875,17 +10937,18 @@
               data-v-c9ec78ed=""
               style="display: block"
             >
+           
               <!--v-if--><!--v-if--><!--v-if-->
               <div
                 data-v-acaadf81=""
                 data-v-df3cc798=""
                 class="lottery_container"
               >
-              <div style="display: flex; margin: 20px 0px;" data-v-8672ccbd="">
-                <img style="width:20px; margin-right: 10px;"
-                  src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
-                  <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Winning information</h1>
+              <div style="display: flex; align-items: center;  margin-bottom: 10px;" data-v-8672ccbd="">
+                <img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">
+                <h1 style="color: #E3EFFF !important; font-weight: 600; font-size: 0.38rem;">Lottery</h1>
                 </div>
+              
 
 
               <div style="display: flex; gap: 10px; ">
@@ -10981,7 +11044,6 @@
         <div
           data-v-8672ccbd=""
           data-v-f5b7f7ac=""
-          style="margin: 100px 0px 0px 0px"
           class="luckyWinners__container"
         >
           <h1  data-v-8672ccbd=""><img style="width:20px; margin-right: 10px;" src="https://www.jalwa.org/assets/svg/icon_win-91513609.svg" alt="">Winning information</h1>

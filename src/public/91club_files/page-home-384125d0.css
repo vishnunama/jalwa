@@ -304,7 +304,7 @@ html:lang(ar) .hot_container .popular .list .win-odds .win-p[data-v-d06787cb] {
 .lotterySlotItem[data-v-acaadf81] {
   position: relative;
   width: 100%;
-  height: 2.26667rem;
+  /* height: 2.26667rem; */
   text-align: end;
   background: var(--commonGradient);
   margin-bottom: 0.26667rem;
@@ -622,7 +622,7 @@ html:lang(ar) .hot_container .popular .list .win-odds .win-p[data-v-d06787cb] {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  background-color: var(--HomebgWhiteLightColor);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);  /* background-color: var(--HomebgWhiteLightColor); */
   font-size: 0.34667rem;
   color: var(--HomeBtnColor);
 }
