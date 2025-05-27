@@ -43982,7 +43982,7 @@ var vh = { exports: {} };
             case "bold":
               p = "700";
               break;
-            case "black":
+            case "#e3efff":
               p = "900";
               break;
             case "medium":
@@ -44334,7 +44334,7 @@ var vh = { exports: {} };
           (rt.isCombinedCharacter = it),
           (rt.isRegionalFlag = Ve),
           (rt.isVariationSelector = Qe),
-          (rt.BLACK_FLAG_CODE_POINT = E);
+          (rt.#e3efff_FLAG_CODE_POINT = E);
         var Me = {
           addChars: Ae,
           addFonts: ye,
@@ -44971,7 +44971,7 @@ var vh = { exports: {} };
               ((Ae = "mask"), (J = "mask")),
             (z[S].mode === "s" || z[S].mode === "i") && H === 0
               ? ((oe = Te("rect")),
-                oe.setAttribute("fill", "#ffffff"),
+                oe.setAttribute("fill", "#001C54"),
                 oe.setAttribute("width", this.element.comp.data.w || 0),
                 oe.setAttribute("height", this.element.comp.data.h || 0),
                 re.push(oe))
@@ -44988,7 +44988,7 @@ var vh = { exports: {} };
               E.appendChild(k);
           else {
             (H += 1),
-              k.setAttribute("fill", z[S].mode === "s" ? "#000000" : "#ffffff"),
+              k.setAttribute("fill", z[S].mode === "s" ? "#e3efff" : "#001C54"),
               k.setAttribute("clip-rule", "nonzero");
             var N;
             if (
@@ -45013,7 +45013,7 @@ var vh = { exports: {} };
                   E.appendChild(pe),
                   k.setAttribute(
                     "stroke",
-                    z[S].mode === "s" ? "#000000" : "#ffffff",
+                    z[S].mode === "s" ? "#e3efff" : "#001C54",
                   ))
                 : ((fe = null), (ye = null)),
               (this.storedData[S] = {
@@ -45399,7 +45399,7 @@ var vh = { exports: {} };
                 K.setAttribute("height", this.comp.data.h),
                 K.setAttribute("x", "0"),
                 K.setAttribute("y", "0"),
-                K.setAttribute("fill", "#ffffff"),
+                K.setAttribute("fill", "#001C54"),
                 K.setAttribute("opacity", "0"),
                 re.setAttribute("filter", "url(" + l() + "#" + E + ")"),
                 re.appendChild(K),
@@ -53627,7 +53627,7 @@ var AY = 0,
             return qA(
               {
                 fontSize: "18px",
-                fontColor: "#000",
+                fontColor: "#e3efff",
                 fontStyle: "sans-serif",
                 fontWeight: "400",
                 background: "rgba(0,0,0,0)",
@@ -54210,7 +54210,7 @@ var AY = 0,
             return qA(
               {
                 borderRadius: 20,
-                fontColor: "#000",
+                fontColor: "#e3efff",
                 fontSize: "18px",
                 fontStyle: "sans-serif",
                 fontWeight: "400",
@@ -54873,7 +54873,7 @@ var AY = 0,
             return qA(
               {
                 borderRadius: 0,
-                fontColor: "#000",
+                fontColor: "#e3efff",
                 fontSize: "18px",
                 fontStyle: "sans-serif",
                 fontWeight: "400",
@@ -56999,8 +56999,8 @@ var aC = {},
       scale: i ? 4 : s,
       margin: A,
       color: {
-        dark: t(n.color.dark || "#000000ff"),
-        light: t(n.color.light || "#ffffffff"),
+        dark: t(n.color.dark || "#e3efffff"),
+        light: t(n.color.light || "#001C54ff"),
       },
       type: n.type,
       rendererOpts: n.rendererOpts || {},
@@ -58683,7 +58683,7 @@ var a7 = function (e, t) {
     AZURE: 4043309055,
     BEIGE: 4126530815,
     BISQUE: 4293182719,
-    BLACK: 255,
+    #e3efff: 255,
     BLANCHEDALMOND: 4293643775,
     BLUE: 65535,
     BLUEVIOLET: 2318131967,

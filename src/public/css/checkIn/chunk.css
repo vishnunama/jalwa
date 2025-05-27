@@ -1,5 +1,5 @@
 .mian[data-v-11ffe290] {
-  background-color: #ffffff;
+  background-color: #011341fff;
   padding-bottom: 3.2rem;
 }
 
@@ -27,8 +27,8 @@
   -webkit-align-items: center;
   align-items: center;
   height: auto;
-  color: #fff;
-  background-color: #ff9a8e;
+  color: #011341;
+  background-color: #00ECBE;
   padding-top: 3rem;
   background-image: url(/assets/png/promotionbg-9dcd78e9.png);
   background-repeat: no-repeat;
@@ -39,13 +39,13 @@
 .mian .check-box .check-header .tit[data-v-11ffe290] {
   font-weight: 600;
   font-size: 0.42667rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .check-box .check-header .txt[data-v-11ffe290] {
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
-  box-shadow: 0 0.10667rem 0.32rem #ffffff;
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+  box-shadow: 0 0.10667rem 0.32rem #011341fff;
   border-radius: 0.8rem;
   height: 0.8rem;
   line-height: 0.8rem;
@@ -69,7 +69,7 @@
 
 .mian .check-box .list[data-v-11ffe290] {
   border-radius: 0.26667rem 0.26667rem 0 0;
-  /*background-color:#fff;margin-top:-.53333rem;*/
+  /*background-color:#011341;margin-top:-.53333rem;*/
   padding: 0.4rem;
 }
 
@@ -78,7 +78,7 @@
   padding: 0.26667rem 0.4rem;
   margin-bottom: 0.26667rem;
   width: 31%;
-  background-color: #ff9a8e;
+  background-color: #00ECBE;
   /*background:url(/images/k.webp) no-repeat 50%;background-size:cover;*/
   border-radius: 0.26667rem;
   overflow: hidden;
@@ -101,7 +101,7 @@
   font-size: 0.48rem;
   font-weight: 600;
   margin-bottom: 0.08rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .check-box .list .item .num .des[data-v-11ffe290] {
@@ -114,7 +114,7 @@
   margin-top: 0.13333rem;
   position: relative;
   font-size: 0.37333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .check-box .list .item.action[data-v-11ffe290] {
@@ -123,7 +123,7 @@
 }
 
 .mian .check-box .list .item.action .num[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
 }
 
 .mian .check-box .list .item.action .icon[data-v-11ffe290] {
@@ -146,7 +146,7 @@
 }
 
 .mian .check-box .list .item.action .txt[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
 }
 
 .mian .check-box .list .item:last-child .txt[data-v-11ffe290]:after {
@@ -198,7 +198,7 @@
   flex: 1;
   text-align: center;
   font-size: 0.34667rem;
-  background-color: #fff;
+  background-color: #011341;
   border: 0.02667rem solid #fee7e7;
   margin-bottom: -0.02667rem;
 }
@@ -263,7 +263,7 @@
   width: 100%;
   height: 1.86667rem;
   padding: 0.53333rem 0.53333rem 0;
-  color: #fff;
+  color: #011341;
   font-size: 0.42667rem;
   background: #de0700 url(../img/head_banner.224e7b9d.png) no-repeat 0 0;
   background-size: 100% 100%;
@@ -271,13 +271,13 @@
 }
 
 .mian .popup-box .title .txt[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
   font-size: 0.45333rem;
   margin-bottom: 0.10667rem;
 }
 
 .mian .popup-box .title .des[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
   font-size: 0.32rem;
 }
 
@@ -294,7 +294,7 @@
 }
 
 .mian .popup-box .info .txt[data-v-11ffe290] {
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0 0.37333rem 0 rgba(242, 65, 59, 0.09);
   border-radius: 0.21333rem;
   line-height: 0.53333rem;

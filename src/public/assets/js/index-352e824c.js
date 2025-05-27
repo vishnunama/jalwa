@@ -223,7 +223,7 @@ const E = { class: "settingPanel__container-items" },
                             p(o("span", null, d(m(g).getLanguageName), 513), [
                               [u, i.icon === "languageIcon"],
                             ]),
-                            R(a, { name: "arrow", color: "#fff" }),
+                            R(a, { name: "arrow", color: "#011341" }),
                           ]),
                         ],
                         8,

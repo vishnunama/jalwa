@@ -1,11 +1,11 @@
 [data-v-51d668f5]:root {
-  --van-popup-background: #f0f0f5;
+  --van-popup-background: #011341;
 }
 .van-toast[data-v-51d668f5] {
   word-break: break-word !important;
 }
 .cg-default.van-button[data-v-51d668f5] {
-  box-shadow: 0 0.05333rem #f95959;
+    /* box-shadow: 0 0.05333rem #f95959; */
   font-weight: 700;
   font-size: 0.4rem;
 }
@@ -43,7 +43,7 @@
 }
 .register__container-invitation__label[data-v-51d668f5] {
   margin-bottom: 0.32rem;
-  color: #666;
+  color: #E3EFFF;
   font-size: 0.4rem;
 }
 .register__container-invitation__label-icon[data-v-51d668f5] {
@@ -59,7 +59,7 @@
   font-size: 0.37333rem;
   border: none;
   border-radius: 0.26667rem;
-  background: #f0f0f5;
+  background: #011341;
 }
 .register__container-remember[data-v-51d668f5] {
   margin-top: 0.84rem;
@@ -76,7 +76,7 @@
   display: inline-flex;
 }
 .register__container-remember[data-v-51d668f5] .van-checkbox .van-icon-success {
-  color: #fff;
+  color: #011341;
 }
 .register__container-remember[data-v-51d668f5]
   .van-checkbox
@@ -88,7 +88,7 @@
   .van-checkbox
   .van-checkbox__label
   span {
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 .register__container-button[data-v-51d668f5] {
@@ -108,15 +108,15 @@
 .register__container-button button[data-v-51d668f5] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.05333rem;
   border-radius: 0.58667rem;
   border: none;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
-  box-shadow: 0 0.05333rem #f95959;
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+    /* box-shadow: 0 0.05333rem #f95959; */
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -132,27 +132,27 @@
   background: linear-gradient(180deg, #cfd1df 0%, #c8cada 100%);
 }
 .register__container-button .login[data-v-51d668f5] {
-  border: 0.01333rem solid #ff9a8e;
+  border: 0.01333rem solid #00ECBE;
   text-shadow: none;
-  background: #ffffff;
+  background: #001C54;
   box-shadow: none;
   margin-top: 0.53333rem;
 }
 .register__container-button .account[data-v-51d668f5] {
   font-size: 0.32rem;
-  color: #666;
+  color: #E3EFFF;
   font-weight: 400;
 }
 .register__container-button .loginin[data-v-51d668f5] {
   font-size: 0.4rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-weight: 700;
   -webkit-margin-start: 0.22667rem;
   margin-inline-start: 0.22667rem;
 }
 .register__container-button span[data-v-51d668f5] {
   margin-top: 0.32rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 .register__container-tips[data-v-51d668f5] {
@@ -160,7 +160,7 @@
   margin-bottom: 0.16rem;
   -webkit-padding-start: 0.22667rem;
   padding-inline-start: 0.22667rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 .register__container-tip[data-v-51d668f5] {
@@ -186,16 +186,16 @@
   background-size: contain;
 }
 .red[data-v-51d668f5] {
-  color: #ff9a8e !important;
+  color: #00ECBE !important;
 }
 [data-v-e945b8e8]:root {
-  --van-popup-background: #f0f0f5;
+  --van-popup-background: #011341;
 }
 .van-toast[data-v-e945b8e8] {
   word-break: break-word !important;
 }
 .cg-default.van-button[data-v-e945b8e8] {
-  box-shadow: 0 0.05333rem #f95959;
+    /* box-shadow: 0 0.05333rem #f95959; */
   font-weight: 700;
   font-size: 0.4rem;
 }
@@ -229,7 +229,7 @@
 }
 .register__container-invitation__label[data-v-e945b8e8] {
   margin-bottom: 0.32rem;
-  color: #666;
+  color: #E3EFFF;
   font-size: 0.4rem;
 }
 .register__container-invitation__label-icon[data-v-e945b8e8] {
@@ -270,7 +270,7 @@
   .van-checkbox
   .van-checkbox__label
   span {
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 .register__container-button[data-v-e945b8e8] {
@@ -290,16 +290,16 @@
 .register__container-button button[data-v-e945b8e8] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.05333rem;
   text-shadow: 0 0.05333rem 0.02667rem rgba(231, 65, 65, 0.5019607843);
   border-radius: 1.06667rem;
   border: none;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
-  box-shadow: 0 0.05333rem #f95959;
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+    /* box-shadow: 0 0.05333rem #f95959; */
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -318,13 +318,13 @@
 .register__container-button .login[data-v-e945b8e8] {
   border: 0.01333rem solid #ff7172;
   text-shadow: none;
-  background: #ffffff;
+  background: #001C54;
   box-shadow: none;
   margin-top: 0.53333rem;
 }
 .register__container-button .account[data-v-e945b8e8] {
   font-size: 0.32rem;
-  color: #666;
+  color: #E3EFFF;
   font-weight: 400;
 }
 .register__container-button .loginin[data-v-e945b8e8] {
@@ -373,13 +373,13 @@
   color: #ff7172 !important;
 }
 [data-v-b42d759c]:root {
-  --van-popup-background: #f0f0f5;
+  --van-popup-background: #011341;
 }
 .van-toast[data-v-b42d759c] {
   word-break: break-word !important;
 }
 .cg-default.van-button[data-v-b42d759c] {
-  box-shadow: 0 0.05333rem #f95959;
+    /* box-shadow: 0 0.05333rem #f95959; */
   font-weight: 700;
   font-size: 0.4rem;
 }
@@ -403,7 +403,7 @@
   -webkit-align-items: center;
   align-items: center;
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 .right img[data-v-b42d759c] {
   width: 0.66667rem;
@@ -420,15 +420,15 @@
   width: 0.45333rem;
   height: auto;
 }
-.resgister__C[data-v-b42d759c] .navbar-fixed {
+/* .resgister__C[data-v-b42d759c] .navbar-fixed {
   background: -webkit-linear-gradient(
     left,
-    #ff9a8e 0%,
+    #00ECBE 0%,
     #f95959 100%
   ) !important;
-  background: linear-gradient(90deg, #ff9a8e 0%, #f95959 100%) !important;
-}
-.resgister__C[data-v-b42d759c]
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6) !important;
+} */
+/* .resgister__C[data-v-b42d759c]
   .navbar-fixed
   .navbar__content
   .navbar__content-center,
@@ -437,8 +437,8 @@
   .navbar__content
   .navbar__content-left
   .van-icon {
-  color: #fff !important;
-}
+  color: #011341 !important;
+} */
 .resgister__C .login_container-tab[data-v-b42d759c] {
   width: 100%;
   overflow-x: hidden;
@@ -472,7 +472,7 @@
 }
 .resgister__C .login_container-tab .tab .font30[data-v-b42d759c] {
   font-size: 0.4rem;
-  color: #888;
+  color: #E3EFFF;
   text-align: center;
   -webkit-box-flex: 0;
   -webkit-flex: none;
@@ -482,10 +482,10 @@
   margin-top: 0.21333rem;
 }
 .resgister__C .login_container-tab .active[data-v-b42d759c] {
-  border-bottom: 0.05333rem solid #ff9a8e;
+  border-bottom: 0.05333rem solid #00ECBE;
 }
 .resgister__C .login_container-tab .active .font30[data-v-b42d759c] {
-  color: #ff9a8e;
+  color: #00ECBE;
 }
 .resgister__C .login_container-tab .basicimg[data-v-b42d759c],
 .resgister__C .login_container-tab .phoneactive[data-v-b42d759c],
@@ -513,13 +513,14 @@
 .resgister__C-heading[data-v-b42d759c] {
   min-height: 2.26667rem;
   padding-bottom: 0.13333rem;
-  background: -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
-  background: linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+  /* background: linear-gradient(180deg, #7AFEC3, #02AFB6);  */
+  background: #011341;
+  color: white;
 }
 .resgister__C-heading__title[data-v-b42d759c] {
   font-size: 0.42667rem;
   font-weight: 700;
-  color: #fff;
+  /* color: #011341; */
   -webkit-margin-start: 0.53333rem;
   margin-inline-start: 0.53333rem;
   padding-top: 0.26667rem;
@@ -537,7 +538,7 @@
   -webkit-margin-start: 0.53333rem;
   margin-inline-start: 0.53333rem;
   margin-bottom: 0.53333rem;
-  color: #fff;
+  /* color: #011341; */
   white-space: normal;
 }
 .resgister__C-form[data-v-b42d759c] {

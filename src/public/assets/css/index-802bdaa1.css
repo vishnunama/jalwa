@@ -1,6 +1,6 @@
 [data-v-cb7a01af]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-cb7a01af] {
@@ -42,7 +42,7 @@
   width: 100%;
   height: 100%;
   padding: 0.45333rem 0.53333rem 0.58667rem;
-  background: #ffffff;
+  background: #001C54;
   color: #4dd8ef;
 }
 
@@ -51,7 +51,7 @@
   line-height: 0.53333rem;
   font-weight: 700;
   font-size: 0.42667rem;
-  color: #fff;
+  color: #011341;
   text-align: center;
 }
 
@@ -102,7 +102,7 @@
 
 .RpwdPopup-foot .dialogBtn[data-v-cb7a01af]:last-of-type {
   width: 4.74667rem;
-  color: #fff;
+  color: #011341;
   background: -webkit-linear-gradient(top, #2aaaf3 0%, #2979f2 100%);
   background: linear-gradient(180deg, #2aaaf3 0%, #2979f2 100%);
   margin-left: 0.2rem;
@@ -154,7 +154,7 @@
 
 .RpwdPopup .gotuserver[data-v-cb7a01af]:after {
   border-radius: 1.33333rem;
-  border-color: #888;
+  border-color: #E3EFFF;
 }
 
 .RpwdPopup .gotuserver img[data-v-cb7a01af] {
@@ -175,8 +175,8 @@
 }
 
 [data-v-a761d0b2]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -184,10 +184,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-a761d0b2] {
@@ -257,7 +257,7 @@
 .signIn__container-button button[data-v-a761d0b2] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.05333rem;
@@ -274,11 +274,11 @@
 .signIn__container-button .register[data-v-a761d0b2] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.48rem;
   background: transparent;
   border-radius: 1.06667rem;
-  border: 0.01333rem solid #ff9a8e;
+  border: 0.01333rem solid #00ECBE;
   box-shadow: none;
   text-shadow: none;
   margin-top: 0.53333rem;
@@ -286,7 +286,7 @@
 
 .signIn__container-button span[data-v-a761d0b2] {
   margin-top: 1.86667rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 
@@ -295,7 +295,7 @@
   display: -webkit-flex;
   display: flex;
   margin-top: 0.77333rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -341,7 +341,7 @@
 .signIn__container .signIn_footer .font24[data-v-a761d0b2] {
   font-size: 0.32rem;
   font-weight: 400;
-  color: #fff;
+  color: #011341;
   text-align: center;
 }
 
@@ -350,7 +350,7 @@
   font-size: 0.32rem;
   line-height: 0.46667rem;
   text-align: center;
-  color: #666;
+  color: #E3EFFF;
   margin-bottom: 0.8rem;
   word-wrap: break-word;
   white-space: normal;
@@ -385,7 +385,7 @@
 .dialogBtn[data-v-a761d0b2]:last-of-type {
   width: -webkit-fit-content;
   width: fit-content;
-  color: #fff;
+  color: #011341;
   background: -webkit-linear-gradient(top, #2aaaf3 0%, #2979f2 100%);
   background: linear-gradient(180deg, #2aaaf3 0%, #2979f2 100%);
 }
@@ -402,8 +402,8 @@
 }
 
 [data-v-a74cbdb9]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -411,10 +411,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-a74cbdb9] {
@@ -445,7 +445,7 @@
   width: 100%;
   height: 100%;
   padding: 0.45333rem 0.53333rem 0.58667rem;
-  background: #ffffff;
+  background: #001C54;
   color: #4dd8ef;
 }
 
@@ -454,7 +454,7 @@
   line-height: 0.53333rem;
   font-weight: 700;
   font-size: 0.42667rem;
-  color: #fff;
+  color: #011341;
   text-align: center;
 }
 
@@ -505,7 +505,7 @@
 
 .RpwdPopup-foot .dialogBtn[data-v-a74cbdb9]:last-of-type {
   width: 4.74667rem;
-  color: #fff;
+  color: #011341;
   background: -webkit-linear-gradient(top, #2aaaf3 0%, #2979f2 100%);
   background: linear-gradient(180deg, #2aaaf3 0%, #2979f2 100%);
   margin-left: 0.2rem;
@@ -575,8 +575,8 @@
 }
 
 [data-v-584ff9a2]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -584,10 +584,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-584ff9a2] {
@@ -657,7 +657,7 @@
 .signIn__container-button button[data-v-584ff9a2] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.05333rem;
@@ -676,11 +676,11 @@
 .signIn__container-button .register[data-v-584ff9a2] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.48rem;
   background: transparent;
   border-radius: 1.06667rem;
-  border: 0.01333rem solid #ff9a8e;
+  border: 0.01333rem solid #00ECBE;
   box-shadow: none;
   text-shadow: none;
   margin-top: 0.53333rem;
@@ -688,7 +688,7 @@
 
 .signIn__container-button span[data-v-584ff9a2] {
   margin-top: 1.86667rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 
@@ -697,7 +697,7 @@
   display: -webkit-flex;
   display: flex;
   margin-top: 0.77333rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -743,7 +743,7 @@
 .signIn__container .signIn_footer .font24[data-v-584ff9a2] {
   font-size: 0.32rem;
   font-weight: 400;
-  color: #666;
+  color: #E3EFFF;
   text-align: center;
 }
 
@@ -752,7 +752,7 @@
   font-size: 0.32rem;
   line-height: 0.46667rem;
   text-align: center;
-  color: #666;
+  color: #E3EFFF;
   margin-bottom: 0.8rem;
   word-wrap: break-word;
   white-space: normal;
@@ -761,11 +761,11 @@
 .dialogBtn[data-v-584ff9a2] {
   width: 6.66667rem;
   height: 1.06667rem;
-  color: #f95959;
+  color: #00ECBE;
   font-size: 0.42667rem;
   text-align: center;
   border-radius: 9rem;
-  border: 0.01333rem solid #f95959;
+  border: 0.01333rem solid #00ECBE;
   background: transparent;
   display: -webkit-box;
   display: -webkit-flex;
@@ -787,7 +787,7 @@
 .dialogBtn[data-v-584ff9a2]:last-of-type {
   width: -webkit-fit-content;
   width: fit-content;
-  color: #fff;
+  color: #011341;
   text-shadow: 0 0.05333rem 0.02667rem rgba(231, 65, 65, 0.5019607843);
   background: -webkit-linear-gradient(top, #ff867a 0%, #f95959 100%);
   background: linear-gradient(180deg, #ff867a 0%, #f95959 100%);
@@ -806,8 +806,8 @@
 }
 
 [data-v-4303e094]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -815,10 +815,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-4303e094] {
@@ -853,7 +853,7 @@
   -webkit-align-items: center;
   align-items: center;
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 
 .right img[data-v-4303e094] {
@@ -885,11 +885,11 @@
   .navbar__content
   .navbar__content-left
   .van-icon {
-  color: #fff !important;
+  color: #011341 !important;
 }
 
 .login__container .van-nav-bar[data-v-4303e094] {
-  background-color: #f7f8ff;
+  background-color: #05012b;
 }
 
 .login__container .van-nav-bar .leftArrow[data-v-4303e094] {
@@ -928,7 +928,7 @@
   -webkit-align-items: center;
   align-items: center;
   min-height: 1.86667rem;
-  color: #f95959;
+  color: #00ECBE;
 }
 
 .login__container .login_container-tab .tab .font30[data-v-4303e094] {
@@ -949,7 +949,7 @@
 }
 
 .login__container .login_container-tab .active .font30[data-v-4303e094] {
-  color: #fff;
+  color: #011341;
 }
 
 .login__container .login_container-tab .basicimg[data-v-4303e094],
@@ -1003,7 +1003,7 @@
 .login__container-heading__title[data-v-4303e094] {
   font-size: 0.42667rem;
   font-weight: 700;
-  color: #fff;
+  color: #011341;
   margin-left: 0.53333rem;
   padding-top: 0.26667rem;
 }
@@ -1020,7 +1020,7 @@
   margin-top: 0.29333rem;
   margin-left: 0.53333rem;
   margin-bottom: 0.53333rem;
-  color: #fff;
+  color: #011341;
   white-space: normal;
 }
 

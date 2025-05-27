@@ -7,7 +7,7 @@
   line-height: 0.96rem;
   border: 0.02667rem solid #ababab;
   border-radius: 0.10667rem;
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.37333rem;
   text-align: left;
   cursor: pointer;
@@ -39,7 +39,7 @@
   list-style: none;
   top: 0.96rem;
   left: 0;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0 0.13333rem rgba(0, 0, 0, 0.2);
   z-index: 9;
 }
@@ -56,7 +56,7 @@
 
 .fd-select-box .fd-select-list li.active[data-v-1a5d9fee] {
   background: #df3832;
-  color: #fff;
+  color: #011341;
 }
 
 .mian[data-v-0ff6946a] {
@@ -74,7 +74,7 @@
 }
 
 .mian .promotion .tab[data-v-0ff6946a] {
-  background-color: #ffffff;
+  background-color: #011341fff;
   height: 1.06667rem;
   line-height: 1.06667rem;
   overflow: hidden;
@@ -91,7 +91,7 @@
   width: 25%;
   text-align: center;
   font-size: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian .promotion .tab ul li.action[data-v-0ff6946a] {
@@ -109,11 +109,11 @@
 }
 
 .mian .promotion .tit[data-v-0ff6946a] {
-  background: #f95959;
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);;
   padding: 0 0.4rem;
   height: 0.90667rem;
   line-height: 0.90667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian .promotion .number[data-v-0ff6946a] {
@@ -144,22 +144,22 @@
   line-height: 0.96rem;
   padding: 0 0.26667rem;
   min-width: 1.6rem;
-  color: #fff;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
-  box-shadow: 0 0.10667rem 0.32rem #ffffff;
+  color: #011341;
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+  box-shadow: 0 0.10667rem 0.32rem #011341fff;
   border-radius: 0.13333rem;
 }
 
 .mian .promotion .table[data-v-0ff6946a] {
   margin: 0.26667rem 0.4rem 0;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.13333rem 0.29333rem 0.02667rem rgba(0, 0, 0, 0.12);
   border-radius: 0.10667rem;
 }
 
 .mian .promotion .table .hd[data-v-0ff6946a] {
-  background: #ff9a8e;
+  background: #00ECBE;
   /*border-radius:.10667rem;*/
   height: 0.93333rem;
   line-height: 0.93333rem;
@@ -168,12 +168,12 @@
 .mian .promotion .table .item[data-v-0ff6946a] {
   position: relative;
   margin: 10px;
-  border: 1px solid #ff9a8e;
+  border: 1px solid #00ECBE;
   border-radius: 7px;
 }
 
 .mian .promotion .table .item .bd[data-v-0ff6946a] {
-  background: #f0f0f5;
+  background: #011341;
   height: 0.93333rem;
   border-radius: 6px;
   line-height: 0.93333rem;

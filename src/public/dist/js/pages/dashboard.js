@@ -92,7 +92,7 @@ $(function () {
       regions: [
         {
           values: visitorsData,
-          scale: ["#ffffff", "#0154ad"],
+          scale: ["#001C54", "#0154ad"],
           normalizeFunction: "polynomial",
         },
       ],
@@ -156,7 +156,7 @@ $(function () {
         pointRadius: false,
         pointColor: "#3b8bba",
         pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
+        pointHighlightFill: "#001C54",
         pointHighlightStroke: "rgba(60,141,188,1)",
         data: [28, 48, 40, 19, 86, 27, 90],
       },
@@ -167,7 +167,7 @@ $(function () {
         pointRadius: false,
         pointColor: "rgba(210, 214, 222, 1)",
         pointStrokeColor: "#c1c7d1",
-        pointHighlightFill: "#fff",
+        pointHighlightFill: "#001C54",
         pointHighlightStroke: "rgba(220,220,220,1)",
         data: [65, 59, 80, 81, 56, 55, 40],
       },

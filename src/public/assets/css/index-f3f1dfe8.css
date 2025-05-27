@@ -121,7 +121,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 3;
 }
 .tabbar__container-item[data-v-6ab3f23e]:nth-of-type(3) svg path {
-  fill: #fff !important;
+  fill: #011341 !important;
 }
 .tabbar__container-item:nth-of-type(3) .promotionBg[data-v-6ab3f23e] {
   position: absolute;
@@ -205,8 +205,8 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 9999;
   width: 10rem;
   height: 100%;
-  background: -webkit-linear-gradient(top, #f0f0f5, #e5e8f5);
-  background: linear-gradient(180deg, #f0f0f5, #e5e8f5);
+  background: -webkit-linear-gradient(top, #011341, #e5e8f5);
+  background: linear-gradient(180deg, #011341, #e5e8f5);
   bottom: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -959,7 +959,7 @@ textarea {
   list-style: none;
 }
 .ar-searchbar__selector-dropdown li.selected {
-  color: #fff;
+  color: #011341;
   background-color: var(--norm_red-color);
 }
 .ar-searchbar__selector.active {
@@ -999,8 +999,8 @@ textarea {
   top: 0;
   right: 0;
   height: 0.01333rem;
-  border-top: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-top: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -1014,7 +1014,7 @@ textarea {
   right: 0;
   height: 0.01333rem;
   border-bottom: 0.01333rem solid var(--Dividing-line_color);
-  color: #e6e8e8;
+  color: #022C68;
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   -webkit-transform: scaleY(0.5);
@@ -1027,8 +1027,8 @@ textarea {
   top: 0;
   width: 0.01333rem;
   bottom: 0;
-  border-left: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-left: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleX(0.5);
@@ -1041,8 +1041,8 @@ textarea {
   top: 0;
   width: 0.01333rem;
   bottom: 0;
-  border-right: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-right: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 100% 0;
   transform-origin: 100% 0;
   -webkit-transform: scaleX(0.5);
@@ -1055,8 +1055,8 @@ textarea {
   top: 0;
   width: 0.01333rem;
   bottom: 0;
-  border-right: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-right: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 100% 0;
   transform-origin: 100% 0;
   -webkit-transform: scaleX(0.5);
@@ -1069,8 +1069,8 @@ textarea {
   bottom: 0;
   right: 0;
   height: 0.01333rem;
-  border-bottom: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-bottom: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   -webkit-transform: scaleY(0.5);
@@ -1083,8 +1083,8 @@ textarea {
   top: 0;
   right: 0;
   height: 0.01333rem;
-  border-top: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-top: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -1097,8 +1097,8 @@ textarea {
   bottom: 0;
   right: 0;
   height: 0.01333rem;
-  border-bottom: 0.01333rem solid #e6e8e8;
-  color: #e6e8e8;
+  border-bottom: 0.01333rem solid #022C68;
+  color: #022C68;
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   -webkit-transform: scaleY(0.5);
@@ -1167,8 +1167,8 @@ textarea {
   color: #303a4c;
   font-size: 0.32rem;
   border-radius: 99rem;
-  background: #fff;
-  box-shadow: 0 0.10667rem 0.16rem #d0d0ed4d;
+  background: #011341;
+    /* box-shadow: 0 0.10667rem 0.16rem #d0d0ed4d; */
 }
 .noticeBar__container-body {
   width: 9.33333rem;
@@ -1262,7 +1262,7 @@ textarea {
   width: 2rem;
   height: 0.66667rem;
   margin-left: auto;
-  color: #fff;
+  color: #011341;
   border: none;
   border-radius: 0.53333rem;
   background: -webkit-linear-gradient(bottom, #f54545 20.19%, #ff7c7c 100%);
@@ -1277,13 +1277,14 @@ textarea {
 }
 #app div:not(.ranking),
 #app input {
+  /* color: white; */
   box-shadow: none !important;
 }
 #app .pointMall__container .navbar__content {
   background: var(--bgColor-5);
 }
 #app .pointMall__container-info {
-  color: #1e2637;
+  color: #E3EFFF;
 }
 #app .pointMall__container-info div {
   background: var(--linearGradien-52);
@@ -1298,7 +1299,7 @@ textarea {
 }
 #app .package-time svg path,
 #app .package-tips svg path {
-  stroke: #ff9a8e;
+  stroke: #00ECBE;
 }
 #app .package-rule span {
   color: var(--main-color);
@@ -1322,7 +1323,7 @@ textarea {
   color: var(--main-color);
 }
 #app .pointMall-rule__container .pointRule__body > div:nth-of-type(2) > div p {
-  background: black;
+  background: #e3efff;
 }
 #app .pointMall-rule__container-pointRule__body > div:nth-of-type(2) > div {
   background: -webkit-linear-gradient(top, #f95959 0%, #f95959 100%);
@@ -1339,7 +1340,7 @@ textarea {
   color: var(--main-color);
 }
 #app .redeem__container-detail__notes li:before {
-  background: #ff9a8e;
+  background: #00ECBE;
 }
 #app .lotteryActivity__container .van-tabs__nav,
 #app .myLottery__container .van-tabs__nav {
@@ -1350,16 +1351,16 @@ textarea {
   color: var(--textW);
 }
 #app .lotteryDetail__container-item__hero-progress .van-progress__portion {
-  background: #ff9a8e !important;
+  background: #00ECBE !important;
 }
 #app .financialServices__container-footer > div > div > div h4 {
-  background: -webkit-linear-gradient(left, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);
-  color: #fff;
+  background: -webkit-linear-gradient(left, #f95959 0%, #00ECBE 100%);
+  background: #011341;
+  color: #011341;
 }
 #app .NewVietnam__C .navbar-fixed {
-  background: -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
-  background: linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+  background: -webkit-linear-gradient(left, #00ECBE 0%, #f95959 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
 }
 #app .game_container .driver,
 #app .luckyWinners__container .driver,
@@ -1378,16 +1379,14 @@ textarea {
   background: #e5e8f5;
 }
 #app .noticeBar__container button {
-  background: -webkit-linear-gradient(353deg, #f95959 9.64%, #f95959 84.03%);
-  background: linear-gradient(97deg, #f95959 9.64%, #f95959 84.03%);
-  box-shadow: unset;
-  color: #171717;
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6) !important;
+  color: #171717 !important;
 }
-#app .content {
-  background-color: #fff !important;
-}
+/* #app .content {
+  background-color: #011341 !important;
+} */
 #app .tabbar__container-item {
-  color: #f95959;
+  color: #00ECBE;
 }
 #app .setting_container .setting_container_item img {
   width: 1.33333rem !important;
@@ -1395,8 +1394,8 @@ textarea {
 }
 #app .vip,
 #app .ChampionshipDetail {
-  --bg_color_L1: #f7f8ff;
-  --textW: #fff;
+  --bg_color_L1: #05012b;
+  --textW: #011341;
 }
 #app .wallet-container-content .container .userDetail > div .imgD,
 #app .info-dialog-content,
@@ -1408,7 +1407,7 @@ textarea {
 #app .ChampionshipDetail .ranking,
 #app .bonus-items .line:after,
 #app .bonus-items .line:before {
-  background: #fff;
+  background: #011341;
 }
 #app .StrongBox__container,
 #app .addBankCard__container,
@@ -1417,13 +1416,13 @@ textarea {
   --Red: var(--main-color);
 }
 #app .StrongBox__container-income-tip svg path {
-  stroke: #ff9a8e;
+  stroke: #00ECBE;
 }
 #app
   .StrongBoxRecordCard__container-first.transferIn
   .StrongBoxRecordCard__container-buttom,
 #app .dailySignIn__container-hero__header div {
-  color: #f95959;
+  color: #00ECBE;
 }
 #app .RpwdPopup-foot .dialogBtn:last-of-type,
 #app .signIn__container .dialogBtn:last-of-type,
@@ -1465,7 +1464,7 @@ textarea {
 #app .dailySignInRules__container-hero__wrapper ul {
   background: -webkit-linear-gradient(top, #f95959 0%, #f95959 100%);
   background: linear-gradient(180deg, #f95959 0%, #f95959 100%);
-  color: #fff;
+  color: #011341;
 }
 #app .dailySignInRules__container-hero__wrapper ul li {
   border-bottom: 0.01333rem solid var(--main-color);
@@ -1496,10 +1495,10 @@ textarea {
   color: #ff650f;
 }
 #app .treasure .container .treasure-item .footer .van-progress .portion {
-  background: black;
+  background: #e3efff;
 }
 #app .treasure__container__treasure-item__footer .van-progress span {
-  background: #ff9a8e !important;
+  background: #00ECBE !important;
 }
 #app .jackpot-rule-owener svg path {
   fill: var(--colorText-26);
@@ -1512,29 +1511,29 @@ textarea {
   opacity: 0.2;
 }
 :root {
-  --main-color: #ff9a8e;
-  --main_gradient-color: linear-gradient(90deg, #f95959 0%, #ff9a8e 100%);
-  --main_gradient-color2: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  --main-color: #00ECBE;
+  --main_gradient-color: #011341;
+  --main_gradient-color2: linear-gradient(180deg, #7AFEC3, #02AFB6);
   --light-main_gradient-color: var(--main_gradient-color);
-  --text_white: #fff;
-  --light-bg_white: #fff;
+  --text_white: #011341;
+  --light-bg_white: #011341;
   --light-main-color: var(--main-color);
   --norm_red-color: #fb5b5b;
   --norm_green-color: #18b660;
-  --norm_secondary-color: #f95959;
+  --norm_secondary-color: #00ECBE;
   --norm_Purple-color: #c86eff;
   --norm_bule-color: #6ea8f4;
   --button_dis_color: linear-gradient(90deg, #cccedc 15.38%, #cdcfdd 98.73%);
-  --text_color_L1: #1e2637;
-  --text_color_L2: #768096;
+  --text_color_L1: #E3EFFF;
+  --text_color_L2: #92A8E3;
   --text_color_L3: #b6bcc8;
-  --text_color_L4: #fff;
-  --bg_color_L1: #f7f8ff;
-  --bg_color_L2: #fff;
-  --bg_color_L3: #f6f6f6;
-  --Dividing-line_color: #e1e1e1;
+  --text_color_L4: #011341;
+  --bg_color_L1: #05012b;
+  --bg_color_L2: #011341;
+  --bg_color_L3: #001C54;
+  --Dividing-line_color: #022C68;
   --sheet_nva_color: var(--main-color);
-  --sheet_detail_bg_color: #f6f6f6;
+  --sheet_detail_bg_color: #001C54;
   --pop_bg-color: linear-gradient(180deg, #ff6c6b 0%, #ff4a4a 68.59%);
   --iconSecondary: rgba(24, 182, 96, 0.3);
   --van-sidebar-text-color: var(--main-color);
@@ -1601,7 +1600,7 @@ textarea {
 }
 .navbar.main .navbar-fixed .navbar__content-left .van-icon[data-v-12a80a3e],
 .navbar.main .navbar-fixed .navbar__content-center[data-v-12a80a3e] {
-  color: #fff;
+  color: white;
 }
 .navbar-fixed[data-v-12a80a3e] {
   position: fixed;
@@ -1692,7 +1691,7 @@ textarea {
   height: 80%;
 }
 .ar-loading-view[data-v-647954c7] {
-  background-color: #0000004d;
+  background-color: #e3efff4d;
   width: 100%;
   height: 100%;
   z-index: 999;
@@ -2052,10 +2051,10 @@ html:lang(ar)
 html:lang(ar) #app .dailySignIn__container-hero {
   background:
     url(/src/assets/icons/activity/DailySignIn/ar-headerBg.png) no-repeat 0 -0.26667rem,
-    -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
+    -webkit-linear-gradient(left, #00ECBE 0%, #f95959 100%);
   background:
     url(/src/assets/icons/activity/DailySignIn/ar-headerBg.png) no-repeat 0 -0.26667rem,
-    linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+    linear-gradient(180deg, #7AFEC3, #02AFB6);
 }
 html:lang(ar) #app .van-sticky {
   direction: ltr;
@@ -2187,8 +2186,8 @@ html:lang(ar) #app .StrongBox__container-income-header-right {
   border-inline-end: 0.01333rem solid #daddf0;
 }
 html:lang(ar) #app .popup__container-numLine > div:first-child {
-  background: -webkit-linear-gradient(27deg, transparent 0.46667rem, #fff 0) 0 0;
-  background: linear-gradient(63deg, transparent 0.46667rem, #fff 0) 0 0;
+  background: -webkit-linear-gradient(27deg, transparent 0.46667rem, #011341 0) 0 0;
+  background: linear-gradient(63deg, transparent 0.46667rem, #011341 0) 0 0;
 }
 html:lang(ar) #app .notification-container-content-title:before {
   -webkit-transform: scaleX(-1);
@@ -2283,7 +2282,7 @@ html:lang(ar) #app .withdraw__container .Recharge__container-intro p:after {
   height: 0.13333rem;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  background: #ff9a8e;
+  background: #00ECBE;
   right: -0.06667rem;
   top: 0.18667rem;
 }
@@ -2357,8 +2356,8 @@ html:lang(ar) #app .bonus-items .head .left {
 html:lang(ar) #app .bonus-items .head .left:before {
   right: auto !important;
   left: 0;
-  background: -webkit-linear-gradient(344deg, #fff 50%, transparent 50%);
-  background: linear-gradient(106deg, #fff 50%, transparent 50%);
+  background: -webkit-linear-gradient(344deg, #011341 50%, transparent 50%);
+  background: linear-gradient(106deg, #011341 50%, transparent 50%);
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
   clip-path: polygon(0 0, 0 100%, 100% 0);
 }
@@ -2411,8 +2410,8 @@ html:lang(ar) #app .ChampionshipDetail .rule .con p:after {
   right: 0;
 }
 html:lang(ar) #app .popup__container-numLine > div:first-child {
-  background: -webkit-linear-gradient(28deg, transparent 0.46667rem, #fff 0) 0 0;
-  background: linear-gradient(-298deg, transparent 0.46667rem, #fff 0) 0 0;
+  background: -webkit-linear-gradient(28deg, transparent 0.46667rem, #011341 0) 0 0;
+  background: linear-gradient(-298deg, transparent 0.46667rem, #011341 0) 0 0;
   -webkit-padding-start: 0 !important;
   padding-inline-start: 0 !important;
 }
@@ -2448,8 +2447,8 @@ html:lang(ar)
   .pointMall__container-products__content-item__header-redeemed {
   right: auto !important;
   left: 0;
-  background: -webkit-linear-gradient(top, #ff9a8e 20%, #f95959 100%);
-  background: linear-gradient(180deg, #ff9a8e 20%, #f95959 100%);
+  background: -webkit-linear-gradient(top, #00ECBE 20%, #f95959 100%);
+  background: linear-gradient(180deg, #00ECBE 20%, #f95959 100%);
   border-top-right-radius: 0.53333rem;
 }
 html:lang(ar)
@@ -2522,7 +2521,7 @@ html:lang(ar) #app .rpwd__C-heading {
   padding: 0 0.26667rem;
 }
 html:lang(ar) #app .setting-wrapper .content-sub_title > div {
-  border-right: 0.10667rem solid #ff9a8e;
+  border-right: 0.10667rem solid #00ECBE;
   border-left: none;
 }
 html:lang(ar) #app .onlineGames__container input {

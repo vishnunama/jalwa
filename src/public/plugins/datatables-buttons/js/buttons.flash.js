@@ -246,7 +246,7 @@
           this.movieId +
           '" align="middle"><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="false" /><param name="movie" value="' +
           ZeroClipboard_TableTools.moviePath +
-          '" /><param name="loop" value="false" /><param name="menu" value="false" /><param name="quality" value="best" /><param name="bgcolor" value="#ffffff" /><param name="flashvars" value="' +
+          '" /><param name="loop" value="false" /><param name="menu" value="false" /><param name="quality" value="best" /><param name="bgcolor" value="#001C54" /><param name="flashvars" value="' +
           flashvars +
           '"/><param name="wmode" value="transparent"/></object>';
       } else {
@@ -256,7 +256,7 @@
           this.movieId +
           '" src="' +
           ZeroClipboard_TableTools.moviePath +
-          '" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="' +
+          '" loop="false" menu="false" quality="best" bgcolor="#001C54" width="' +
           width +
           '" height="' +
           height +

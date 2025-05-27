@@ -11,7 +11,7 @@
   padding-bottom: 0.53333rem;
 }
 .mian .promotion .tab[data-v-7c8bbbf4] {
-  background-color: #fff;
+  background-color: #011341;
   height: 1.06667rem;
   line-height: 1.06667rem;
   overflow: hidden;
@@ -27,17 +27,17 @@
   width: 25%;
   text-align: center;
   font-size: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
 }
 .mian .promotion .tab ul li.action[data-v-7c8bbbf4] {
   color: #df3832;
 }
 .mian .promotion .tit[data-v-7c8bbbf4] {
-  background: #f4f4f4;
+  background: #001C54;
   padding: 0 0.4rem;
   height: 0.90667rem;
   line-height: 0.90667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 .mian .promotion .tit .btn[data-v-7c8bbbf4] {
   padding: 0 0.21333rem;
@@ -46,7 +46,7 @@
   box-shadow: 0 0.10667rem 0.53333rem 0.05333rem rgba(228, 38, 34, 0.25);
   border-radius: 0.21333rem;
   height: 0.69333rem;
-  color: #fff;
+  color: #011341;
 }
 .mian .promotion .info[data-v-7c8bbbf4] {
   padding: 0.26667rem 0.4rem;
@@ -69,7 +69,7 @@
   font-weight: 600;
 }
 .mian .promotion .info-data .left .txt[data-v-7c8bbbf4] {
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.37333rem;
   line-height: 0.66667rem;
 }
@@ -81,7 +81,7 @@
   border-radius: 0.26667rem;
 }
 .mian .promotion .info-data .right .txt[data-v-7c8bbbf4] {
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
 }
@@ -108,11 +108,11 @@
   background: #e42622;
   box-shadow: 0 0.10667rem 0.53333rem 0.05333rem rgba(228, 38, 34, 0.25);
   border-radius: 0.26667rem;
-  color: #fff;
+  color: #011341;
 }
 .mian .promotion .table[data-v-7c8bbbf4] {
   margin: 0.4rem 0.4rem 0;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.13333rem 0.29333rem 0.02667rem rgba(0, 0, 0, 0.12);
   border-radius: 0.10667rem;
   overflow-y: auto;
@@ -124,7 +124,7 @@
   font-weight: 600;
 }
 .mian .promotion .table .hd[data-v-7c8bbbf4] {
-  background: #f4f4f4;
+  background: #001C54;
   border-radius: 0.10667rem;
   height: 0.93333rem;
   line-height: 0.93333rem;
@@ -143,7 +143,7 @@
 .mian .promotion .team[data-v-7c8bbbf4] {
   padding: 0 0.4rem;
   margin-top: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.37333rem;
   line-height: 0.66667rem;
   position: relative;

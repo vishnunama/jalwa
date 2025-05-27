@@ -84,91 +84,87 @@ function countDownTimer({ GAME_TYPE_ID }) {
     var seconds1 = Math.floor((distance % (1000 * 60)) / 10000);
     var seconds2 = Math.floor(((distance % (1000 * 60)) / 1000) % 10);
     var seconds30 = Math.floor((distance % (1000 * 30)) / 10000);
-    return { minute, seconds1, seconds2,seconds30 };
+    return { minute, seconds1, seconds2, seconds30 };
   };
 
   var countDownDate = new Date("2030-07-16T23:59:59.9999999+03:00").getTime();
   countDownInterval1 = setInterval(function () {
-    const { minute, seconds1, seconds2,seconds30 } = getTimeMSS(countDownDate);
-    if (GAME_TYPE_ID !== "1" && GAME_TYPE_ID !== "10" ) {
+    const { minute, seconds1, seconds2, seconds30 } = getTimeMSS(countDownDate);
+    if (GAME_TYPE_ID !== "1" && GAME_TYPE_ID !== "10") {
       $(".TimeLeft__C-time div:eq(1)").text(minute);
     } else {
       $(".TimeLeft__C-time div:eq(1)").text("0");
     }
-if(GAME_TYPE_ID == "10" ){
-
-  $(".TimeLeft__C-time div:eq(3)").text(seconds30);
-  $(".TimeLeft__C-time div:eq(4)").text(seconds2);
-}else{
-  $(".TimeLeft__C-time div:eq(3)").text(seconds1);
-  $(".TimeLeft__C-time div:eq(4)").text(seconds2);
-}
+    if (GAME_TYPE_ID == "10") {
+      $(".TimeLeft__C-time div:eq(3)").text(seconds30);
+      $(".TimeLeft__C-time div:eq(4)").text(seconds2);
+    } else {
+      $(".TimeLeft__C-time div:eq(3)").text(seconds1);
+      $(".TimeLeft__C-time div:eq(4)").text(seconds2);
+    }
   }, 0);
 
   countDownInterval2 = setInterval(() => {
-    const { minute, seconds1, seconds2 ,seconds30} = getTimeMSS(countDownDate);
+    const { minute, seconds1, seconds2, seconds30 } = getTimeMSS(countDownDate);
     const check_volume = localStorage.getItem("volume");
-if(GAME_TYPE_ID == "10"){
-
-  if (seconds30 == 0 && seconds2 <= 5) {
-    if (clicked) {
-      if (check_volume == "on") {
-        playAudio1();
+    if (GAME_TYPE_ID == "10") {
+      if (seconds30 == 0 && seconds2 <= 5) {
+        if (clicked) {
+          if (check_volume == "on") {
+            playAudio1();
+          }
+        }
+      }
+      if (seconds30 == 5 && seconds2 == 5) {
+        if (clicked) {
+          if (check_volume == "on") {
+            playAudio2();
+          }
+        }
+      }
+    } else {
+      if (minute == 0 && seconds1 == 0 && seconds2 <= 5) {
+        if (clicked) {
+          if (check_volume == "on") {
+            playAudio1();
+          }
+        }
+      }
+      if (minute == 0 && seconds1 == 5 && seconds2 == 5) {
+        if (clicked) {
+          if (check_volume == "on") {
+            playAudio2();
+          }
+        }
       }
     }
-  }
-  if (seconds30 == 5 && seconds2 == 5) {
-    if (clicked) {
-      if (check_volume == "on") {
-        playAudio2();
-      }
-    }
-  }
-}else{
-  if (minute == 0 && seconds1 == 0 && seconds2 <= 5) {
-    if (clicked) {
-      if (check_volume == "on") {
-        playAudio1();
-      }
-    }
-  }
-  if (minute == 0 && seconds1 == 5 && seconds2 == 5) {
-    if (clicked) {
-      if (check_volume == "on") {
-        playAudio2();
-      }
-    }
-  }
-}
   }, 1000);
 
   countDownInterval3 = setInterval(function () {
-    const { minute, seconds1, seconds2,seconds30 } = getTimeMSS(countDownDate);
+    const { minute, seconds1, seconds2, seconds30 } = getTimeMSS(countDownDate);
 
-if(GAME_TYPE_ID == "10"){
-  if (seconds30 == 0 && seconds2 <= 5) {
-    $(".van-overlay").fadeOut();
-    $(".popup-join").fadeOut();
-    $(".Betting__C-mark").css("display", "flex");
-    $(".Betting__C-mark div:eq(0)").text(0);
-    $(".Betting__C-mark div:eq(1)").text(seconds2);
-  } else {
-    $(".Betting__C-mark").css("display", "none");
-  }
-}else{
+    if (GAME_TYPE_ID == "10") {
+      if (seconds30 == 0 && seconds2 <= 5) {
+        $(".van-overlay").fadeOut();
+        $(".popup-join").fadeOut();
+        $(".Betting__C-mark").css("display", "flex");
+        $(".Betting__C-mark div:eq(0)").text(0);
+        $(".Betting__C-mark div:eq(1)").text(seconds2);
+      } else {
+        $(".Betting__C-mark").css("display", "none");
+      }
+    } else {
+      if (minute == 0 && seconds1 == 0 && seconds2 <= 5) {
+        $(".van-overlay").fadeOut();
+        $(".popup-join").fadeOut();
 
-
-  if (minute == 0 && seconds1 == 0 && seconds2 <= 5) {
-    $(".van-overlay").fadeOut();
-    $(".popup-join").fadeOut();
-
-    $(".Betting__C-mark").css("display", "flex");
-    $(".Betting__C-mark div:eq(0)").text(seconds1);
-    $(".Betting__C-mark div:eq(1)").text(seconds2);
-  } else {
-    $(".Betting__C-mark").css("display", "none");
-  }
-}
+        $(".Betting__C-mark").css("display", "flex");
+        $(".Betting__C-mark div:eq(0)").text(seconds1);
+        $(".Betting__C-mark div:eq(1)").text(seconds2);
+      } else {
+        $(".Betting__C-mark").css("display", "none");
+      }
+    }
   }, 0);
 }
 
@@ -202,7 +198,9 @@ fetch("/api/webapi/GetUserInfo")
       unsetCookie();
       return false;
     }
-    $("#balance_amount").text(`Rs ${formatIndianNumber(data.data.money_user)} `);
+    $("#balance_amount").text(
+      `Rs ${formatIndianNumber(data.data.money_user)} `,
+    );
     $("#bonus_balance_amount").text(
       `Rs ${formatIndianNumber(data.data.bonus_money)} `,
     );
@@ -295,10 +293,12 @@ const displayResultHandler = ({ status, amount, period, result }) => {
   $("#popup_num_display").html(result);
   $("#popup_bs_display").html(bsDisplay);
 
-  if(GAME_TYPE_ID=="10"){
+  if (GAME_TYPE_ID == "10") {
     $("#popup_game_details").html(`Period: Win 30Sec ${period}`);
-  }else{
-    $("#popup_game_details").html(`Period: Win ${GAME_TYPE_ID} minute ${period}`);
+  } else {
+    $("#popup_game_details").html(
+      `Period: Win ${GAME_TYPE_ID} minute ${period}`,
+    );
   }
 
   if (status === STATUS_MAP.WIN) {
@@ -726,12 +726,10 @@ function initGameLogics({
   //   $(".Betting__Popup-body-x-btn").removeClass("bgcolor");
   //   $(`.Betting__Popup-body-x-btn[data-x="${currentX}"]`).addClass("bgcolor");
 
-
-
   //   totalMoney();
   // });
   $(`#van-field-1-input`).off("input.input");
-$(`#van-field-1-input`).on("input.input", function (e) {
+  $(`#van-field-1-input`).on("input.input", function (e) {
     e.preventDefault();
     const currentX = parseInt($(this).val());
 
@@ -739,78 +737,76 @@ $(`#van-field-1-input`).on("input.input", function (e) {
     $(`.Betting__Popup-body-x-btn[data-x="${currentX}"]`).addClass("bgcolor");
 
     totalMoney();
-});
-
-
-$("#join_bet_btn").off("click.join_btn");
-$("#join_bet_btn").on("click.join_btn", function (event) {
-  event.preventDefault();
-  let join = $(this).attr("data-join");
-  const currentX = parseInt($("#van-field-1-input").val().trim());
-  let money = $(".Betting__Popup-body-money-main").attr("data-current-money");
-
-  if (!join || !currentX || !money) {
-    return;
-  }
-
-  $(this).addClass("block-click");
-  $.ajax({
-    type: "POST",
-    url: "/api/webapi/action/join",
-    data: {
-      typeid: GAME_TYPE_ID,
-      join: join,
-      x: currentX,
-      money: money,
-    },
-    dataType: "json",
-    success: function (response) {
-      alertMessage(response.message);
-      if (response.status === false) return;
-      $("#balance_amount").text(`Rs ${formatIndianNumber(response.money)} `);
-      $("#bonus_balance_amount").text(
-        `Rs ${formatIndianNumber(response.bonus_money)} `,
-      );
-
-      initMyBets();
-
-      socket.emit("data-server_2", {
-        money: currentX * money,
-        join,
-        time: Date.now(),
-        change: response.change,
-      });
-
-      // Reset only the bet number and set amount back to 1
-      $("#van-field-1-input").val("");
-      $(".Betting__Popup-body-money-main").attr("data-current-money", "1");
-      $(".Betting__Popup-body-line-item").removeClass("bgcolor");
-      $(".Betting__Popup-body-line-item[data-money='1']").addClass("bgcolor");
-    },
   });
 
-  setTimeout(() => {
+  $("#join_bet_btn").off("click.join_btn");
+  $("#join_bet_btn").on("click.join_btn", function (event) {
+    event.preventDefault();
+    let join = $(this).attr("data-join");
+    const currentX = parseInt($("#van-field-1-input").val().trim());
+    let money = $(".Betting__Popup-body-money-main").attr("data-current-money");
+
+    if (!join || !currentX || !money) {
+      return;
+    }
+
+    $(this).addClass("block-click");
+    $.ajax({
+      type: "POST",
+      url: "/api/webapi/action/join",
+      data: {
+        typeid: GAME_TYPE_ID,
+        join: join,
+        x: currentX,
+        money: money,
+      },
+      dataType: "json",
+      success: function (response) {
+        alertMessage(response.message);
+        if (response.status === false) return;
+        $("#balance_amount").text(`Rs ${formatIndianNumber(response.money)} `);
+        $("#bonus_balance_amount").text(
+          `Rs ${formatIndianNumber(response.bonus_money)} `,
+        );
+
+        initMyBets();
+
+        socket.emit("data-server_2", {
+          money: currentX * money,
+          join,
+          time: Date.now(),
+          change: response.change,
+        });
+
+        // Reset only the bet number and set amount back to 1
+        $("#van-field-1-input").val("");
+        $(".Betting__Popup-body-money-main").attr("data-current-money", "1");
+        $(".Betting__Popup-body-line-item").removeClass("bgcolor");
+        $(".Betting__Popup-body-line-item[data-money='1']").addClass("bgcolor");
+      },
+    });
+
+    setTimeout(() => {
+      $(".van-overlay").fadeOut();
+      $(".popup-join").fadeOut();
+      $("#join_bet_btn").removeClass("block-click");
+    }, 500);
+  });
+
+  $("#cancel_bet_btn").off("click.cancel_btn");
+  $("#cancel_bet_btn").on("click.cancel_btn", function (event) {
+    event.preventDefault();
+
     $(".van-overlay").fadeOut();
     $(".popup-join").fadeOut();
     $("#join_bet_btn").removeClass("block-click");
-  }, 500);
-});
 
-$("#cancel_bet_btn").off("click.cancel_btn");
-$("#cancel_bet_btn").on("click.cancel_btn", function (event) {
-  event.preventDefault();
-
-  $(".van-overlay").fadeOut();
-  $(".popup-join").fadeOut();
-  $("#join_bet_btn").removeClass("block-click");
-
-  // Reset only the bet number and set amount back to 1
-  $("#van-field-1-input").val("");
-  $(".Betting__Popup-body-money-main").attr("data-current-money", "1");
-  $(".Betting__Popup-body-line-item").removeClass("bgcolor");
-  $(".Betting__Popup-body-line-item[data-money='1']").addClass("bgcolor");
-});
-
+    // Reset only the bet number and set amount back to 1
+    $("#van-field-1-input").val("");
+    $(".Betting__Popup-body-money-main").attr("data-current-money", "1");
+    $(".Betting__Popup-body-line-item").removeClass("bgcolor");
+    $(".Betting__Popup-body-line-item[data-money='1']").addClass("bgcolor");
+  });
 
   //main button events
 
@@ -851,7 +847,7 @@ $("#cancel_bet_btn").on("click.cancel_btn", function (event) {
 
     $(this).css({
       "background-color": "rgb(63 147 104)",
-      color: "rgb(255, 255, 255)",
+      color: "#05012B",
     });
     $(".Betting__C-multiple-r").removeClass("active");
     $(this).addClass("active");

@@ -33,7 +33,7 @@
   width: 100%;
   height: 0.8rem;
   line-height: 0.8rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.53333rem;
 }
 
@@ -46,7 +46,7 @@
   position: relative;
   padding: 0.4rem;
   border-radius: 0.13333rem;
-  background: #fff;
+  background: #011341;
 }
 
 .mian .wallet-box .box .icon1[data-v-7b283485] {
@@ -62,7 +62,7 @@
 
 .mian .wallet-box .box .title[data-v-7b283485] {
   font-size: 0.53333rem;
-  color: #000;
+  color: #e3efff;
 }
 
 .mian .wallet-box .box .balance[data-v-7b283485] {
@@ -80,12 +80,12 @@
 
 .mian .wallet-box .box .balance .txt[data-v-7b283485] {
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .wallet-box .box .balance .balanceMoney .money[data-v-7b283485] {
   margin: 0.32rem 0;
-  color: #fff;
+  color: #011341;
   font-weight: 600;
   font-size: 0.8rem;
 }
@@ -120,7 +120,7 @@
 }
 
 .mian .wallet-box .box .balance .info .item[data-v-7b283485] {
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   flex: 1;
   text-align: center;
@@ -140,7 +140,7 @@
   display: block;
   height: 0.8rem;
   width: 0.05333rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .mian .wallet-box .total-btn .item[data-v-7b283485] {
@@ -148,7 +148,7 @@
 }
 
 .mian .wallet-box .total-btn .item .li[data-v-7b283485] {
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   border-radius: 1.06667rem;
   text-align: center;
@@ -165,7 +165,7 @@
 }
 
 .mian .wallet-box .list[data-v-7b283485] {
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0 0.8rem 0 rgba(58, 58, 58, 0.07);
 }
 
@@ -174,7 +174,7 @@
   height: 1.6rem;
   line-height: 1.6rem;
   font-size: 0.37333rem;
-  color: #000;
+  color: #e3efff;
   border-bottom: 0.02667rem solid #efeeee;
 }
 
@@ -205,7 +205,7 @@
 .mian .wallet-box .card-box .card[data-v-7b283485] {
   font-weight: 600;
   font-size: 0.45333rem;
-  color: #000;
+  color: #e3efff;
 }
 
 .mian .wallet-box .card-box .addBank[data-v-7b283485] {
@@ -231,11 +231,11 @@
 
 .mian .wallet-box .card-list .number .num[data-v-7b283485] {
   font-size: 0.53333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .wallet-box .card-list .master-box[data-v-7b283485] {
   padding: 0.26667rem 0.53333rem;
-  background: #fff;
+  background: #011341;
   border-radius: 0.26667rem;
 }

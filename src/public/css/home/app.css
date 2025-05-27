@@ -486,7 +486,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: white;
   position: relative;
   font-size: 0.37333rem;
 }
@@ -612,7 +612,7 @@ img[data-v-7b9b9922] {
   color: #f2413b;
 }
 .van-tabbar .muan {
-  background-color: #fff;
+  background-color: #011341;
   padding: 0.13333rem;
   height: 1.33333rem;
   width: 1.33333rem;
@@ -647,10 +647,10 @@ img[data-v-7b9b9922] {
   width: 1.46667rem;
 }
 .activityBox.longBox {
-  background-color: #fff;
+  background-color: #011341;
   width: 1.46667rem;
   height: 1.46667rem;
-  color: #fff;
+  color: #011341;
   border-radius: 1.46667rem;
   overflow: hidden;
   font-size: 0.42667rem;
@@ -663,11 +663,11 @@ img[data-v-7b9b9922] {
   width: 1.46667rem;
 }
 .activityBox.longBox1 {
-  background-color: #fff;
+  background-color: #011341;
   width: 1.46667rem;
   height: 1.46667rem;
   overflow: hidden;
-  color: #fff;
+  color: #011341;
   border-radius: 1.46667rem;
   font-size: 0.42667rem;
   box-shadow: 0 0.02667rem 0.48rem 0 rgba(203, 202, 220, 0.56);
@@ -679,7 +679,7 @@ img[data-v-7b9b9922] {
 .serveBox .img {
   height: 1.46667rem;
   border-radius: 1.46667rem;
-  background-color: #fff;
+  background-color: #011341;
   box-shadow: 0 0.02667rem 0.48rem 0 rgba(203, 202, 220, 0.56);
 }
 .activityBox .img {
@@ -694,7 +694,7 @@ img[data-v-7b9b9922] {
   height: 1.46667rem;
   width: 1.46667rem;
   border-radius: 1.46667rem;
-  background-color: #fff;
+  background-color: #011341;
   box-shadow: 0 0.02667rem 0.48rem 0 rgba(203, 202, 220, 0.56);
   position: relative;
 }
@@ -709,7 +709,7 @@ img[data-v-7b9b9922] {
   align-items: center;
   justify-content: center;
   position: fixed;
-  color: #fff;
+  color: #011341;
   z-index: 999;
 }
 .navbar.action[data-v-106b99c8] {
@@ -794,7 +794,7 @@ img[data-v-7b9b9922] {
   width: 1.33333rem;
 }
 .mian .login-banner .bankPage .bank[data-v-a0753f48] {
-  border: 0.05333rem solid #fff;
+  border: 0.05333rem solid #011341;
   width: 0.69333rem;
   height: 0.69333rem;
   border-radius: 0.69333rem;
@@ -813,7 +813,7 @@ img[data-v-7b9b9922] {
   padding: 0.66667rem 0.8rem;
   border-radius: 0.53333rem 0.53333rem 0 0;
   margin-top: -0.53333rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 .mian .login-box .tit[data-v-a0753f48] {
   text-align: center;
@@ -823,7 +823,7 @@ img[data-v-7b9b9922] {
 .mian .forgot-box[data-v-a0753f48] {
   width: 100%;
   padding: 0.13333rem 0.8rem 0.8rem;
-  background-color: #fff;
+  background-color: #011341;
   border-top-left-radius: 0.66667rem;
   border-top-right-radius: 0.66667rem;
   position: relative;
@@ -838,7 +838,7 @@ img[data-v-7b9b9922] {
 .mian-from .tip[data-v-a0753f48] {
   margin: -0.53333rem 0 0.26667rem;
   font-size: 0.34667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 .mian-from .item[data-v-a0753f48] {
   position: relative;
@@ -902,12 +902,12 @@ img[data-v-7b9b9922] {
   line-height: 0.96rem;
   background-color: #ffebeb;
   border-color: #ffebeb !important;
-  color: #000;
+  color: #e3efff;
 }
 .mian-from .agree[data-v-a0753f48] {
   line-height: 0.53333rem;
   height: 0.53333rem;
-  color: #000;
+  color: #e3efff;
   font-size: 0.4rem;
 }
 .mian-from .txt[data-v-a0753f48] {
@@ -966,7 +966,7 @@ img[data-v-7b9b9922] {
   word-break: break-all;
   overflow: hidden;
   font-size: 0.37333rem;
-  color: #fff;
+  color: #011341;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .v-enter[data-v-1dcba851],

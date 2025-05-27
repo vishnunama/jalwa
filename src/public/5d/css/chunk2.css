@@ -271,7 +271,7 @@
   width: 2.66667rem;
   height: 1.06667rem;
   line-height: 1.06667rem;
-  background-color: #f6f7f8;
+    /* background-color: #f6f7f8; */
 }
 
 .game .page-nav .arr[data-v-42f27458] {
@@ -282,7 +282,7 @@
 }
 
 .game .page-nav .arr .icon[data-v-42f27458] {
-  color: #7f7f7f;
+  color: #92a8e3;
 }
 
 .game .page-nav .arr .icon.action[data-v-42f27458] {
@@ -290,7 +290,7 @@
 }
 
 .game .page-nav .arr.action[data-v-42f27458] {
-  background-color: #ff9a8e;
+  background-color: #00ECBE;
 }
 
 .game .rule-box .title[data-v-42f27458] {
@@ -341,7 +341,7 @@
 
 .game[data-v-42f27458] {
   position: relative;
-  background-color: #efeef4;
+  /* background-color: #efeef4; */
 }
 
 .game[data-v-42f27458] .van-sticky--fixed {
@@ -520,7 +520,7 @@
 }
 
 .game .betting-mark .info .item .amount-box .li[data-v-42f27458] {
-  background-color: #f0f0f0;
+  background-color: #001c54;
 }
 
 .game .betting-mark .info .item .amount-box .li.action[data-v-42f27458],
@@ -529,7 +529,7 @@
 }
 
 .game .betting-mark .info .item .multiple-box .li.acion[data-v-42f27458] {
-  background-color: #f4453e;
+  background-color: #00ECBE;
 }
 
 .game .betting-mark.color1 .box[data-v-42f27458],
@@ -658,7 +658,7 @@
   height: 2.26667rem;
   border-radius: 0.10667rem;
   overflow: hidden;
-  background: #333;
+  background: #727272;
   margin-right: 0.10667rem;
   vertical-align: bottom;
   position: relative;
@@ -766,6 +766,7 @@
 
 .bet-box[data-v-42f27458] {
   margin-top: 0.53333rem;
+  padding: 0px 10px;
   overflow: hidden;
   position: relative;
 }
@@ -806,7 +807,7 @@
   width: 1.06667rem;
   height: 1.06667rem;
   line-height: 1.06667rem;
-  background: #ceced8;
+  background: #001C54;
   font-size: 0.42667rem;
   font-weight: 700;
   color: #fff;
@@ -830,21 +831,21 @@
   background: radial-gradient(
     circle at 100% 0,
     rgba(204, 0, 0, 0) 0.26667rem,
-    #ceced8 0.29333rem
+    #001C54 0.29333rem
   );
   right: -0.26667rem;
 }
 
 .d5-bet-type.active[data-v-42f27458] {
-  background-color: #ff9a8e;
-  color: #fff;
+  background-color: #00ECBE;
+  color: black;
 }
 
 .d5-bet-type.active[data-v-42f27458]:before {
   background: radial-gradient(
     circle at 0 0,
     rgba(204, 0, 0, 0) 0.26667rem,
-    #ff9a8e 0.29333rem
+    #00ECBE 0.29333rem
   );
   left: -0.26667rem;
   z-index: 9;
@@ -854,7 +855,7 @@
   background: radial-gradient(
     circle at 100% 0,
     rgba(204, 0, 0, 0) 0.26667rem,
-    #ff9a8e 0.29333rem
+    #00ECBE 0.29333rem
   );
   right: -0.26667rem;
   z-index: 9;
@@ -877,10 +878,10 @@
   width: 1.86667rem;
   height: 0.93333rem;
   line-height: 0.93333rem;
-  background: #d1d1d6;
+  background: #001C54;
 
   border-radius: 0.16rem;
-  color: #fff;
+  color: #92a8e3;
   margin-bottom: 0.4rem;
   padding: 0 0.16rem;
   font-weight: 600;
@@ -898,12 +899,12 @@
 }
 
 .bet-box .bet-type-btn.active3[data-v-42f27458] {
-  background: #ff9500;
+  background: #00ecbe;
 }
 
 .bet-box .bet-type-btn.active4[data-v-42f27458] {
-  background: #fff;
-  border: 0.02667rem solid #ff9500;
+  background: black;
+  border: 0.02667rem solid #00ecbe;
   color: #ff9500;
   line-height: 1.01333rem;
 }
@@ -920,7 +921,7 @@
   width: 1.06667rem;
   height: 1.06667rem;
   line-height: 1.06667rem;
-  border: 0.02667rem solid #ceced8;
+  border: 0.02667rem solid #6F80A4;
   border-radius: 50%;
   color: #9da7b3;
   font-size: 0.4rem;
@@ -929,13 +930,13 @@
 }
 
 .bet-box .bet-box-num.active[data-v-42f27458] {
-  background: #ff9500;
-  border: 0.02667rem solid #ff9500;
-  color: #fff;
+  background: #00ecbe;
+  border: 0.02667rem solid #00ecbe;
+  color: black;
 }
 
 .bet-box .bet-box-num.active > div[data-v-42f27458] {
-  color: #6b7581;
+  color: #92a8e3;
 }
 
 .bet-box .bet-box-num > div[data-v-42f27458] {
@@ -947,12 +948,12 @@
   font-weight: 400;
   font-size: 0.32rem;
   line-height: 0.32rem;
-  color: #6b7581;
+  color: #92a8e3;
 }
-
+/* 
 .game[data-v-42f27458] {
   background-color: #fbfcfd;
-}
+} */
 
 .game .activityBox[data-v-42f27458] {
   width: 1.46667rem;
@@ -981,8 +982,8 @@
 
 .game-betting .content .page-box[data-v-42f27458] {
   width: 100%;
-  background: #fff;
-  border-radius: 1.06667rem 1.06667rem 0 0;
+  /* background: #fff; */
+  /* border-radius: 1.06667rem 1.06667rem 0 0; */
   position: relative;
 }
 
@@ -995,7 +996,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+background: #011341;
   border-radius: 0.21333rem;
   overflow: hidden;
   box-shadow: 1px 1px 15px #3f936833;
@@ -1005,7 +1006,7 @@
 .game-betting .content .page-box .last-round > span[data-v-42f27458] {
   font-size: 0.37333rem;
   font-weight: 400;
-  color: #8e8e93;
+  color: #92A8E3;
   max-width: 2.4rem;
 }
 
@@ -1017,17 +1018,17 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #000;
-  background: #f4f4f4;
+  color: #e3efff;
+  background: #001C54;
   position: relative;
   margin-left: 5px;
   height: 0.93333rem;
   width: 0.93333rem;
   line-height: 0.93333rem;
-  background: #f4f4f4;
-  border: 0.01333rem solid #000000;
+  background: #001C54;
+  /* border: 0.01333rem solid #e3efff; */
   font-size: 0.34667rem;
-  color: #000;
+  color: #e3efff;
   border-radius: 50%;
   text-align: center;
 }
@@ -1040,7 +1041,7 @@
   border: none;
   color: #fff;
   line-height: 1.06667rem;
-  background: #ff9a8e;
+  background: #00ECBE;
 }
 
 .game-betting
@@ -1064,7 +1065,7 @@
   align-items: center;
   font-size: 0.37333rem;
   font-weight: 400;
-  color: #8e8e93;
+  color: #92A8E3;
   margin-bottom: 0.13333rem;
 }
 
@@ -1089,10 +1090,10 @@
   width: 0.53333rem;
   height: 0.8rem;
   line-height: 0.8rem;
-  background: #efeff4;
+  background: #001C54;
   border-radius: 0.08rem;
   margin-left: 0.4rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   text-align: center;
 }
 
@@ -1131,8 +1132,8 @@
   display: block;
   text-align: center;
   width: 100%;
-  background: #e8e7e8;
-  color: #333;
+  background: #011341;
+  color: #E3EFFF;
   overflow: hidden;
   font-size: 0.305rem;
   border-radius: 9px;
@@ -1149,16 +1150,16 @@
 }
 
 .game-list .tab .li .txt.action[data-v-42f27458] {
-  background-color: #ff9a8e;
-  color: #fff;
+  background-color: #00ECBE;
+  color: black;
   /* border: .02667rem solid #3f9368; */
   /* box-shadow: .02667rem .02667rem .13333rem .13333rem #3f9368 */
   font-weight: 600;
-  color: #fff;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  /* color: #fff; */
+  /* background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%); */
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
   font-weight: 600;
-  color: #fff;
+  /* color: #fff; */
   /* background-color: #fbedf3; */
   /* border: 0.02667rem solid #fb4e4e; */
   /* box-shadow: 0.02667rem 0.02667rem 0.13333rem 0.13333rem #fbedf3;*/
@@ -1200,7 +1201,7 @@
   padding: 0.4rem 0.13333rem;
   /* background-color: #3f9368; */
   background: #fff;
-  background: #ff9a8e;
+  background: #2C5ECA;
   /* border-top-right-radius: .26667rem; */
   /* margin-left: 10px; */
   /* margin-right: 10px; */
@@ -1211,7 +1212,7 @@
 
 .game-list .list .hb[data-v-42f27458] {
   /* background-color: #fff; */
-  color: #414141;
+  color: #fff;
   font-size: 0.37333rem;
 }
 
@@ -1223,15 +1224,15 @@
 .game-list .list .hb .item[data-v-42f27458] {
   padding: 0.21333rem;
   /* border-bottom: .02667rem solid #e2e2e2; */
-  color: #414141;
+  color: #fff;
   font-size: 0.37333rem;
-  border-bottom: 1px solid #c9c9c9;
+  /* border-bottom: 1px solid #c9c9c9; */
 }
 
 .my_bets_bar:nth-child(odd) {
   /* padding: 0.21333rem; */
   /* border-bottom: 0.02667rem solid #e2e2e2; */
-  /* color: #414141; */
+  /* color: #fff; */
   /* font-size: 0.37333rem; */
   /* background: rgba(63, 147, 104, .08); */
 }
@@ -1256,16 +1257,16 @@
 .game-list .list .hb .li.action[data-v-42f27458] {
   font-size: 0.32rem;
   border: none;
-  color: #fff;
-  background-color: #ff9a8e;
+  color: black;
+  background-color: #00ECBE;
   position: relative;
   z-index: 100;
 }
 
-.game-list .list .hb .li.circle-black[data-v-42f27458] {
-  border: 0.02667rem solid #000;
-  color: #000;
-  background: #f4f4f4;
+.game-list .list .hb .li.circle-#e3efff[data-v-42f27458] {
+  border: 0.02667rem solid #e3efff;
+  color: #e3efff;
+  background: #001C54;
 }
 
 .game-list .list .hb .li.actionH[data-v-42f27458] {
@@ -1283,11 +1284,11 @@
 .game-list .list .hb .li.actionO[data-v-42f27458] {
   border: none;
   color: #fff;
-  background-color: #ff9500;
+  background-color: #00ecbe;
 }
 
 .game-list .list .hb .li.actionE[data-v-42f27458] {
-  border: 0.02667rem solid #ff9500;
+  border: 0.02667rem solid #00ecbe;
   color: #ff9500;
   background-color: #fff;
 }
@@ -1373,12 +1374,12 @@
 
 .game-list .list .hb .details[data-v-42f27458] {
   padding: 0.4rem;
-  border-bottom: 0.02667rem solid #e2e2e2;
+  /* border-bottom: 0.02667rem solid #e2e2e2; */
 }
 
 .game-list .list .hb .details .tit[data-v-42f27458] {
   font-size: 0.53333rem;
-  color: #000;
+  color: #e3efff;
   margin-bottom: 0.26667rem;
 }
 
@@ -1443,7 +1444,7 @@
 
 .game .betting-mark .info .item .tit[data-v-42f27458] {
   font-size: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .game .betting-mark .info .item .amount-box .li[data-v-42f27458] {
@@ -1451,14 +1452,14 @@
   font-size: 0.32rem;
   padding: 0 0.26667rem;
   margin-left: 0.13333rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #001c54;
   border-radius: 0.53333rem;
   color: #fff;
 }
 
 .game .betting-mark .info .item .amount-box .li.action[data-v-42f27458] {
-  background-color: #f4453e;
-  color: #fff;
+  background-color: #00ECBE;
+  color: black;
 }
 
 .game .betting-mark .info .item .stepper-box .digit-box[data-v-42f27458] {
@@ -1484,7 +1485,7 @@
   height: 0.8rem;
   width: 0.8rem;
   font-size: 0.8rem;
-  background-color: #f0f0f0;
+  background-color: #001c54;
   color: #c8c9cc;
 }
 
@@ -1494,8 +1495,8 @@
 }
 
 .game .betting-mark .info .item .stepper-box .li.action[data-v-42f27458] {
-  background-color: #f4453e;
-  color: #fff;
+  background-color: #00ECBE;
+  color: black;
 }
 
 .game .betting-mark .info .item .multiple-box .li[data-v-42f27458] {
@@ -1503,13 +1504,13 @@
   font-size: 0.32rem;
   padding: 0 0.26667rem;
   margin-left: 0.13333rem;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #001c54;
+  color: #E3EFFF;
 }
 
 .game .betting-mark .info .item .multiple-box .li.action[data-v-42f27458] {
-  color: #fff;
-  background-color: #f4453e;
+  color: black;
+  background-color: #00ECBE;
 }
 
 .game .betting-mark .info .item .txt[data-v-42f27458] {

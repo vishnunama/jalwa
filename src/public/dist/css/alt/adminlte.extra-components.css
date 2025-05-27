@@ -277,7 +277,7 @@
 
 .small-box > .small-box-footer:hover {
   background-color: rgba(0, 0, 0, 0.15);
-  color: #fff;
+  color: #001C54;
 }
 
 .small-box h3 {
@@ -408,7 +408,7 @@
     0 0 1px rgba(0, 0, 0, 0.125),
     0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
-  background-color: #fff;
+  background-color: #001C54;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
@@ -425,7 +425,7 @@
 }
 
 .info-box .progress .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box-icon {
@@ -475,42 +475,42 @@
 
 .info-box .info-box .bg-primary,
 .info-box .info-box .bg-gradient-primary {
-  color: #fff;
+  color: #001C54;
 }
 
 .info-box .info-box .bg-primary .progress-bar,
 .info-box .info-box .bg-gradient-primary .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box .bg-secondary,
 .info-box .info-box .bg-gradient-secondary {
-  color: #fff;
+  color: #001C54;
 }
 
 .info-box .info-box .bg-secondary .progress-bar,
 .info-box .info-box .bg-gradient-secondary .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box .bg-success,
 .info-box .info-box .bg-gradient-success {
-  color: #fff;
+  color: #001C54;
 }
 
 .info-box .info-box .bg-success .progress-bar,
 .info-box .info-box .bg-gradient-success .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box .bg-info,
 .info-box .info-box .bg-gradient-info {
-  color: #fff;
+  color: #001C54;
 }
 
 .info-box .info-box .bg-info .progress-bar,
 .info-box .info-box .bg-gradient-info .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box .bg-warning,
@@ -525,12 +525,12 @@
 
 .info-box .info-box .bg-danger,
 .info-box .info-box .bg-gradient-danger {
-  color: #fff;
+  color: #001C54;
 }
 
 .info-box .info-box .bg-danger .progress-bar,
 .info-box .info-box .bg-gradient-danger .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box .bg-light,
@@ -545,12 +545,12 @@
 
 .info-box .info-box .bg-dark,
 .info-box .info-box .bg-gradient-dark {
-  color: #fff;
+  color: #001C54;
 }
 
 .info-box .info-box .bg-dark .progress-bar,
 .info-box .info-box .bg-gradient-dark .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .info-box .info-box-more {
@@ -606,47 +606,47 @@
 
 .dark-mode .info-box {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-primary,
 .dark-mode .info-box .info-box .bg-gradient-primary {
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-primary .progress-bar,
 .dark-mode .info-box .info-box .bg-gradient-primary .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-secondary,
 .dark-mode .info-box .info-box .bg-gradient-secondary {
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-secondary .progress-bar,
 .dark-mode .info-box .info-box .bg-gradient-secondary .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-success,
 .dark-mode .info-box .info-box .bg-gradient-success {
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-success .progress-bar,
 .dark-mode .info-box .info-box .bg-gradient-success .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-info,
 .dark-mode .info-box .info-box .bg-gradient-info {
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-info .progress-bar,
 .dark-mode .info-box .info-box .bg-gradient-info .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-warning,
@@ -661,12 +661,12 @@
 
 .dark-mode .info-box .info-box .bg-danger,
 .dark-mode .info-box .info-box .bg-gradient-danger {
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-danger .progress-bar,
 .dark-mode .info-box .info-box .bg-gradient-danger .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-light,
@@ -681,12 +681,12 @@
 
 .dark-mode .info-box .info-box .bg-dark,
 .dark-mode .info-box .info-box .bg-gradient-dark {
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .info-box .info-box .bg-dark .progress-bar,
 .dark-mode .info-box .info-box .bg-gradient-dark .progress-bar {
-  background-color: #fff;
+  background-color: #001C54;
 }
 
 .timeline {
@@ -724,7 +724,7 @@
     0 0 1px rgba(0, 0, 0, 0.125),
     0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
-  background-color: #fff;
+  background-color: #001C54;
   color: #495057;
   margin-left: 60px;
   margin-right: 15px;
@@ -769,7 +769,7 @@
 }
 
 .timeline > div > .timeline-item > .timeline-footer > a {
-  color: #fff;
+  color: #001C54;
 }
 
 .timeline > div > .fa,
@@ -798,7 +798,7 @@
 
 .timeline > .time-label > span {
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #001C54;
   display: inline-block;
   font-weight: 600;
   padding: 5px;
@@ -820,7 +820,7 @@
 
 .dark-mode .timeline > div > .timeline-item {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
   border-color: #6c757d;
 }
 
@@ -841,7 +841,7 @@
 
 .products-list > .item {
   border-radius: 0.25rem;
-  background-color: #fff;
+  background-color: #001C54;
   padding: 10px 0;
 }
 
@@ -887,7 +887,7 @@
 
 .dark-mode .products-list > .item {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
   border-bottom-color: #6c757d;
 }
 
@@ -1027,7 +1027,7 @@
   transform: translate(101%, 0);
   background-color: #343a40;
   bottom: 0;
-  color: #fff;
+  color: #001C54;
   height: 250px;
   overflow: auto;
   position: absolute;
@@ -1079,7 +1079,7 @@
 }
 
 .contacts-list-info {
-  color: #fff;
+  color: #001C54;
   margin-left: 45px;
 }
 
@@ -1108,7 +1108,7 @@
 .direct-chat-primary .right > .direct-chat-text {
   background-color: #007bff;
   border-color: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-primary .right > .direct-chat-text::after,
@@ -1119,7 +1119,7 @@
 .direct-chat-secondary .right > .direct-chat-text {
   background-color: #6c757d;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-secondary .right > .direct-chat-text::after,
@@ -1130,7 +1130,7 @@
 .direct-chat-success .right > .direct-chat-text {
   background-color: #28a745;
   border-color: #28a745;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-success .right > .direct-chat-text::after,
@@ -1141,7 +1141,7 @@
 .direct-chat-info .right > .direct-chat-text {
   background-color: #17a2b8;
   border-color: #17a2b8;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-info .right > .direct-chat-text::after,
@@ -1163,7 +1163,7 @@
 .direct-chat-danger .right > .direct-chat-text {
   background-color: #dc3545;
   border-color: #dc3545;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-danger .right > .direct-chat-text::after,
@@ -1185,7 +1185,7 @@
 .direct-chat-dark .right > .direct-chat-text {
   background-color: #343a40;
   border-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-dark .right > .direct-chat-text::after,
@@ -1196,7 +1196,7 @@
 .direct-chat-lightblue .right > .direct-chat-text {
   background-color: #3c8dbc;
   border-color: #3c8dbc;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-lightblue .right > .direct-chat-text::after,
@@ -1207,7 +1207,7 @@
 .direct-chat-navy .right > .direct-chat-text {
   background-color: #001f3f;
   border-color: #001f3f;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-navy .right > .direct-chat-text::after,
@@ -1218,7 +1218,7 @@
 .direct-chat-olive .right > .direct-chat-text {
   background-color: #3d9970;
   border-color: #3d9970;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-olive .right > .direct-chat-text::after,
@@ -1240,7 +1240,7 @@
 .direct-chat-fuchsia .right > .direct-chat-text {
   background-color: #f012be;
   border-color: #f012be;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-fuchsia .right > .direct-chat-text::after,
@@ -1251,7 +1251,7 @@
 .direct-chat-maroon .right > .direct-chat-text {
   background-color: #d81b60;
   border-color: #d81b60;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-maroon .right > .direct-chat-text::after,
@@ -1262,7 +1262,7 @@
 .direct-chat-blue .right > .direct-chat-text {
   background-color: #007bff;
   border-color: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-blue .right > .direct-chat-text::after,
@@ -1273,7 +1273,7 @@
 .direct-chat-indigo .right > .direct-chat-text {
   background-color: #6610f2;
   border-color: #6610f2;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-indigo .right > .direct-chat-text::after,
@@ -1284,7 +1284,7 @@
 .direct-chat-purple .right > .direct-chat-text {
   background-color: #6f42c1;
   border-color: #6f42c1;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-purple .right > .direct-chat-text::after,
@@ -1295,7 +1295,7 @@
 .direct-chat-pink .right > .direct-chat-text {
   background-color: #e83e8c;
   border-color: #e83e8c;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-pink .right > .direct-chat-text::after,
@@ -1306,7 +1306,7 @@
 .direct-chat-red .right > .direct-chat-text {
   background-color: #dc3545;
   border-color: #dc3545;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-red .right > .direct-chat-text::after,
@@ -1339,7 +1339,7 @@
 .direct-chat-green .right > .direct-chat-text {
   background-color: #28a745;
   border-color: #28a745;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-green .right > .direct-chat-text::after,
@@ -1350,7 +1350,7 @@
 .direct-chat-teal .right > .direct-chat-text {
   background-color: #20c997;
   border-color: #20c997;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-teal .right > .direct-chat-text::after,
@@ -1361,7 +1361,7 @@
 .direct-chat-cyan .right > .direct-chat-text {
   background-color: #17a2b8;
   border-color: #17a2b8;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-cyan .right > .direct-chat-text::after,
@@ -1370,20 +1370,20 @@
 }
 
 .direct-chat-white .right > .direct-chat-text {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #001C54;
+  border-color: #001C54;
   color: #1f2d3d;
 }
 
 .direct-chat-white .right > .direct-chat-text::after,
 .direct-chat-white .right > .direct-chat-text::before {
-  border-left-color: #fff;
+  border-left-color: #001C54;
 }
 
 .direct-chat-gray .right > .direct-chat-text {
   background-color: #6c757d;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-gray .right > .direct-chat-text::after,
@@ -1394,7 +1394,7 @@
 .direct-chat-gray-dark .right > .direct-chat-text {
   background-color: #343a40;
   border-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 
 .direct-chat-gray-dark .right > .direct-chat-text::after,
@@ -1405,7 +1405,7 @@
 .dark-mode .direct-chat-text {
   background-color: #454d55;
   border-color: #4b545c;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-text::after,
@@ -1425,7 +1425,7 @@
 .dark-mode .direct-chat-primary .right > .direct-chat-text {
   background-color: #3f6791;
   border-color: #3f6791;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-primary .right > .direct-chat-text::after,
@@ -1436,7 +1436,7 @@
 .dark-mode .direct-chat-secondary .right > .direct-chat-text {
   background-color: #6c757d;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-secondary .right > .direct-chat-text::after,
@@ -1447,7 +1447,7 @@
 .dark-mode .direct-chat-success .right > .direct-chat-text {
   background-color: #00bc8c;
   border-color: #00bc8c;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-success .right > .direct-chat-text::after,
@@ -1458,7 +1458,7 @@
 .dark-mode .direct-chat-info .right > .direct-chat-text {
   background-color: #3498db;
   border-color: #3498db;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-info .right > .direct-chat-text::after,
@@ -1480,7 +1480,7 @@
 .dark-mode .direct-chat-danger .right > .direct-chat-text {
   background-color: #e74c3c;
   border-color: #e74c3c;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-danger .right > .direct-chat-text::after,
@@ -1502,7 +1502,7 @@
 .dark-mode .direct-chat-dark .right > .direct-chat-text {
   background-color: #343a40;
   border-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-dark .right > .direct-chat-text::after,
@@ -1524,7 +1524,7 @@
 .dark-mode .direct-chat-navy .right > .direct-chat-text {
   background-color: #002c59;
   border-color: #002c59;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-navy .right > .direct-chat-text::after,
@@ -1579,7 +1579,7 @@
 .dark-mode .direct-chat-blue .right > .direct-chat-text {
   background-color: #3f6791;
   border-color: #3f6791;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-blue .right > .direct-chat-text::after,
@@ -1590,7 +1590,7 @@
 .dark-mode .direct-chat-indigo .right > .direct-chat-text {
   background-color: #6610f2;
   border-color: #6610f2;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-indigo .right > .direct-chat-text::after,
@@ -1601,7 +1601,7 @@
 .dark-mode .direct-chat-purple .right > .direct-chat-text {
   background-color: #6f42c1;
   border-color: #6f42c1;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-purple .right > .direct-chat-text::after,
@@ -1612,7 +1612,7 @@
 .dark-mode .direct-chat-pink .right > .direct-chat-text {
   background-color: #e83e8c;
   border-color: #e83e8c;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-pink .right > .direct-chat-text::after,
@@ -1623,7 +1623,7 @@
 .dark-mode .direct-chat-red .right > .direct-chat-text {
   background-color: #e74c3c;
   border-color: #e74c3c;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-red .right > .direct-chat-text::after,
@@ -1656,7 +1656,7 @@
 .dark-mode .direct-chat-green .right > .direct-chat-text {
   background-color: #00bc8c;
   border-color: #00bc8c;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-green .right > .direct-chat-text::after,
@@ -1667,7 +1667,7 @@
 .dark-mode .direct-chat-teal .right > .direct-chat-text {
   background-color: #20c997;
   border-color: #20c997;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-teal .right > .direct-chat-text::after,
@@ -1678,7 +1678,7 @@
 .dark-mode .direct-chat-cyan .right > .direct-chat-text {
   background-color: #3498db;
   border-color: #3498db;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-cyan .right > .direct-chat-text::after,
@@ -1687,20 +1687,20 @@
 }
 
 .dark-mode .direct-chat-white .right > .direct-chat-text {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #001C54;
+  border-color: #001C54;
   color: #1f2d3d;
 }
 
 .dark-mode .direct-chat-white .right > .direct-chat-text::after,
 .dark-mode .direct-chat-white .right > .direct-chat-text::before {
-  border-left-color: #fff;
+  border-left-color: #001C54;
 }
 
 .dark-mode .direct-chat-gray .right > .direct-chat-text {
   background-color: #6c757d;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-gray .right > .direct-chat-text::after,
@@ -1711,7 +1711,7 @@
 .dark-mode .direct-chat-gray-dark .right > .direct-chat-text {
   background-color: #343a40;
   border-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 
 .dark-mode .direct-chat-gray-dark .right > .direct-chat-text::after,
@@ -1801,7 +1801,7 @@
 }
 
 .widget-user .widget-user-image > img {
-  border: 3px solid #fff;
+  border: 3px solid #001C54;
   height: auto;
   width: 90px;
 }

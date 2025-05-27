@@ -602,7 +602,7 @@ html.os-html > .os-host > .os-scrollbar {
   border-radius: 10px;
 }
 .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  background: rgba(0, 0, 0, 0.4);
+  background: #001c54;
 }
 .os-theme-light > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
   background: rgba(255, 255, 255, 0.4);

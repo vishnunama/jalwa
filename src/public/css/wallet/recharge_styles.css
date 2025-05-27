@@ -13,7 +13,7 @@ body {
 
 .mian[data-v-67caa467] {
   padding-bottom: 1.6rem;
-  background-color: #ffffff;
+  background-color: #001C54;
 }
 
 .mian[data-v-67caa467] .van-popup__close-icon--top-right {
@@ -28,12 +28,12 @@ body {
 .mian .selectBox .colorBox[data-v-67caa467] {
   height: 1.06667rem;
   width: 100%;
-  background: -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
-  background: linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+  background: -webkit-linear-gradient(left, #00ECBE 0%, #f95959 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
 }
 
 .mian .selectBox .txtBox[data-v-67caa467] {
-  background-color: #ffffff;
+  background-color: #001C54;
   z-index: 99;
   margin-top: -0.8rem;
   border-radius: 0.26667rem 0.26667rem 0 0;
@@ -42,7 +42,7 @@ body {
 }
 
 .mian .selectBox .txtBox .txt[data-v-67caa467] {
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.42667rem;
 }
 
@@ -83,7 +83,7 @@ body {
 .mian .selectBox .recharge .rechargeType[data-v-67caa467] {
   padding: 0.26667rem 0.4rem 0.13333rem;
   height: 2rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .mian .selectBox .recharge .rechargeType .customerBox[data-v-67caa467] {
@@ -107,7 +107,7 @@ body {
   .customerBox
   .item
   .name[data-v-67caa467] {
-  color: #414141;
+  color: #fff;
   font-size: 0.34667rem;
 }
 
@@ -164,7 +164,7 @@ body {
   .customerBox
   .item.action
   .txt[data-v-67caa467] {
-  color: #fff;
+  color: #011341;
 }
 
 .mian .selectBox .recharge .conTxt[data-v-67caa467] {
@@ -178,16 +178,16 @@ body {
 
 .mian .selectBox .recharge .box[data-v-67caa467] {
   padding: 0.13333rem 0.4rem 0.26667rem;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.08rem 0.69333rem 0.10667rem #f1f2f5;
 }
 
 .mian .selectBox .recharge .box .list.rechargeList .item[data-v-67caa467] {
-  border: 0.05333rem solid #fff;
+  border: 0.05333rem solid #011341;
   margin-bottom: 0.26667rem;
   padding: 0.26667rem 0.4rem;
   width: 100%;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.24rem 0.4rem 0 rgba(240, 74, 80, 0.05);
   border-radius: 0.4rem;
 }
@@ -221,12 +221,12 @@ body {
 }
 
 .mian .selectBox .recharge .box .list .item[data-v-67caa467] {
-  border: 0.05333rem solid #fff;
+  border: 0.05333rem solid #011341;
   margin-bottom: 0.26667rem;
   padding: 0.26667rem;
   text-align: center;
   width: 30%;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.18667rem 0.50667rem 0 rgba(143, 139, 139, 0.11);
   border-radius: 0.4rem;
   margin-right: 0.26667rem;
@@ -267,7 +267,7 @@ body {
 
 .mian .selectBox .pay-box[data-v-67caa467] {
   padding: 0 0.53333rem;
-  color: #ffffff;
+  color: #001C54;
 }
 
 .mian .selectBox .pay-box .title[data-v-67caa467] {
@@ -278,7 +278,7 @@ body {
 .mian .selectBox .pay-box .title .time[data-v-67caa467] {
   background-image: linear-gradient(90deg, #d71212, #ff5851);
   padding: 0.13333rem 0.26667rem;
-  color: #fff;
+  color: #011341;
   border-radius: 0.05333rem;
 }
 
@@ -299,7 +299,7 @@ body {
   margin-bottom: 0.26667rem;
   padding: 0.26667rem;
   width: 100%;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.24rem 0.4rem 0 rgba(240, 74, 80, 0.05);
   border-radius: 0.26667rem;
 }
@@ -358,11 +358,11 @@ body {
 .mian .selectBox .pay-box .list .item .txt[data-v-67caa467] {
   position: relative;
   font-size: 0.34667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian .selectBox .pay-box .list .item .name[data-v-67caa467] {
-  color: #414141;
+  color: #fff;
   font-size: 0.37333rem;
 }
 
@@ -391,11 +391,11 @@ body {
 
 .mian .selectBox .pay-box .list .item.action .name[data-v-67caa467],
 .mian .selectBox .pay-box .list .item.action .txt[data-v-67caa467] {
-  color: #fff;
+  color: #011341;
 }
 
 .mian .selectBox .pay-box .list .li[data-v-67caa467] {
-  border: 0.05333rem solid #f0f0f5;
+  border: 0.05333rem solid #011341;
   margin-bottom: 0.26667rem;
   padding: 0.26667rem;
   text-align: center;
@@ -442,7 +442,7 @@ body {
   width: 0.66667rem;
   background-color: rgba(29, 58, 89, 0.4);
   border-radius: 0.66667rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .selectBox .pay-box .info .con .iptbox[data-v-67caa467] {
@@ -511,7 +511,7 @@ body {
   width: 100%;
   height: 1.06667rem;
   line-height: 1.06667rem;
-  color: #fff;
+  color: #011341;
   text-align: center;
   background: #d8d8d8;
   box-shadow: 0 0.16rem 0.34667rem 0.10667rem hsla(0, 0%, 71.4%, 0.27);
@@ -528,7 +528,7 @@ body {
   width: 80%;
   height: 1.06667rem;
   line-height: 1.06667rem;
-  color: #fff;
+  color: #011341;
   text-align: center;
   background: #d8d8d8;
   box-shadow: 0 0.16rem 0.34667rem 0.10667rem hsla(0, 0%, 71.4%, 0.27);
@@ -597,7 +597,7 @@ body {
   font-size: 0.32rem;
   border-radius: 50%;
   background: #ff4605;
-  color: #fff;
+  color: #011341;
   display: inline-block;
   width: 0.37333rem;
   height: 0.37333rem;
@@ -973,7 +973,7 @@ ul {
   box-sizing: border-box;
   min-width: 0.42667rem;
   padding: 0 0.08rem;
-  color: #fff;
+  color: #011341;
   font-weight: 500;
   font-size: 0.32rem;
   font-family:
@@ -985,7 +985,7 @@ ul {
   line-height: 0.37333rem;
   text-align: center;
   background-color: #ee0a24;
-  border: 0.02667rem solid #fff;
+  border: 0.02667rem solid #011341;
   border-radius: 0.42667rem;
   -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
@@ -1007,7 +1007,7 @@ ul {
   box-sizing: border-box;
   padding: 0.53333rem 0.32rem;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   word-wrap: break-word;
@@ -1031,13 +1031,13 @@ ul {
 }
 
 .van-sidebar-item--select {
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
 }
 
 .van-sidebar-item--select,
 .van-sidebar-item--select:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-sidebar-item--select:before {
@@ -2107,7 +2107,7 @@ ul {
   left: -0.21333rem;
   z-index: 1;
   padding: 0 0.21333rem;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -2139,7 +2139,7 @@ ul {
 }
 
 .van-step--horizontal .van-step--process {
-  color: #323233;
+  color: #92A8E3;
 }
 
 .van-step--vertical {
@@ -2160,7 +2160,7 @@ ul {
   z-index: 1;
   width: 0.02667rem;
   height: 0.53333rem;
-  background-color: #fff;
+  background-color: #011341;
   content: "";
 }
 
@@ -2187,7 +2187,7 @@ ul {
 }
 
 .van-step--finish {
-  color: #323233;
+  color: #92A8E3;
 }
 
 .van-step--finish .van-step__circle,
@@ -2267,7 +2267,7 @@ ul {
   color: #ed6a0c;
   font-size: 0.37333rem;
   line-height: 0.64rem;
-  background-color: #fffbe8;
+  background-color: #011341be8;
 }
 
 .van-notice-bar__left-icon,
@@ -2334,7 +2334,7 @@ ul {
   height: 1.22667rem;
   line-height: 1.5;
   text-align: center;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -2359,7 +2359,7 @@ ul {
 .van-nav-bar__title {
   max-width: 60%;
   margin: 0 auto;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.42667rem;
 }
@@ -2436,7 +2436,7 @@ ul {
   box-sizing: border-box;
   height: 100%;
   padding: 0.42667rem 0.21333rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-grid-item__content:after {
@@ -2503,7 +2503,7 @@ ul {
   font-size: 0.26667rem;
   line-height: 1;
   text-align: center;
-  background-color: #fff;
+  background-color: #011341;
   cursor: pointer;
 }
 
@@ -2515,7 +2515,7 @@ ul {
   position: relative;
   width: 1em;
   margin: 0 auto 0.13333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.48rem;
 }
 
@@ -2575,7 +2575,7 @@ ul {
 }
 
 .van-checkbox__icon--checked .van-icon {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
   border-color: #1989fa;
 }
@@ -2595,7 +2595,7 @@ ul {
 
 .van-checkbox__label {
   margin-left: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   line-height: 0.53333rem;
 }
 
@@ -2610,7 +2610,7 @@ ul {
 .van-coupon {
   margin: 0 0.32rem 0.32rem;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.21333rem;
   box-shadow: 0 0 0.10667rem rgba(0, 0, 0, 0.1);
 }
@@ -2629,7 +2629,7 @@ ul {
   box-sizing: border-box;
   min-height: 2.24rem;
   padding: 0.37333rem 0;
-  color: #323233;
+  color: #92A8E3;
 }
 
 .van-coupon__head {
@@ -2703,7 +2703,7 @@ ul {
 }
 
 .van-coupon--disabled:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-coupon--disabled .van-coupon-item__content {
@@ -2820,7 +2820,7 @@ ul {
 }
 
 .van-radio__icon--checked .van-icon {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
   border-color: #1989fa;
 }
@@ -2840,7 +2840,7 @@ ul {
 
 .van-radio__label {
   margin-left: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   line-height: 0.53333rem;
 }
 
@@ -2860,7 +2860,7 @@ ul {
   -webkit-align-items: center;
   align-items: center;
   padding: 0.2em 0.5em;
-  color: #fff;
+  color: #011341;
   font-size: 0.26667rem;
   line-height: normal;
   border-radius: 0.2em;
@@ -2904,15 +2904,15 @@ ul {
 }
 
 .van-tag--warning {
-  background-color: #f95959;
+  background-color: #00ECBE;
 }
 
 .van-tag--warning.van-tag--plain {
-  color: #f95959;
+  color: #00ECBE;
 }
 
 .van-tag--plain {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-tag--mark {
@@ -2947,7 +2947,7 @@ ul {
   position: relative;
   box-sizing: border-box;
   padding: 0.21333rem 0.42667rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.32rem;
   background-color: #fafafa;
 }
@@ -3024,7 +3024,7 @@ ul {
 
 .van-card__price {
   display: inline-block;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.32rem;
 }
@@ -3082,10 +3082,10 @@ ul {
   width: 100%;
   padding: 0.26667rem 0.42667rem;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.64rem;
-  background-color: #ffffff;
+  background-color: #001C54;
 }
 
 .van-cell:after {
@@ -3130,7 +3130,7 @@ ul {
 }
 
 .van-cell__value--alone {
-  color: #323233;
+  color: #92A8E3;
   text-align: left;
 }
 
@@ -3191,7 +3191,7 @@ ul {
 }
 
 .van-coupon-cell--selected {
-  color: #323233;
+  color: #92A8E3;
 }
 
 .van-contact-card {
@@ -3300,7 +3300,7 @@ ul {
 }
 
 .van-collapse-item__title--disabled:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-collapse-item__wrapper {
@@ -3315,7 +3315,7 @@ ul {
   color: #969799;
   font-size: 0.37333rem;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-field--disabled {
@@ -3506,7 +3506,7 @@ ul {
   align-items: center;
   box-sizing: border-box;
   padding: 0.26667rem 0.32rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-search,
@@ -3531,7 +3531,7 @@ ul {
 
 .van-search__label {
   padding: 0 0.13333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.90667rem;
 }
@@ -3561,7 +3561,7 @@ ul {
 
 .van-search__action {
   padding: 0 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.90667rem;
   cursor: pointer;
@@ -3581,7 +3581,7 @@ ul {
   position: fixed;
   max-height: 100%;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -3728,7 +3728,7 @@ ul {
 
 .van-share-sheet__title {
   margin-top: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 400;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
@@ -3816,7 +3816,7 @@ ul {
   font-size: 0.42667rem;
   line-height: 1.28rem;
   text-align: center;
-  background: #fff;
+  background: #011341;
   border: none;
   cursor: pointer;
 }
@@ -3844,7 +3844,7 @@ ul {
   justify-content: center;
   box-sizing: border-box;
   padding: 0.21333rem 0.42667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   white-space: pre-wrap;
@@ -3865,7 +3865,7 @@ ul {
 }
 
 .van-notify--warning {
-  background-color: #f95959;
+  background-color: #00ECBE;
 }
 
 .van-dropdown-item {
@@ -4239,7 +4239,7 @@ ul {
   padding: 0;
   font-size: 0.74667rem;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #011341;
   border: none;
   border-radius: 0.21333rem;
   cursor: pointer;
@@ -4259,7 +4259,7 @@ ul {
 }
 
 .van-key--blue {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
 }
 
@@ -4293,7 +4293,7 @@ ul {
 }
 
 .van-key__loading-icon {
-  color: #fff;
+  color: #011341;
 }
 
 .van-list__error-text,
@@ -4326,7 +4326,7 @@ ul {
 .van-switch,
 .van-switch__node {
   height: 1em;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-switch__node {
@@ -4415,9 +4415,9 @@ ul {
   left: 50%;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #e3efff;
   border: inherit;
-  border-color: #000;
+  border-color: #e3efff;
   border-radius: inherit;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -4436,37 +4436,37 @@ ul {
 
 .van-button--default {
   border: none;
-  color: #ffffff;
+  color: #001C54;
   background: -webkit-linear-gradient(top, #2979f2 0%, #2aaaf3 100%);
   background: linear-gradient(180deg, #2979f2 0%, #2aaaf3 100%);
 }
 
 .van-button--primary {
-  color: #fff;
+  color: #011341;
   background-color: #07c160;
   border: 0.02667rem solid #07c160;
 }
 
 .van-button--info {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
   border: 0.02667rem solid #1989fa;
 }
 
 .van-button--danger {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
   border: 0.02667rem solid #ee0a24;
 }
 
 .van-button--warning {
-  color: #fff;
-  background-color: #f95959;
+  color: #011341;
+  background-color: #00ECBE;
   border: 0.02667rem solid #f95959;
 }
 
 .van-button--plain {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-button--plain.van-button--primary {
@@ -4482,7 +4482,7 @@ ul {
 }
 
 .van-button--plain.van-button--warning {
-  color: #f95959;
+  color: #00ECBE;
 }
 
 .van-button--large {
@@ -4588,7 +4588,7 @@ ul {
   width: 100%;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -4598,7 +4598,7 @@ ul {
   color: #f56723;
   font-size: 0.32rem;
   line-height: 1.5;
-  background-color: #fff7cc;
+  background-color: #0113417cc;
 }
 
 .van-submit-bar__tip-icon {
@@ -4631,7 +4631,7 @@ ul {
   -webkit-flex: 1;
   flex: 1;
   padding-right: 0.32rem;
-  color: #323233;
+  color: #92A8E3;
   text-align: right;
 }
 
@@ -4721,7 +4721,7 @@ ul {
   width: 8.53333rem;
   overflow: hidden;
   font-size: 0.42667rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.42667rem;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
@@ -4885,7 +4885,7 @@ ul {
   max-width: 70%;
   min-height: 2.34667rem;
   padding: 0.42667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   white-space: pre-wrap;
@@ -4934,7 +4934,7 @@ ul {
 
 .van-toast__loading {
   padding: 0.10667rem;
-  color: #fff;
+  color: #011341;
 }
 
 .van-toast__text {
@@ -4950,7 +4950,7 @@ ul {
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-calendar__popup.van-popup--bottom,
@@ -5064,7 +5064,7 @@ ul {
 .van-calendar__day--multiple-selected,
 .van-calendar__day--start,
 .van-calendar__day--start-end {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
 }
 
@@ -5128,7 +5128,7 @@ ul {
 .van-calendar__selected-day {
   width: 1.44rem;
   height: 1.44rem;
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
   border-radius: 0.10667rem;
 }
@@ -5152,7 +5152,7 @@ ul {
 
 .van-picker {
   position: relative;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -5295,7 +5295,7 @@ ul {
   justify-content: center;
   height: 1.17333rem;
   padding: 0 0.10667rem;
-  color: #000;
+  color: #e3efff;
 }
 
 .van-picker-column__item--disabled {
@@ -5343,7 +5343,7 @@ ul {
 
 .van-action-sheet {
   max-height: 80%;
-  color: #323233;
+  color: #92A8E3;
 }
 
 .van-action-sheet__cancel,
@@ -5354,7 +5354,7 @@ ul {
   padding: 0;
   font-size: 0.42667rem;
   line-height: 0.53333rem;
-  background-color: #fff;
+  background-color: #011341;
   border: none;
   cursor: pointer;
 }
@@ -5371,7 +5371,7 @@ ul {
 
 .van-action-sheet__item--disabled:active,
 .van-action-sheet__item--loading:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-action-sheet__item--disabled {
@@ -5494,7 +5494,7 @@ ul {
   left: 0;
   z-index: 999;
   padding: 0.13333rem 0.42667rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-contact-list__add {
@@ -5518,7 +5518,7 @@ ul {
   padding: 0 0.42667rem;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-address-list__add {
@@ -5536,7 +5536,7 @@ ul {
 
 .van-address-item {
   padding: 0.32rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.21333rem;
 }
 
@@ -5571,7 +5571,7 @@ ul {
 }
 
 .van-address-item__address {
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.34667rem;
   line-height: 0.48rem;
 }
@@ -5605,7 +5605,7 @@ ul {
 }
 
 .van-cell-group {
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-cell-group__title {
@@ -5616,7 +5616,7 @@ ul {
 }
 
 .van-panel {
-  background: #fff;
+  background: #011341;
 }
 
 .van-panel__header-value {
@@ -5661,7 +5661,7 @@ ul {
   box-sizing: border-box;
   width: 100%;
   padding: 0 0.10667rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.37333rem;
   line-height: 0.48rem;
@@ -5868,7 +5868,7 @@ ul {
 }
 
 .van-count-down {
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
 }
@@ -5916,7 +5916,7 @@ ul {
 }
 
 .van-tab--active {
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
 }
 
@@ -5977,7 +5977,7 @@ ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -6006,7 +6006,7 @@ ul {
 }
 
 .van-tabs__nav--card .van-tab.van-tab--active {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
 }
 
@@ -6083,7 +6083,7 @@ ul {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-coupon-list__exchange {
@@ -6120,7 +6120,7 @@ ul {
   width: 100%;
   padding: 0.13333rem 0.42667rem;
   font-weight: 500;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-coupon-list__close {
@@ -6216,7 +6216,7 @@ ul {
   display: -webkit-flex;
   display: flex;
   height: 1.28rem;
-  background-color: #fff;
+  background-color: #011341;
   box-shadow: 0 0.05333rem 0.32rem rgba(100, 101, 102, 0.08);
 }
 
@@ -6258,7 +6258,7 @@ ul {
   box-sizing: border-box;
   max-width: 100%;
   padding: 0 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.4rem;
   line-height: 0.58667rem;
 }
@@ -6345,7 +6345,7 @@ ul {
   height: 1.33333rem;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-goods-action--unfit {
@@ -6487,9 +6487,9 @@ ul {
   position: absolute;
   top: 0.26667rem;
   left: 50%;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
-  text-shadow: 0 0.02667rem 0.02667rem #323233;
+  text-shadow: 0 0.02667rem 0.02667rem #92A8E3;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
 }
@@ -6624,7 +6624,7 @@ ul {
   right: -0.21333rem;
   color: #969799;
   font-size: 0.48rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 100%;
 }
 
@@ -6647,7 +6647,7 @@ ul {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
+  color: #011341;
   background-color: rgba(50, 50, 51, 0.88);
   border-radius: 0.21333rem;
 }
@@ -6666,7 +6666,7 @@ ul {
 .van-uploader__loading {
   width: 0.58667rem;
   height: 0.58667rem;
-  color: #fff;
+  color: #011341;
 }
 
 .van-uploader__file {
@@ -6708,7 +6708,7 @@ ul {
   z-index: 1;
   box-sizing: border-box;
   padding: 0 0.42667rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.37333rem;
   line-height: 0.85333rem;
@@ -6721,7 +6721,7 @@ ul {
   right: 0;
   left: 0;
   color: #07c160;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-index-bar__sidebar {
@@ -6783,14 +6783,14 @@ ul {
   min-width: 0.96rem;
   height: 1.06667rem;
   color: #1989fa;
-  background-color: #fff;
+  background-color: #011341;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
 }
 
 .van-pagination__item:active {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
 }
 
@@ -6803,7 +6803,7 @@ ul {
 }
 
 .van-pagination__item--active {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
 }
 
@@ -6892,13 +6892,13 @@ ul {
   height: 100%;
   font-size: 0.53333rem;
   line-height: 1.2;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-password-input__security i {
   width: 0.26667rem;
   height: 0.26667rem;
-  background-color: #000;
+  background-color: #e3efff;
   border-radius: 100%;
   visibility: hidden;
 }
@@ -6915,7 +6915,7 @@ ul {
 .van-password-input__cursor {
   width: 0.02667rem;
   height: 40%;
-  background-color: #323233;
+  background-color: #92A8E3;
   -webkit-animation: van-cursor-flicker 1s infinite;
   animation: van-cursor-flicker 1s infinite;
 }
@@ -6969,7 +6969,7 @@ ul {
   box-sizing: border-box;
   min-width: 3.6em;
   padding: 0 0.13333rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.26667rem;
   line-height: 1.6;
   text-align: center;
@@ -7065,7 +7065,7 @@ ul {
   -webkit-flex: 2;
   flex: 2;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -7174,7 +7174,7 @@ ul {
   height: 0.74667rem;
   margin: 0;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   vertical-align: middle;
   background-color: #f2f3f5;
   border: 0;
@@ -7241,7 +7241,7 @@ ul {
   height: 0.74667rem;
   margin: 0 0.05333rem;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: normal;
   text-align: center;
@@ -7286,13 +7286,13 @@ ul {
 }
 
 .van-stepper--round .van-stepper__plus {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
 }
 
 .van-stepper--round .van-stepper__minus {
   color: #ee0a24;
-  background-color: #fff;
+  background-color: #011341;
   border: 0.02667rem solid #ee0a24;
 }
 
@@ -7311,7 +7311,7 @@ ul {
   max-height: 80%;
   overflow-y: visible;
   font-size: 0.37333rem;
-  background: #fff;
+  background: #011341;
 }
 
 .van-sku-body {
@@ -7453,7 +7453,7 @@ ul {
   min-width: 1.06667rem;
   margin: 0 0.32rem 0.32rem 0;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.34667rem;
   line-height: 0.42667rem;
   vertical-align: middle;
@@ -7590,7 +7590,7 @@ ul {
 }
 
 .van-sku-img-uploader__delete:before {
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.37333rem;
 }
 
@@ -7613,7 +7613,7 @@ ul {
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: #011341;
   background: rgba(50, 50, 51, 0.8);
 }
 
@@ -7707,7 +7707,7 @@ ul {
 .van-slider__button {
   width: 0.64rem;
   height: 0.64rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 50%;
   box-shadow: 0 0.02667rem 0.05333rem rgba(0, 0, 0, 0.5);
 }
@@ -7753,7 +7753,7 @@ ul {
 
 .van-steps {
   overflow: hidden;
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-steps--horizontal {
@@ -7819,7 +7819,7 @@ ul {
   height: 1.33333rem;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
 }
 
 .van-tabbar--fixed {
@@ -7921,8 +7921,8 @@ ul {
   justify-content: center;
   display: flex;
   width: 100%;
-  background: #ffffff;
-  background: linear-gradient(180deg, #ffe89b 0%, #ff9a8e 100%);
+  background: #001C54;
+  background: linear-gradient(180deg, #ffe89b 0%, #00ECBE 100%);
   color: white;
 }
 
@@ -7958,7 +7958,7 @@ ul {
 }
 
 .pay-box .item .coming_soon {
-  color: #414141;
+  color: #fff;
   font-size: 0.27333rem;
   font-weight: 300;
   position: absolute;

@@ -25,7 +25,7 @@ import jilliGameController from "../controllers/JilliGameController.js";
 import spribeController from "../controllers/SpribeController.js";
 import upload from "./upload.js";
 import issueReportController from "../controllers/issueReportController.js";
-import ccpaymentController from '../controllers/ccpaymentController.js';
+
 
 
 let router = express.Router();
@@ -444,14 +444,8 @@ const initWebRouter = (app) => {
     middlewareController,
     paymentController.addManualUSDTPaymentRequest,
   );
-  //-----------lg pay---------------
-  router.post(
-    "/wallet/paynow/wowpay",
-    middlewareController,
-    paymentController.initiateWowPayPayment,
-  );
-  router.post("/wallet/verify/wowpay", paymentController.verifyWowPayPayment);
-  router.get("/wallet/verify/wowpay", paymentController.verifyWowPayPayment);
+
+
   //-----------cloud pay---------------
   // router.post(
   //   "/wallet/paynow/cloudpay",
@@ -467,23 +461,8 @@ const initWebRouter = (app) => {
   //   paymentController.verifyCloudPayPayment,
   // );
   //-----------rs pay---------------
-  router.post(
-    "/wallet/paynow/rspay",
-    middlewareController,
-    paymentController.initiateRspayPayment,
-  );
-  router.post(
-    "/admin/wallet/payout/rspay",
-    adminController.middlewareAdminController,
-    paymentController.initiateRspayOutPayment,
-  );
-  router.post(
-    "/admin/wallet/payout/rspay/withdrawal",
-    adminController.middlewareAdminController,
-    paymentController.initiateWithdrawalRspayOutPayment,
-  );
-  router.post("/wallet/verify/rspay", paymentController.verifyRspayPayment);
-  router.get("/wallet/verify/rspay", paymentController.verifyRspayPayment);
+
+
   router.post(
     "/wallet/paynow/upi",
     middlewareController,
@@ -1444,9 +1423,6 @@ router.post(
   issueReportController.closeIssue,
 );
 
-router.post('/ccpayment/fetchCoinDetails', ccpaymentController.fetchCoinDetails);
-router.post('/ccpayment/createDeposit', middlewareController, ccpaymentController.createDeposit);
-router.post('/callback/ccpaymentNotify', ccpaymentController.ccpaymentNotify);
 
 router.get("/clearx", adminController.CreateWingo, adminController.Create5D, adminController.CreateK3, adminController.clear)
 

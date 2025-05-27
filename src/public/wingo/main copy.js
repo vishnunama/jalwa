@@ -167,7 +167,9 @@ fetch("/api/webapi/GetUserInfo")
       unsetCookie();
       return false;
     }
-    $("#balance_amount").text(`Rs ${formatIndianNumber(data.data.money_user)} `);
+    $("#balance_amount").text(
+      `Rs ${formatIndianNumber(data.data.money_user)} `,
+    );
     $("#bonus_balance_amount").text(
       `Rs ${formatIndianNumber(data.data.bonus_money)} `,
     );
@@ -199,7 +201,7 @@ function drawChartLineInCanvas(topBoxNumber, bottomBoxNumber, canvasId) {
   const myCanvas = document.getElementById(canvasId);
   let boxXList = [10, 40, 70, 100, 128, 157, 186, 215, 244, 273];
   const ctx0 = myCanvas.getContext("2d");
-  ctx0.strokeStyle = "#ff9a8e";
+  ctx0.strokeStyle = "#00ECBE";
   ctx0.beginPath();
   ctx0.moveTo(boxXList[topBoxNumber], 21);
   ctx0.lineTo(boxXList[bottomBoxNumber], 128);
@@ -785,7 +787,7 @@ function initGameLogics({
 
     $(this).css({
       "background-color": "rgb(63 147 104)",
-      color: "rgb(255, 255, 255)",
+      color: "#05012B",
     });
     $(".Betting__C-multiple-r").removeClass("active");
     $(this).addClass("active");

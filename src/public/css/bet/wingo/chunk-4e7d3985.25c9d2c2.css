@@ -1,6 +1,6 @@
 .list[data-v-21f3500a] {
   margin-top: 0.53333rem;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0 0.8rem 0 rgba(58, 58, 58, 0.07);
 }
 
@@ -9,7 +9,7 @@
   height: 1.33333rem;
   line-height: 1.33333rem;
   font-size: 0.4rem;
-  color: #000;
+  color: #e3efff;
   border-bottom: 0.02667rem solid #efeeee;
 }
 
@@ -62,7 +62,7 @@
 .mian .menu-box[data-v-8cd483ca] {
   z-index: 99999;
   width: 100%;
-  background: #fff;
+  background: #011341;
   transition: 0.4s;
   -webkit-transition: 0.4s;
 }
@@ -72,7 +72,7 @@
   height: 1.6rem;
   text-align: center;
   font-size: 0.32rem;
-  color: #fff;
+  color: #011341;
   border-radius: 1.6rem;
   overflow: hidden;
 }
@@ -83,7 +83,7 @@
 }
 
 .mian .menu-box .infoName[data-v-8cd483ca] {
-  color: #fff;
+  color: #011341;
   font-size: 0.42667rem;
 }
 
@@ -123,7 +123,7 @@
 .mian .menu-box .info .state-info .txt[data-v-8cd483ca] {
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #011341;
   height: 0.8rem;
   line-height: 0.8rem;
 }
@@ -139,7 +139,7 @@
 
 .mian .menu-box .total-box[data-v-8cd483ca] {
   margin: -1.46667rem 0.4rem 0.4rem;
-  background-color: #fff;
+  background-color: #011341;
   padding: 0.4rem 0.53333rem;
   border-radius: 0.4rem;
   box-shadow: 0 0.21333rem 0.8rem 0 rgba(211, 13, 13, 0.07);
@@ -160,7 +160,7 @@
 }
 
 .mian .menu-box .total-box .infoItem .infoBtn .item .li[data-v-8cd483ca] {
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   border-radius: 0.8rem;
   text-align: center;
@@ -222,7 +222,7 @@
   background: url(../img/banner_tuiguang.dbc34bdc.png) 0 0 no-repeat;
   background-size: 100% auto;
   font-size: 0.53333rem;
-  color: #fff;
+  color: #011341;
   position: relative;
 }
 
@@ -234,7 +234,7 @@
 
 .mian .menu-box .promote.shop .txt[data-v-8cd483ca] {
   font-size: 0.53333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .menu-box .promote .img[data-v-8cd483ca] {
@@ -273,7 +273,7 @@
   line-height: 0.53333rem;
   overflow: hidden;
   border-radius: 0.53333rem;
-  color: #fff;
+  color: #011341;
   z-index: 99;
 }
 

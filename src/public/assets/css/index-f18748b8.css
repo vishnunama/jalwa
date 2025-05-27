@@ -1,6 +1,6 @@
 [data-v-5b1210fd]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-5b1210fd] {
@@ -64,7 +64,7 @@
 
 .list .item span[data-v-5b1210fd] {
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 
 .list .item-title[data-v-5b1210fd] {

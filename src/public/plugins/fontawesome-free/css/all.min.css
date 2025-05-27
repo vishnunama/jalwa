@@ -194,7 +194,7 @@
   font-size: 2em;
 }
 .fa-inverse {
-  color: #fff;
+  color: #001C54;
 }
 .fa-500px:before {
   content: "\f26e";
@@ -556,10 +556,10 @@
 .fa-bity:before {
   content: "\f37a";
 }
-.fa-black-tie:before {
+.fa-#e3efff-tie:before {
   content: "\f27e";
 }
-.fa-blackberry:before {
+.fa-#e3efffberry:before {
   content: "\f37b";
 }
 .fa-blender:before {

@@ -1,6 +1,6 @@
 [data-v-28c2558e]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-28c2558e] {
@@ -82,7 +82,7 @@
 .redeem-container-receive[data-v-28c2558e] {
   height: 7.33333rem;
   width: calc(100% - 0.64rem);
-  background: #f0f0f5;
+  background: #011341;
   border-radius: 0.26667rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -96,7 +96,7 @@
   justify-content: flex-start;
   padding: 0.33333rem 0.46667rem;
   margin-top: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 
 .redeem-container-receive p[data-v-28c2558e] {
@@ -116,7 +116,7 @@
   border-radius: 0.8rem;
   border: none;
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
   padding: 0.29333rem 0.56rem;
   margin-top: 0.34667rem;
 }
@@ -147,7 +147,7 @@
   background: linear-gradient(180deg, #2aaaf3 0%, #2979f2 100%);
   border-radius: 1.06667rem;
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
   border: none;
   margin-top: 0.74667rem;
 }
@@ -156,7 +156,7 @@
   margin: 0.4rem 0 0.29333rem;
   width: calc(100% - 0.64rem);
   padding: 0.34667rem 0.32rem;
-  background: #f0f0f5;
+  background: #011341;
   border-radius: 0.26667rem;
 }
 
@@ -179,7 +179,7 @@
 
 .redeem-container-record-title span[data-v-28c2558e] {
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 
 .redeem-container-record-itemsBox[data-v-28c2558e] {
@@ -260,5 +260,5 @@
 
 .redeem-container[data-v-28c2558e] .navbar__content .navbar__content-center,
 .redeem-container[data-v-28c2558e] .navbar__content .van-icon {
-  color: #fff;
+  color: #011341;
 }

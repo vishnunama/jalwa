@@ -254,7 +254,7 @@
   background-color: #e9e9e9;
 }
 .fc-header-title h2 {
-  color: #666;
+  color: #E3EFFF;
   font-size: 15px;
   line-height: 1.6em;
   margin-left: 10px;
@@ -436,14 +436,14 @@
 }
 .select2-container--default .select2-results__option--highlighted {
   background-color: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-results__option--highlighted[aria-selected],
 .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #0074f0;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-selection--multiple {
   border: 1px solid #ced4da;
@@ -485,7 +485,7 @@
   .select2-selection__choice {
   background-color: #007bff;
   border-color: #006fe6;
-  color: #fff;
+  color: #001C54;
   padding: 0 10px;
   margin-top: 0.31rem;
 }
@@ -500,7 +500,7 @@
 .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-selection--multiple.text-sm
@@ -664,7 +664,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-primary
@@ -679,7 +679,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #0074f0;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-primary .select2-selection--multiple:focus,
 .select2-primary
@@ -697,7 +697,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #007bff;
   border-color: #006fe6;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-primary
@@ -717,7 +717,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-primary.select2-container--focus
@@ -768,7 +768,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-secondary
@@ -783,7 +783,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #656d75;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-secondary
@@ -803,7 +803,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6c757d;
   border-color: #60686f;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-secondary
@@ -823,7 +823,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-secondary.select2-container--focus
@@ -874,7 +874,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #28a745;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-success
@@ -889,7 +889,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #259b40;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-success .select2-selection--multiple:focus,
 .select2-success
@@ -907,7 +907,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #28a745;
   border-color: #23923d;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-success
@@ -927,7 +927,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-success.select2-container--focus
@@ -976,7 +976,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #17a2b8;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-info
@@ -991,7 +991,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #1596aa;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-info .select2-selection--multiple:focus,
 .select2-info .select2-container--default .select2-selection--multiple:focus {
@@ -1007,7 +1007,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #17a2b8;
   border-color: #148ea1;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-info
@@ -1027,7 +1027,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-info.select2-container--focus
@@ -1182,7 +1182,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #dc3545;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-danger
@@ -1197,7 +1197,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #da2839;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-danger .select2-selection--multiple:focus,
 .select2-danger .select2-container--default .select2-selection--multiple:focus {
@@ -1213,7 +1213,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #dc3545;
   border-color: #d32535;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-danger
@@ -1233,7 +1233,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-danger.select2-container--focus
@@ -1246,12 +1246,12 @@ select.form-control-sm
 .select2-light
   + .select2-container--default.select2-container--open
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-light
   + .select2-container--default.select2-container--focus
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-container--default
   .select2-light
@@ -1275,7 +1275,7 @@ select.form-control-sm
 .select2-light
   .select2-container--default.select2-dropdown
   .select2-search__field:focus {
-  border: 1px solid #fff;
+  border: 1px solid #001C54;
 }
 .select2-container--default
   .select2-light
@@ -1303,7 +1303,7 @@ select.form-control-sm
 }
 .select2-container--default .select2-light .select2-selection--multiple:focus,
 .select2-light .select2-container--default .select2-selection--multiple:focus {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-container--default
   .select2-light
@@ -1343,7 +1343,7 @@ select.form-control-sm
 .select2-light
   .select2-container--default.select2-container--focus
   .select2-selection--multiple {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-dark
   + .select2-container--default.select2-container--open
@@ -1384,7 +1384,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-dark
@@ -1399,7 +1399,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #2d3238;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-dark .select2-selection--multiple:focus,
 .select2-dark .select2-container--default .select2-selection--multiple:focus {
@@ -1415,7 +1415,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #343a40;
   border-color: #292d32;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-dark
@@ -1435,7 +1435,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-dark.select2-container--focus
@@ -1486,7 +1486,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #3c8dbc;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-lightblue
@@ -1501,7 +1501,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #3884b0;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-lightblue
@@ -1521,7 +1521,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #3c8dbc;
   border-color: #367fa9;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-lightblue
@@ -1541,7 +1541,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-lightblue.select2-container--focus
@@ -1590,7 +1590,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #001f3f;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-navy
@@ -1605,7 +1605,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #001730;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-navy .select2-selection--multiple:focus,
 .select2-navy .select2-container--default .select2-selection--multiple:focus {
@@ -1621,7 +1621,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #001f3f;
   border-color: #001226;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-navy
@@ -1641,7 +1641,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-navy.select2-container--focus
@@ -1692,7 +1692,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #3d9970;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-olive
@@ -1707,7 +1707,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #398e68;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-olive .select2-selection--multiple:focus,
 .select2-olive .select2-container--default .select2-selection--multiple:focus {
@@ -1723,7 +1723,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #3d9970;
   border-color: #368763;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-olive
@@ -1743,7 +1743,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-olive.select2-container--focus
@@ -1894,7 +1894,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #f012be;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-fuchsia
@@ -1909,7 +1909,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #e40eb4;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-fuchsia .select2-selection--multiple:focus,
 .select2-fuchsia
@@ -1927,7 +1927,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #f012be;
   border-color: #db0ead;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-fuchsia
@@ -1947,7 +1947,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-fuchsia.select2-container--focus
@@ -1998,7 +1998,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #d81b60;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-maroon
@@ -2013,7 +2013,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #ca195a;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-maroon .select2-selection--multiple:focus,
 .select2-maroon .select2-container--default .select2-selection--multiple:focus {
@@ -2029,7 +2029,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #d81b60;
   border-color: #c11856;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-maroon
@@ -2049,7 +2049,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-maroon.select2-container--focus
@@ -2098,7 +2098,7 @@ select.form-control-sm
   .select2-blue
   .select2-results__option--highlighted {
   background-color: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 .select2-blue
   .select2-container--default
@@ -2113,7 +2113,7 @@ select.form-control-sm
   .select2-blue
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #0074f0;
-  color: #fff;
+  color: #001C54;
 }
 .select2-blue .select2-container--default .select2-selection--multiple:focus,
 .select2-container--default .select2-blue .select2-selection--multiple:focus {
@@ -2129,7 +2129,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #007bff;
   border-color: #006fe6;
-  color: #fff;
+  color: #001C54;
 }
 .select2-blue
   .select2-container--default
@@ -2149,7 +2149,7 @@ select.form-control-sm
   .select2-blue
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-blue
   .select2-container--default.select2-container--focus
@@ -2200,7 +2200,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #6610f2;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-indigo
@@ -2215,7 +2215,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #5f0de6;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-indigo .select2-selection--multiple:focus,
 .select2-indigo .select2-container--default .select2-selection--multiple:focus {
@@ -2231,7 +2231,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6610f2;
   border-color: #5b0cdd;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-indigo
@@ -2251,7 +2251,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-indigo.select2-container--focus
@@ -2302,7 +2302,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #6f42c1;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-purple
@@ -2317,7 +2317,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #683cb8;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-purple .select2-selection--multiple:focus,
 .select2-purple .select2-container--default .select2-selection--multiple:focus {
@@ -2333,7 +2333,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6f42c1;
   border-color: #643ab0;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-purple
@@ -2353,7 +2353,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-purple.select2-container--focus
@@ -2402,7 +2402,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #e83e8c;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-pink
@@ -2417,7 +2417,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #e63084;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-pink .select2-selection--multiple:focus,
 .select2-pink .select2-container--default .select2-selection--multiple:focus {
@@ -2433,7 +2433,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #e83e8c;
   border-color: #e5277e;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-pink
@@ -2453,7 +2453,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-pink.select2-container--focus
@@ -2500,7 +2500,7 @@ select.form-control-sm
 .select2-container--default .select2-red .select2-results__option--highlighted,
 .select2-red .select2-container--default .select2-results__option--highlighted {
   background-color: #dc3545;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-red
@@ -2515,7 +2515,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #da2839;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-red .select2-selection--multiple:focus,
 .select2-red .select2-container--default .select2-selection--multiple:focus {
@@ -2531,7 +2531,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #dc3545;
   border-color: #d32535;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-red
@@ -2551,7 +2551,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-red.select2-container--focus
@@ -2617,7 +2617,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #fd7605;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-orange .select2-selection--multiple:focus,
 .select2-orange .select2-container--default .select2-selection--multiple:focus {
@@ -2806,7 +2806,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #28a745;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-green
@@ -2821,7 +2821,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #259b40;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-green .select2-selection--multiple:focus,
 .select2-green .select2-container--default .select2-selection--multiple:focus {
@@ -2837,7 +2837,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #28a745;
   border-color: #23923d;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-green
@@ -2857,7 +2857,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-green.select2-container--focus
@@ -2906,7 +2906,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #20c997;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-teal
@@ -2921,7 +2921,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #1ebc8d;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-teal .select2-selection--multiple:focus,
 .select2-teal .select2-container--default .select2-selection--multiple:focus {
@@ -2937,7 +2937,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #20c997;
   border-color: #1cb386;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-teal
@@ -2957,7 +2957,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-teal.select2-container--focus
@@ -3006,7 +3006,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #17a2b8;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-cyan
@@ -3021,7 +3021,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #1596aa;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-cyan .select2-selection--multiple:focus,
 .select2-cyan .select2-container--default .select2-selection--multiple:focus {
@@ -3037,7 +3037,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #17a2b8;
   border-color: #148ea1;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-cyan
@@ -3057,7 +3057,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-cyan.select2-container--focus
@@ -3070,12 +3070,12 @@ select.form-control-sm
 .select2-white
   + .select2-container--default.select2-container--open
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-white
   + .select2-container--default.select2-container--focus
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-container--default
   .select2-white
@@ -3099,7 +3099,7 @@ select.form-control-sm
 .select2-white
   .select2-container--default.select2-dropdown
   .select2-search__field:focus {
-  border: 1px solid #fff;
+  border: 1px solid #001C54;
 }
 .select2-container--default
   .select2-white
@@ -3107,7 +3107,7 @@ select.form-control-sm
 .select2-white
   .select2-container--default
   .select2-results__option--highlighted {
-  background-color: #fff;
+  background-color: #001C54;
   color: #1f2d3d;
 }
 .select2-container--default
@@ -3127,7 +3127,7 @@ select.form-control-sm
 }
 .select2-container--default .select2-white .select2-selection--multiple:focus,
 .select2-white .select2-container--default .select2-selection--multiple:focus {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-container--default
   .select2-white
@@ -3137,7 +3137,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice {
-  background-color: #fff;
+  background-color: #001C54;
   border-color: #f2f2f2;
   color: #1f2d3d;
 }
@@ -3167,7 +3167,7 @@ select.form-control-sm
 .select2-white
   .select2-container--default.select2-container--focus
   .select2-selection--multiple {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .select2-gray
   + .select2-container--default.select2-container--open
@@ -3208,7 +3208,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray
@@ -3223,7 +3223,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #656d75;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default .select2-gray .select2-selection--multiple:focus,
 .select2-gray .select2-container--default .select2-selection--multiple:focus {
@@ -3239,7 +3239,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6c757d;
   border-color: #60686f;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray
@@ -3259,7 +3259,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray.select2-container--focus
@@ -3310,7 +3310,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray-dark
@@ -3325,7 +3325,7 @@ select.form-control-sm
   .select2-container--default
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #2d3238;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray-dark
@@ -3345,7 +3345,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #343a40;
   border-color: #292d32;
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray-dark
@@ -3365,7 +3365,7 @@ select.form-control-sm
   .select2-container--default
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .select2-container--default
   .select2-gray-dark.select2-container--focus
@@ -3387,18 +3387,18 @@ select.form-control-sm
   border-color: #6c757d;
 }
 .dark-mode .select2-selection--single .select2-selection__rendered {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .select2-dropdown .select2-search__field,
 .dark-mode .select2-search--inline .select2-search__field {
   background-color: #343a40;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .select2-dropdown {
   background-color: #343a40;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .select2-results__option[aria-selected="true"] {
   background-color: #3f474e !important;
@@ -3406,13 +3406,13 @@ select.form-control-sm
 }
 .dark-mode .select2-container .select2-search--inline .select2-search__field {
   background-color: transparent;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-container--bootstrap4
   .select2-selection--multiple
   .select2-selection__choice {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-primary
@@ -3465,7 +3465,7 @@ select.form-control-sm
   .select2-primary
   .select2-results__option--highlighted {
   background-color: #3f6791;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-primary
@@ -3484,7 +3484,7 @@ select.form-control-sm
   .select2-primary
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #3a5f86;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-primary
@@ -3508,7 +3508,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #3f6791;
   border-color: #375a7f;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-primary
@@ -3532,7 +3532,7 @@ select.form-control-sm
   .select2-primary
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-primary
@@ -3595,7 +3595,7 @@ select.form-control-sm
   .select2-secondary
   .select2-results__option--highlighted {
   background-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-secondary
@@ -3614,7 +3614,7 @@ select.form-control-sm
   .select2-secondary
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #656d75;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-secondary
@@ -3638,7 +3638,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6c757d;
   border-color: #60686f;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-secondary
@@ -3662,7 +3662,7 @@ select.form-control-sm
   .select2-secondary
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-secondary
@@ -3725,7 +3725,7 @@ select.form-control-sm
   .select2-success
   .select2-results__option--highlighted {
   background-color: #00bc8c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-success
@@ -3744,7 +3744,7 @@ select.form-control-sm
   .select2-success
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #00ad81;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-success
@@ -3768,7 +3768,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #00bc8c;
   border-color: #00a379;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-success
@@ -3792,7 +3792,7 @@ select.form-control-sm
   .select2-success
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-success
@@ -3855,7 +3855,7 @@ select.form-control-sm
   .select2-info
   .select2-results__option--highlighted {
   background-color: #3498db;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-info
@@ -3874,7 +3874,7 @@ select.form-control-sm
   .select2-info
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #2791d9;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-info
@@ -3898,7 +3898,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #3498db;
   border-color: #258cd1;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-info
@@ -3922,7 +3922,7 @@ select.form-control-sm
   .select2-info
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-info
@@ -4115,7 +4115,7 @@ select.form-control-sm
   .select2-danger
   .select2-results__option--highlighted {
   background-color: #e74c3c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-danger
@@ -4134,7 +4134,7 @@ select.form-control-sm
   .select2-danger
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #e53f2e;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-danger
@@ -4158,7 +4158,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #e74c3c;
   border-color: #e43725;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-danger
@@ -4182,7 +4182,7 @@ select.form-control-sm
   .select2-danger
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-danger
@@ -4198,13 +4198,13 @@ select.form-control-sm
   .select2-light
   + .select2-container--default.select2-container--open
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-light
   + .select2-container--default.select2-container--focus
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-light
@@ -4234,7 +4234,7 @@ select.form-control-sm
   .dark-mode
   .select2-light.select2-dropdown
   .select2-search__field:focus {
-  border: 1px solid #fff;
+  border: 1px solid #001C54;
 }
 .dark-mode
   .select2-light
@@ -4274,7 +4274,7 @@ select.form-control-sm
   .dark-mode
   .select2-light
   .select2-selection--multiple:focus {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-light
@@ -4322,7 +4322,7 @@ select.form-control-sm
   .dark-mode
   .select2-light.select2-container--focus
   .select2-selection--multiple {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-dark
@@ -4375,7 +4375,7 @@ select.form-control-sm
   .select2-dark
   .select2-results__option--highlighted {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-dark
@@ -4394,7 +4394,7 @@ select.form-control-sm
   .select2-dark
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #2d3238;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-dark
@@ -4418,7 +4418,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #343a40;
   border-color: #292d32;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-dark
@@ -4442,7 +4442,7 @@ select.form-control-sm
   .select2-dark
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-dark
@@ -4635,7 +4635,7 @@ select.form-control-sm
   .select2-navy
   .select2-results__option--highlighted {
   background-color: #002c59;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-navy
@@ -4654,7 +4654,7 @@ select.form-control-sm
   .select2-navy
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #002449;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-navy
@@ -4678,7 +4678,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #002c59;
   border-color: #001f3f;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-navy
@@ -4702,7 +4702,7 @@ select.form-control-sm
   .select2-navy
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-navy
@@ -5174,7 +5174,7 @@ select.form-control-sm
   .select2-maroon
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #eb5f92;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-maroon
@@ -5285,7 +5285,7 @@ select.form-control-sm
   .select2-blue
   .select2-results__option--highlighted {
   background-color: #3f6791;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-blue
@@ -5304,7 +5304,7 @@ select.form-control-sm
   .select2-blue
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #3a5f86;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-blue
@@ -5328,7 +5328,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #3f6791;
   border-color: #375a7f;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-blue
@@ -5352,7 +5352,7 @@ select.form-control-sm
   .select2-blue
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-blue
@@ -5415,7 +5415,7 @@ select.form-control-sm
   .select2-indigo
   .select2-results__option--highlighted {
   background-color: #6610f2;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-indigo
@@ -5434,7 +5434,7 @@ select.form-control-sm
   .select2-indigo
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #5f0de6;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-indigo
@@ -5458,7 +5458,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6610f2;
   border-color: #5b0cdd;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-indigo
@@ -5482,7 +5482,7 @@ select.form-control-sm
   .select2-indigo
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-indigo
@@ -5545,7 +5545,7 @@ select.form-control-sm
   .select2-purple
   .select2-results__option--highlighted {
   background-color: #6f42c1;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-purple
@@ -5564,7 +5564,7 @@ select.form-control-sm
   .select2-purple
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #683cb8;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-purple
@@ -5588,7 +5588,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6f42c1;
   border-color: #643ab0;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-purple
@@ -5612,7 +5612,7 @@ select.form-control-sm
   .select2-purple
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-purple
@@ -5675,7 +5675,7 @@ select.form-control-sm
   .select2-pink
   .select2-results__option--highlighted {
   background-color: #e83e8c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-pink
@@ -5694,7 +5694,7 @@ select.form-control-sm
   .select2-pink
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #e63084;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-pink
@@ -5718,7 +5718,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #e83e8c;
   border-color: #e5277e;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-pink
@@ -5742,7 +5742,7 @@ select.form-control-sm
   .select2-pink
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-pink
@@ -5805,7 +5805,7 @@ select.form-control-sm
   .select2-red
   .select2-results__option--highlighted {
   background-color: #e74c3c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-red
@@ -5824,7 +5824,7 @@ select.form-control-sm
   .select2-red
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #e53f2e;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-red
@@ -5848,7 +5848,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #e74c3c;
   border-color: #e43725;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-red
@@ -5872,7 +5872,7 @@ select.form-control-sm
   .select2-red
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-red
@@ -5954,7 +5954,7 @@ select.form-control-sm
   .select2-orange
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #fd7605;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-orange
@@ -6195,7 +6195,7 @@ select.form-control-sm
   .select2-green
   .select2-results__option--highlighted {
   background-color: #00bc8c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-green
@@ -6214,7 +6214,7 @@ select.form-control-sm
   .select2-green
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #00ad81;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-green
@@ -6238,7 +6238,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #00bc8c;
   border-color: #00a379;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-green
@@ -6262,7 +6262,7 @@ select.form-control-sm
   .select2-green
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-green
@@ -6325,7 +6325,7 @@ select.form-control-sm
   .select2-teal
   .select2-results__option--highlighted {
   background-color: #20c997;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-teal
@@ -6344,7 +6344,7 @@ select.form-control-sm
   .select2-teal
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #1ebc8d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-teal
@@ -6368,7 +6368,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #20c997;
   border-color: #1cb386;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-teal
@@ -6392,7 +6392,7 @@ select.form-control-sm
   .select2-teal
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-teal
@@ -6455,7 +6455,7 @@ select.form-control-sm
   .select2-cyan
   .select2-results__option--highlighted {
   background-color: #3498db;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-cyan
@@ -6474,7 +6474,7 @@ select.form-control-sm
   .select2-cyan
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #2791d9;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-cyan
@@ -6498,7 +6498,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #3498db;
   border-color: #258cd1;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-cyan
@@ -6522,7 +6522,7 @@ select.form-control-sm
   .select2-cyan
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-cyan
@@ -6538,13 +6538,13 @@ select.form-control-sm
   .select2-white
   + .select2-container--default.select2-container--open
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-white
   + .select2-container--default.select2-container--focus
   .select2-selection--single {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-white
@@ -6574,7 +6574,7 @@ select.form-control-sm
   .dark-mode
   .select2-white.select2-dropdown
   .select2-search__field:focus {
-  border: 1px solid #fff;
+  border: 1px solid #001C54;
 }
 .dark-mode
   .select2-white
@@ -6584,7 +6584,7 @@ select.form-control-sm
   .dark-mode
   .select2-white
   .select2-results__option--highlighted {
-  background-color: #fff;
+  background-color: #001C54;
   color: #1f2d3d;
 }
 .dark-mode
@@ -6614,7 +6614,7 @@ select.form-control-sm
   .dark-mode
   .select2-white
   .select2-selection--multiple:focus {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-white
@@ -6626,7 +6626,7 @@ select.form-control-sm
   .select2-white
   .select2-selection--multiple
   .select2-selection__choice {
-  background-color: #fff;
+  background-color: #001C54;
   border-color: #f2f2f2;
   color: #1f2d3d;
 }
@@ -6662,7 +6662,7 @@ select.form-control-sm
   .dark-mode
   .select2-white.select2-container--focus
   .select2-selection--multiple {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .select2-gray
@@ -6715,7 +6715,7 @@ select.form-control-sm
   .select2-gray
   .select2-results__option--highlighted {
   background-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray
@@ -6734,7 +6734,7 @@ select.form-control-sm
   .select2-gray
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #656d75;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray
@@ -6758,7 +6758,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #6c757d;
   border-color: #60686f;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray
@@ -6782,7 +6782,7 @@ select.form-control-sm
   .select2-gray
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray
@@ -6845,7 +6845,7 @@ select.form-control-sm
   .select2-gray-dark
   .select2-results__option--highlighted {
   background-color: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray-dark
@@ -6864,7 +6864,7 @@ select.form-control-sm
   .select2-gray-dark
   .select2-results__option--highlighted[aria-selected]:hover {
   background-color: #2d3238;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray-dark
@@ -6888,7 +6888,7 @@ select.form-control-sm
   .select2-selection__choice {
   background-color: #343a40;
   border-color: #292d32;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray-dark
@@ -6912,7 +6912,7 @@ select.form-control-sm
   .select2-gray-dark
   .select2-selection--multiple
   .select2-selection__choice__remove:hover {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .select2-gray-dark
@@ -7006,7 +7006,7 @@ select.form-control-sm
   background: #17a2b8;
 }
 .slider-white .slider .slider-selection {
-  background: #fff;
+  background: #001C54;
 }
 .slider-gray .slider .slider-selection {
   background: #6c757d;
@@ -7091,7 +7091,7 @@ select.form-control-sm
   background: #3498db;
 }
 .dark-mode .slider-white .slider .slider-selection {
-  background: #fff;
+  background: #001C54;
 }
 .dark-mode .slider-gray .slider .slider-selection {
   background: #6c757d;
@@ -7703,7 +7703,7 @@ select.form-control-sm
 .icheck-white
   > input:first-child:not(:checked):not(:disabled):hover
   + label::before {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .icheck-white
   > input:first-child:not(:checked):not(:disabled):focus
@@ -7712,15 +7712,15 @@ select.form-control-sm
 .icheck-white
   > input:first-child:not(:checked):not(:disabled):focus
   + label::before {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .icheck-white
   > input:first-child:checked
   + input[type="hidden"]
   + label::before,
 .icheck-white > input:first-child:checked + label::before {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #001C54;
+  border-color: #001C54;
 }
 .icheck-gray
   > input:first-child:not(:checked):not(:disabled):hover
@@ -8535,7 +8535,7 @@ select.form-control-sm
   .icheck-white
   > input:first-child:not(:checked):not(:disabled):hover
   + label::before {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .icheck-white
@@ -8546,7 +8546,7 @@ select.form-control-sm
   .icheck-white
   > input:first-child:not(:checked):not(:disabled):focus
   + label::before {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode
   .icheck-white
@@ -8554,8 +8554,8 @@ select.form-control-sm
   + input[type="hidden"]
   + label::before,
 .dark-mode .icheck-white > input:first-child:checked + label::before {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #001C54;
+  border-color: #001C54;
 }
 .dark-mode
   .icheck-gray
@@ -8650,8 +8650,8 @@ select.form-control-sm
   line-break: auto;
   border-radius: 0.25rem;
   font-size: 0.875rem;
-  background-color: #000;
-  color: #fff;
+  background-color: #e3efff;
+  color: #001C54;
   display: block;
   max-width: 200px;
   padding: 0.25rem 0.5rem;
@@ -8787,7 +8787,7 @@ select.form-control-sm
   background: #007bff;
 }
 .pace-barber-shop-primary .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-primary .pace .pace-progress {
   background: #007bff;
@@ -8816,7 +8816,7 @@ select.form-control-sm
 }
 .pace-center-atom-primary .pace-progress::before {
   background: #007bff;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -8830,7 +8830,7 @@ select.form-control-sm
 }
 .pace-center-circle-primary .pace .pace-progress {
   background: rgba(0, 123, 255, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-primary .pace .pace-activity {
   border-color: #007bff transparent transparent;
@@ -8839,7 +8839,7 @@ select.form-control-sm
   border-color: #007bff transparent transparent;
 }
 .pace-center-simple-primary .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #007bff;
 }
 .pace-center-simple-primary .pace .pace-progress {
@@ -8853,7 +8853,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-primary .pace .pace-activity::after,
 .pace-corner-indicator-primary .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-primary .pace .pace-activity::before {
   border-right-color: rgba(0, 123, 255, 0.2);
@@ -8882,13 +8882,13 @@ select.form-control-sm
   background: #007bff;
   color: #007bff;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-primary .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #007bff,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-primary .pace .pace-progress {
   background-color: #007bff;
@@ -8912,7 +8912,7 @@ select.form-control-sm
   background: #6c757d;
 }
 .pace-barber-shop-secondary .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-secondary .pace .pace-progress {
   background: #6c757d;
@@ -8941,7 +8941,7 @@ select.form-control-sm
 }
 .pace-center-atom-secondary .pace-progress::before {
   background: #6c757d;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -8955,7 +8955,7 @@ select.form-control-sm
 }
 .pace-center-circle-secondary .pace .pace-progress {
   background: rgba(108, 117, 125, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-secondary .pace .pace-activity {
   border-color: #6c757d transparent transparent;
@@ -8964,7 +8964,7 @@ select.form-control-sm
   border-color: #6c757d transparent transparent;
 }
 .pace-center-simple-secondary .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #6c757d;
 }
 .pace-center-simple-secondary .pace .pace-progress {
@@ -8978,7 +8978,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-secondary .pace .pace-activity::after,
 .pace-corner-indicator-secondary .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-secondary .pace .pace-activity::before {
   border-right-color: rgba(108, 117, 125, 0.2);
@@ -9007,13 +9007,13 @@ select.form-control-sm
   background: #6c757d;
   color: #6c757d;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-secondary .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #6c757d,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-secondary .pace .pace-progress {
   background-color: #6c757d;
@@ -9037,7 +9037,7 @@ select.form-control-sm
   background: #28a745;
 }
 .pace-barber-shop-success .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-success .pace .pace-progress {
   background: #28a745;
@@ -9066,7 +9066,7 @@ select.form-control-sm
 }
 .pace-center-atom-success .pace-progress::before {
   background: #28a745;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -9080,7 +9080,7 @@ select.form-control-sm
 }
 .pace-center-circle-success .pace .pace-progress {
   background: rgba(40, 167, 69, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-success .pace .pace-activity {
   border-color: #28a745 transparent transparent;
@@ -9089,7 +9089,7 @@ select.form-control-sm
   border-color: #28a745 transparent transparent;
 }
 .pace-center-simple-success .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #28a745;
 }
 .pace-center-simple-success .pace .pace-progress {
@@ -9103,7 +9103,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-success .pace .pace-activity::after,
 .pace-corner-indicator-success .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-success .pace .pace-activity::before {
   border-right-color: rgba(40, 167, 69, 0.2);
@@ -9132,13 +9132,13 @@ select.form-control-sm
   background: #28a745;
   color: #28a745;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-success .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #28a745,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-success .pace .pace-progress {
   background-color: #28a745;
@@ -9162,7 +9162,7 @@ select.form-control-sm
   background: #17a2b8;
 }
 .pace-barber-shop-info .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-info .pace .pace-progress {
   background: #17a2b8;
@@ -9191,7 +9191,7 @@ select.form-control-sm
 }
 .pace-center-atom-info .pace-progress::before {
   background: #17a2b8;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -9205,7 +9205,7 @@ select.form-control-sm
 }
 .pace-center-circle-info .pace .pace-progress {
   background: rgba(23, 162, 184, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-info .pace .pace-activity {
   border-color: #17a2b8 transparent transparent;
@@ -9214,7 +9214,7 @@ select.form-control-sm
   border-color: #17a2b8 transparent transparent;
 }
 .pace-center-simple-info .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #17a2b8;
 }
 .pace-center-simple-info .pace .pace-progress {
@@ -9228,7 +9228,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-info .pace .pace-activity::after,
 .pace-corner-indicator-info .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-info .pace .pace-activity::before {
   border-right-color: rgba(23, 162, 184, 0.2);
@@ -9257,13 +9257,13 @@ select.form-control-sm
   background: #17a2b8;
   color: #17a2b8;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-info .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #17a2b8,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-info .pace .pace-progress {
   background-color: #17a2b8;
@@ -9412,7 +9412,7 @@ select.form-control-sm
   background: #dc3545;
 }
 .pace-barber-shop-danger .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-danger .pace .pace-progress {
   background: #dc3545;
@@ -9441,7 +9441,7 @@ select.form-control-sm
 }
 .pace-center-atom-danger .pace-progress::before {
   background: #dc3545;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -9455,7 +9455,7 @@ select.form-control-sm
 }
 .pace-center-circle-danger .pace .pace-progress {
   background: rgba(220, 53, 69, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-danger .pace .pace-activity {
   border-color: #dc3545 transparent transparent;
@@ -9464,7 +9464,7 @@ select.form-control-sm
   border-color: #dc3545 transparent transparent;
 }
 .pace-center-simple-danger .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #dc3545;
 }
 .pace-center-simple-danger .pace .pace-progress {
@@ -9478,7 +9478,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-danger .pace .pace-activity::after,
 .pace-corner-indicator-danger .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-danger .pace .pace-activity::before {
   border-right-color: rgba(220, 53, 69, 0.2);
@@ -9507,13 +9507,13 @@ select.form-control-sm
   background: #dc3545;
   color: #dc3545;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-danger .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #dc3545,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-danger .pace .pace-progress {
   background-color: #dc3545;
@@ -9662,7 +9662,7 @@ select.form-control-sm
   background: #343a40;
 }
 .pace-barber-shop-dark .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-dark .pace .pace-progress {
   background: #343a40;
@@ -9691,7 +9691,7 @@ select.form-control-sm
 }
 .pace-center-atom-dark .pace-progress::before {
   background: #343a40;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -9705,7 +9705,7 @@ select.form-control-sm
 }
 .pace-center-circle-dark .pace .pace-progress {
   background: rgba(52, 58, 64, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-dark .pace .pace-activity {
   border-color: #343a40 transparent transparent;
@@ -9714,7 +9714,7 @@ select.form-control-sm
   border-color: #343a40 transparent transparent;
 }
 .pace-center-simple-dark .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #343a40;
 }
 .pace-center-simple-dark .pace .pace-progress {
@@ -9728,7 +9728,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-dark .pace .pace-activity::after,
 .pace-corner-indicator-dark .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-dark .pace .pace-activity::before {
   border-right-color: rgba(52, 58, 64, 0.2);
@@ -9757,13 +9757,13 @@ select.form-control-sm
   background: #343a40;
   color: #343a40;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-dark .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #343a40,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-dark .pace .pace-progress {
   background-color: #343a40;
@@ -9787,7 +9787,7 @@ select.form-control-sm
   background: #3c8dbc;
 }
 .pace-barber-shop-lightblue .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-lightblue .pace .pace-progress {
   background: #3c8dbc;
@@ -9816,7 +9816,7 @@ select.form-control-sm
 }
 .pace-center-atom-lightblue .pace-progress::before {
   background: #3c8dbc;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -9830,7 +9830,7 @@ select.form-control-sm
 }
 .pace-center-circle-lightblue .pace .pace-progress {
   background: rgba(60, 141, 188, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-lightblue .pace .pace-activity {
   border-color: #3c8dbc transparent transparent;
@@ -9839,7 +9839,7 @@ select.form-control-sm
   border-color: #3c8dbc transparent transparent;
 }
 .pace-center-simple-lightblue .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #3c8dbc;
 }
 .pace-center-simple-lightblue .pace .pace-progress {
@@ -9853,7 +9853,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-lightblue .pace .pace-activity::after,
 .pace-corner-indicator-lightblue .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-lightblue .pace .pace-activity::before {
   border-right-color: rgba(60, 141, 188, 0.2);
@@ -9882,13 +9882,13 @@ select.form-control-sm
   background: #3c8dbc;
   color: #3c8dbc;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-lightblue .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #3c8dbc,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-lightblue .pace .pace-progress {
   background-color: #3c8dbc;
@@ -9912,7 +9912,7 @@ select.form-control-sm
   background: #001f3f;
 }
 .pace-barber-shop-navy .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-navy .pace .pace-progress {
   background: #001f3f;
@@ -9941,7 +9941,7 @@ select.form-control-sm
 }
 .pace-center-atom-navy .pace-progress::before {
   background: #001f3f;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -9955,7 +9955,7 @@ select.form-control-sm
 }
 .pace-center-circle-navy .pace .pace-progress {
   background: rgba(0, 31, 63, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-navy .pace .pace-activity {
   border-color: #001f3f transparent transparent;
@@ -9964,7 +9964,7 @@ select.form-control-sm
   border-color: #001f3f transparent transparent;
 }
 .pace-center-simple-navy .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #001f3f;
 }
 .pace-center-simple-navy .pace .pace-progress {
@@ -9978,7 +9978,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-navy .pace .pace-activity::after,
 .pace-corner-indicator-navy .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-navy .pace .pace-activity::before {
   border-right-color: rgba(0, 31, 63, 0.2);
@@ -10007,13 +10007,13 @@ select.form-control-sm
   background: #001f3f;
   color: #001f3f;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-navy .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #001f3f,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-navy .pace .pace-progress {
   background-color: #001f3f;
@@ -10037,7 +10037,7 @@ select.form-control-sm
   background: #3d9970;
 }
 .pace-barber-shop-olive .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-olive .pace .pace-progress {
   background: #3d9970;
@@ -10066,7 +10066,7 @@ select.form-control-sm
 }
 .pace-center-atom-olive .pace-progress::before {
   background: #3d9970;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10080,7 +10080,7 @@ select.form-control-sm
 }
 .pace-center-circle-olive .pace .pace-progress {
   background: rgba(61, 153, 112, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-olive .pace .pace-activity {
   border-color: #3d9970 transparent transparent;
@@ -10089,7 +10089,7 @@ select.form-control-sm
   border-color: #3d9970 transparent transparent;
 }
 .pace-center-simple-olive .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #3d9970;
 }
 .pace-center-simple-olive .pace .pace-progress {
@@ -10103,7 +10103,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-olive .pace .pace-activity::after,
 .pace-corner-indicator-olive .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-olive .pace .pace-activity::before {
   border-right-color: rgba(61, 153, 112, 0.2);
@@ -10132,13 +10132,13 @@ select.form-control-sm
   background: #3d9970;
   color: #3d9970;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-olive .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #3d9970,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-olive .pace .pace-progress {
   background-color: #3d9970;
@@ -10287,7 +10287,7 @@ select.form-control-sm
   background: #f012be;
 }
 .pace-barber-shop-fuchsia .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-fuchsia .pace .pace-progress {
   background: #f012be;
@@ -10316,7 +10316,7 @@ select.form-control-sm
 }
 .pace-center-atom-fuchsia .pace-progress::before {
   background: #f012be;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10330,7 +10330,7 @@ select.form-control-sm
 }
 .pace-center-circle-fuchsia .pace .pace-progress {
   background: rgba(240, 18, 190, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-fuchsia .pace .pace-activity {
   border-color: #f012be transparent transparent;
@@ -10339,7 +10339,7 @@ select.form-control-sm
   border-color: #f012be transparent transparent;
 }
 .pace-center-simple-fuchsia .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #f012be;
 }
 .pace-center-simple-fuchsia .pace .pace-progress {
@@ -10353,7 +10353,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-fuchsia .pace .pace-activity::after,
 .pace-corner-indicator-fuchsia .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-fuchsia .pace .pace-activity::before {
   border-right-color: rgba(240, 18, 190, 0.2);
@@ -10382,13 +10382,13 @@ select.form-control-sm
   background: #f012be;
   color: #f012be;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-fuchsia .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #f012be,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-fuchsia .pace .pace-progress {
   background-color: #f012be;
@@ -10412,7 +10412,7 @@ select.form-control-sm
   background: #d81b60;
 }
 .pace-barber-shop-maroon .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-maroon .pace .pace-progress {
   background: #d81b60;
@@ -10441,7 +10441,7 @@ select.form-control-sm
 }
 .pace-center-atom-maroon .pace-progress::before {
   background: #d81b60;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10455,7 +10455,7 @@ select.form-control-sm
 }
 .pace-center-circle-maroon .pace .pace-progress {
   background: rgba(216, 27, 96, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-maroon .pace .pace-activity {
   border-color: #d81b60 transparent transparent;
@@ -10464,7 +10464,7 @@ select.form-control-sm
   border-color: #d81b60 transparent transparent;
 }
 .pace-center-simple-maroon .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #d81b60;
 }
 .pace-center-simple-maroon .pace .pace-progress {
@@ -10478,7 +10478,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-maroon .pace .pace-activity::after,
 .pace-corner-indicator-maroon .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-maroon .pace .pace-activity::before {
   border-right-color: rgba(216, 27, 96, 0.2);
@@ -10507,13 +10507,13 @@ select.form-control-sm
   background: #d81b60;
   color: #d81b60;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-maroon .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #d81b60,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-maroon .pace .pace-progress {
   background-color: #d81b60;
@@ -10537,7 +10537,7 @@ select.form-control-sm
   background: #007bff;
 }
 .pace-barber-shop-blue .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-blue .pace .pace-progress {
   background: #007bff;
@@ -10566,7 +10566,7 @@ select.form-control-sm
 }
 .pace-center-atom-blue .pace-progress::before {
   background: #007bff;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10580,7 +10580,7 @@ select.form-control-sm
 }
 .pace-center-circle-blue .pace .pace-progress {
   background: rgba(0, 123, 255, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-blue .pace .pace-activity {
   border-color: #007bff transparent transparent;
@@ -10589,7 +10589,7 @@ select.form-control-sm
   border-color: #007bff transparent transparent;
 }
 .pace-center-simple-blue .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #007bff;
 }
 .pace-center-simple-blue .pace .pace-progress {
@@ -10603,7 +10603,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-blue .pace .pace-activity::after,
 .pace-corner-indicator-blue .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-blue .pace .pace-activity::before {
   border-right-color: rgba(0, 123, 255, 0.2);
@@ -10632,13 +10632,13 @@ select.form-control-sm
   background: #007bff;
   color: #007bff;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-blue .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #007bff,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-blue .pace .pace-progress {
   background-color: #007bff;
@@ -10662,7 +10662,7 @@ select.form-control-sm
   background: #6610f2;
 }
 .pace-barber-shop-indigo .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-indigo .pace .pace-progress {
   background: #6610f2;
@@ -10691,7 +10691,7 @@ select.form-control-sm
 }
 .pace-center-atom-indigo .pace-progress::before {
   background: #6610f2;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10705,7 +10705,7 @@ select.form-control-sm
 }
 .pace-center-circle-indigo .pace .pace-progress {
   background: rgba(102, 16, 242, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-indigo .pace .pace-activity {
   border-color: #6610f2 transparent transparent;
@@ -10714,7 +10714,7 @@ select.form-control-sm
   border-color: #6610f2 transparent transparent;
 }
 .pace-center-simple-indigo .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #6610f2;
 }
 .pace-center-simple-indigo .pace .pace-progress {
@@ -10728,7 +10728,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-indigo .pace .pace-activity::after,
 .pace-corner-indicator-indigo .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-indigo .pace .pace-activity::before {
   border-right-color: rgba(102, 16, 242, 0.2);
@@ -10757,13 +10757,13 @@ select.form-control-sm
   background: #6610f2;
   color: #6610f2;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-indigo .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #6610f2,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-indigo .pace .pace-progress {
   background-color: #6610f2;
@@ -10787,7 +10787,7 @@ select.form-control-sm
   background: #6f42c1;
 }
 .pace-barber-shop-purple .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-purple .pace .pace-progress {
   background: #6f42c1;
@@ -10816,7 +10816,7 @@ select.form-control-sm
 }
 .pace-center-atom-purple .pace-progress::before {
   background: #6f42c1;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10830,7 +10830,7 @@ select.form-control-sm
 }
 .pace-center-circle-purple .pace .pace-progress {
   background: rgba(111, 66, 193, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-purple .pace .pace-activity {
   border-color: #6f42c1 transparent transparent;
@@ -10839,7 +10839,7 @@ select.form-control-sm
   border-color: #6f42c1 transparent transparent;
 }
 .pace-center-simple-purple .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #6f42c1;
 }
 .pace-center-simple-purple .pace .pace-progress {
@@ -10853,7 +10853,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-purple .pace .pace-activity::after,
 .pace-corner-indicator-purple .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-purple .pace .pace-activity::before {
   border-right-color: rgba(111, 66, 193, 0.2);
@@ -10882,13 +10882,13 @@ select.form-control-sm
   background: #6f42c1;
   color: #6f42c1;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-purple .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #6f42c1,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-purple .pace .pace-progress {
   background-color: #6f42c1;
@@ -10912,7 +10912,7 @@ select.form-control-sm
   background: #e83e8c;
 }
 .pace-barber-shop-pink .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-pink .pace .pace-progress {
   background: #e83e8c;
@@ -10941,7 +10941,7 @@ select.form-control-sm
 }
 .pace-center-atom-pink .pace-progress::before {
   background: #e83e8c;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -10955,7 +10955,7 @@ select.form-control-sm
 }
 .pace-center-circle-pink .pace .pace-progress {
   background: rgba(232, 62, 140, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-pink .pace .pace-activity {
   border-color: #e83e8c transparent transparent;
@@ -10964,7 +10964,7 @@ select.form-control-sm
   border-color: #e83e8c transparent transparent;
 }
 .pace-center-simple-pink .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #e83e8c;
 }
 .pace-center-simple-pink .pace .pace-progress {
@@ -10978,7 +10978,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-pink .pace .pace-activity::after,
 .pace-corner-indicator-pink .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-pink .pace .pace-activity::before {
   border-right-color: rgba(232, 62, 140, 0.2);
@@ -11007,13 +11007,13 @@ select.form-control-sm
   background: #e83e8c;
   color: #e83e8c;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-pink .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #e83e8c,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-pink .pace .pace-progress {
   background-color: #e83e8c;
@@ -11037,7 +11037,7 @@ select.form-control-sm
   background: #dc3545;
 }
 .pace-barber-shop-red .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-red .pace .pace-progress {
   background: #dc3545;
@@ -11066,7 +11066,7 @@ select.form-control-sm
 }
 .pace-center-atom-red .pace-progress::before {
   background: #dc3545;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -11080,7 +11080,7 @@ select.form-control-sm
 }
 .pace-center-circle-red .pace .pace-progress {
   background: rgba(220, 53, 69, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-red .pace .pace-activity {
   border-color: #dc3545 transparent transparent;
@@ -11089,7 +11089,7 @@ select.form-control-sm
   border-color: #dc3545 transparent transparent;
 }
 .pace-center-simple-red .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #dc3545;
 }
 .pace-center-simple-red .pace .pace-progress {
@@ -11103,7 +11103,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-red .pace .pace-activity::after,
 .pace-corner-indicator-red .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-red .pace .pace-activity::before {
   border-right-color: rgba(220, 53, 69, 0.2);
@@ -11132,13 +11132,13 @@ select.form-control-sm
   background: #dc3545;
   color: #dc3545;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-red .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #dc3545,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-red .pace .pace-progress {
   background-color: #dc3545;
@@ -11412,7 +11412,7 @@ select.form-control-sm
   background: #28a745;
 }
 .pace-barber-shop-green .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-green .pace .pace-progress {
   background: #28a745;
@@ -11441,7 +11441,7 @@ select.form-control-sm
 }
 .pace-center-atom-green .pace-progress::before {
   background: #28a745;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -11455,7 +11455,7 @@ select.form-control-sm
 }
 .pace-center-circle-green .pace .pace-progress {
   background: rgba(40, 167, 69, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-green .pace .pace-activity {
   border-color: #28a745 transparent transparent;
@@ -11464,7 +11464,7 @@ select.form-control-sm
   border-color: #28a745 transparent transparent;
 }
 .pace-center-simple-green .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #28a745;
 }
 .pace-center-simple-green .pace .pace-progress {
@@ -11478,7 +11478,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-green .pace .pace-activity::after,
 .pace-corner-indicator-green .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-green .pace .pace-activity::before {
   border-right-color: rgba(40, 167, 69, 0.2);
@@ -11507,13 +11507,13 @@ select.form-control-sm
   background: #28a745;
   color: #28a745;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-green .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #28a745,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-green .pace .pace-progress {
   background-color: #28a745;
@@ -11537,7 +11537,7 @@ select.form-control-sm
   background: #20c997;
 }
 .pace-barber-shop-teal .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-teal .pace .pace-progress {
   background: #20c997;
@@ -11566,7 +11566,7 @@ select.form-control-sm
 }
 .pace-center-atom-teal .pace-progress::before {
   background: #20c997;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -11580,7 +11580,7 @@ select.form-control-sm
 }
 .pace-center-circle-teal .pace .pace-progress {
   background: rgba(32, 201, 151, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-teal .pace .pace-activity {
   border-color: #20c997 transparent transparent;
@@ -11589,7 +11589,7 @@ select.form-control-sm
   border-color: #20c997 transparent transparent;
 }
 .pace-center-simple-teal .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #20c997;
 }
 .pace-center-simple-teal .pace .pace-progress {
@@ -11603,7 +11603,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-teal .pace .pace-activity::after,
 .pace-corner-indicator-teal .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-teal .pace .pace-activity::before {
   border-right-color: rgba(32, 201, 151, 0.2);
@@ -11632,13 +11632,13 @@ select.form-control-sm
   background: #20c997;
   color: #20c997;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-teal .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #20c997,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-teal .pace .pace-progress {
   background-color: #20c997;
@@ -11662,7 +11662,7 @@ select.form-control-sm
   background: #17a2b8;
 }
 .pace-barber-shop-cyan .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-cyan .pace .pace-progress {
   background: #17a2b8;
@@ -11691,7 +11691,7 @@ select.form-control-sm
 }
 .pace-center-atom-cyan .pace-progress::before {
   background: #17a2b8;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -11705,7 +11705,7 @@ select.form-control-sm
 }
 .pace-center-circle-cyan .pace .pace-progress {
   background: rgba(23, 162, 184, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-cyan .pace .pace-activity {
   border-color: #17a2b8 transparent transparent;
@@ -11714,7 +11714,7 @@ select.form-control-sm
   border-color: #17a2b8 transparent transparent;
 }
 .pace-center-simple-cyan .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #17a2b8;
 }
 .pace-center-simple-cyan .pace .pace-progress {
@@ -11728,7 +11728,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-cyan .pace .pace-activity::after,
 .pace-corner-indicator-cyan .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-cyan .pace .pace-activity::before {
   border-right-color: rgba(23, 162, 184, 0.2);
@@ -11757,13 +11757,13 @@ select.form-control-sm
   background: #17a2b8;
   color: #17a2b8;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-cyan .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #17a2b8,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-cyan .pace .pace-progress {
   background-color: #17a2b8;
@@ -11784,13 +11784,13 @@ select.form-control-sm
   color: #17a2b8;
 }
 .pace-white .pace .pace-progress {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-white .pace {
   background: #1f2d3d;
 }
 .pace-barber-shop-white .pace .pace-progress {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-white .pace .pace-activity {
   background-image: linear-gradient(
@@ -11808,48 +11808,48 @@ select.form-control-sm
   color: rgba(255, 255, 255, 0.2);
 }
 .pace-bounce-white .pace .pace-activity {
-  background: #fff;
+  background: #001C54;
 }
 .pace-center-atom-white .pace-progress {
   height: 100px;
   width: 80px;
 }
 .pace-center-atom-white .pace-progress::before {
-  background: #fff;
+  background: #001C54;
   color: #1f2d3d;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
 }
 .pace-center-atom-white .pace-activity {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .pace-center-atom-white .pace-activity::after,
 .pace-center-atom-white .pace-activity::before {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .pace-center-circle-white .pace .pace-progress {
   background: rgba(255, 255, 255, 0.8);
   color: #1f2d3d;
 }
 .pace-center-radar-white .pace .pace-activity {
-  border-color: #fff transparent transparent;
+  border-color: #001C54 transparent transparent;
 }
 .pace-center-radar-white .pace .pace-activity::before {
-  border-color: #fff transparent transparent;
+  border-color: #001C54 transparent transparent;
 }
 .pace-center-simple-white .pace {
   background: #1f2d3d;
-  border-color: #fff;
+  border-color: #001C54;
 }
 .pace-center-simple-white .pace .pace-progress {
-  background: #fff;
+  background: #001C54;
 }
 .pace-material-white .pace {
-  color: #fff;
+  color: #001C54;
 }
 .pace-corner-indicator-white .pace .pace-activity {
-  background: #fff;
+  background: #001C54;
 }
 .pace-corner-indicator-white .pace .pace-activity::after,
 .pace-corner-indicator-white .pace .pace-activity::before {
@@ -11867,34 +11867,34 @@ select.form-control-sm
   background-color: rgba(255, 255, 255, 0.2);
 }
 .pace-flash-white .pace .pace-progress {
-  background: #fff;
+  background: #001C54;
 }
 .pace-flash-white .pace .pace-progress-inner {
   box-shadow:
-    0 0 10px #fff,
-    0 0 5px #fff;
+    0 0 10px #001C54,
+    0 0 5px #001C54;
 }
 .pace-flash-white .pace .pace-activity {
-  border-top-color: #fff;
-  border-left-color: #fff;
+  border-top-color: #001C54;
+  border-left-color: #001C54;
 }
 .pace-loading-bar-white .pace .pace-progress {
-  background: #fff;
-  color: #fff;
+  background: #001C54;
+  color: #001C54;
   box-shadow:
     120px 0 #1f2d3d,
     240px 0 #1f2d3d;
 }
 .pace-loading-bar-white .pace .pace-activity {
   box-shadow:
-    inset 0 0 0 2px #fff,
+    inset 0 0 0 2px #001C54,
     inset 0 0 0 7px #1f2d3d;
 }
 .pace-mac-osx-white .pace .pace-progress {
-  background-color: #fff;
+  background-color: #001C54;
   box-shadow:
-    inset -1px 0 #fff,
-    inset 0 -1px #fff,
+    inset -1px 0 #001C54,
+    inset 0 -1px #001C54,
     inset 0 2px rgba(31, 45, 61, 0.5),
     inset 0 6px rgba(31, 45, 61, 0.3);
 }
@@ -11906,13 +11906,13 @@ select.form-control-sm
   height: 12px;
 }
 .pace-progress-color-white .pace-progress {
-  color: #fff;
+  color: #001C54;
 }
 .pace-gray .pace .pace-progress {
   background: #6c757d;
 }
 .pace-barber-shop-gray .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-gray .pace .pace-progress {
   background: #6c757d;
@@ -11941,7 +11941,7 @@ select.form-control-sm
 }
 .pace-center-atom-gray .pace-progress::before {
   background: #6c757d;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -11955,7 +11955,7 @@ select.form-control-sm
 }
 .pace-center-circle-gray .pace .pace-progress {
   background: rgba(108, 117, 125, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-gray .pace .pace-activity {
   border-color: #6c757d transparent transparent;
@@ -11964,7 +11964,7 @@ select.form-control-sm
   border-color: #6c757d transparent transparent;
 }
 .pace-center-simple-gray .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #6c757d;
 }
 .pace-center-simple-gray .pace .pace-progress {
@@ -11978,7 +11978,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-gray .pace .pace-activity::after,
 .pace-corner-indicator-gray .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-gray .pace .pace-activity::before {
   border-right-color: rgba(108, 117, 125, 0.2);
@@ -12007,13 +12007,13 @@ select.form-control-sm
   background: #6c757d;
   color: #6c757d;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-gray .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #6c757d,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-gray .pace .pace-progress {
   background-color: #6c757d;
@@ -12037,7 +12037,7 @@ select.form-control-sm
   background: #343a40;
 }
 .pace-barber-shop-gray-dark .pace {
-  background: #fff;
+  background: #001C54;
 }
 .pace-barber-shop-gray-dark .pace .pace-progress {
   background: #343a40;
@@ -12066,7 +12066,7 @@ select.form-control-sm
 }
 .pace-center-atom-gray-dark .pace-progress::before {
   background: #343a40;
-  color: #fff;
+  color: #001C54;
   font-size: 0.8rem;
   line-height: 0.7rem;
   padding-top: 17%;
@@ -12080,7 +12080,7 @@ select.form-control-sm
 }
 .pace-center-circle-gray-dark .pace .pace-progress {
   background: rgba(52, 58, 64, 0.8);
-  color: #fff;
+  color: #001C54;
 }
 .pace-center-radar-gray-dark .pace .pace-activity {
   border-color: #343a40 transparent transparent;
@@ -12089,7 +12089,7 @@ select.form-control-sm
   border-color: #343a40 transparent transparent;
 }
 .pace-center-simple-gray-dark .pace {
-  background: #fff;
+  background: #001C54;
   border-color: #343a40;
 }
 .pace-center-simple-gray-dark .pace .pace-progress {
@@ -12103,7 +12103,7 @@ select.form-control-sm
 }
 .pace-corner-indicator-gray-dark .pace .pace-activity::after,
 .pace-corner-indicator-gray-dark .pace .pace-activity::before {
-  border: 5px solid #fff;
+  border: 5px solid #001C54;
 }
 .pace-corner-indicator-gray-dark .pace .pace-activity::before {
   border-right-color: rgba(52, 58, 64, 0.2);
@@ -12132,13 +12132,13 @@ select.form-control-sm
   background: #343a40;
   color: #343a40;
   box-shadow:
-    120px 0 #fff,
-    240px 0 #fff;
+    120px 0 #001C54,
+    240px 0 #001C54;
 }
 .pace-loading-bar-gray-dark .pace .pace-activity {
   box-shadow:
     inset 0 0 0 2px #343a40,
-    inset 0 0 0 7px #fff;
+    inset 0 0 0 7px #001C54;
 }
 .pace-mac-osx-gray-dark .pace .pace-progress {
   background-color: #343a40;
@@ -12213,22 +12213,22 @@ select.form-control-sm
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
   background: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-secondary,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-secondary {
   background: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success {
   background: #28a745;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info {
   background: #17a2b8;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning {
@@ -12238,7 +12238,7 @@ select.form-control-sm
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger {
   background: #dc3545;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-light,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-light {
@@ -12248,22 +12248,22 @@ select.form-control-sm
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-dark,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-dark {
   background: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-lightblue,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-lightblue {
   background: #3c8dbc;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-navy,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-navy {
   background: #001f3f;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-olive,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-olive {
   background: #3d9970;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-lime,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-lime {
@@ -12273,37 +12273,37 @@ select.form-control-sm
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-fuchsia,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-fuchsia {
   background: #f012be;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-maroon,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-maroon {
   background: #d81b60;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-blue,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-blue {
   background: #007bff;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-indigo,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-indigo {
   background: #6610f2;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-purple,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-purple {
   background: #6f42c1;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-pink,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-pink {
   background: #e83e8c;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-red,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-red {
   background: #dc3545;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-orange,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-orange {
@@ -12318,32 +12318,32 @@ select.form-control-sm
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-green,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-green {
   background: #28a745;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-teal,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-teal {
   background: #20c997;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-cyan,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-cyan {
   background: #17a2b8;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-white,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-white {
-  background: #fff;
+  background: #001C54;
   color: #1f2d3d;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-gray,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-gray {
   background: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-gray-dark,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-gray-dark {
   background: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .bootstrap-switch .bootstrap-switch-handle-on {
   border-bottom-left-radius: 0.1rem;
@@ -12432,7 +12432,7 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-default {
   background-color: #3a4047;
-  color: #fff;
+  color: #001C54;
   border-color: #454d55;
 }
 .dark-mode
@@ -12442,7 +12442,7 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-primary {
   background: #3f6791;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12451,7 +12451,7 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-secondary {
   background: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12460,12 +12460,12 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-success {
   background: #00bc8c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info {
   background: #3498db;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12483,7 +12483,7 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-danger {
   background: #e74c3c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12497,7 +12497,7 @@ select.form-control-sm
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-dark,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-dark {
   background: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12511,7 +12511,7 @@ select.form-control-sm
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-navy,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-navy {
   background: #002c59;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12548,7 +12548,7 @@ select.form-control-sm
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-blue,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-blue {
   background: #3f6791;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12557,7 +12557,7 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-indigo {
   background: #6610f2;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12566,17 +12566,17 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-purple {
   background: #6f42c1;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-pink,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-pink {
   background: #e83e8c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-red,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-red {
   background: #e74c3c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12603,17 +12603,17 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-green {
   background: #00bc8c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-teal,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-teal {
   background: #20c997;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-cyan,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-cyan {
   background: #3498db;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12621,13 +12621,13 @@ select.form-control-sm
 .dark-mode
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-white {
-  background: #fff;
+  background: #001C54;
   color: #1f2d3d;
 }
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-gray,
 .dark-mode .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-gray {
   background: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode
   .bootstrap-switch
@@ -12636,7 +12636,7 @@ select.form-control-sm
   .bootstrap-switch
   .bootstrap-switch-handle-on.bootstrap-switch-gray-dark {
   background: #343a40;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .daterangepicker {
   background-color: #3f474e;
@@ -12652,14 +12652,14 @@ select.form-control-sm
 }
 .dark-mode .daterangepicker td.in-range {
   background-color: #4b545c;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .daterangepicker td.off,
 .dark-mode .daterangepicker td.off.end-date,
 .dark-mode .daterangepicker td.off.in-range,
 .dark-mode .daterangepicker td.off.start-date {
   background-color: #292d32;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .daterangepicker .ranges li:hover {
   background-color: #343a40;
@@ -12681,11 +12681,11 @@ select.form-control-sm
 }
 .dark-mode .daterangepicker .calendar-table td,
 .dark-mode .daterangepicker .calendar-table th {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .daterangepicker .calendar-table .next span,
 .dark-mode .daterangepicker .calendar-table .prev span {
-  border-color: #fff;
+  border-color: #001C54;
 }
 .dark-mode .daterangepicker select.ampmselect,
 .dark-mode .daterangepicker select.hourselect,

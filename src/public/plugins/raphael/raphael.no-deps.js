@@ -367,7 +367,7 @@
                 cursor: "default",
                 cx: 0,
                 cy: 0,
-                fill: "#fff",
+                fill: "#001C54",
                 "fill-opacity": 1,
                 font: '10px "Arial"',
                 "font-family": '"Arial"',
@@ -384,7 +384,7 @@
                 rx: 0,
                 ry: 0,
                 src: "",
-                stroke: "#000",
+                stroke: "#e3efff",
                 "stroke-dasharray": "",
                 "stroke-linecap": "butt",
                 "stroke-linejoin": "butt",
@@ -1135,8 +1135,8 @@
      - colour (string) colour string in one of formats:
      # <ul>
      #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
-     #     <li>#••• — shortened HTML colour: (“<code>#000</code>”, “<code>#fc0</code>”, etc)</li>
-     #     <li>#•••••• — full length HTML colour: (“<code>#000000</code>”, “<code>#bd2300</code>”)</li>
+     #     <li>#••• — shortened HTML colour: (“<code>#e3efff</code>”, “<code>#fc0</code>”, etc)</li>
+     #     <li>#•••••• — full length HTML colour: (“<code>#e3efff</code>”, “<code>#bd2300</code>”)</li>
      #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<code>rgb(200,&nbsp;100,&nbsp;0)</code>”)</li>
      #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>”)</li>
      #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>”)</li>
@@ -3822,7 +3822,7 @@
      > Usage
      | for (var i = 0, i < 5, i++) {
      |     paper.circle(10 + 15 * i, 10, 10)
-     |          .attr({fill: "#000"})
+     |          .attr({fill: "#e3efff"})
      |          .data("i", i)
      |          .click(function () {
      |             alert(this.data("i"));
@@ -4586,7 +4586,7 @@
      o     opacity (number) opacity, default is `0.5`
      o     offsetx (number) horizontal offset, default is `0`
      o     offsety (number) vertical offset, default is `0`
-     o     color (string) glow colour, default is `black`
+     o     color (string) glow colour, default is `#e3efff`
      o }
      = (object) @Paper.set of elements that represents glow
     \*/
@@ -4601,7 +4601,7 @@
                   opacity: glow.opacity == null ? 0.5 : glow.opacity,
                   offsetx: glow.offsetx || 0,
                   offsety: glow.offsety || 0,
-                  color: glow.color || "#000",
+                  color: glow.color || "#e3efff",
                 },
                 c = s.width / 2,
                 r = this.paper,
@@ -6274,7 +6274,7 @@
      - line_spacing (number) #optional number in range `1..3`, default is `1`
      = (object) resulting path element, which consist of all letters
      > Usage
-     | var txt = r.print(10, 50, "print", r.getFont("Museo"), 30).attr({fill: "#fff"});
+     | var txt = r.print(10, 50, "print", r.getFont("Museo"), 30).attr({fill: "#001C54"});
     \*/
             paperproto.print = function (
               x,
@@ -6340,7 +6340,7 @@
                 }
               }
               return this.path(path).attr({
-                fill: "#000",
+                fill: "#e3efff",
                 stroke: "none",
               });
             };
@@ -6706,7 +6706,7 @@
                             : i
                               ? "100%"
                               : "0%",
-                          "stop-color": dots[i].color || "#fff",
+                          "stop-color": dots[i].color || "#001C54",
                           "stop-opacity": isFinite(dots[i].opacity)
                             ? dots[i].opacity
                             : 1,
@@ -7438,7 +7438,7 @@
               p.type = "path";
               setFillAndStroke(p, {
                 fill: "none",
-                stroke: "#000",
+                stroke: "#e3efff",
                 path: pathString,
               });
               return p;
@@ -7738,19 +7738,19 @@
      o x (number)
      o y (number)
      > Gradients
-     * Linear gradient format: “`‹angle›-‹colour›[-‹colour›[:‹offset›]]*-‹colour›`”, example: “`90-#fff-#000`” – 90°
-     * gradient from white to black or “`0-#fff-#f00:20-#000`” – 0° gradient from white via red (at 20%) to black.
+     * Linear gradient format: “`‹angle›-‹colour›[-‹colour›[:‹offset›]]*-‹colour›`”, example: “`90-#001C54-#e3efff`” – 90°
+     * gradient from white to #e3efff or “`0-#001C54-#f00:20-#e3efff`” – 0° gradient from white via red (at 20%) to #e3efff.
      *
-     * radial gradient: “`r[(‹fx›, ‹fy›)]‹colour›[-‹colour›[:‹offset›]]*-‹colour›`”, example: “`r#fff-#000`” –
-     * gradient from white to black or “`r(0.25, 0.75)#fff-#000`” – gradient from white to black with focus point
+     * radial gradient: “`r[(‹fx›, ‹fy›)]‹colour›[-‹colour›[:‹offset›]]*-‹colour›`”, example: “`r#001C54-#e3efff`” –
+     * gradient from white to #e3efff or “`r(0.25, 0.75)#001C54-#e3efff`” – gradient from white to #e3efff with focus point
      * at 0.25, 0.75. Focus point coordinates are in 0..1 range. Radial gradients can only be applied to circles and ellipses.
      > Path String
      # <p>Please refer to <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path’s data attribute’s format are described in the SVG specification.">SVG documentation regarding path string</a>. Raphaël fully supports it.</p>
      > Colour Parsing
      # <ul>
      #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
-     #     <li>#••• — shortened HTML colour: (“<code>#000</code>”, “<code>#fc0</code>”, etc)</li>
-     #     <li>#•••••• — full length HTML colour: (“<code>#000000</code>”, “<code>#bd2300</code>”)</li>
+     #     <li>#••• — shortened HTML colour: (“<code>#e3efff</code>”, “<code>#fc0</code>”, etc)</li>
+     #     <li>#•••••• — full length HTML colour: (“<code>#e3efff</code>”, “<code>#bd2300</code>”)</li>
      #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<code>rgb(200,&nbsp;100,&nbsp;0)</code>”)</li>
      #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>”)</li>
      #     <li>rgba(•••, •••, •••, •••) — red, green and blue channels’ values: (“<code>rgba(200,&nbsp;100,&nbsp;0, .5)</code>”)</li>
@@ -7947,7 +7947,13 @@
               var el = $("circle");
               svg.canvas && svg.canvas.appendChild(el);
               var res = new Element(el, svg);
-              res.attrs = { cx: x, cy: y, r: r, fill: "none", stroke: "#000" };
+              res.attrs = {
+                cx: x,
+                cy: y,
+                r: r,
+                fill: "none",
+                stroke: "#e3efff",
+              };
               res.type = "circle";
               $(el, res.attrs);
               return res;
@@ -7964,7 +7970,7 @@
                 rx: r || 0,
                 ry: r || 0,
                 fill: "none",
-                stroke: "#000",
+                stroke: "#e3efff",
               };
               res.type = "rect";
               $(el, res.attrs);
@@ -7980,7 +7986,7 @@
                 rx: rx,
                 ry: ry,
                 fill: "none",
-                stroke: "#000",
+                stroke: "#e3efff",
               };
               res.type = "ellipse";
               $(el, res.attrs);
@@ -8014,7 +8020,7 @@
                 "font-family": R._availableAttrs["font-family"],
                 "font-size": R._availableAttrs["font-size"],
                 stroke: "none",
-                fill: "#000",
+                fill: "#e3efff",
               };
               res.type = "text";
               setFillAndStroke(res, res.attrs);
@@ -9125,7 +9131,7 @@
               el.coordsize = zoom + S + zoom;
               el.coordorigin = vml.coordorigin;
               var p = new Element(el, vml),
-                attr = { fill: "none", stroke: "#000" };
+                attr = { fill: "none", stroke: "#e3efff" };
               pathString && (attr.path = pathString);
               p.type = "path";
               p.path = [];
@@ -9226,7 +9232,7 @@
               el.coordorigin = "0 0";
               var p = new Element(el, vml),
                 attr = {
-                  fill: "#000",
+                  fill: "#e3efff",
                   stroke: "none",
                   font: R._availableAttrs.font,
                   text: text,

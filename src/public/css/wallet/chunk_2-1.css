@@ -1,6 +1,6 @@
 .mian[data-v-7b283485] {
   padding-bottom: 4rem;
-  background-color: #ffffff;
+  background-color: #011341fff;
 }
 
 .mian .head-right[data-v-7b283485] {
@@ -16,8 +16,8 @@
 .mian .wallet-user[data-v-7b283485] {
   padding: 0.53333rem 0.8rem 3.2rem;
   width: 100%;
-  background: -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
-  background: linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+  background: -webkit-linear-gradient(left, #00ECBE 0%, #f95959 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
 }
 
 .mian .wallet-user .img[data-v-7b283485] {
@@ -33,7 +33,7 @@
   width: 100%;
   height: 0.8rem;
   line-height: 0.8rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.53333rem;
 }
 
@@ -46,9 +46,9 @@
   position: relative;
   padding: 0.4rem;
   border-radius: 0.13333rem;
-  background: #f0f0f5;
+  background: #011341;
   border-radius: 0.26667rem;
-  background-color: #f0f0f5;
+  background-color: #011341;
 }
 
 .mian .wallet-box .box .icon1[data-v-7b283485] {
@@ -61,13 +61,13 @@
 
 .mian .wallet-box .box .title[data-v-7b283485] {
   font-size: 0.53333rem;
-  color: #000;
+  color: #e3efff;
 }
 
 .mian .wallet-box .box .balance[data-v-7b283485] {
   padding: 0.4rem 0.4rem 0;
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
-  box-shadow: 0 0rem 0.5rem #ffffff;
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+  box-shadow: 0 0rem 0.5rem #011341fff;
   border-radius: 0.26667rem;
   background-size: 100% 100%;
 }
@@ -79,12 +79,12 @@
 
 .mian .wallet-box .box .balance .txt[data-v-7b283485] {
   font-size: 0.4rem;
-  color: #ffffff;
+  color: #011341fff;
 }
 
 .mian .wallet-box .box .balance .balanceMoney .money[data-v-7b283485] {
   margin: 0.32rem 0;
-  color: #ffffff;
+  color: #011341fff;
   font-weight: 600;
   font-size: 0.8rem;
 }
@@ -118,7 +118,7 @@
 }
 
 .mian .wallet-box .box .balance .info .item[data-v-7b283485] {
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   flex: 1;
   text-align: center;
@@ -138,7 +138,7 @@
   display: block;
   height: 0.8rem;
   width: 0.05333rem;
-  background-color: #ffffff;
+  background-color: #011341fff;
 }
 
 .mian .wallet-box .total-btn .item[data-v-7b283485] {
@@ -146,7 +146,7 @@
 }
 
 .mian .wallet-box .total-btn .item .li[data-v-7b283485] {
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   border-radius: 1.06667rem;
   text-align: center;
@@ -159,18 +159,18 @@
 .mian .wallet-box .total-btn .item:last-child .li[data-v-7b283485] {
   width: 100%;
   height: 0.93333rem;
-  color: #ffffff;
+  color: #011341fff;
   font-size: 0.4rem;
   font-weight: 500;
   letter-spacing: 0.01333rem;
   border: none;
   border-radius: 1.06667rem;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
 }
 
 .mian .wallet-box .list[data-v-7b283485] {
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0 0.8rem 0 rgba(58, 58, 58, 0.07);
 }
 
@@ -179,7 +179,7 @@
   height: 1.6rem;
   line-height: 1.6rem;
   font-size: 0.37333rem;
-  color: #000;
+  color: #e3efff;
   border-bottom: 0.02667rem solid #efeeee;
 }
 
@@ -210,7 +210,7 @@
 .mian .wallet-box .card-box .card[data-v-7b283485] {
   font-weight: 600;
   font-size: 0.45333rem;
-  color: #000;
+  color: #e3efff;
 }
 
 .mian .wallet-box .card-box .addBank[data-v-7b283485] {
@@ -236,11 +236,11 @@
 
 .mian .wallet-box .card-list .number .num[data-v-7b283485] {
   font-size: 0.53333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .wallet-box .card-list .master-box[data-v-7b283485] {
   padding: 0.26667rem 0.53333rem;
-  background: #fff;
+  background: #011341;
   border-radius: 0.26667rem;
 }

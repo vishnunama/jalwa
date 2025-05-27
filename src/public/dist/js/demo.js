@@ -769,9 +769,9 @@
       var $logo = $(".brand-link");
 
       if (color === "navbar-light" || color === "navbar-white") {
-        $logo.addClass("text-black");
+        $logo.addClass("text-#e3efff");
       } else {
-        $logo.removeClass("text-black");
+        $logo.removeClass("text-#e3efff");
       }
 
       logo_skins.forEach(function (skin) {

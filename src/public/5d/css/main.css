@@ -644,7 +644,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: white;
   position: relative;
   font-size: 0.37333rem;
 }
@@ -1061,7 +1061,7 @@ img[data-v-7b9b9922] {
 .mian-from .tip[data-v-a0753f48] {
   margin: -0.53333rem 0 0.26667rem;
   font-size: 0.34667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian-from .item[data-v-a0753f48] {
@@ -1135,13 +1135,13 @@ img[data-v-7b9b9922] {
   line-height: 0.96rem;
   background-color: #ffebeb;
   border-color: #ffebeb !important;
-  color: #000;
+  color: #e3efff;
 }
 
 .mian-from .agree[data-v-a0753f48] {
   line-height: 0.53333rem;
   height: 0.53333rem;
-  color: #000;
+  color: #e3efff;
   font-size: 0.4rem;
 }
 

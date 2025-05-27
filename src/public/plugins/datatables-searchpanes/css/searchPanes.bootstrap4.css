@@ -15,7 +15,7 @@ div.dtsp-topRow input.dtsp-search {
   max-width: none;
 }
 div.dtsp-topRow input.dtsp-search::placeholder {
-  color: black;
+  color: #e3efff;
 }
 div.dtsp-topRow div.dtsp-subRow1 {
   display: flex;
@@ -71,12 +71,12 @@ div.dtsp-topRow button.dtsp-collapseButton.dtsp-rotated {
 }
 
 div.dtsp-topRow.dtsp-bordered {
-  border: 2px solid #f0f0f0;
+  border: 2px solid #001c54;
   border-radius: 3px;
 }
 
 div.dtsp-topRow.dtsp-bordered:hover {
-  background-color: #f0f0f0;
+  background-color: #001c54;
   opacity: 0.6;
   border: 2px solid #cfcfcf;
   border-radius: 3px;
@@ -235,7 +235,7 @@ div.dtsp-panesContainer
   border-radius: 10px;
   width: auto;
   min-width: 30px;
-  color: black;
+  color: #e3efff;
   font-size: 0.9em;
   padding: 0 4px;
 }
@@ -352,7 +352,7 @@ div.dtsp-panesContainer
   pointer-events: none;
 }
 div.dtsp-panesContainer div.dtsp-searchPane div.dataTables_wrapper {
-  border: 2px #f0f0f0 solid;
+  border: 2px #001c54 solid;
   border-radius: 4px;
 }
 div.dtsp-panesContainer div.dtsp-searchPane div.dataTables_wrapper:hover {

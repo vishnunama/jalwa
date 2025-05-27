@@ -11,13 +11,13 @@
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
+  color: #e3efff;
+  text-shadow: 0 1px 0 #001C54;
   opacity: 0.5;
 }
 .close:hover,
 .mailbox-attachment-close:hover {
-  color: #000;
+  color: #e3efff;
   text-decoration: none;
 }
 .close:not(:disabled):not(.disabled):focus,
@@ -312,7 +312,7 @@ a.disabled.mailbox-attachment-close {
   width: 200px;
 }
 .mailbox-attachment-name {
-  color: #666;
+  color: #E3EFFF;
   font-weight: 700;
 }
 .mailbox-attachment-icon,
@@ -333,7 +333,7 @@ a.disabled.mailbox-attachment-close {
   padding-top: 0.75rem;
 }
 .mailbox-attachment-icon {
-  color: #666;
+  color: #E3EFFF;
   font-size: 65px;
   max-height: 132.5px;
   padding: 20px 10px;
@@ -369,7 +369,7 @@ a.disabled.mailbox-attachment-close {
 }
 .lockscreen-item {
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #001C54;
   margin: 10px auto 30px;
   padding: 0;
   position: relative;
@@ -377,7 +377,7 @@ a.disabled.mailbox-attachment-close {
 }
 .lockscreen-image {
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #001C54;
   left: -10px;
   padding: 5px;
   position: absolute;
@@ -396,7 +396,7 @@ a.disabled.mailbox-attachment-close {
   border: 0;
 }
 .lockscreen-credentials .btn {
-  background-color: #fff;
+  background-color: #001C54;
   border: 0;
   padding: 0 10px;
 }
@@ -407,7 +407,7 @@ a.disabled.mailbox-attachment-close {
   background-color: #343a40;
 }
 .dark-mode .lockscreen-logo a {
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .lockscreen-credentials .btn {
   background-color: #343a40;
@@ -456,9 +456,9 @@ a.disabled.mailbox-attachment-close {
 }
 .login-card-body,
 .register-card-body {
-  background-color: #fff;
+  background-color: #001C54;
   border-top: 0;
-  color: #666;
+  color: #E3EFFF;
   padding: 20px;
 }
 .login-card-body .input-group .form-control,
@@ -557,11 +557,11 @@ a.disabled.mailbox-attachment-close {
 .dark-mode .register-card-body {
   background-color: #343a40;
   border-color: #6c757d;
-  color: #fff;
+  color: #001C54;
 }
 .dark-mode .login-logo a,
 .dark-mode .register-logo a {
-  color: #fff;
+  color: #001C54;
 }
 .error-page {
   margin: 20px auto 0;
@@ -602,7 +602,7 @@ a.disabled.mailbox-attachment-close {
   }
 }
 .invoice {
-  background-color: #fff;
+  background-color: #001C54;
   border: 1px solid rgba(0, 0, 0, 0.125);
   position: relative;
 }
@@ -624,7 +624,7 @@ a.disabled.mailbox-attachment-close {
 }
 .post {
   border-bottom: 1px solid #adb5bd;
-  color: #666;
+  color: #E3EFFF;
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
@@ -641,7 +641,7 @@ a.disabled.mailbox-attachment-close {
   width: 100%;
 }
 .dark-mode .post {
-  color: #fff;
+  color: #001C54;
   border-color: #6c757d;
 }
 .product-image {
@@ -659,7 +659,7 @@ a.disabled.mailbox-attachment-close {
 .product-image-thumb {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   border-radius: 0.25rem;
-  background-color: #fff;
+  background-color: #001C54;
   border: 1px solid #dee2e6;
   display: -ms-flexbox;
   display: flex;

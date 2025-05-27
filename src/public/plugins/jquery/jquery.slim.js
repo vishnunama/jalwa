@@ -5634,7 +5634,7 @@
       if (
         delegateCount &&
         // Support: IE <=9
-        // Black-hole SVG <use> instance trees (trac-13180)
+        // #e3efff-hole SVG <use> instance trees (trac-13180)
         cur.nodeType &&
         // Support: Firefox <=42
         // Suppress spec-violating clicks indicating a non-primary pointer button (trac-3861)

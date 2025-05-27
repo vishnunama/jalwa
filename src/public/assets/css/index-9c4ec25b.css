@@ -1,6 +1,6 @@
 [data-v-ac37ce77]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-ac37ce77] {
@@ -57,7 +57,7 @@
   height: 4.2rem;
   border-radius: 0.26667rem;
   background: #374992;
-  color: #fff;
+  color: #011341;
 }
 
 .totalSavings__container-content[data-v-ac37ce77] {
@@ -164,8 +164,8 @@
 }
 
 [data-v-4ac977f5]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -173,10 +173,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-4ac977f5] {
@@ -226,9 +226,9 @@
   gap: 0.13333rem;
   width: 100%;
   padding-block: 0.13333rem;
-  color: #f95959;
+  color: #00ECBE;
   background: none;
-  border: 0.01333rem solid #f95959;
+  border: 0.01333rem solid #00ECBE;
   border-radius: 99rem;
   outline: none;
   font-size: 0.4rem;
@@ -278,10 +278,10 @@
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  color: #fff;
+  color: #011341;
   padding: 0.24rem;
   margin: 0.13333rem 0;
-  background: #f0f0f5;
+  background: #011341;
   border-radius: 0.13333rem;
 }
 
@@ -327,7 +327,7 @@
   -webkit-align-items: center;
   align-items: center;
   gap: 0.5rem;
-  color: #fff;
+  color: #011341;
 }
 
 .financialServices__container-footer-des[data-v-4ac977f5] {
@@ -400,9 +400,9 @@
 
 .financialServices__container-footer > div > div > div h4[data-v-4ac977f5] {
   font-size: 0.37333rem;
-  color: #fff;
+  color: #011341;
   border-radius: 9rem;
-  background: #f95959;
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);;
   padding: 0 0.13333rem;
 }
 
@@ -433,8 +433,8 @@
 }
 
 [data-v-cc2aee76]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -442,10 +442,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-cc2aee76] {
@@ -489,9 +489,9 @@
   gap: 0.13333rem;
   width: 100%;
   padding-block: 0.13333rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   background: none;
-  border: 0.01333rem solid #ff9a8e;
+  border: 0.01333rem solid #00ECBE;
   border-radius: 99rem;
   outline: none;
   font-size: 0.4rem;
@@ -505,13 +505,13 @@
 .serviceCenter__container[data-v-cc2aee76] {
   padding: 0.53333rem 0.32rem;
   border-radius: 0.26667rem;
-  background: #f0f0f5;
+  background: #011341;
   height: 5.33333rem;
 }
 
 .serviceCenter__container h1[data-v-cc2aee76] {
   margin-bottom: 0.58667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.4rem;
 }
 
@@ -595,17 +595,17 @@
 [data-v-cc2aee76] .cancelOrderDialog .dialog-btnWrapper button {
   width: 3.12rem;
   height: 1.06667rem;
-  color: #f95959;
+  color: #00ECBE;
   font-size: 0.42667rem;
   text-align: center;
   border-radius: 9rem;
-  border: 0.01333rem solid #f95959;
+  border: 0.01333rem solid #00ECBE;
   background: transparent;
 }
 
 [data-v-cc2aee76] .cancelOrderDialog .dialog-btnWrapper button:last-of-type {
   width: 4.34667rem;
-  color: #fff;
+  color: #011341;
   text-shadow: 0 0.05333rem 0.02667rem rgba(231, 65, 65, 0.5019607843);
   background: -webkit-linear-gradient(top, #ff867a 0%, #f95959 100%);
   background: linear-gradient(180deg, #ff867a 0%, #f95959 100%);
@@ -621,8 +621,8 @@
 }
 
 [data-v-5768d7f3]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -630,10 +630,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-5768d7f3] {

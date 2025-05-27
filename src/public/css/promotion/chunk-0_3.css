@@ -13,7 +13,7 @@
 }
 
 .mian .promotion .tab[data-v-14912091] {
-  background-color: #ffffff;
+  background-color: #011341fff;
   height: 1.06667rem;
   line-height: 1.06667rem;
   overflow: hidden;
@@ -30,7 +30,7 @@
   width: 25%;
   text-align: center;
   font-size: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian .promotion .tab ul li.action[data-v-14912091] {
@@ -44,11 +44,11 @@
 }
 
 .mian .promotion .tit[data-v-14912091] {
-  background: #f4f4f4;
+  background: #001C54;
   padding: 0 0.4rem;
   height: 0.90667rem;
   line-height: 0.90667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian .promotion .ipt[data-v-14912091] {
@@ -70,27 +70,27 @@
   padding: 0 0.26667rem;
   min-width: 1.6rem;
   background-color: #df3832;
-  color: #fff;
+  color: #011341;
   border-radius: 0.13333rem;
   box-shadow: 0 0.10667rem 0.53333rem 0.05333rem rgba(228, 38, 34, 0.25);
 }
 
 .mian .promotion .table[data-v-14912091] {
   margin: 0.4rem 0.4rem 0;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.13333rem 0.29333rem 0.02667rem rgba(0, 0, 0, 0.12);
   border-radius: 0.10667rem;
 }
 
 .mian .promotion .table .hd[data-v-14912091] {
-  background: #ff9a8e;
+  background: #00ECBE;
   /*border-radius:.10667rem;*/
   height: 0.93333rem;
   line-height: 0.93333rem;
 }
 
 .mian .promotion .table .bd[data-v-14912091] {
-  background: #f0f0f5;
+  background: #011341;
   height: 0.93333rem;
   line-height: 0.93333rem;
 }

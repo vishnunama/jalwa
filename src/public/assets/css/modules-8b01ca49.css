@@ -1,6 +1,6 @@
 :root {
-  --van-black: #000;
-  --van-white: #fff;
+  --van-#e3efff: #e3efff;
+  --van-white: #011341;
   --van-gray-1: #f7f8fa;
   --van-gray-2: #f2f3f5;
   --van-gray-3: #ebedf0;
@@ -8,12 +8,12 @@
   --van-gray-5: #c8c9cc;
   --van-gray-6: #969799;
   --van-gray-7: #646566;
-  --van-gray-8: #323233;
+  --van-gray-8: #92A8E3;
   --van-red: #ee0a24;
   --van-blue: #1989fa;
   --van-orange: #f95959;
   --van-orange-dark: #ed6a0c;
-  --van-orange-light: #fffbe8;
+  --van-orange-light: #011341be8;
   --van-green: #07c160;
   --van-gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
   --van-gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
@@ -65,10 +65,10 @@
 .van-theme-dark {
   --van-text-color: #f5f5f5;
   --van-text-color-2: #707070;
-  --van-text-color-3: #4d4d4d;
+  --van-text-color-3: #E3EFFF;
   --van-border-color: #3a3a3c;
   --van-active-color: #3a3a3c;
-  --van-background: #000;
+  --van-background: #e3efff;
   --van-background-2: #1c1c1e;
   --van-background-3: #37363b;
 }
@@ -2001,7 +2001,7 @@ ul {
   --van-back-top-bottom: 40px;
   --van-back-top-z-index: 100;
   --van-back-top-icon-size: 20px;
-  --van-back-top-text-color: #fff;
+  --van-back-top-text-color: #011341;
   --van-back-top-background: var(--van-blue);
 }
 
@@ -2024,7 +2024,7 @@ ul {
   cursor: pointer;
   color: var(--van-back-top-text-color);
   border-radius: var(--van-radius-max);
-  box-shadow: 0 0.02667rem 0.10667rem #0000001f;
+  box-shadow: 0 0.02667rem 0.10667rem #e3efff1f;
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: var(--van-duration-base) cubic-bezier(0.25, 0.8, 0.5, 1);
@@ -3576,9 +3576,9 @@ ul {
   left: 50%;
   width: 100%;
   height: 100%;
-  background: var(--van-black);
+  background: var(--van-#e3efff);
   border: inherit;
-  border-color: var(--van-black);
+  border-color: var(--van-#e3efff);
   border-radius: inherit;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -4641,7 +4641,7 @@ ul {
 }
 
 .van-popover--dark .van-popover__action:active {
-  background-color: #0003;
+  background-color: #e3efff3;
 }
 
 .van-popover--dark .van-popover__action--disabled {
@@ -6991,10 +6991,10 @@ ul {
   white-space: nowrap;
   color: var(--van-barrage-color);
   text-shadow:
-    0.01333rem 0 0.01333rem #000000,
-    0 0.01333rem 0.01333rem #000000,
-    0 -0.01333rem 0.01333rem #000000,
-    -0.01333rem 0 0.01333rem #000000;
+    0.01333rem 0 0.01333rem #e3efff,
+    0 0.01333rem 0.01333rem #e3efff,
+    0 -0.01333rem 0.01333rem #e3efff,
+    -0.01333rem 0 0.01333rem #e3efff;
   -webkit-user-select: none;
   user-select: none;
   will-change: transform;

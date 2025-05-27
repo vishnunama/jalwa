@@ -21,7 +21,7 @@
   width: 1.33333rem;
 }
 .mian .login-banner .bankPage .bank[data-v-51f72da1] {
-  border: 0.05333rem solid #fff;
+  border: 0.05333rem solid #011341;
   width: 0.69333rem;
   height: 0.69333rem;
   border-radius: 0.69333rem;
@@ -40,7 +40,7 @@
   padding: 0.66667rem 0.8rem;
   border-radius: 0.53333rem 0.53333rem 0 0;
   margin-top: -0.53333rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 .mian .login-box .tit[data-v-51f72da1] {
   text-align: center;
@@ -50,7 +50,7 @@
 .mian .forgot-box[data-v-51f72da1] {
   width: 100%;
   padding: 0.13333rem 0.8rem 0.8rem;
-  background-color: #fff;
+  background-color: #011341;
   border-top-left-radius: 0.66667rem;
   border-top-right-radius: 0.66667rem;
   position: relative;
@@ -65,7 +65,7 @@
 .mian-from .tip[data-v-51f72da1] {
   margin: -0.53333rem 0 0.26667rem;
   font-size: 0.34667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 .mian-from .item[data-v-51f72da1] {
   position: relative;
@@ -129,13 +129,13 @@
   font-weight: 700;
   background-color: #d05b5b;
   /* border-color: #ffebeb!important; */
-  color: #fff;
+  color: #011341;
   box-shadow: 3px 5px 5px 4px #807a7a;
 }
 .mian-from .agree[data-v-51f72da1] {
   line-height: 0.53333rem;
   height: 0.53333rem;
-  color: #000;
+  color: #e3efff;
   font-size: 0.4rem;
 }
 .mian-from .txt[data-v-51f72da1] {

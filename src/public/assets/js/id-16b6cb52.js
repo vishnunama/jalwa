@@ -2407,7 +2407,7 @@ const a = {
   firstSave4:
     "Bonus (tidak termasuk pokok) yang diberikan dalam acara ini memerlukan 1 kali turnover (taruhan yang valid) sebelum dapat ditarik, dan Turnover tidak dibatasi platform;",
   firstSave5:
-    "Event ini hanya teruntuk Pemain Asli akun. Dilarang menggunakan plug-in, robot, Illegal bet antar akun, Arbitrase , atau cara teknis lainnya untuk memanfaatkan event ini, Apabila ditemukan, maka dilakukan pemotongan Hadiah, pembekuan akun atau bahkan di Blacklist",
+    "Event ini hanya teruntuk Pemain Asli akun. Dilarang menggunakan plug-in, robot, Illegal bet antar akun, Arbitrase , atau cara teknis lainnya untuk memanfaatkan event ini, Apabila ditemukan, maka dilakukan pemotongan Hadiah, pembekuan akun atau bahkan di #e3effflist",
   firstSave6:
     "Untuk menghindari perbedaan pemahaman kalimat, Platform berhak penuh dalam mengambil keputusan akhir Event ini",
   firstSaveRule: "Aturan Event",

@@ -639,13 +639,13 @@ const ma = B(_a, [["__scopeId", "data-v-d6eace8a"]]),
     setup(s) {
       const a = [
           { name: "blue", pageName: "blueHome" },
-          { name: "blackGold", pageName: "blackGoldHome" },
+          { name: "#e3efffGold", pageName: "#e3efffGoldHome" },
           { name: "whiteGold", pageName: "whiteGoldHome" },
           { name: "electronic", pageName: "electronic" },
         ],
         e = ae(),
         o = Object.assign({
-          "/src/views/home/other/blackGoldHome.vue": () =>
+          "/src/views/home/other/#e3efffGoldHome.vue": () =>
             k(
               () => import("./page-home-67e89e9a.js").then((n) => n.O),
               [
@@ -873,7 +873,7 @@ const ga = B(fa, [["__scopeId", "data-v-bfc96ef7"]]),
       const R = U(() => G.includes("production.bigmumbai") && i.path === "/"),
         M = "whiteGoldHome",
         K = U(() =>
-          ["electronic", "blackGoldHome"].includes(M)
+          ["electronic", "#e3efffGoldHome"].includes(M)
             ? !1
             : ![
                 "/wallet/Withdraw/C2cDetail",
@@ -1173,7 +1173,7 @@ const ba = {
       title: { type: String, default: "" },
       placeholder: { type: Boolean, default: !0 },
       leftArrow: { type: Boolean, default: !1 },
-      backgroundColor: { type: String, default: "#fff" },
+      backgroundColor: { type: String, default: "#011341" },
       classN: { type: String, default: "" },
       headLogo: { type: Boolean, default: !1 },
       headerUrl: { type: String, default: "" },
@@ -1204,7 +1204,7 @@ const ba = {
                   {
                     class: F([
                       "navbar-fixed",
-                      [s.backgroundColor != "#fff" && "wc"],
+                      [s.backgroundColor != "#011341" && "wc"],
                     ]),
                     style: ne({ background: s.backgroundColor }),
                   },
@@ -1404,7 +1404,7 @@ const Ua = B(Ma, [["__scopeId", "data-v-3b481cc4"]]),
   Fa = "whiteGoldHome";
 ya(
   Object.assign({
-    "../assets/styles/other/blackGoldHome/reset.scss": () =>
+    "../assets/styles/other/#e3efffGoldHome/reset.scss": () =>
       k(() => Promise.resolve({}), ["assets/css/reset-8972b5eb.css"]),
     "../assets/styles/other/blueHome/reset.scss": () =>
       k(() => Promise.resolve({}), ["assets/css/reset-58948e2b.css"]),

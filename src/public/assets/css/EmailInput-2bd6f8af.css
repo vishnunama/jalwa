@@ -1,6 +1,6 @@
 [data-v-5fed29ce]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-5fed29ce] {
@@ -55,7 +55,7 @@
 
 .verifyInput__container-label[data-v-5fed29ce] {
   margin-bottom: 0.32rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.4rem;
 }
 
@@ -95,7 +95,7 @@
   right: 0.26667rem;
   width: 2.53333rem;
   height: 0.93333rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.34667rem;
   border: none;
   border-radius: 1.92rem;
@@ -139,8 +139,8 @@
 }
 
 [data-v-362c90e1]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -148,10 +148,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-362c90e1] {
@@ -195,7 +195,7 @@
 
 .emailinput__container-label[data-v-362c90e1] {
   margin-bottom: 0.32rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.4rem;
 }
 
@@ -217,7 +217,7 @@
   border: none;
   border-radius: 0.26667rem;
   background: #323a7c;
-  color: #fff;
+  color: #011341;
 }
 
 .emailinput__container-input input[data-v-362c90e1]::-webkit-input-placeholder {

@@ -40,7 +40,7 @@
 }
 .register__container-invitation__label[data-v-36240ca4] {
   margin-bottom: 0.32rem;
-  color: #fff;
+  color: #001C54;
   font-size: 0.4rem;
 }
 .register__container-invitation__label-icon[data-v-36240ca4] {
@@ -53,7 +53,7 @@
   height: 1.17333rem;
   padding: 0.36rem 0.34667rem;
   background: #323a7c;
-  color: #fff;
+  color: #001C54;
   font-size: 0.37333rem;
   border: none;
   border-radius: 0.26667rem;
@@ -74,7 +74,7 @@
   display: inline-flex;
 }
 .register__container-remember[data-v-36240ca4] .van-checkbox .van-icon-success {
-  color: #fff;
+  color: #001C54;
 }
 .register__container-remember[data-v-36240ca4]
   .van-checkbox
@@ -86,7 +86,7 @@
   .van-checkbox
   .van-checkbox__label
   span {
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.32rem;
 }
 .register__container-button[data-v-36240ca4] {
@@ -106,14 +106,14 @@
 .register__container-button button[data-v-36240ca4] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.05333rem;
   border-radius: 1.06667rem;
   border: none;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -130,7 +130,7 @@
   box-shadow: 0 0.05333rem #b6bad0;
 }
 .register__container-button .login[data-v-36240ca4] {
-  border: 0.01333rem solid #ff9a8e;
+  border: 0.01333rem solid #00ECBE;
   text-shadow: none;
   background: transparent;
   box-shadow: none;
@@ -143,26 +143,26 @@
 }
 .register__container-button .loginin[data-v-36240ca4] {
   font-size: 0.4rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-weight: 700;
   margin-left: 0.22667rem;
 }
 .register__container-button span[data-v-36240ca4] {
   margin-top: 0.32rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 .register__container-tips[data-v-36240ca4] {
   margin-top: -0.26667rem;
   margin-bottom: 0.16rem;
   padding-left: 0.22667rem;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.32rem;
 }
 .register__container-tip[data-v-36240ca4] {
   margin-top: 0.16rem;
   padding-left: 0.22667rem;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.32rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -192,7 +192,7 @@
   white-space: normal;
 }
 .red[data-v-36240ca4] {
-  color: #ff9a8e !important;
+  color: #00ECBE !important;
 }
 .van-toast[data-v-7e428c43] {
   word-break: break-word !important;
@@ -232,7 +232,7 @@
 }
 .register__container-invitation__label[data-v-7e428c43] {
   margin-bottom: 0.32rem;
-  color: #fff;
+  color: #001C54;
   font-size: 0.4rem;
 }
 .register__container-invitation__label-icon[data-v-7e428c43] {
@@ -245,7 +245,7 @@
   height: 1.17333rem;
   padding: 0.36rem 0.34667rem;
   background: #323a7c;
-  color: #fff;
+  color: #001C54;
   font-size: 0.37333rem;
   border: none;
   border-radius: 0.26667rem;
@@ -275,7 +275,7 @@
   .van-checkbox
   .van-checkbox__label
   span {
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.32rem;
 }
 .register__container-button[data-v-7e428c43] {
@@ -295,14 +295,14 @@
 .register__container-button button[data-v-7e428c43] {
   width: 7.73333rem;
   height: 1.06667rem;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.05333rem;
   border-radius: 1.06667rem;
   border: none;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -319,7 +319,7 @@
   box-shadow: 0 0.05333rem #b6bad0;
 }
 .register__container-button .login[data-v-7e428c43] {
-  border: 0.01333rem solid #ff9a8e;
+  border: 0.01333rem solid #00ECBE;
   text-shadow: none;
   background: transparent;
   box-shadow: none;
@@ -332,26 +332,26 @@
 }
 .register__container-button .loginin[data-v-7e428c43] {
   font-size: 0.4rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-weight: 700;
   margin-left: 0.22667rem;
 }
 .register__container-button span[data-v-7e428c43] {
   margin-top: 0.32rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
 }
 .register__container-tips[data-v-7e428c43] {
   margin-top: -0.26667rem;
   margin-bottom: 0.16rem;
   padding-left: 0.22667rem;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.32rem;
 }
 .register__container-tip[data-v-7e428c43] {
   margin-top: 0.32rem;
   padding-left: 0.22667rem;
-  color: #ff9a8e;
+  color: #00ECBE;
   font-size: 0.32rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -370,7 +370,7 @@
   background-size: contain;
 }
 .red[data-v-7e428c43] {
-  color: #ff9a8e !important;
+  color: #00ECBE !important;
 }
 .van-toast[data-v-7e82aefe] {
   word-break: break-word !important;
@@ -400,7 +400,7 @@
   -webkit-align-items: center;
   align-items: center;
   font-size: 0.4rem;
-  color: #fff;
+  color: #001C54;
 }
 .right img[data-v-7e82aefe] {
   width: 0.66667rem;
@@ -415,7 +415,7 @@
   white-space: nowrap;
 }
 .resgister__C .van-nav-bar[data-v-7e82aefe] {
-  background-color: #f7f8ff;
+  background-color: #05012b;
 }
 .resgister__C .van-nav-bar .leftArrow[data-v-7e82aefe] {
   width: 0.45333rem;
@@ -438,7 +438,7 @@
   .navbar__content
   .navbar__content-left
   .van-icon {
-  color: #fff !important;
+  color: #001C54 !important;
 }
 .resgister__C .login_container-tab[data-v-7e82aefe] {
   width: 100%;
@@ -473,7 +473,7 @@
 }
 .resgister__C .login_container-tab .tab .font30[data-v-7e82aefe] {
   font-size: 0.4rem;
-  color: #888;
+  color: #E3EFFF;
   text-align: center;
   -webkit-box-flex: 0;
   -webkit-flex: none;
@@ -483,10 +483,10 @@
   margin-top: 0.21333rem;
 }
 .resgister__C .login_container-tab .active[data-v-7e82aefe] {
-  border-bottom: 0.05333rem solid #ffffff;
+  border-bottom: 0.05333rem solid #001C54;
 }
 .resgister__C .login_container-tab .active .font30[data-v-7e82aefe] {
-  color: #ffffff;
+  color: #001C54;
 }
 .resgister__C .login_container-tab .basicimg[data-v-7e82aefe],
 .resgister__C .login_container-tab .phoneactive[data-v-7e82aefe],
@@ -519,7 +519,7 @@
 .resgister__C-heading__title[data-v-7e82aefe] {
   font-size: 0.42667rem;
   font-weight: 700;
-  color: #fff;
+  color: #001C54;
   margin-left: 0.53333rem;
   padding-top: 0.26667rem;
 }
@@ -535,7 +535,7 @@
   margin-top: 0.29333rem;
   margin-left: 0.53333rem;
   margin-bottom: 0.53333rem;
-  color: #fff;
+  color: #001C54;
   white-space: normal;
 }
 .resgister__C-form[data-v-7e82aefe] {

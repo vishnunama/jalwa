@@ -435,7 +435,7 @@ const Me = { class: "vip-content-card" },
                                                   ),
                                                   "stroke-width": "8",
                                                   color:
-                                                    "linear-gradient(180deg, #FFFCE7 0%, #FFC821 100%)",
+                                                    "linear-gradient(180deg, #011341CE7 0%, #FFC821 100%)",
                                                   "track-color": l(f)[t.id],
                                                   "show-pivot": !1,
                                                 },
@@ -579,7 +579,7 @@ const Me = { class: "vip-content-card" },
                                                   ),
                                                   "stroke-width": "8",
                                                   color:
-                                                    "linear-gradient(180deg, #FFFCE7 0%, #FFC821 100%)",
+                                                    "linear-gradient(180deg, #011341CE7 0%, #FFC821 100%)",
                                                   "track-color": l(f)[t.id],
                                                   "show-pivot": !1,
                                                 },
@@ -1608,8 +1608,7 @@ const Mn = H(En, [["__scopeId", "data-v-ce3e6ca0"]]),
             e("div", Bn, [
               I(K, {
                 title: "VIP",
-                backgroundColor:
-                  "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                 "left-arrow": "",
                 onClickLeft: m[0] || (m[0] = (X) => l(f).go(-1)),
               }),

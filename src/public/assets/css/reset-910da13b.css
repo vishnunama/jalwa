@@ -1,12 +1,12 @@
 @charset "UTF-8";
 :root {
-  --van-popup-background: #f0f0f5;
+  --van-popup-background: #011341;
 }
 .van-toast {
   word-break: break-word !important;
 }
 .cg-default.van-button {
-  box-shadow: 0 0.05333rem #f95959;
+    /* box-shadow: 0 0.05333rem #f95959; */
   font-weight: 700;
   font-size: 0.4rem;
 }
@@ -39,7 +39,7 @@ html:lang(ar) #app .withdraw__container .Recharge__container-intro p:after {
   height: 0.13333rem;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  background: #ff9a8e;
+  background: #00ECBE;
   right: -0.06667rem;
   top: 0.18667rem;
 }
@@ -113,8 +113,8 @@ html:lang(ar) #app .bonus-items .head .left {
 html:lang(ar) #app .bonus-items .head .left:before {
   right: auto !important;
   left: 0;
-  background: -webkit-linear-gradient(344deg, #fff 50%, transparent 50%);
-  background: linear-gradient(106deg, #fff 50%, transparent 50%);
+  background: -webkit-linear-gradient(344deg, #011341 50%, transparent 50%);
+  background: linear-gradient(106deg, #011341 50%, transparent 50%);
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
   clip-path: polygon(0 0, 0 100%, 100% 0);
 }
@@ -167,8 +167,8 @@ html:lang(ar) #app .ChampionshipDetail .rule .con p:after {
   right: 0;
 }
 html:lang(ar) #app .popup__container-numLine > div:first-child {
-  background: -webkit-linear-gradient(28deg, transparent 0.46667rem, #fff 0) 0 0;
-  background: linear-gradient(-298deg, transparent 0.46667rem, #fff 0) 0 0;
+  background: -webkit-linear-gradient(28deg, transparent 0.46667rem, #011341 0) 0 0;
+  background: linear-gradient(-298deg, transparent 0.46667rem, #011341 0) 0 0;
   -webkit-padding-start: 0 !important;
   padding-inline-start: 0 !important;
 }
@@ -204,8 +204,8 @@ html:lang(ar)
   .pointMall__container-products__content-item__header-redeemed {
   right: auto !important;
   left: 0;
-  background: -webkit-linear-gradient(top, #ff9a8e 20%, #f95959 100%);
-  background: linear-gradient(180deg, #ff9a8e 20%, #f95959 100%);
+  background: -webkit-linear-gradient(top, #00ECBE 20%, #f95959 100%);
+  background: linear-gradient(180deg, #00ECBE 20%, #f95959 100%);
   border-top-right-radius: 0.53333rem;
 }
 html:lang(ar)
@@ -279,7 +279,7 @@ html:lang(ar) #app .rpwd__C-heading {
   padding: 0 0.26667rem;
 }
 html:lang(ar) #app .setting-wrapper .content-sub_title > div {
-  border-right: 0.10667rem solid #ff9a8e;
+  border-right: 0.10667rem solid #00ECBE;
   border-left: none;
 }
 html:lang(ar) #app .onlineGames__container input {
@@ -421,10 +421,10 @@ html:lang(ar)
 html:lang(ar) #app .dailySignIn__container-hero {
   background:
     url(/assets/png/ar-headerBg-27af7ca7.png) no-repeat 0 -0.26667rem,
-    -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
+    -webkit-linear-gradient(left, #00ECBE 0%, #f95959 100%);
   background:
     url(/assets/png/ar-headerBg-27af7ca7.png) no-repeat 0 -0.26667rem,
-    linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+    linear-gradient(180deg, #7AFEC3, #02AFB6);
 }
 html:lang(ar) #app .van-sticky {
   direction: ltr;
@@ -556,8 +556,8 @@ html:lang(ar) #app .StrongBox__container-income-header-right {
   border-inline-end: 0.01333rem solid #daddf0;
 }
 html:lang(ar) #app .popup__container-numLine > div:first-child {
-  background: -webkit-linear-gradient(27deg, transparent 0.46667rem, #fff 0) 0 0;
-  background: linear-gradient(63deg, transparent 0.46667rem, #fff 0) 0 0;
+  background: -webkit-linear-gradient(27deg, transparent 0.46667rem, #011341 0) 0 0;
+  background: linear-gradient(63deg, transparent 0.46667rem, #011341 0) 0 0;
 }
 html:lang(ar) #app .notification-container-content-title:before {
   -webkit-transform: scaleX(-1);
@@ -645,11 +645,12 @@ html:lang(ar) #app .Recharge__content-paymoney__money-input {
   width: 100%;
   height: 0.98667rem;
   padding-inline: 0.26667rem;
-  color: #303a4c;
+  color: #E3EFFF !important;
+  border: .01333rem solid #224BA2;
   font-size: 0.32rem;
-  border-radius: 99rem;
-  background: #fff;
-  box-shadow: 0 0.10667rem 0.16rem #d0d0ed4d;
+  border-radius: .26667rem !important;
+  background: #011341;
+    /* box-shadow: 0 0.10667rem 0.16rem #d0d0ed4d; */
 }
 .noticeBar__container-body {
   width: 9.33333rem;
@@ -743,7 +744,7 @@ html:lang(ar) #app .Recharge__content-paymoney__money-input {
   width: 2rem;
   height: 0.66667rem;
   margin-left: auto;
-  color: #fff;
+  color: #011341;
   border: none;
   border-radius: 0.53333rem;
   background: -webkit-linear-gradient(

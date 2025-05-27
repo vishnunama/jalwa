@@ -1,6 +1,6 @@
 [data-v-53f1c857]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-53f1c857] {
@@ -75,7 +75,7 @@
   font-size: 0.4rem;
   font-weight: 600;
   margin-bottom: 0.13333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .activity-wrapper
@@ -84,7 +84,7 @@
   > .box-content
   p[data-v-53f1c857] {
   font-size: 0.32rem;
-  color: #888;
+  color: #E3EFFF;
 }
 
 .activity-wrapper .activitySection__container > .box img[data-v-53f1c857] {
@@ -93,7 +93,7 @@
 }
 
 .activity-wrapper .activity-banner[data-v-53f1c857] {
-  color: #fff;
+  color: #011341;
   font-size: 0.32rem;
   font-style: normal;
   min-height: 2rem;
@@ -182,7 +182,7 @@
   border-radius: 0.26667rem;
   padding: 0.13333rem;
   box-shadow:
-    0 -0.05333rem 0.16rem #fff inset,
+    0 -0.05333rem 0.16rem #011341 inset,
     0 0.10667rem 0.21333rem #d0d0ed5c;
   margin-bottom: 0.29333rem;
 }
@@ -308,7 +308,7 @@
   .activity-panel-content
   .content-title
   .content-para[data-v-53f1c857] {
-  color: #fff;
+  color: #011341;
   font-weight: 700;
   padding: 0.13333rem 0.26667rem;
   font-size: 0.37333rem;
@@ -316,7 +316,7 @@
 
 .activity-wrapper .activity-panel-content .content-title p[data-v-53f1c857] {
   padding: 0.06667rem 0.26667rem;
-  color: #fff;
+  color: #011341;
 }
 
 .activity-wrapper .dialog-wrapper[data-v-53f1c857] {
@@ -341,14 +341,14 @@
 }
 
 .activity-wrapper .dialog-wrapper .dialog-title[data-v-53f1c857] {
-  color: #fff;
+  color: #011341;
   margin-bottom: 0.13333rem;
   font-size: 0.4rem;
   padding: 0 0.16rem;
 }
 
 .activity-wrapper .dialog-wrapper .dialog-title span[data-v-53f1c857] {
-  color: #ff9a8e;
+  color: #00ECBE;
   font-weight: 700;
   font-size: 0.48rem;
 }
@@ -368,7 +368,7 @@
   background: linear-gradient(180deg, #2aaaf3 0%, #2979f2 100%);
   border-radius: 1.06667rem;
   font-weight: 700;
-  color: #fff;
+  color: #011341;
   font-size: 0.42667rem;
   margin-top: 1.06667rem;
 }
@@ -399,8 +399,8 @@
 }
 
 [data-v-0ea39f99]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -408,10 +408,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-0ea39f99] {
@@ -439,7 +439,7 @@
 }
 
 .navbar[data-v-0ea39f99] {
-  background: #f7f8ff;
+  background: #05012b;
 }
 
 .navbar__content-center img[data-v-0ea39f99] {

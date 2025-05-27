@@ -1,6 +1,6 @@
 [data-v-8b0ced33]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-8b0ced33] {
@@ -64,7 +64,7 @@
   background: -webkit-linear-gradient(left, #2979f2 0%, #2aaaf3 100%);
   background: linear-gradient(90deg, #2979f2 0%, #2aaaf3 100%);
   border-radius: 0.26667rem 0.26667rem 0 0;
-  color: #fff;
+  color: #011341;
   font-size: 0.29333rem;
   padding: 0.13333rem 0.26667rem;
   border-top: 0.01333rem solid #2aaaf3;
@@ -91,7 +91,7 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  color: #fff;
+  color: #011341;
 }
 
 .item[data-v-8b0ced33] .right .head > div.time span,
@@ -102,7 +102,7 @@
 
 .item[data-v-8b0ced33] .right .head > div.amount,
 .item[data-v-8b0ced33] .right .foot > div.amount {
-  background: #fff;
+  background: #011341;
   color: #2979f2;
   font-weight: 700;
   text-align: center;

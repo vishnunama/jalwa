@@ -16,10 +16,10 @@ socket.on("data-server-k3", function (msg) {
       $("#period").text(notResult.period);
       // $("#previous").addClass("block-click")
       // $("#previous").removeClass("action")
-      // $("#previous .van-icon-arrow").css("color", "#7f7f7f")
+      // $("#previous .van-icon-arrow").css("color", "#92a8e3")
       // $("#next").removeClass("block-click")
       // $("#next").addClass("action")
-      // $("#next .van-icon-arrow").css("color", "#fff")
+      // $("#next .van-icon-arrow").css("color", "#001C54")
     }
   }
 });
@@ -233,7 +233,7 @@ var page = 1;
 //    $(".Loading").fadeIn(0)
 //    $("#previous").removeClass("block-click")
 //    $("#previous").addClass("action")
-//    $("#previous .van-icon-arrow-left").css("color", "#fff")
+//    $("#previous .van-icon-arrow-left").css("color", "#001C54")
 //    pageno += 10
 //    let pageto = limit
 //    let url = ""
@@ -257,7 +257,7 @@ var page = 1;
 //             pageno -= 10
 //             $("#next").addClass("block-click")
 //             $("#next").removeClass("action")
-//             $("#next .van-icon-arrow").css("color", "#7f7f7f")
+//             $("#next .van-icon-arrow").css("color", "#92a8e3")
 //             alertMess(response.msg)
 //             return false
 //          }
@@ -278,7 +278,7 @@ var page = 1;
 //    $(".Loading").fadeIn(0)
 //    $("#next").removeClass("block-click")
 //    $("#next").addClass("action")
-//    $("#next .van-icon-arrow").css("color", "#fff")
+//    $("#next .van-icon-arrow").css("color", "#001C54")
 //    pageno -= 10
 //    let pageto = limit
 //    let url = ""
@@ -301,13 +301,13 @@ var page = 1;
 //          if (page - 1 < 2) {
 //             $("#previous").addClass("block-click")
 //             $("#previous").removeClass("action")
-//             $("#previous .van-icon-arrow-left").css("color", "#7f7f7f")
+//             $("#previous .van-icon-arrow-left").css("color", "#92a8e3")
 //          }
 //          if (response.status === false) {
 //             pageno = 0
 //             $("#previous .arr:eq(0)").addClass("block-click")
 //             $("#previous .arr:eq(0)").removeClass("action")
-//             $("#previous .van-icon-arrow-left").css("color", "#7f7f7f")
+//             $("#previous .van-icon-arrow-left").css("color", "#92a8e3")
 //             alertMess(response.msg)
 //             return false
 //          }

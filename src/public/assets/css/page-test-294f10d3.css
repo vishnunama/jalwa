@@ -1,11 +1,11 @@
 [data-v-9c8849f5]:root {
-  --van-popup-background: #f0f0f5;
+  --van-popup-background: #011341;
 }
 .van-toast[data-v-9c8849f5] {
   word-break: break-word !important;
 }
 .cg-default.van-button[data-v-9c8849f5] {
-  box-shadow: 0 0.05333rem #f95959;
+    /* box-shadow: 0 0.05333rem #f95959; */
   font-weight: 700;
   font-size: 0.4rem;
 }
@@ -34,7 +34,7 @@ html:lang(ar) .dialog[data-v-9c8849f5] {
   left: unset;
 }
 .dialog-bg[data-v-9c8849f5] {
-  background-color: #00000080;
+  background-color: #e3efff80;
   width: 100%;
   height: 100%;
 }
@@ -79,7 +79,7 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
 }
 .dialog-main-content[data-v-9c8849f5] {
   padding: 0.56rem 0.16rem 0.24rem;
-  background-color: var(--body, #fff);
+  background-color: var(--body, #011341);
   border-radius: 0.12rem;
   width: 100%;
   margin-top: -0.4rem;
@@ -87,12 +87,12 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
 }
 .dialog-main-content-title[data-v-9c8849f5] {
   font-size: 0.21333rem;
-  color: #333;
+  color: #E3EFFF;
   font-weight: 500;
 }
 .dialog-main-content-code[data-v-9c8849f5] {
   font-size: 0.14667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 .dialog-main-content-desc[data-v-9c8849f5] {
   display: -webkit-box;
@@ -107,7 +107,7 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   width: 100%;
   height: 1.13333rem;
   font-size: 0.18667rem;
-  color: #000;
+  color: #e3efff;
   font-weight: 500;
 }
 .dialog-main-content-handle[data-v-9c8849f5] {
@@ -223,13 +223,13 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   animation: dialogOut-9c8849f5 0.2s ease-in;
 }
 [data-v-f47148b3]:root {
-  --van-popup-background: #f0f0f5;
+  --van-popup-background: #011341;
 }
 .van-toast[data-v-f47148b3] {
   word-break: break-word !important;
 }
 .cg-default.van-button[data-v-f47148b3] {
-  box-shadow: 0 0.05333rem #f95959;
+    /* box-shadow: 0 0.05333rem #f95959; */
   font-weight: 700;
   font-size: 0.4rem;
 }
@@ -248,8 +248,8 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
 .security[data-v-f47148b3] {
   width: 9.33333rem;
   height: 10rem;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 74.07%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 74.07%);
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 74.07%);
+  background: linear-gradient(180deg, #f95959 0%, #00ECBE 74.07%);
   border-radius: 0.26667rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -287,18 +287,18 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   font-family: Poppins;
   font-weight: 700;
   font-size: 0.50667rem;
-  color: #fff;
+  color: #011341;
   text-shadow: 0 0.05333rem 0.02667rem rgba(137, 102, 70, 0.5);
 }
 .security-header-left[data-v-f47148b3] {
   background: -webkit-linear-gradient(
     left,
-    #ffffff -2.73%,
+    #001C54 -2.73%,
     rgba(255, 255, 255, 0) 91.36%
   );
   background: linear-gradient(
     90deg,
-    #ffffff -2.73%,
+    #001C54 -2.73%,
     rgba(255, 255, 255, 0) 91.36%
   );
   border-radius: 0.26667rem;
@@ -308,12 +308,12 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
 .security-header-right[data-v-f47148b3] {
   background: -webkit-linear-gradient(
     left,
-    #ffffff -2.73%,
+    #001C54 -2.73%,
     rgba(255, 255, 255, 0) 91.36%
   );
   background: linear-gradient(
     90deg,
-    #ffffff -2.73%,
+    #001C54 -2.73%,
     rgba(255, 255, 255, 0) 91.36%
   );
   border-radius: 0.26667rem;
@@ -321,7 +321,7 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
 .security-content[data-v-f47148b3] {
   width: 8.8rem;
   height: 8.26667rem;
-  background: #ffffff;
+  background: #001C54;
   border-radius: 0.26667rem;
   padding: 0.46667rem 0.33333rem;
 }
@@ -330,7 +330,7 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   border-radius: 0.16rem;
   height: 3.06667rem;
   margin-bottom: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.37333rem;
   font-weight: 400;
   line-height: 0.48rem;
@@ -352,7 +352,7 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   margin: 1.33333rem 0;
 }
 .security-tip p[data-v-f47148b3] {
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.32rem;
   font-style: normal;
   font-weight: 400;
@@ -362,8 +362,8 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   min-width: 2.6rem;
   height: 0.66667rem;
   border-radius: 0.13333rem;
-  border: 0.01333rem solid #666;
-  color: #666;
+  /* border: 0.01333rem solid #e3efff; */
+  color: #E3EFFF;
   font-size: 0.32rem;
   font-weight: 400;
   line-height: 0.66667rem;
@@ -395,9 +395,9 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   height: 100%;
 }
 .security-code[data-v-f47148b3] {
-  background: -webkit-linear-gradient(top, #ff9a8e 0%, #e3c29f 100%);
-  background: linear-gradient(180deg, #ff9a8e 0%, #e3c29f 100%);
-  box-shadow: 0 -0.05333rem 0.13333rem #fff6f4 inset;
+  background: -webkit-linear-gradient(top, #00ECBE 0%, #e3c29f 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+  box-shadow: 0 -0.05333rem 0.13333rem #0113416f4 inset;
   -webkit-filter: drop-shadow(0 0.05333rem 0.21333rem #d0d0ed);
   filter: drop-shadow(0 0.05333rem 0.21333rem #d0d0ed);
   border: none;
@@ -415,8 +415,8 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   flex-direction: column;
 }
 .security-btns .van-button--primary[data-v-f47148b3] {
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
   -webkit-filter: drop-shadow(0 0.05333rem 0 #f95959);
   filter: drop-shadow(0 0.05333rem 0 #f95959);
   border: none;
@@ -436,7 +436,7 @@ html:lang(ar) .dialog-main[data-v-9c8849f5] {
   margin-bottom: 0.37333rem;
 }
 .security-btns .van-button--default[data-v-f47148b3] {
-  border-color: #ff9a8e;
-  color: #ff9a8e;
+  border-color: #00ECBE;
+  color: #00ECBE;
   margin-bottom: 0.37333rem;
 }

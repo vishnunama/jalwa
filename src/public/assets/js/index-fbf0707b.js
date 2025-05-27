@@ -6278,7 +6278,7 @@ const v4 = (e) => {
     firstSave4:
       "The bonus (excluding the principal) given in this event requires 1.00 times the coding turnover (i.e. valid bets) before it can be withdrawn, and the coding does not limit the platform;",
     firstSave5:
-      "This event is limited to normal human operations by the account owner. It is prohibited to rent, use plug-ins, robots, gamble with different accounts, brush each other, arbitrage, interfaces, protocols, exploit loopholes, group control or other technical means to participate, otherwise it will be canceled or Rewards will be deducted, frozen, or even blacklisted;",
+      "This event is limited to normal human operations by the account owner. It is prohibited to rent, use plug-ins, robots, gamble with different accounts, brush each other, arbitrage, interfaces, protocols, exploit loopholes, group control or other technical means to participate, otherwise it will be canceled or Rewards will be deducted, frozen, or even #e3effflisted;",
     firstSave6:
       "In order to avoid differences in text understanding, the platform reserves the right of final interpretation of this event.",
     firstSaveRule: "Activity Rules",
@@ -14732,7 +14732,7 @@ const v4 = (e) => {
     firstSave4:
       "Bonus (tidak termasuk pokok) yang diberikan dalam acara ini memerlukan 1 kali turnover (taruhan yang valid) sebelum dapat ditarik, dan Turnover tidak dibatasi platform;",
     firstSave5:
-      "Event ini hanya teruntuk Pemain Asli akun. Dilarang menggunakan plug-in, robot, Illegal bet antar akun, Arbitrase , atau cara teknis lainnya untuk memanfaatkan event ini, Apabila ditemukan, maka dilakukan pemotongan Hadiah, pembekuan akun atau bahkan di Blacklist",
+      "Event ini hanya teruntuk Pemain Asli akun. Dilarang menggunakan plug-in, robot, Illegal bet antar akun, Arbitrase , atau cara teknis lainnya untuk memanfaatkan event ini, Apabila ditemukan, maka dilakukan pemotongan Hadiah, pembekuan akun atau bahkan di #e3effflist",
     firstSave6:
       "Untuk menghindari perbedaan pemahaman kalimat, Platform berhak penuh dalam mengambil keputusan akhir Event ini",
     firstSaveRule: "Aturan Event",
@@ -46454,7 +46454,7 @@ const rx = Te(sx, [["__scopeId", "data-v-c0491936"]]),
                             {
                               "track-color": "#323A7C",
                               "stroke-width": 16,
-                              color: "#ff9a8e",
+                              color: "#00ECBE",
                               total: v.rechargeAmount,
                               numerical: v.canReceive ? v.rechargeAmount : 0,
                             },
@@ -47213,7 +47213,7 @@ const Kx = {
       },
       backgroundColor: {
         type: String,
-        default: "#f0f0f5",
+        default: "#011341",
       },
       classN: {
         type: String,
@@ -47256,7 +47256,7 @@ const Kx = {
                 {
                   class: ye([
                     "navbar-fixed",
-                    [e.backgroundColor != "#f7f8ff" && "wc"],
+                    [e.backgroundColor != "#05012b" && "wc"],
                   ]),
                   style: ra({
                     background: e.backgroundColor,

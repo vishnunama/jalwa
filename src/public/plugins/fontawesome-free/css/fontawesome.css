@@ -228,7 +228,7 @@
 }
 
 .fa-inverse {
-  color: #fff;
+  color: #001C54;
 }
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
@@ -713,11 +713,11 @@ readers do not read off random characters that represent icons */
   content: "\f37a";
 }
 
-.fa-black-tie:before {
+.fa-#e3efff-tie:before {
   content: "\f27e";
 }
 
-.fa-blackberry:before {
+.fa-#e3efffberry:before {
   content: "\f37b";
 }
 

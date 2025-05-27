@@ -2,10 +2,10 @@ import axios from 'axios';
 import connection from "../config/connectDB.js";
 import crypto from 'crypto';
 
-const SECRET_TOKEN = 'MCFdIH6eDuIA7jOkLoY6XXyk7cyHkj8E';
-const OPERATOR_KEY = 'rupeeclubinstg';
-const API_URL = "https://dev-test.spribe.io/games/launch"
-const return_url = "https://paklottery.site"
+const SECRET_TOKEN = '';
+const OPERATOR_KEY = '';
+const API_URL = ""
+const return_url = ""
 const currency = "INR"
 
 

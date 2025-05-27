@@ -306,7 +306,7 @@ ul {
   box-sizing: border-box;
   min-width: 0.42667rem;
   padding: 0 0.08rem;
-  color: #fff;
+  color: #011341;
   font-weight: 500;
   font-size: 0.32rem;
   font-family:
@@ -318,7 +318,7 @@ ul {
   line-height: 0.37333rem;
   text-align: center;
   background-color: #ee0a24;
-  border: 0.02667rem solid #fff;
+  border: 0.02667rem solid #011341;
   border-radius: 0.42667rem;
   -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
@@ -338,7 +338,7 @@ ul {
   box-sizing: border-box;
   padding: 0.53333rem 0.32rem;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   word-wrap: break-word;
@@ -358,12 +358,12 @@ ul {
   border-bottom-width: 0.02667rem;
 }
 .van-sidebar-item--select {
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
 }
 .van-sidebar-item--select,
 .van-sidebar-item--select:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-sidebar-item--select:before {
   position: absolute;
@@ -1183,7 +1183,7 @@ ul {
   left: -0.21333rem;
   z-index: 1;
   padding: 0 0.21333rem;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -1210,7 +1210,7 @@ ul {
   font-size: 0.32rem;
 }
 .van-step--horizontal .van-step--process {
-  color: #323233;
+  color: #92A8E3;
 }
 .van-step--vertical {
   display: block;
@@ -1228,7 +1228,7 @@ ul {
   z-index: 1;
   width: 0.02667rem;
   height: 0.53333rem;
-  background-color: #fff;
+  background-color: #011341;
   content: "";
 }
 .van-step--vertical .van-step__circle-container {
@@ -1251,7 +1251,7 @@ ul {
   width: 0;
 }
 .van-step--finish {
-  color: #323233;
+  color: #92A8E3;
 }
 .van-step--finish .van-step__circle,
 .van-step--finish .van-step__line {
@@ -1318,7 +1318,7 @@ ul {
   color: #ed6a0c;
   font-size: 0.37333rem;
   line-height: 0.64rem;
-  background-color: #fffbe8;
+  background-color: #011341be8;
 }
 .van-notice-bar__left-icon,
 .van-notice-bar__right-icon {
@@ -1376,7 +1376,7 @@ ul {
   height: 1.22667rem;
   line-height: 1.5;
   text-align: center;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -1397,7 +1397,7 @@ ul {
 .van-nav-bar__title {
   max-width: 60%;
   margin: 0 auto;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.42667rem;
 }
@@ -1462,7 +1462,7 @@ ul {
   box-sizing: border-box;
   height: 100%;
   padding: 0.42667rem 0.21333rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-grid-item__content:after {
   z-index: 1;
@@ -1520,7 +1520,7 @@ ul {
   font-size: 0.26667rem;
   line-height: 1;
   text-align: center;
-  background-color: #fff;
+  background-color: #011341;
   cursor: pointer;
 }
 .van-goods-action-icon:active {
@@ -1530,7 +1530,7 @@ ul {
   position: relative;
   width: 1em;
   margin: 0 auto 0.13333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.48rem;
 }
 .van-checkbox {
@@ -1582,7 +1582,7 @@ ul {
   border-radius: 100%;
 }
 .van-checkbox__icon--checked .van-icon {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
   border-color: #1989fa;
 }
@@ -1598,7 +1598,7 @@ ul {
 }
 .van-checkbox__label {
   margin-left: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   line-height: 0.53333rem;
 }
 .van-checkbox__label--left {
@@ -1610,7 +1610,7 @@ ul {
 .van-coupon {
   margin: 0 0.32rem 0.32rem;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.21333rem;
   box-shadow: 0 0 0.10667rem rgba(0, 0, 0, 0.1);
 }
@@ -1627,7 +1627,7 @@ ul {
   box-sizing: border-box;
   min-height: 2.24rem;
   padding: 0.37333rem 0;
-  color: #323233;
+  color: #92A8E3;
 }
 .van-coupon__head {
   position: relative;
@@ -1689,7 +1689,7 @@ ul {
   border-top: 0.02667rem dashed #ebedf0;
 }
 .van-coupon--disabled:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-coupon--disabled .van-coupon-item__content {
   height: 1.97333rem;
@@ -1790,7 +1790,7 @@ ul {
   border-radius: 100%;
 }
 .van-radio__icon--checked .van-icon {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
   border-color: #1989fa;
 }
@@ -1806,7 +1806,7 @@ ul {
 }
 .van-radio__label {
   margin-left: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   line-height: 0.53333rem;
 }
 .van-radio__label--left {
@@ -1823,7 +1823,7 @@ ul {
   -webkit-align-items: center;
   align-items: center;
   padding: 0.2em 0.5em;
-  color: #fff;
+  color: #011341;
   font-size: 0.26667rem;
   line-height: normal;
   border-radius: 0.2em;
@@ -1857,13 +1857,13 @@ ul {
   color: #07c160;
 }
 .van-tag--warning {
-  background-color: #f95959;
+  background-color: #00ECBE;
 }
 .van-tag--warning.van-tag--plain {
-  color: #f95959;
+  color: #00ECBE;
 }
 .van-tag--plain {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-tag--mark {
   padding-right: 0.7em;
@@ -1891,7 +1891,7 @@ ul {
   position: relative;
   box-sizing: border-box;
   padding: 0.21333rem 0.42667rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.32rem;
   background-color: #fafafa;
 }
@@ -1957,7 +1957,7 @@ ul {
 }
 .van-card__price {
   display: inline-block;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.32rem;
 }
@@ -2007,10 +2007,10 @@ ul {
   width: 100%;
   padding: 0.26667rem 0.42667rem;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.64rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-cell:after {
   position: absolute;
@@ -2049,7 +2049,7 @@ ul {
   word-wrap: break-word;
 }
 .van-cell__value--alone {
-  color: #323233;
+  color: #92A8E3;
   text-align: left;
 }
 .van-cell__left-icon,
@@ -2098,7 +2098,7 @@ ul {
   font-size: 0.37333rem;
 }
 .van-coupon-cell--selected {
-  color: #323233;
+  color: #92A8E3;
 }
 .van-contact-card {
   padding: 0.42667rem;
@@ -2192,7 +2192,7 @@ ul {
   color: #c8c9cc;
 }
 .van-collapse-item__title--disabled:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-collapse-item__wrapper {
   overflow: hidden;
@@ -2205,7 +2205,7 @@ ul {
   color: #969799;
   font-size: 0.37333rem;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-field--disabled {
   color: #c8c9cc;
@@ -2243,7 +2243,7 @@ ul {
   min-width: 0;
   margin: 0;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   line-height: inherit;
   text-align: left;
   background-color: transparent;
@@ -2365,7 +2365,7 @@ ul {
   align-items: center;
   box-sizing: border-box;
   padding: 0.26667rem 0.32rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-search,
 .van-search__content {
@@ -2386,7 +2386,7 @@ ul {
 }
 .van-search__label {
   padding: 0 0.13333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.90667rem;
 }
@@ -2411,7 +2411,7 @@ ul {
 }
 .van-search__action {
   padding: 0 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.90667rem;
   cursor: pointer;
@@ -2428,7 +2428,7 @@ ul {
   position: fixed;
   max-height: 100%;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -2550,7 +2550,7 @@ ul {
 }
 .van-share-sheet__title {
   margin-top: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 400;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
@@ -2628,7 +2628,7 @@ ul {
   font-size: 0.42667rem;
   line-height: 1.28rem;
   text-align: center;
-  background: #fff;
+  background: #011341;
   border: none;
   cursor: pointer;
 }
@@ -2653,7 +2653,7 @@ ul {
   justify-content: center;
   box-sizing: border-box;
   padding: 0.21333rem 0.42667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   white-space: pre-wrap;
@@ -2670,7 +2670,7 @@ ul {
   background-color: #ee0a24;
 }
 .van-notify--warning {
-  background-color: #f95959;
+  background-color: #00ECBE;
 }
 .van-dropdown-item {
   position: fixed;
@@ -2990,7 +2990,7 @@ ul {
   padding: 0;
   font-size: 0.74667rem;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #011341;
   border: none;
   border-radius: 0.21333rem;
   cursor: pointer;
@@ -3006,7 +3006,7 @@ ul {
   background-color: #ebedf0;
 }
 .van-key--blue {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
 }
 .van-key--blue.van-key--active {
@@ -3034,7 +3034,7 @@ ul {
   height: 0.64rem;
 }
 .van-key__loading-icon {
-  color: #fff;
+  color: #011341;
 }
 .van-list__error-text,
 .van-list__finished-text,
@@ -3063,7 +3063,7 @@ ul {
 .van-switch,
 .van-switch__node {
   height: 1em;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-switch__node {
   position: absolute;
@@ -3140,9 +3140,9 @@ ul {
   left: 50%;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #e3efff;
   border: inherit;
-  border-color: #000;
+  border-color: #e3efff;
   border-radius: inherit;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -3157,32 +3157,32 @@ ul {
   display: none;
 }
 .van-button--default {
-  color: #323233;
-  background-color: #fff;
+  color: #92A8E3;
+  background-color: #011341;
   border: 0.02667rem solid #ebedf0;
 }
 .van-button--primary {
-  color: #fff;
+  color: #011341;
   background-color: #07c160;
   border: 0.02667rem solid #07c160;
 }
 .van-button--info {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
   border: 0.02667rem solid #1989fa;
 }
 .van-button--danger {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
   border: 0.02667rem solid #ee0a24;
 }
 .van-button--warning {
-  color: #fff;
-  background-color: #f95959;
+  color: #011341;
+  background-color: #00ECBE;
   border: 0.02667rem solid #f95959;
 }
 .van-button--plain {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-button--plain.van-button--primary {
   color: #07c160;
@@ -3194,7 +3194,7 @@ ul {
   color: #ee0a24;
 }
 .van-button--plain.van-button--warning {
-  color: #f95959;
+  color: #00ECBE;
 }
 .van-button--large {
   width: 100%;
@@ -3281,7 +3281,7 @@ ul {
   width: 100%;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -3290,7 +3290,7 @@ ul {
   color: #f56723;
   font-size: 0.32rem;
   line-height: 1.5;
-  background-color: #fff7cc;
+  background-color: #0113417cc;
 }
 .van-submit-bar__tip-icon {
   min-width: 0.48rem;
@@ -3319,7 +3319,7 @@ ul {
   -webkit-flex: 1;
   flex: 1;
   padding-right: 0.32rem;
-  color: #323233;
+  color: #92A8E3;
   text-align: right;
 }
 .van-submit-bar__text span {
@@ -3395,7 +3395,7 @@ ul {
   width: 8.53333rem;
   overflow: hidden;
   font-size: 0.42667rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.42667rem;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
@@ -3536,7 +3536,7 @@ ul {
   max-width: 70%;
   min-height: 2.34667rem;
   padding: 0.42667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   white-space: pre-wrap;
@@ -3577,7 +3577,7 @@ ul {
 }
 .van-toast__loading {
   padding: 0.10667rem;
-  color: #fff;
+  color: #011341;
 }
 .van-toast__text {
   margin-top: 0.21333rem;
@@ -3591,7 +3591,7 @@ ul {
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-calendar__popup.van-popup--bottom,
 .van-calendar__popup.van-popup--top {
@@ -3690,7 +3690,7 @@ ul {
 .van-calendar__day--multiple-selected,
 .van-calendar__day--start,
 .van-calendar__day--start-end {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
 }
 .van-calendar__day--start {
@@ -3743,7 +3743,7 @@ ul {
 .van-calendar__selected-day {
   width: 1.44rem;
   height: 1.44rem;
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
   border-radius: 0.10667rem;
 }
@@ -3763,7 +3763,7 @@ ul {
 }
 .van-picker {
   position: relative;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -3891,7 +3891,7 @@ ul {
   justify-content: center;
   height: 1.17333rem;
   padding: 0 0.10667rem;
-  color: #000;
+  color: #e3efff;
 }
 .van-picker-column__item--disabled {
   opacity: 0.3;
@@ -3928,7 +3928,7 @@ ul {
 }
 .van-action-sheet {
   max-height: 80%;
-  color: #323233;
+  color: #92A8E3;
 }
 .van-action-sheet__cancel,
 .van-action-sheet__item {
@@ -3938,7 +3938,7 @@ ul {
   padding: 0;
   font-size: 0.42667rem;
   line-height: 0.53333rem;
-  background-color: #fff;
+  background-color: #011341;
   border: none;
   cursor: pointer;
 }
@@ -3952,7 +3952,7 @@ ul {
 }
 .van-action-sheet__item--disabled:active,
 .van-action-sheet__item--loading:active {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-action-sheet__item--disabled {
   cursor: not-allowed;
@@ -4058,7 +4058,7 @@ ul {
   left: 0;
   z-index: 999;
   padding: 0.13333rem 0.42667rem;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-contact-list__add {
   height: 1.06667rem;
@@ -4079,7 +4079,7 @@ ul {
   padding: 0 0.42667rem;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-address-list__add {
   height: 1.06667rem;
@@ -4094,7 +4094,7 @@ ul {
 }
 .van-address-item {
   padding: 0.32rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.21333rem;
 }
 .van-address-item:not(:last-child) {
@@ -4124,7 +4124,7 @@ ul {
   line-height: 1.4em;
 }
 .van-address-item__address {
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.34667rem;
   line-height: 0.48rem;
 }
@@ -4152,7 +4152,7 @@ ul {
   border-color: #ee0a24;
 }
 .van-cell-group {
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-cell-group__title {
   padding: 0.42667rem 0.42667rem 0.21333rem;
@@ -4161,7 +4161,7 @@ ul {
   line-height: 0.42667rem;
 }
 .van-panel {
-  background: #fff;
+  background: #011341;
 }
 .van-panel__header-value {
   color: #ee0a24;
@@ -4199,7 +4199,7 @@ ul {
   box-sizing: border-box;
   width: 100%;
   padding: 0 0.10667rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.37333rem;
   line-height: 0.48rem;
@@ -4356,7 +4356,7 @@ ul {
   margin-left: 100%;
 }
 .van-count-down {
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
 }
@@ -4399,7 +4399,7 @@ ul {
   cursor: pointer;
 }
 .van-tab--active {
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
 }
 .van-tab--disabled {
@@ -4449,7 +4449,7 @@ ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -4473,7 +4473,7 @@ ul {
   border-right: none;
 }
 .van-tabs__nav--card .van-tab.van-tab--active {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
 }
 .van-tabs__nav--card .van-tab--disabled {
@@ -4537,7 +4537,7 @@ ul {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-coupon-list__exchange {
   -webkit-box-flex: 0;
@@ -4569,7 +4569,7 @@ ul {
   width: 100%;
   padding: 0.13333rem 0.42667rem;
   font-weight: 500;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-coupon-list__close {
   height: 1.06667rem;
@@ -4651,7 +4651,7 @@ ul {
   display: -webkit-flex;
   display: flex;
   height: 1.28rem;
-  background-color: #fff;
+  background-color: #011341;
   box-shadow: 0 0.05333rem 0.32rem rgba(100, 101, 102, 0.08);
 }
 .van-dropdown-menu__bar--opened {
@@ -4687,7 +4687,7 @@ ul {
   box-sizing: border-box;
   max-width: 100%;
   padding: 0 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.4rem;
   line-height: 0.58667rem;
 }
@@ -4764,7 +4764,7 @@ ul {
   height: 1.33333rem;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-goods-action--unfit {
   padding-bottom: 0;
@@ -4885,9 +4885,9 @@ ul {
   position: absolute;
   top: 0.26667rem;
   left: 50%;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
-  text-shadow: 0 0.02667rem 0.02667rem #323233;
+  text-shadow: 0 0.02667rem 0.02667rem #92A8E3;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
 }
@@ -5002,7 +5002,7 @@ ul {
   right: -0.21333rem;
   color: #969799;
   font-size: 0.48rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 100%;
 }
 .van-uploader__mask {
@@ -5024,7 +5024,7 @@ ul {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
+  color: #011341;
   background-color: rgba(50, 50, 51, 0.88);
   border-radius: 0.21333rem;
 }
@@ -5040,7 +5040,7 @@ ul {
 .van-uploader__loading {
   width: 0.58667rem;
   height: 0.58667rem;
-  color: #fff;
+  color: #011341;
 }
 .van-uploader__file {
   display: -webkit-box;
@@ -5078,7 +5078,7 @@ ul {
   z-index: 1;
   box-sizing: border-box;
   padding: 0 0.42667rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.37333rem;
   line-height: 0.85333rem;
@@ -5090,7 +5090,7 @@ ul {
   right: 0;
   left: 0;
   color: #07c160;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-index-bar__sidebar {
   position: fixed;
@@ -5146,13 +5146,13 @@ ul {
   min-width: 0.96rem;
   height: 1.06667rem;
   color: #1989fa;
-  background-color: #fff;
+  background-color: #011341;
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
 }
 .van-pagination__item:active {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
 }
 .van-pagination__item:after {
@@ -5162,7 +5162,7 @@ ul {
   border-right-width: 0.02667rem;
 }
 .van-pagination__item--active {
-  color: #fff;
+  color: #011341;
   background-color: #1989fa;
 }
 .van-pagination__next,
@@ -5239,12 +5239,12 @@ ul {
   height: 100%;
   font-size: 0.53333rem;
   line-height: 1.2;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-password-input__security i {
   width: 0.26667rem;
   height: 0.26667rem;
-  background-color: #000;
+  background-color: #e3efff;
   border-radius: 100%;
   visibility: hidden;
 }
@@ -5259,7 +5259,7 @@ ul {
 .van-password-input__cursor {
   width: 0.02667rem;
   height: 40%;
-  background-color: #323233;
+  background-color: #92A8E3;
   -webkit-animation: van-cursor-flicker 1s infinite;
   animation: van-cursor-flicker 1s infinite;
 }
@@ -5304,7 +5304,7 @@ ul {
   box-sizing: border-box;
   min-width: 3.6em;
   padding: 0 0.13333rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.26667rem;
   line-height: 1.6;
   text-align: center;
@@ -5386,7 +5386,7 @@ ul {
   -webkit-flex: 2;
   flex: 2;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: #011341;
   -webkit-overflow-scrolling: touch;
 }
 .van-tree-select__item {
@@ -5476,7 +5476,7 @@ ul {
   height: 0.74667rem;
   margin: 0;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   vertical-align: middle;
   background-color: #f2f3f5;
   border: 0;
@@ -5533,7 +5533,7 @@ ul {
   height: 0.74667rem;
   margin: 0 0.05333rem;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: normal;
   text-align: center;
@@ -5571,12 +5571,12 @@ ul {
   opacity: 0.3;
 }
 .van-stepper--round .van-stepper__plus {
-  color: #fff;
+  color: #011341;
   background-color: #ee0a24;
 }
 .van-stepper--round .van-stepper__minus {
   color: #ee0a24;
-  background-color: #fff;
+  background-color: #011341;
   border: 0.02667rem solid #ee0a24;
 }
 .van-sku-container {
@@ -5594,7 +5594,7 @@ ul {
   max-height: 80%;
   overflow-y: visible;
   font-size: 0.37333rem;
-  background: #fff;
+  background: #011341;
 }
 .van-sku-body {
   -webkit-box-flex: 1;
@@ -5717,7 +5717,7 @@ ul {
   min-width: 1.06667rem;
   margin: 0 0.32rem 0.32rem 0;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.34667rem;
   line-height: 0.42667rem;
   vertical-align: middle;
@@ -5831,7 +5831,7 @@ ul {
   opacity: 0.8;
 }
 .van-sku-img-uploader__delete:before {
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 0.37333rem;
 }
 .van-sku-img-uploader__mask {
@@ -5853,7 +5853,7 @@ ul {
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: #011341;
   background: rgba(50, 50, 51, 0.8);
 }
 .van-sku-img-uploader__warn-text {
@@ -5934,7 +5934,7 @@ ul {
 .van-slider__button {
   width: 0.64rem;
   height: 0.64rem;
-  background-color: #fff;
+  background-color: #011341;
   border-radius: 50%;
   box-shadow: 0 0.02667rem 0.05333rem rgba(0, 0, 0, 0.5);
 }
@@ -5973,7 +5973,7 @@ ul {
 }
 .van-steps {
   overflow: hidden;
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-steps--horizontal {
   padding: 0.26667rem 0.26667rem 0;
@@ -6030,7 +6030,7 @@ ul {
   height: 1.33333rem;
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  background-color: #fff;
+  background-color: #011341;
 }
 .van-tabbar--fixed {
   position: fixed;

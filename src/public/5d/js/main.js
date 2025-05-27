@@ -39,7 +39,7 @@ socket.on("data-server-5d", function (msg) {
       $("#period").text(notResult.period);
       $("#previous").addClass("block-click");
       $("#previous").removeClass("action");
-      $("#previous .van-icon-arrow").css("color", "#7f7f7f");
+      $("#previous .van-icon-arrow").css("color", "#92a8e3");
       $("#next").removeClass("block-click");
       $("#next").addClass("action");
       $("#next .van-icon-arrow").css("color", "#fff");
@@ -109,7 +109,7 @@ function ShowListOrder(list_orders) {
     for (let i = 0; i < arr.length; i++) {
       total += Number(arr[i]);
       resultData += `
-          <div data-v-42f27458="" class="li circle-black c-row c-row-middle-center c-tc">
+          <div data-v-42f27458="" class="li circle-#e3efff c-row c-row-middle-center c-tc">
               <div data-v-42f27458="">${arr[i]}</div>
           </div>
         `;
@@ -196,7 +196,7 @@ $("#GetNoaverageEmerdList").click(function (e) {
   callListOrder();
   $("#previous").addClass("block-click");
   $("#previous").removeClass("action");
-  $("#previous .van-icon-arrow").css("color", "#7f7f7f");
+  $("#previous .van-icon-arrow").css("color", "#92a8e3");
   $("#next").removeClass("block-click");
   $("#next").addClass("action");
   $("#next .van-icon-arrow").css("color", "#fff");
@@ -661,7 +661,7 @@ function GetMyEmerdList(datas) {
       for (let i = 0; i < arr.length; i++) {
         total += Number(arr[i]);
         //    resultData += `
-        //     <div data-v-42f27458="" class="li circle-black">${arr[i]}</div>
+        //     <div data-v-42f27458="" class="li circle-#e3efff">${arr[i]}</div>
         //   `
         resultData += `
                <div data-v-b4b99df8="">${arr[i]}</div>
@@ -676,7 +676,7 @@ function GetMyEmerdList(datas) {
           join += `
                   <div data-v-42f27458="">
                       <span data-v-42f27458="" style="color: rgb(0, 0, 0);">
-                        <span data-v-42f27458="" class="li circle-black" style="color: rgb(0, 0, 0);">${arr2[i]}</span>
+                        <span data-v-42f27458="" class="li circle-#e3efff" style="color: rgb(0, 0, 0);">${arr2[i]}</span>
                       </span>
                   </div>`;
         } else {
@@ -922,7 +922,7 @@ function drawChartLineInCanvas(topBoxNumber, bottomBoxNumber, canvasId) {
   const myCanvas = document.getElementById(canvasId);
   let boxXList = [5, 35, 65, 95, 123, 152, 181, 210, 239, 268];
   const ctx0 = myCanvas.getContext("2d");
-  ctx0.strokeStyle = "#ff9a8e";
+  ctx0.strokeStyle = "#00ECBE";
   ctx0.beginPath();
   ctx0.moveTo(boxXList[topBoxNumber], 21);
   ctx0.lineTo(boxXList[bottomBoxNumber], 128);
@@ -1393,7 +1393,7 @@ $("#trend_tab_button").click(function (e) {
   initChartTab();
   $("#previous").addClass("block-click");
   $("#previous").removeClass("action");
-  $("#previous .van-icon-arrow").css("color", "#7f7f7f");
+  $("#previous .van-icon-arrow").css("color", "#92a8e3");
   $("#next").removeClass("block-click");
   $("#next").addClass("action");
   $("#next .van-icon-arrow").css("color", "#fff");
@@ -1418,7 +1418,7 @@ $("#GetMyEmerdList").click(function (e) {
   showMeJoin();
   $("#previous").addClass("block-click");
   $("#previous").removeClass("action");
-  $("#previous .van-icon-arrow").css("color", "#7f7f7f");
+  $("#previous .van-icon-arrow").css("color", "#92a8e3");
   $("#next").removeClass("block-click");
   $("#next").addClass("action");
   $("#next .van-icon-arrow").css("color", "#fff");
@@ -1457,7 +1457,7 @@ $("#next").click(function (e) {
         pageno -= 10;
         $("#next").addClass("block-click");
         $("#next").removeClass("action");
-        $("#next .van-icon-arrow").css("color", "#7f7f7f");
+        $("#next .van-icon-arrow").css("color", "#92a8e3");
         alertMess(response.msg);
         return false;
       }
@@ -1514,13 +1514,13 @@ $("#previous").click(function (e) {
       if (page - 1 < 2) {
         $("#previous").addClass("block-click");
         $("#previous").removeClass("action");
-        $("#previous .van-icon-arrow-left").css("color", "#7f7f7f");
+        $("#previous .van-icon-arrow-left").css("color", "#92a8e3");
       }
       if (response.status === false) {
         pageno = 0;
         $("#previous .arr:eq(0)").addClass("block-click");
         $("#previous .arr:eq(0)").removeClass("action");
-        $("#previous .van-icon-arrow-left").css("color", "#7f7f7f");
+        $("#previous .van-icon-arrow-left").css("color", "#92a8e3");
         alertMess(response.msg);
         return false;
       }

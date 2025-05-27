@@ -3333,7 +3333,7 @@ const $U = () =>
         "../assets/styles/fonts.scss": iB,
         "../assets/styles/lotteryrecord.scss": lB,
         "../assets/styles/native.scss": cB,
-        "../assets/styles/other/blackGoldHome/reset.scss": gB,
+        "../assets/styles/other/#e3efffGoldHome/reset.scss": gB,
         "../assets/styles/other/blueHome/reset.scss": rB,
         "../assets/styles/other/damanHome/reset.scss": dB,
         "../assets/styles/other/electronic/home.scss": pB,
@@ -6017,7 +6017,7 @@ let ut = Object.assign({
       ),
   }),
   Qs = Object.assign({
-    "../views/home/other/blackGoldHome.vue": () =>
+    "../views/home/other/#e3efffGoldHome.vue": () =>
       I(
         () => import("./page-home-67e89e9a.js").then((e) => e.O),
         [
@@ -7925,7 +7925,7 @@ function Jt() {
                 {
                   text: `${sessionStorage.getItem("dollarSign") || ""}${o(v.rewardSetting)}`,
                   lineClamp: 2,
-                  fontColor: "#fff",
+                  fontColor: "#011341",
                   wordWrap: !0,
                   top: "30%",
                   fontSize: "12px",
@@ -7940,7 +7940,7 @@ function Jt() {
                 {
                   text: v.rewardSetting,
                   lineClamp: 2,
-                  fontColor: "#fff",
+                  fontColor: "#011341",
                   fontSize: "12px",
                   wordWrap: !0,
                   top: "30%",
@@ -10284,7 +10284,7 @@ const uR = $(_R, [["__scopeId", "data-v-df7a533f"]]),
               [
                 U(o, {
                   "background-color":
-                    "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                    "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                   headLogo: !0,
                 }),
                 U(uR),
@@ -12028,7 +12028,7 @@ const ke = $(VR, [["__scopeId", "data-v-9df420ea"]]),
                   {
                     title: u.$t("activityDestitle"),
                     backgroundColor:
-                      "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                      "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                     placeholder: !1,
                     "left-arrow": "",
                     onClickLeft: c,
@@ -12518,8 +12518,7 @@ const tE = $(eE, [["__scopeId", "data-v-9e342d17"]]),
                 w,
                 {
                   title: C.$t("checkIn"),
-                  backgroundColor:
-                    "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                  backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                   placeholder: !1,
                   "left-arrow": "",
                   onClickLeft: u,
@@ -12795,8 +12794,7 @@ const CE = $(bE, [["__scopeId", "data-v-3ba0459b"]]),
                 X,
                 {
                   title: "",
-                  backgroundColor:
-                    "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                  backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                   placeholder: !1,
                   "left-arrow": "",
                   onClickLeft: v,
@@ -13155,7 +13153,7 @@ const i8 = $(o8, [["__scopeId", "data-v-bb39b164"]]),
       [
         t("path", {
           d: "M18 33C22.1421 33 25.8921 31.3211 28.6066 28.6066C31.3211 25.8921 33 22.1421 33 18C33 13.8579 31.3211 10.1079 28.6066 7.39339C25.8921 4.67893 22.1421 3 18 3C13.8579 3 10.1079 4.67893 7.39339 7.39339C4.67893 10.1079 3 13.8579 3 18C3 22.1421 4.67893 25.8921 7.39339 28.6066C10.1079 31.3211 13.8579 33 18 33Z",
-          stroke: "#ff9a8e",
+          stroke: "#00ECBE",
           "stroke-width": "2",
           "stroke-linejoin": "round",
         }),
@@ -13163,11 +13161,11 @@ const i8 = $(o8, [["__scopeId", "data-v-bb39b164"]]),
           "fill-rule": "evenodd",
           "clip-rule": "evenodd",
           d: "M18 27.75C19.0355 27.75 19.875 26.9105 19.875 25.875C19.875 24.8395 19.0355 24 18 24C16.9645 24 16.125 24.8395 16.125 25.875C16.125 26.9105 16.9645 27.75 18 27.75Z",
-          fill: "#ff9a8e",
+          fill: "#00ECBE",
         }),
         t("path", {
           d: "M18 9V21",
-          stroke: "#ff9a8e",
+          stroke: "#00ECBE",
           "stroke-width": "2.5",
           "stroke-linecap": "round",
           "stroke-linejoin": "round",
@@ -13198,7 +13196,7 @@ const i8 = $(o8, [["__scopeId", "data-v-bb39b164"]]),
           [
             t("path", {
               d: "M32.298 18.6091C38.8283 18.6091 44.3643 21.4959 44.5609 25.7142L44.5643 25.9451V33.0765C44.5643 37.4194 38.9472 40.4114 32.2969 40.4114C31.4146 40.4114 30.5506 40.3588 29.714 40.2571V36.7965C30.5255 36.9165 31.3929 36.9828 32.2969 36.9828C37.3037 36.9828 41.1369 34.9416 41.1369 33.0754V31.1142C39.7346 31.9656 37.9769 32.5976 36.0032 32.9554C34.8157 33.1702 33.5689 33.2811 32.2969 33.2811C31.4203 33.2811 30.5552 33.2285 29.714 33.1256V29.6662C30.5437 29.7896 31.4123 29.8525 32.2969 29.8525C33.3655 29.8525 34.4077 29.7611 35.3917 29.5816C38.9186 28.9428 41.1369 27.3199 41.1369 25.9451C41.1369 24.0799 37.3037 22.0376 32.2969 22.0376C31.3929 22.0376 30.5255 22.1051 29.714 22.2251V18.7634C30.5711 18.6599 31.4336 18.6084 32.2969 18.6091H32.298ZM15.6123 6.28564C22.1426 6.28564 27.6786 9.1725 27.8752 13.3896L27.8786 13.6216V35.1074C27.8786 39.4502 22.2615 42.4434 15.6112 42.4434C8.96204 42.4434 3.34375 39.4502 3.34375 35.1074V20.7759V13.6205C3.34375 9.27764 8.96204 6.28564 15.6112 6.28564H15.6123ZM24.4523 33.1462C23.0489 33.9976 21.2912 34.6296 19.3175 34.9874C18.13 35.2022 16.8832 35.3131 15.6112 35.3131C14.3689 35.3151 13.1289 35.2061 11.906 34.9874C9.93232 34.6296 8.17461 33.9976 6.77232 33.1474V35.1074L6.77804 35.2354C6.94718 37.0651 10.7186 39.0148 15.6123 39.0148C20.618 39.0148 24.4512 36.9736 24.4512 35.1074V33.1462H24.4523ZM24.4523 25.9691C23.0489 26.8194 21.2912 27.4525 19.3175 27.8091C18.13 28.0251 16.8832 28.1348 15.6112 28.1348C14.3689 28.1368 13.1289 28.0278 11.906 27.8091C9.93232 27.4525 8.17461 26.8194 6.77232 25.9691V27.9771L6.77918 28.1108C6.91632 29.4559 9.10375 30.9954 12.5163 31.6136C13.5003 31.7919 14.5437 31.8845 15.6112 31.8845C16.6797 31.8845 17.722 31.7931 18.706 31.6136C22.2329 30.9736 24.4512 29.3519 24.4512 27.9771V25.9679L24.4523 25.9691ZM24.4523 18.7908C23.0489 19.6411 21.2912 20.2742 19.3175 20.6308C18.13 20.8479 16.8832 20.9576 15.6112 20.9576C14.3689 20.9597 13.1289 20.8507 11.906 20.6319C9.93232 20.2742 8.17461 19.6422 6.77232 18.7908V20.7999L6.77918 20.9336C6.91632 22.2788 9.10375 23.8171 12.5163 24.4365C13.5003 24.6148 14.5437 24.7062 15.6112 24.7062C16.6797 24.7062 17.722 24.6148 18.706 24.4365C22.2329 23.7965 24.4512 22.1736 24.4512 20.7999V20.7771V18.7908H24.4523ZM15.6112 9.71422C10.6055 9.71422 6.77232 11.7554 6.77232 13.6216C6.77232 14.9965 8.98946 16.6194 12.5175 17.2582C13.5003 17.4365 14.5437 17.5291 15.6112 17.5291C16.6797 17.5291 17.722 17.4365 18.706 17.2582C22.2329 16.6182 24.4512 14.9965 24.4512 13.6216C24.4512 11.7554 20.618 9.71422 15.6112 9.71422Z",
-              fill: "#ff9a8e",
+              fill: "#00ECBE",
             }),
           ],
         ),
@@ -13224,7 +13222,7 @@ const i8 = $(o8, [["__scopeId", "data-v-bb39b164"]]),
           [
             t("path", {
               d: "M6.64044 22.4187V24.1173H9.50881C10.5045 24.1173 11.4001 24.2346 12.1857 24.4335C12.6452 24.5496 13.001 24.6756 13.2468 24.7856L19.1232 27.1091H26.3929L26.6202 27.1227C27.1428 27.1845 27.7938 27.3722 28.4707 27.796C28.9744 28.1045 29.4046 28.5193 29.7315 29.0113C30.0584 29.5033 30.2739 30.0606 30.3632 30.6445L37.8504 27.4612C38.053 27.3377 38.3136 27.1981 38.6224 27.061C39.4439 26.6965 40.2988 26.4927 41.1894 26.557C42.4111 26.6447 43.4932 27.2512 44.2258 28.3654C45.4166 30.1776 45.1424 32.0256 44.0244 33.4672C43.6909 33.8983 43.3549 34.2083 43.0807 34.4072C42.9985 34.4675 42.9118 34.5212 42.8212 34.5678L33.2896 39.4534L23.9409 44.2302L23.5456 44.4192C22.2655 44.9889 20.8394 45.1444 19.4666 44.8639C19.2675 44.8265 19.0711 44.7761 18.8786 44.7132L8.11045 41.1457L6.64044 41.1445V43.0505H3V22.4187H6.64044ZM9.50881 28.0022L6.64044 28.001V37.262H8.42298C8.56134 37.262 8.69845 37.2768 8.83434 37.3064L9.03322 37.3608L20.1287 41.0358L20.424 41.0889C20.9527 41.1568 21.5468 41.0877 22.1287 40.7949L40.8448 31.2165C40.8756 31.1844 40.9152 31.1411 40.9559 31.0892C41.1412 30.8496 41.1536 30.7619 40.9806 30.4988L40.9423 30.437C40.9362 30.4296 40.9312 30.4321 40.909 30.4308H40.8225C40.6644 30.4432 40.4396 30.5049 40.1962 30.6124C40.1622 30.6275 40.1284 30.6432 40.0949 30.6594L39.9343 30.7409L39.6848 30.8916L39.5168 30.9731L27.396 36.1267C27.1557 36.2288 26.8973 36.2813 26.6363 36.2812H16.8552V32.3974H26.241L26.5412 32.2689V31.4289C26.5412 31.1967 26.5165 31.1547 26.4053 31.0855C26.3428 31.0481 26.2766 31.0175 26.2076 30.9941H18.7514C18.5068 30.9941 18.2646 30.9472 18.0373 30.8582L11.7707 28.379L11.6286 28.3172L11.447 28.258L11.2321 28.1987C10.6675 28.0621 10.0883 27.9957 9.50758 28.001L9.50881 28.0022ZM23.6283 3C32.3434 3 39.4056 10.0646 39.4056 18.7783C39.4056 20.609 39.0943 22.3669 38.5199 24.0036L33.5762 25.733C35.0046 23.6955 35.7691 21.2667 35.7652 18.7783C35.7652 12.0744 30.3323 6.64163 23.6308 6.64163C16.928 6.64163 11.4952 12.0744 11.4952 18.7783C11.4952 19.7357 11.6064 20.6683 11.8164 21.5627L7.99927 20.9203C7.90296 20.2104 7.85468 19.4948 7.85474 18.7783C7.85351 10.0646 14.917 3 23.6283 3ZM25.7605 9.79409L25.7592 10.9676C26.6444 11.114 27.5065 11.3756 28.3237 11.7458L27.3021 14.3214L26.9229 14.1547C25.9285 13.7371 25.0576 13.5271 24.3127 13.5271C23.8791 13.5271 23.5641 13.6037 23.3664 13.7557C23.2751 13.819 23.2003 13.9036 23.1487 14.0021C23.0971 14.1006 23.0701 14.2102 23.07 14.3214C23.07 14.5635 23.196 14.7797 23.4467 14.9712C23.6975 15.1627 24.3769 15.5122 25.485 16.0187C26.5498 16.4968 27.2885 17.0106 27.7024 17.5604C28.1162 18.1088 28.3237 18.7993 28.3237 19.6332C28.3237 20.399 28.1298 21.0785 27.7407 21.6714C27.3528 22.2668 26.7919 22.7276 26.0606 23.0574C25.962 23.1019 25.8619 23.1431 25.7605 23.1809V24.6176H22.0546L22.0508 23.4786C21.8378 23.4547 21.626 23.4213 21.4159 23.3786C20.814 23.2473 20.23 23.0441 19.6766 22.7733V19.8024L20.0608 19.9889C20.5784 20.2273 21.1108 20.42 21.6605 20.5658C22.2764 20.7386 22.9121 20.8308 23.5517 20.84C24.0483 20.84 24.4103 20.7536 24.6413 20.5831C24.7491 20.5096 24.8372 20.4106 24.8975 20.2949C24.9578 20.1791 24.9887 20.0503 24.9872 19.9198C24.9907 19.7608 24.9421 19.6051 24.8488 19.4763C24.724 19.3223 24.572 19.1925 24.4004 19.0933C24.1953 18.9636 23.6481 18.6981 22.7574 18.2991C21.9545 17.9334 21.3492 17.5776 20.9477 17.2342C20.5625 16.9141 20.2561 16.5096 20.0521 16.0521C19.8582 15.6074 19.7606 15.0811 19.7606 14.4734C19.7606 13.3369 20.1744 12.45 21.0021 11.8138C21.3218 11.5708 21.6756 11.3764 22.0521 11.2369L22.0546 9.79409H25.7605Z",
-              fill: "#ff9a8e",
+              fill: "#00ECBE",
             }),
           ],
         ),
@@ -13279,8 +13277,7 @@ const i8 = $(o8, [["__scopeId", "data-v-bb39b164"]]),
                 v,
                 {
                   title: y.$t("activityDestitle"),
-                  backgroundColor:
-                    "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                  backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                   placeholder: !1,
                   "left-arrow": "",
                   onClickLeft: C,
@@ -13749,9 +13746,9 @@ const s5 = $(t5, [["__scopeId", "data-v-6fa08806"]]),
         else
           switch (d) {
             case "1":
-              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #FFF962 76.75%)";
+              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #011341962 76.75%)";
             default:
-              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #FFF962 76.75%)";
+              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #011341962 76.75%)";
           }
       }
       function u(d) {
@@ -13806,7 +13803,7 @@ const s5 = $(t5, [["__scopeId", "data-v-6fa08806"]]),
                 C,
                 {
                   "stroke-width": "8px",
-                  color: "#ff9a8e",
+                  color: "#00ECBE",
                   percentage: i(d.item.redeemedNumber, d.item.totalNumber),
                   "show-pivot": !1,
                 },
@@ -14146,8 +14143,7 @@ const E5 = $(R5, [["__scopeId", "data-v-b9264082"]]),
               c,
               {
                 title: o.$t("pointsMall"),
-                backgroundColor:
-                  "linear-gradient(125deg, #ff9a8e 0%, #f95959 100%)",
+                backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                 placeholder: !1,
                 "left-arrow": "",
                 onClickLeft: A,
@@ -14218,11 +14214,11 @@ const U5 = $(G5, [["__scopeId", "data-v-d2d90ef6"]]),
   j5 = { class: "turntable-main" },
   Z5 = { class: "turntable-entry" },
   q5 = Ye(
-    '<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-824a8ad5><path opacity="0.3" d="M77.8132 7.28571L82.0769 11.5714L86.3407 7.28571L82.0769 3L77.8132 7.28571ZM0 42.6429L3.1978 45.8571L6.3956 42.6429L3.1978 39.4286L0 42.6429ZM88.6044 59.7857L91.8022 63L95 59.7857L91.8022 56.5714L88.6044 59.7857Z" fill="#ff9a8e" data-v-824a8ad5></path><path fill-rule="evenodd" clip-rule="evenodd" d="M61.5714 5H23V82H83V26.3889L61.5714 5Z" fill="#ff9a8e" data-v-824a8ad5></path><path d="M83 26.5H62L61.5 5L83 26.5Z" fill="#ff9a8e" data-v-824a8ad5></path><path d="M33 22H51V27H33V22Z" fill="white" data-v-824a8ad5></path><path d="M72 35H67V39H72V35Z" fill="white" data-v-824a8ad5></path><path d="M33 35H63V39H33V35Z" fill="white" data-v-824a8ad5></path><path d="M33 45H63V49H33V45Z" fill="white" data-v-824a8ad5></path><path d="M33 55H63V59H33V55Z" fill="white" data-v-824a8ad5></path><path d="M33 64H63V68H33V64Z" fill="white" data-v-824a8ad5></path><path d="M67 45H72V49H67V45Z" fill="white" data-v-824a8ad5></path><path d="M72 55H67V59H72V55Z" fill="white" data-v-824a8ad5></path><path d="M67 64H72V68H67V64Z" fill="white" data-v-824a8ad5></path><path opacity="0.3" d="M14 91V14H22.5714V82.4444H74V91H14Z" fill="#ff9a8e" data-v-824a8ad5></path></svg>',
+    '<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-824a8ad5><path opacity="0.3" d="M77.8132 7.28571L82.0769 11.5714L86.3407 7.28571L82.0769 3L77.8132 7.28571ZM0 42.6429L3.1978 45.8571L6.3956 42.6429L3.1978 39.4286L0 42.6429ZM88.6044 59.7857L91.8022 63L95 59.7857L91.8022 56.5714L88.6044 59.7857Z" fill="#00ECBE" data-v-824a8ad5></path><path fill-rule="evenodd" clip-rule="evenodd" d="M61.5714 5H23V82H83V26.3889L61.5714 5Z" fill="#00ECBE" data-v-824a8ad5></path><path d="M83 26.5H62L61.5 5L83 26.5Z" fill="#00ECBE" data-v-824a8ad5></path><path d="M33 22H51V27H33V22Z" fill="white" data-v-824a8ad5></path><path d="M72 35H67V39H72V35Z" fill="white" data-v-824a8ad5></path><path d="M33 35H63V39H33V35Z" fill="white" data-v-824a8ad5></path><path d="M33 45H63V49H33V45Z" fill="white" data-v-824a8ad5></path><path d="M33 55H63V59H33V55Z" fill="white" data-v-824a8ad5></path><path d="M33 64H63V68H33V64Z" fill="white" data-v-824a8ad5></path><path d="M67 45H72V49H67V45Z" fill="white" data-v-824a8ad5></path><path d="M72 55H67V59H72V55Z" fill="white" data-v-824a8ad5></path><path d="M67 64H72V68H67V64Z" fill="white" data-v-824a8ad5></path><path opacity="0.3" d="M14 91V14H22.5714V82.4444H74V91H14Z" fill="#00ECBE" data-v-824a8ad5></path></svg>',
     1,
   ),
   $5 = Ye(
-    '<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-824a8ad5><path fill-rule="evenodd" clip-rule="evenodd" d="M8 8H88V88H76.5714L68 73L59.4286 88H36.5714L28 73L19.4286 88H8V8Z" fill="#ff9a8e" data-v-824a8ad5></path><path d="M23 21H29V26H23V21Z" fill="white" data-v-824a8ad5></path><path d="M73 21H35V26H73V21Z" fill="white" data-v-824a8ad5></path><path d="M73 37H35V42H73V37Z" fill="white" data-v-824a8ad5></path><path d="M63 53H35V58H63V53Z" fill="white" data-v-824a8ad5></path><path d="M29 37H23V42H29V37Z" fill="white" data-v-824a8ad5></path><path d="M23 53H29V58H23V53Z" fill="white" data-v-824a8ad5></path></svg>',
+    '<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-824a8ad5><path fill-rule="evenodd" clip-rule="evenodd" d="M8 8H88V88H76.5714L68 73L59.4286 88H36.5714L28 73L19.4286 88H8V8Z" fill="#00ECBE" data-v-824a8ad5></path><path d="M23 21H29V26H23V21Z" fill="white" data-v-824a8ad5></path><path d="M73 21H35V26H73V21Z" fill="white" data-v-824a8ad5></path><path d="M73 37H35V42H73V37Z" fill="white" data-v-824a8ad5></path><path d="M63 53H35V58H63V53Z" fill="white" data-v-824a8ad5></path><path d="M29 37H23V42H29V37Z" fill="white" data-v-824a8ad5></path><path d="M23 53H29V58H23V53Z" fill="white" data-v-824a8ad5></path></svg>',
     1,
   ),
   eI = en(() =>
@@ -14239,7 +14235,7 @@ const U5 = $(G5, [["__scopeId", "data-v-d2d90ef6"]]),
         t("circle", { cx: "72", cy: "75", r: "14", fill: "white" }),
         t("path", {
           d: "M72 56.2C76.48 56.2 80.64 57.8 83.84 60.36V27.08C83.84 25.48 82.88 22.92 81.6 21.64L67.52 7.24C66.24 5.96 64 5 62.08 5H14.4C10.88 5 8 7.88 8 11.4V81.16C8 84.68 10.88 87.56 14.4 87.56H57.6C54.72 84.36 52.8 79.88 52.8 75.08C52.8 64.84 61.44 56.2 72 56.2ZM60.48 13C60.48 11.08 61.44 10.76 62.72 12.04L77.12 26.44C78.4 27.72 78.08 28.68 76.16 28.68H66.88C63.36 28.68 60.48 25.8 60.48 22.28V13ZM20.16 20.68H48.64C49.92 20.68 50.88 21.64 50.88 22.92C50.88 24.2 49.92 25.16 48.64 25.16H20.16C18.88 25.16 17.92 24.2 17.92 22.92C17.92 21.64 18.88 20.68 20.16 20.68ZM20.16 33.48H72.32C73.6 33.48 74.56 34.44 74.56 35.72C74.56 37 73.6 37.96 72.32 37.96H20.16C18.88 37.96 17.92 37 17.92 35.72C17.92 34.44 18.88 33.48 20.16 33.48ZM17.92 48.52C17.92 47.24 18.88 46.28 20.16 46.28H58.24C59.52 46.28 60.48 47.24 60.48 48.52C60.48 49.8 59.52 50.76 58.24 50.76H20.16C18.88 50.76 17.92 49.8 17.92 48.52ZM72 59.4C63.04 59.4 56 66.44 56 75.4C56 84.36 63.04 91.4 72 91.4C80.96 91.4 88 84.36 88 75.4C88 66.44 80.96 59.4 72 59.4ZM72 87.88C64.96 87.88 59.2 82.12 59.2 75.08C59.2 68.04 64.96 62.28 72 62.28C79.04 62.28 84.8 68.04 84.8 75.08C84.8 82.44 79.04 87.88 72 87.88ZM80.64 71.56L76.16 70.92L73.92 66.76C73.28 65.48 71.36 65.48 70.72 66.76L68.48 70.92L64 71.56C63.36 71.56 62.72 72.2 62.4 72.84C62.08 73.48 62.4 74.12 63.04 74.44L66.56 77.64L65.6 82.44C65.6 83.08 65.92 83.72 66.24 84.04C66.56 84.36 67.52 84.68 68.16 84.36L72.32 82.12L76.48 84.36C76.8 84.68 77.12 84.68 77.12 84.68C77.76 84.68 77.76 84.36 78.08 84.36C78.72 83.72 78.72 83.4 78.72 82.76L78.4 78.28L81.92 75.08C82.24 74.44 82.24 73.48 82.24 72.84C81.6 72.2 81.28 71.88 80.64 71.56Z",
-          fill: "#ff9a8e",
+          fill: "#00ECBE",
         }),
         t("path", {
           d: "M60.4799 13C60.4799 11.08 61.4399 10.76 62.7199 12.04L77.1199 26.44C78.3999 27.72 78.0799 28.68 76.1599 28.68H66.8799C63.3599 28.68 60.4799 25.8 60.4799 22.28V13ZM20.1599 20.68H48.6399C49.9199 20.68 50.8799 21.64 50.8799 22.92C50.8799 24.2 49.9199 25.16 48.6399 25.16H20.1599C18.8799 25.16 17.9199 24.2 17.9199 22.92C17.9199 21.64 18.8799 20.68 20.1599 20.68ZM20.1599 33.48H72.3199C73.5999 33.48 74.5599 34.44 74.5599 35.72C74.5599 37 73.5999 37.96 72.3199 37.96H20.1599C18.8799 37.96 17.9199 37 17.9199 35.72C17.9199 34.44 18.8799 33.48 20.1599 33.48ZM17.9199 48.52C17.9199 47.24 18.8799 46.28 20.1599 46.28H58.2399C59.5199 46.28 60.4799 47.24 60.4799 48.52C60.4799 49.8 59.5199 50.76 58.2399 50.76H20.1599C18.8799 50.76 17.9199 49.8 17.9199 48.52Z",
@@ -14251,7 +14247,7 @@ const U5 = $(G5, [["__scopeId", "data-v-d2d90ef6"]]),
   ),
   tI = { class: "turntable-title" },
   sI = Ye(
-    '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-824a8ad5><path d="M41 10H13V44H41V10Z" fill="#ff9a8e" stroke="#ff9a8e" stroke-width="2" stroke-linejoin="round" data-v-824a8ad5></path><path d="M35 10V4H8C7.44772 4 7 4.44772 7 5V38H13" stroke="#ff9a8e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-824a8ad5></path><path d="M21 22H33" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-824a8ad5></path><path d="M21 30H33" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-824a8ad5></path></svg>',
+    '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-824a8ad5><path d="M41 10H13V44H41V10Z" fill="#00ECBE" stroke="#00ECBE" stroke-width="2" stroke-linejoin="round" data-v-824a8ad5></path><path d="M35 10V4H8C7.44772 4 7 4.44772 7 5V38H13" stroke="#00ECBE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-824a8ad5></path><path d="M21 22H33" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-824a8ad5></path><path d="M21 30H33" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-824a8ad5></path></svg>',
     1,
   ),
   nI = { class: "turntable-table" },
@@ -14311,8 +14307,7 @@ const U5 = $(G5, [["__scopeId", "data-v-d2d90ef6"]]),
                 L,
                 {
                   title: f.$t("activityTurntable"),
-                  backgroundColor:
-                    "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                  backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                   placeholder: !1,
                   "left-arrow": "",
                   onClickLeft: l(B),
@@ -15773,12 +15768,12 @@ const q7 = $(Z7, [["__scopeId", "data-v-7c087f5f"]]),
                 active: l(c),
                 "onUpdate:active":
                   C[0] || (C[0] = (b) => (Ie(c) ? (c.value = b) : null)),
-                background: "#ff9a8e",
-                color: "#fff",
+                background: "#00ECBE",
+                color: "#011341",
                 "line-width": "0",
                 "line-height": "0",
-                "title-active-color": "#fff",
-                "title-inactive-color": "#fff",
+                "title-active-color": "#011341",
+                "title-inactive-color": "#011341",
               },
               {
                 default: j(() => [
@@ -15872,7 +15867,7 @@ const nS = $(sS, [["__scopeId", "data-v-56c90138"]]),
   mS = { key: 0, class: "lotteryDetail__container-item__hero-footer" },
   vS = { class: "lotteryDetail__container-item__hero-footer__ending" },
   hS = { class: "lotteryDetail__container-item__hero-footer__cost" },
-  wS = { style: { color: "#ff9a8e" } },
+  wS = { style: { color: "#00ECBE" } },
   bS = { key: 1, class: "lotteryDetail__container-item__hero-footer" },
   CS = { class: "lotteryDetail__container-item__hero-footer__ending" },
   BS = { class: "lotteryDetail__container-item__hero-footer__cost" },
@@ -15938,7 +15933,7 @@ const nS = $(sS, [["__scopeId", "data-v-56c90138"]]),
           "fill-rule": "evenodd",
           "clip-rule": "evenodd",
           d: "M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM15.0027 10.9995C14.2722 10.9995 13.5998 11.3978 13.2488 12.0383L8.68993 20.357C8.27753 21.1095 8.39114 22.0413 8.97227 22.6726L22.5283 37.4007C23.3206 38.2615 24.6792 38.2615 25.4714 37.4007L39.0275 22.6726C39.6086 22.0413 39.7222 21.1095 39.3098 20.357L34.751 12.0383C34.3999 11.3978 33.7276 10.9995 32.9971 10.9995H15.0027Z",
-          fill: "#ff9a8e",
+          fill: "#00ECBE",
         }),
       ],
       -1,
@@ -15960,7 +15955,7 @@ const nS = $(sS, [["__scopeId", "data-v-56c90138"]]),
           "fill-rule": "evenodd",
           "clip-rule": "evenodd",
           d: "M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM15.0027 10.9995C14.2722 10.9995 13.5998 11.3978 13.2488 12.0383L8.68993 20.357C8.27753 21.1095 8.39114 22.0413 8.97227 22.6726L22.5283 37.4007C23.3206 38.2615 24.6792 38.2615 25.4714 37.4007L39.0275 22.6726C39.6086 22.0413 39.7222 21.1095 39.3098 20.357L34.751 12.0383C34.3999 11.3978 33.7276 10.9995 32.9971 10.9995H15.0027Z",
-          fill: "#ff9a8e",
+          fill: "#00ECBE",
         }),
       ],
       -1,
@@ -16172,7 +16167,7 @@ const nS = $(sS, [["__scopeId", "data-v-56c90138"]]),
                           F,
                           {
                             "stroke-width": "8px",
-                            color: "#ff9a8e",
+                            color: "#00ECBE",
                             percentage: C(
                               l(p).redeemedNumber || 0,
                               l(p).totalNumber,
@@ -16296,8 +16291,8 @@ const nS = $(sS, [["__scopeId", "data-v-56c90138"]]),
                             k[3] || (k[3] = (z) => (w.value = z)),
                           type: "card",
                           background: "transparent",
-                          "title-active-color": "#151515",
-                          "title-inactive-color": "#333",
+                          "title-active-color": "#E3EFFF",
+                          "title-inactive-color": "#E3EFFF",
                           animated: "",
                         },
                         {
@@ -16729,11 +16724,11 @@ const t9 = $(e9, [["__scopeId", "data-v-f888849c"]]),
         else
           switch (y) {
             case 1:
-              return "linear-gradient(90deg, #BDC9F4 -3.24%, #FFF 4.63%, #C9D5FB 13.43%, #D9E3FF 76.75%)";
+              return "linear-gradient(90deg, #BDC9F4 -3.24%, #011341 4.63%, #C9D5FB 13.43%, #D9E3FF 76.75%)";
             case 2:
-              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #FFF962 76.75%)";
+              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #011341962 76.75%)";
             default:
-              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #FFF962 76.75%)";
+              return "linear-gradient(90deg, #FF9C3A -3.24%, #FFE55C 4.63%, #FFB936 13.43%, #011341962 76.75%)";
           }
       }
       function B(y) {
@@ -16779,12 +16774,12 @@ const t9 = $(e9, [["__scopeId", "data-v-f888849c"]]),
                 active: l(o),
                 "onUpdate:active":
                   b[0] || (b[0] = (M) => (Ie(o) ? (o.value = M) : null)),
-                background: "#ff9a8e",
-                color: "#fff",
+                background: "#00ECBE",
+                color: "#011341",
                 "line-width": "0",
                 "line-height": "0",
-                "title-active-color": "#fff",
-                "title-inactive-color": "#fff",
+                "title-active-color": "#011341",
+                "title-inactive-color": "#011341",
               },
               {
                 default: j(() => [
@@ -17367,8 +17362,7 @@ const U9 = { class: "orderDetail__container" },
                 f,
                 {
                   title: b.$t("myOrder"),
-                  backgroundColor:
-                    "linear-gradient(90deg, #ff9a8e 0%, #f95959 100%)",
+                  backgroundColor: "linear-gradient(180deg, #7AFEC3, #02AFB6)",
                   placeholder: !1,
                   "left-arrow": "",
                   onClickLeft: B,
@@ -18486,8 +18480,8 @@ const xD = $(FD, [["__scopeId", "data-v-2c413ae4"]]),
                           "onUpdate:currentRate":
                             E[0] || (E[0] = (Z) => (R.value = Z)),
                           speed: 100,
-                          color: "#ff9a8e",
-                          "layer-color": "#fff",
+                          color: "#00ECBE",
+                          "layer-color": "#011341",
                           "stroke-width": "30",
                           "stroke-linecap": "butt",
                           rate: 100,

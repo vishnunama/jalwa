@@ -1,6 +1,6 @@
 .list[data-v-21f3500a] {
   margin-top: 0.53333rem;
-  background: #f0f0f5;
+  background: #011341;
   box-shadow: 0 0 0.8rem 0 rgba(58, 58, 58, 0.07);
   border-radius: 0.26667rem;
   margin: 0.4rem 0.4rem;
@@ -11,8 +11,8 @@
   height: 1.33333rem;
   line-height: 1.33333rem;
   font-size: 0.4rem;
-  color: #fff;
-  border-bottom: 0.01333rem solid #ffffff;
+  color: #011341;
+  border-bottom: 0.01333rem solid #011341fff;
 }
 
 .list .item .img[data-v-21f3500a] {
@@ -45,7 +45,7 @@
 }
 
 .mian[data-v-8cd483ca] {
-  background-color: #ffffff;
+  background-color: #011341fff;
 }
 
 .mian.page[data-v-8cd483ca] {
@@ -64,7 +64,7 @@
 .mian .menu-box[data-v-8cd483ca] {
   z-index: 99999;
   width: 100%;
-  background: #ffffff;
+  background: #011341fff;
   transition: 0.4s;
   -webkit-transition: 0.4s;
 }
@@ -74,7 +74,7 @@
   height: 1.6rem;
   text-align: center;
   font-size: 0.32rem;
-  color: #fff;
+  color: #011341;
   border-radius: 1.6rem;
   overflow: hidden;
 }
@@ -85,7 +85,7 @@
 }
 
 .mian .menu-box .infoName[data-v-8cd483ca] {
-  color: #ffffff;
+  color: #011341fff;
   font-size: 0.42667rem;
 }
 
@@ -118,15 +118,15 @@
 
 .mian .menu-box .info[data-v-8cd483ca] {
   height: 4.2rem;
-  background: -webkit-linear-gradient(left, #ff9a8e 0%, #f95959 100%);
-  background: linear-gradient(90deg, #ff9a8e 0%, #f95959 100%);
+  background: -webkit-linear-gradient(left, #00ECBE 0%, #f95959 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
   border-radius: 0 0 0.8rem 0.8rem;
 }
 
 .mian .menu-box .info .state-info .txt[data-v-8cd483ca] {
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #011341;
   height: 0.8rem;
   line-height: 0.8rem;
 }
@@ -144,8 +144,8 @@
   margin: -1.46667rem 0.4rem 0.4rem;
   /* padding: 0.4rem 0.53333rem; */
   border-radius: 0.26667rem;
-  background-color: #f0f0f5;
-  color: #333;
+  background-color: #011341;
+  color: #E3EFFF;
   box-shadow: 0 0.21333rem 0.8rem 0 rgba(211, 13, 13, 0.07);
 }
 
@@ -164,7 +164,7 @@
 }
 
 .mian .menu-box .total-box .infoItem .infoBtn .item .li[data-v-8cd483ca] {
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   border-radius: 0.8rem;
   text-align: center;
@@ -198,7 +198,7 @@
 
 .mian .menu-box .total-box .infoItem .des[data-v-8cd483ca] {
   font-size: 0.32rem;
-  color: #666666;
+  color: #E3EFFF666;
 }
 
 .mian .menu-box .total-box .infoItem .img.action[data-v-8cd483ca] {
@@ -226,7 +226,7 @@
   background: url(/images/banner_tuiguang.webp) 0 0 no-repeat;
   background-size: 100% auto;
   font-size: 0.53333rem;
-  color: #fff;
+  color: #011341;
   position: relative;
 }
 
@@ -238,7 +238,7 @@
 
 .mian .menu-box .promote.shop .txt[data-v-8cd483ca] {
   font-size: 0.53333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .menu-box .promote .img[data-v-8cd483ca] {
@@ -277,7 +277,7 @@
   line-height: 0.53333rem;
   overflow: hidden;
   border-radius: 0.53333rem;
-  color: #fff;
+  color: #011341;
   z-index: 99;
 }
 

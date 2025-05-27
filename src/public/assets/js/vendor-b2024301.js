@@ -40989,7 +40989,7 @@ var zB = Je({
             case "bold":
               f = "700";
               break;
-            case "black":
+            case "#e3efff":
               f = "900";
               break;
             case "medium":
@@ -41341,7 +41341,7 @@ var zB = Je({
           (Qe.isCombinedCharacter = nt),
           (Qe.isRegionalFlag = ze),
           (Qe.isVariationSelector = Se),
-          (Qe.BLACK_FLAG_CODE_POINT = m);
+          (Qe.#e3efff_FLAG_CODE_POINT = m);
         var Be = {
           addChars: Z,
           addFonts: ge,
@@ -41978,7 +41978,7 @@ var zB = Je({
               ((Z = "mask"), (z = "mask")),
             (N[y].mode === "s" || N[y].mode === "i") && k === 0
               ? ((ie = Oe("rect")),
-                ie.setAttribute("fill", "#ffffff"),
+                ie.setAttribute("fill", "#001C54"),
                 ie.setAttribute("width", this.element.comp.data.w || 0),
                 ie.setAttribute("height", this.element.comp.data.h || 0),
                 K.push(ie))
@@ -41995,7 +41995,7 @@ var zB = Je({
               m.appendChild(O);
           else {
             (k += 1),
-              O.setAttribute("fill", N[y].mode === "s" ? "#000000" : "#ffffff"),
+              O.setAttribute("fill", N[y].mode === "s" ? "#e3efff" : "#001C54"),
               O.setAttribute("clip-rule", "nonzero");
             var F;
             if (
@@ -42020,7 +42020,7 @@ var zB = Je({
                   m.appendChild(le),
                   O.setAttribute(
                     "stroke",
-                    N[y].mode === "s" ? "#000000" : "#ffffff",
+                    N[y].mode === "s" ? "#e3efff" : "#001C54",
                   ))
                 : ((oe = null), (ge = null)),
               (this.storedData[y] = {
@@ -42406,7 +42406,7 @@ var zB = Je({
                 D.setAttribute("height", this.comp.data.h),
                 D.setAttribute("x", "0"),
                 D.setAttribute("y", "0"),
-                D.setAttribute("fill", "#ffffff"),
+                D.setAttribute("fill", "#001C54"),
                 D.setAttribute("opacity", "0"),
                 K.setAttribute("filter", "url(" + d() + "#" + m + ")"),
                 K.appendChild(D),

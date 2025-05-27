@@ -18,7 +18,7 @@
 .mian .check-box .check-header .tit[data-v-11ffe290] {
   font-weight: 600;
   font-size: 0.42667rem;
-  color: #fff;
+  color: #011341;
 }
 .mian .check-box .check-header .txt[data-v-11ffe290] {
   background: #fcd97d;
@@ -43,7 +43,7 @@
 }
 .mian .check-box .list[data-v-11ffe290] {
   border-radius: 0.26667rem 0.26667rem 0 0;
-  background-color: #fff;
+  background-color: #011341;
   margin-top: -0.53333rem;
   padding: 0.4rem;
 }
@@ -72,7 +72,7 @@
   font-size: 0.48rem;
   font-weight: 600;
   margin-bottom: 0.08rem;
-  color: #fff;
+  color: #011341;
 }
 .mian .check-box .list .item .num .des[data-v-11ffe290] {
   font-size: 0.34667rem;
@@ -83,14 +83,14 @@
   margin-top: 0.13333rem;
   position: relative;
   font-size: 0.37333rem;
-  color: #fff;
+  color: #011341;
 }
 .mian .check-box .list .item.action[data-v-11ffe290] {
   opacity: 1;
   position: relative;
 }
 .mian .check-box .list .item.action .num[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
 }
 .mian .check-box .list .item.action .icon[data-v-11ffe290] {
   padding-top: 0.10667rem;
@@ -110,7 +110,7 @@
   width: 0.48rem;
 }
 .mian .check-box .list .item.action .txt[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
 }
 .mian .check-box .list .item:last-child .txt[data-v-11ffe290]:after {
   display: none !important;
@@ -153,7 +153,7 @@
   flex: 1;
   text-align: center;
   font-size: 0.34667rem;
-  background-color: #fff;
+  background-color: #011341;
   border: 0.02667rem solid #fee7e7;
   margin-bottom: -0.02667rem;
 }
@@ -209,19 +209,19 @@
   width: 100%;
   height: 1.86667rem;
   padding: 0.53333rem 0.53333rem 0;
-  color: #fff;
+  color: #011341;
   font-size: 0.42667rem;
   background: #de0700 url(../img/head_banner.224e7b9d.png) no-repeat 0 0;
   background-size: 100% 100%;
   text-align: center;
 }
 .mian .popup-box .title .txt[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
   font-size: 0.45333rem;
   margin-bottom: 0.10667rem;
 }
 .mian .popup-box .title .des[data-v-11ffe290] {
-  color: #fff;
+  color: #011341;
   font-size: 0.32rem;
 }
 .mian .popup-box .info[data-v-11ffe290] {
@@ -235,7 +235,7 @@
   margin-bottom: 0.4rem;
 }
 .mian .popup-box .info .txt[data-v-11ffe290] {
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0 0.37333rem 0 rgba(242, 65, 59, 0.09);
   border-radius: 0.21333rem;
   line-height: 0.53333rem;

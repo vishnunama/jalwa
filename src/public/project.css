@@ -46,7 +46,7 @@ h4 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent black */
+  /* Semi-transparent #e3efff */
   z-index: 1;
   /* Ensure it sits behind the popup */
 }
@@ -66,7 +66,7 @@ h4 {
 
 .container {
   height: 470px;
-  background-color: #ffffff;
+  background-color: #001C54;
   margin-top: 20px;
   display: flex;
 }
@@ -127,7 +127,7 @@ h4 {
   width: 150px;
   height: 20px;
   color: white;
-  background-color: #ffffff;
+  background-color: #001C54;
   border-radius: 12px;
   margin-top: 40px;
   margin-left: 20px;

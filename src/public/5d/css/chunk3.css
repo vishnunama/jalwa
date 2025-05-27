@@ -338,7 +338,7 @@ ul {
   box-sizing: border-box;
   padding: 0.53333rem 0.32rem;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
   word-wrap: break-word;
@@ -358,7 +358,7 @@ ul {
   border-bottom-width: 0.02667rem;
 }
 .van-sidebar-item--select {
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
 }
 .van-sidebar-item--select,
@@ -1210,7 +1210,7 @@ ul {
   font-size: 0.32rem;
 }
 .van-step--horizontal .van-step--process {
-  color: #323233;
+  color: #92A8E3;
 }
 .van-step--vertical {
   display: block;
@@ -1251,7 +1251,7 @@ ul {
   width: 0;
 }
 .van-step--finish {
-  color: #323233;
+  color: #92A8E3;
 }
 .van-step--finish .van-step__circle,
 .van-step--finish .van-step__line {
@@ -1397,7 +1397,7 @@ ul {
 .van-nav-bar__title {
   max-width: 60%;
   margin: 0 auto;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.42667rem;
 }
@@ -1530,7 +1530,7 @@ ul {
   position: relative;
   width: 1em;
   margin: 0 auto 0.13333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.48rem;
 }
 .van-checkbox {
@@ -1598,7 +1598,7 @@ ul {
 }
 .van-checkbox__label {
   margin-left: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   line-height: 0.53333rem;
 }
 .van-checkbox__label--left {
@@ -1627,7 +1627,7 @@ ul {
   box-sizing: border-box;
   min-height: 2.24rem;
   padding: 0.37333rem 0;
-  color: #323233;
+  color: #92A8E3;
 }
 .van-coupon__head {
   position: relative;
@@ -1806,7 +1806,7 @@ ul {
 }
 .van-radio__label {
   margin-left: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   line-height: 0.53333rem;
 }
 .van-radio__label--left {
@@ -1857,10 +1857,10 @@ ul {
   color: #07c160;
 }
 .van-tag--warning {
-  background-color: #f95959;
+  background-color: #00ECBE;
 }
 .van-tag--warning.van-tag--plain {
-  color: #f95959;
+  color: #00ECBE;
 }
 .van-tag--plain {
   background-color: #fff;
@@ -1891,7 +1891,7 @@ ul {
   position: relative;
   box-sizing: border-box;
   padding: 0.21333rem 0.42667rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.32rem;
   background-color: #fafafa;
 }
@@ -1957,7 +1957,7 @@ ul {
 }
 .van-card__price {
   display: inline-block;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.32rem;
 }
@@ -2007,7 +2007,7 @@ ul {
   width: 100%;
   padding: 0.26667rem 0.42667rem;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.64rem;
   background-color: #fff;
@@ -2049,7 +2049,7 @@ ul {
   word-wrap: break-word;
 }
 .van-cell__value--alone {
-  color: #323233;
+  color: #92A8E3;
   text-align: left;
 }
 .van-cell__left-icon,
@@ -2098,7 +2098,7 @@ ul {
   font-size: 0.37333rem;
 }
 .van-coupon-cell--selected {
-  color: #323233;
+  color: #92A8E3;
 }
 .van-contact-card {
   padding: 0.42667rem;
@@ -2243,7 +2243,7 @@ ul {
   min-width: 0;
   margin: 0;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   line-height: inherit;
   text-align: left;
   background-color: transparent;
@@ -2386,7 +2386,7 @@ ul {
 }
 .van-search__label {
   padding: 0 0.13333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.90667rem;
 }
@@ -2411,7 +2411,7 @@ ul {
 }
 .van-search__action {
   padding: 0 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.90667rem;
   cursor: pointer;
@@ -2550,7 +2550,7 @@ ul {
 }
 .van-share-sheet__title {
   margin-top: 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 400;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
@@ -2670,7 +2670,7 @@ ul {
   background-color: #ee0a24;
 }
 .van-notify--warning {
-  background-color: #f95959;
+  background-color: #00ECBE;
 }
 .van-dropdown-item {
   position: fixed;
@@ -3142,9 +3142,9 @@ ul {
   left: 50%;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #e3efff;
   border: inherit;
-  border-color: #000;
+  border-color: #e3efff;
   border-radius: inherit;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -3159,7 +3159,7 @@ ul {
   display: none;
 }
 .van-button--default {
-  color: #323233;
+  color: #92A8E3;
   background-color: #fff;
   border: 0.02667rem solid #ebedf0;
 }
@@ -3180,7 +3180,7 @@ ul {
 }
 .van-button--warning {
   color: #fff;
-  background-color: #f95959;
+  background-color: #00ECBE;
   border: 0.02667rem solid #f95959;
 }
 .van-button--plain {
@@ -3196,7 +3196,7 @@ ul {
   color: #ee0a24;
 }
 .van-button--plain.van-button--warning {
-  color: #f95959;
+  color: #00ECBE;
 }
 .van-button--large {
   width: 100%;
@@ -3321,7 +3321,7 @@ ul {
   -webkit-flex: 1;
   flex: 1;
   padding-right: 0.32rem;
-  color: #323233;
+  color: #92A8E3;
   text-align: right;
 }
 .van-submit-bar__text span {
@@ -3893,7 +3893,7 @@ ul {
   justify-content: center;
   height: 1.17333rem;
   padding: 0 0.10667rem;
-  color: #000;
+  color: #e3efff;
 }
 .van-picker-column__item--disabled {
   opacity: 0.3;
@@ -3930,7 +3930,7 @@ ul {
 }
 .van-action-sheet {
   max-height: 80%;
-  color: #323233;
+  color: #92A8E3;
 }
 .van-action-sheet__cancel,
 .van-action-sheet__item {
@@ -4126,7 +4126,7 @@ ul {
   line-height: 1.4em;
 }
 .van-address-item__address {
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.34667rem;
   line-height: 0.48rem;
 }
@@ -4201,7 +4201,7 @@ ul {
   box-sizing: border-box;
   width: 100%;
   padding: 0 0.10667rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.37333rem;
   line-height: 0.48rem;
@@ -4358,7 +4358,7 @@ ul {
   margin-left: 100%;
 }
 .van-count-down {
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: 0.53333rem;
 }
@@ -4401,7 +4401,7 @@ ul {
   cursor: pointer;
 }
 .van-tab--active {
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
 }
 .van-tab--disabled {
@@ -4689,7 +4689,7 @@ ul {
   box-sizing: border-box;
   max-width: 100%;
   padding: 0 0.21333rem;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.4rem;
   line-height: 0.58667rem;
 }
@@ -4889,7 +4889,7 @@ ul {
   left: 50%;
   color: #fff;
   font-size: 0.37333rem;
-  text-shadow: 0 0.02667rem 0.02667rem #323233;
+  text-shadow: 0 0.02667rem 0.02667rem #92A8E3;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
 }
@@ -5080,7 +5080,7 @@ ul {
   z-index: 1;
   box-sizing: border-box;
   padding: 0 0.42667rem;
-  color: #323233;
+  color: #92A8E3;
   font-weight: 500;
   font-size: 0.37333rem;
   line-height: 0.85333rem;
@@ -5246,7 +5246,7 @@ ul {
 .van-password-input__security i {
   width: 0.26667rem;
   height: 0.26667rem;
-  background-color: #000;
+  background-color: #e3efff;
   border-radius: 100%;
   visibility: hidden;
 }
@@ -5261,7 +5261,7 @@ ul {
 .van-password-input__cursor {
   width: 0.02667rem;
   height: 40%;
-  background-color: #323233;
+  background-color: #92A8E3;
   -webkit-animation: van-cursor-flicker 1s infinite;
   animation: van-cursor-flicker 1s infinite;
 }
@@ -5478,7 +5478,7 @@ ul {
   height: 0.74667rem;
   margin: 0;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   vertical-align: middle;
   background-color: #f2f3f5;
   border: 0;
@@ -5535,7 +5535,7 @@ ul {
   height: 0.74667rem;
   margin: 0 0.05333rem;
   padding: 0;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.37333rem;
   line-height: normal;
   text-align: center;
@@ -5719,7 +5719,7 @@ ul {
   min-width: 1.06667rem;
   margin: 0 0.32rem 0.32rem 0;
   overflow: hidden;
-  color: #323233;
+  color: #92A8E3;
   font-size: 0.34667rem;
   line-height: 0.42667rem;
   vertical-align: middle;

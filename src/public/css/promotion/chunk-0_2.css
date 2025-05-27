@@ -1,6 +1,6 @@
 .mian[data-v-7c8bbbf4] {
   padding-bottom: 1.86667rem;
-  background-color: #ffffff;
+  background-color: #011341fff;
 }
 
 .mian .head-right[data-v-7c8bbbf4] {
@@ -9,13 +9,13 @@
 }
 
 .mian .promotion[data-v-7c8bbbf4] {
-  background-color: #ffffff;
+  background-color: #011341fff;
   padding-top: 1.06667rem;
   padding-bottom: 0.53333rem;
 }
 
 .mian .promotion .tab[data-v-7c8bbbf4] {
-  background-color: #ffffff;
+  background-color: #011341fff;
   height: 1.06667rem;
   line-height: 1.06667rem;
   overflow: hidden;
@@ -36,15 +36,15 @@
 }
 
 .mian .promotion .tab ul li.action[data-v-7c8bbbf4] {
-  color: #fff;
+  color: #011341;
 }
 
 .mian .promotion .tit[data-v-7c8bbbf4] {
-  background: #f95959;
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);;
   padding: 0 0.4rem;
   height: 0.90667rem;
   line-height: 0.90667rem;
-  color: #333;
+  color: #E3EFFF;
 }
 
 .mian .promotion .tit .btn[data-v-7c8bbbf4] {
@@ -54,7 +54,7 @@
   box-shadow: 0 0.10667rem 0.53333rem 0.05333rem rgba(228, 38, 34, 0.25);
   border-radius: 0.21333rem;
   height: 0.69333rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .promotion .info[data-v-7c8bbbf4] {
@@ -126,16 +126,16 @@
 
 .mian .promotion .info-img .btn-list .btn[data-v-7c8bbbf4] {
   height: 1.06667rem;
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
-  box-shadow: 0 0.10667rem 0.32rem #ffffff;
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
+  box-shadow: 0 0.10667rem 0.32rem #011341fff;
   border-radius: 0.26667rem;
-  color: #fff;
+  color: #011341;
 }
 
 .mian .promotion .table[data-v-7c8bbbf4] {
   margin: 0.4rem 0.4rem 0;
-  background: #fff;
+  background: #011341;
   box-shadow: 0 0.13333rem 0.29333rem 0.02667rem rgba(0, 0, 0, 0.12);
   border-radius: 0.10667rem;
   overflow-y: auto;
@@ -150,7 +150,7 @@
 }
 
 .mian .promotion .table .hd[data-v-7c8bbbf4] {
-  background: #ff9a8e;
+  background: #00ECBE;
   /*border-radius:.10667rem;*/
   height: 0.93333rem;
   line-height: 0.93333rem;
@@ -166,7 +166,7 @@
 }
 
 .mian .promotion .table .bd[data-v-7c8bbbf4] {
-  background: #f0f0f5;
+  background: #011341;
   height: 0.93333rem;
   line-height: 0.93333rem;
 }
@@ -174,7 +174,7 @@
 .mian .promotion .team[data-v-7c8bbbf4] {
   padding: 0 0.4rem;
   margin-top: 0.4rem;
-  color: #333;
+  color: #E3EFFF;
   font-size: 0.37333rem;
   line-height: 0.66667rem;
   position: relative;

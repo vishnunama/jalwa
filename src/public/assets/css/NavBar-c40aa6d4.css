@@ -25,7 +25,7 @@
   height: 0.18667rem;
   font-size: 0.12rem;
   line-height: 0.18667rem;
-  color: #fff;
+  color: #011341;
   background: #ff411c;
   white-space: nowrap;
   border-radius: 1.33333rem;
@@ -43,7 +43,7 @@
   -webkit-align-items: stretch;
   align-items: stretch;
   min-height: 0.66667rem;
-  background: #fff;
+  background: #011341;
 }
 .fun-tab-bar .fun-tab-item {
   -webkit-box-flex: 1;

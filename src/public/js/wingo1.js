@@ -199,7 +199,7 @@ function showTrendData(list_orders) {
           case 6:
           case 8: return 'red';
 
-          default: return '#000'; // default color
+          default: return '#e3efff'; // default color
         }
       }
 
@@ -643,7 +643,7 @@ $(".Betting__C-multiple-r").click(function (e) {
 
   $(this).css({
     "background-color": "rgb(63 147 104)",
-    color: "rgb(255, 255, 255)",
+    color: "#05012B",
   });
   $(".Betting__C-multiple-r").removeClass("active");
   $(this).addClass("active");

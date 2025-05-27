@@ -77,7 +77,7 @@
 }
 .top-selete-sub.active[data-v-264e8c0e] {
   font-size: 14px;
-  color: #fff;
+  color: #011341;
   background-color: #00b8a9;
 }
 .reservation-chunk[data-v-264e8c0e] {
@@ -142,7 +142,7 @@
 }
 .booking-bottom-btn-sub[data-v-264e8c0e] {
   font-weight: 600;
-  background-color: #f2f2f2;
+  background-color: #001C54; 
   border: 0;
   display: inline-block;
 }
@@ -162,7 +162,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.5); */
 }
 .parity-box {
   box-sizing: border-box;
@@ -179,7 +179,7 @@
   width: 50%;
 }
 .order-content .order-box {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #001c54;
   margin: 14px;
   padding-bottom: 5px;
   color: #707070;
@@ -197,7 +197,7 @@
 .order-content .order-box .top {
   font-size: 13px;
   position: relative;
-  color: #000;
+  color: #e3efff;
 }
 .order-content .order-box .top em {
   font-size: 13px;
@@ -259,7 +259,7 @@
 }
 .top-selete-sub.active[data-v-99b33750] {
   font-size: 14px;
-  color: #fff;
+  color: #011341;
   background-color: #00b8a9;
 }
 .reservation-chunk[data-v-99b33750] {
@@ -324,7 +324,7 @@
 }
 .booking-bottom-btn-sub[data-v-99b33750] {
   font-weight: 600;
-  background-color: #f2f2f2;
+  background-color: #001C54; 
   border: 0;
   display: inline-block;
 }
@@ -344,7 +344,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.5); */
 }
 .transcation-content .my[data-v-04e3b381] {
   background: url(/images/transction-bgimg.png) center no-repeat;
@@ -371,8 +371,8 @@
   width: 40%;
 }
 .transcation-content .my .top .right button[data-v-04e3b381] {
-  background-color: #fff;
-  color: #000;
+  background-color: #011341;
+  color: #e3efff;
   border: none;
   border-radius: 10px;
   padding: 4px;
@@ -393,7 +393,7 @@
   float: right;
   border-radius: 5px;
   background: transparent;
-  color: #fff;
+  color: #011341;
 }
 .transcation-content .kline[data-v-04e3b381] {
   padding: 15px 12px 0;
@@ -481,7 +481,7 @@
   margin-top: 15px;
   width: 100%;
   height: 10px;
-  background-color: #f6f6f6;
+  background-color: #001C54;
 }
 .transcation-content .kline .buttonBox .order[data-v-04e3b381] {
   flex: 1;
@@ -534,7 +534,7 @@
   padding: 5px;
   height: 45px;
   background-color: #04ab02;
-  color: #fff;
+  color: #011341;
   font-size: 22px;
   line-height: 45px;
 }
@@ -561,7 +561,7 @@
   padding: 5px;
   height: 45px;
   background-color: #007acc;
-  color: #fff;
+  color: #011341;
   font-size: 22px;
   line-height: 45px;
 }
@@ -621,7 +621,7 @@
   border-radius: 5px;
 }
 .transcation-content .tranBox .tran .item button.active[data-v-04e3b381] {
-  color: #fff;
+  color: #011341;
   background-color: #707070;
   border: 1px solid #707070;
 }
@@ -637,7 +637,7 @@
   z-index: 999;
 }
 .transcation-content .tranBox .bottom .cancel[data-v-04e3b381] {
-  background-color: #f2f2f2;
+  background-color: #001C54; 
   border: none;
   flex: 1;
 }
@@ -690,7 +690,7 @@
   font-size: 24px;
 }
 .reservation-chunk-sub-num button[data-v-04e3b381] {
-  color: #fff;
+  color: #011341;
   border: none;
   background-color: #f0c336;
   padding: 4px 18px;
@@ -725,7 +725,7 @@
 .contract .contract-footer[data-v-04e3b381] {
   margin: 0 18px;
   font-size: 12px;
-  color: #000;
+  color: #e3efff;
 }
 .contract .contract-button[data-v-04e3b381] {
   text-align: center;
@@ -737,7 +737,7 @@ span.time-sub {
   margin: 0 2px;
   padding: 4px;
   font-size: 24px;
-  background: #f2f2f2;
+  background: #001C54; 
   color: #0f1223;
   border-radius: 5px;
 }
@@ -767,7 +767,7 @@ span.time-sub-dot {
 }
 .header[data-v-1d9f20bc] {
   padding: 15px;
-  color: #fff;
+  color: #011341;
   background-color: #0bd2c1;
   background-image: linear-gradient(to bottom right, #01baab, #0fdac9);
   border-radius: 8px;
@@ -794,7 +794,7 @@ span.time-sub-dot {
   border: none;
   border-radius: 20px;
   color: #01baab;
-  background: #fff;
+  background: #011341;
   padding: 5px 10px;
 }
 .nav ul[data-v-1d9f20bc] {
@@ -809,7 +809,7 @@ span.time-sub-dot {
 }
 .nav ul .active[data-v-1d9f20bc] {
   background: #01baab;
-  color: #fff;
+  color: #011341;
 }
 .content[data-v-1d9f20bc] {
   margin-top: 20px;
@@ -943,12 +943,12 @@ span.time-sub-dot {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: #fff;
+  color: #011341;
   font-size: 16px;
   transform: translate(-50%, -50%);
 }
 .reservation-chunk-sub-num button[data-v-1d9f20bc] {
-  color: #fff;
+  color: #011341;
   border: none;
   background-color: #f0c336;
   padding: 4px 10px;
@@ -982,7 +982,7 @@ span.time-sub-dot {
   bottom: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
+  border-bottom: 10px solid #011341;
 }
 .isGreen[data-v-1d9f20bc] {
   color: #01baab;
@@ -1036,19 +1036,19 @@ span.time-sub-dot {
 }
 .popup-content .popup-num ul .opoupIsGreen[data-v-1d9f20bc] {
   background: #01baab;
-  color: #fff;
+  color: #011341;
 }
 .popup-content .popup-num ul .opoupisRed[data-v-1d9f20bc] {
   background: #f52827;
-  color: #fff;
+  color: #011341;
 }
 .popup-content .popup-num ul .opoupisViolet[data-v-1d9f20bc] {
   background: #ea3af0;
-  color: #fff;
+  color: #011341;
 }
 .popup-content .popup-num ul .opoupdefault[data-v-1d9f20bc] {
   background: #1dd7ff;
-  color: #fff;
+  color: #011341;
 }
 .popup-content .popup-num .popup-left[data-v-1d9f20bc] {
   width: 20%;
@@ -1066,14 +1066,14 @@ span.time-sub-dot {
   outline: none;
   border: none;
   width: 30%;
-  background: #f2f2f2;
+  background: #001C54; 
   padding: 10px 0;
   text-align: center;
   border-radius: 8px;
 }
 .popup-bottom .confirm[data-v-1d9f20bc] {
   width: 60%;
-  color: #fff;
+  color: #011341;
   background: #1dd7ff;
 }
 .popup-bottom .btnisRed[data-v-1d9f20bc] {
@@ -1114,7 +1114,7 @@ span.time-sub-dot {
 .contract .contract-footer[data-v-1d9f20bc] {
   margin: 0 18px;
   font-size: 12px;
-  color: #000;
+  color: #e3efff;
 }
 .contract .contract-button[data-v-1d9f20bc] {
   text-align: center;

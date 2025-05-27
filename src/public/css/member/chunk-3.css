@@ -16,7 +16,7 @@
 }
 .mian .con-box .list .item[data-v-0ca4111b] {
   border-bottom: 0.02667rem solid #f2f5f7;
-  background-color: #fff;
+  background-color: #011341;
   margin-bottom: 0.26667rem;
 }
 .mian .con-box .list .item .info[data-v-0ca4111b] {
@@ -44,7 +44,7 @@
 }
 .mian .con-box .list .item .info .name[data-v-0ca4111b] {
   background-color: #fb4e4e;
-  color: #fff;
+  color: #011341;
   height: 0.8rem;
   line-height: 0.8rem;
   font-size: 0.4rem;
@@ -63,7 +63,7 @@
   color: #5cba47;
 }
 .mian .con-box .list .item .info .money.null[data-v-0ca4111b] {
-  color: #666;
+  color: #E3EFFF;
 }
 .mian .con-box .list .item .info .time[data-v-0ca4111b] {
   font-size: 0.37333rem;

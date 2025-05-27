@@ -38,17 +38,17 @@
   font-family: Poppins;
   font-weight: 700;
   font-size: 0.50667rem;
-  color: #fff;
+  color: #011341;
 }
 .info-dialog-header-left[data-v-2c18a1cc] {
   background: -webkit-linear-gradient(
     left,
-    #fff -2.73%,
+    #011341 -2.73%,
     rgba(230, 235, 240, 0) 91.36%
   );
   background: linear-gradient(
     90deg,
-    #fff -2.73%,
+    #011341 -2.73%,
     rgba(230, 235, 240, 0) 91.36%
   );
   border-radius: 0.26667rem;
@@ -58,12 +58,12 @@
 .info-dialog-header-right[data-v-2c18a1cc] {
   background: -webkit-linear-gradient(
     left,
-    #fff -2.73%,
+    #011341 -2.73%,
     rgba(230, 235, 240, 0) 91.36%
   );
   background: linear-gradient(
     90deg,
-    #fff -2.73%,
+    #011341 -2.73%,
     rgba(230, 235, 240, 0) 91.36%
   );
   border-radius: 0.26667rem;
@@ -193,7 +193,7 @@
   background: var(--light-main_gradient-color, var(--bg_color_L2));
 }
 .userInfo__container-nav[data-v-5bd44e74] {
-  color: #fff;
+  color: #011341;
   font-size: 0.48rem;
   position: fixed;
   top: 0;
@@ -420,7 +420,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 0.45333rem;
-  color: #fff;
+  color: #011341;
 }
 .userInfo__container-content-wrapper[data-v-5bd44e74] {
   display: -webkit-box;
@@ -464,7 +464,7 @@
   -webkit-align-items: center;
   align-items: center;
   font-size: 0.4rem;
-  color: #fff;
+  color: #011341;
 }
 .userInfo__container-content-nickname img[data-v-5bd44e74] {
   width: 1.33333rem;
@@ -493,7 +493,7 @@
 }
 .userInfo__container-content-logintime[data-v-5bd44e74] {
   font-size: 0.29333rem;
-  color: #fff;
+  color: #011341;
 }
 .userInfo__container-content-right[data-v-5bd44e74] {
   display: -webkit-box;
@@ -935,7 +935,7 @@ html:lang(ar)
 }
 .financialServices__container-footer > div > div > div h4[data-v-acd6d46f] {
   font-size: 0.37333rem;
-  color: #fff;
+  color: #011341;
   border-radius: 9rem;
   background: var(--norm_secondary-color);
   padding: 0 0.13333rem;
@@ -1201,7 +1201,7 @@ html:lang(ar)
 }
 .settingPanel__container-items-right h5[data-v-a30d19b1] {
   font-size: 0.32rem;
-  color: #fff;
+  color: #011341;
   border-radius: 0.42667rem;
   margin-right: 0.4rem;
   background: var(--norm_red-color);
@@ -2236,7 +2236,7 @@ html:lang(ar) .bet .li .lab[data-v-893cf551]:after {
   padding: 0 0.32rem;
 }
 .bet-container[data-v-1d8fbc24] .van-nav-bar {
-  background-color: #f6f6f6;
+  background-color: #001C54;
 }
 .bet-container[data-v-1d8fbc24]
   .van-nav-bar
@@ -2246,7 +2246,7 @@ html:lang(ar) .bet .li .lab[data-v-893cf551]:after {
   color: var(--text_color_L1);
 }
 .bet-container .bet-container__header[data-v-1d8fbc24] {
-  background-color: #f6f6f6;
+  background-color: #001C54;
   position: relative;
 }
 .bet-container-searchBar[data-v-1d8fbc24] {
@@ -2721,7 +2721,7 @@ html:lang(ar) .bet-container-lottery-note-result div h2[data-v-1d8fbc24]:after {
   min-width: 1.33333rem;
   height: 0.66667rem;
   line-height: 0.61333rem;
-  color: #fff;
+  color: #011341;
   border-radius: 0.13333rem;
   margin-left: 0.16rem;
 }
@@ -2981,7 +2981,7 @@ html:lang(ar) .binguo_result[data-v-1d8fbc24]:after {
   .navbar
   .navbar__content
   .navbar__content-center {
-  color: #fff;
+  color: #011341;
 }
 .customer-container-header-belly[data-v-26935615] {
   height: 4.56rem;
@@ -3631,18 +3631,18 @@ html:lang(ar) .gverify-container-content-item-tip svg[data-v-1911143a] {
 .bonus-header .title[data-v-b733e3c6] {
   font-size: 0.48rem;
   margin-bottom: 0.58667rem;
-  color: #fff;
+  color: #011341;
 }
 .bonus-header .tip[data-v-b733e3c6] {
   font-size: 0.32rem;
   margin-bottom: 0.21333rem;
-  color: #fff;
+  color: #011341;
 }
 .bonus-header .time[data-v-b733e3c6] {
   font-size: 0.48rem;
   font-weight: 500;
   margin-bottom: 0.34667rem;
-  color: #fff;
+  color: #011341;
 }
 .bonus-header .nav[data-v-b733e3c6] {
   width: calc(100% - 0.64rem);
@@ -4653,7 +4653,7 @@ html:lang(ar) .gverify-container-content-item-tip svg[data-v-1911143a] {
 }
 .coins-container-content-btn .gainCoins[data-v-15181d0c] {
   border: 0.01333rem solid var(--main-color);
-  background-color: #f6f6f6;
+  background-color: #001C54;
   color: var(--text_color_L1);
 }
 .coins-container-content-btn .gainCoins span[data-v-15181d0c] {
@@ -6155,14 +6155,14 @@ html:lang(ar) .gverify-container-content-item-tip svg[data-v-1911143a] {
   max-width: 5.12rem;
 }
 .Xg-page .Xg-info .tit[data-v-6243ef37] {
-  color: #fff;
+  color: #011341;
   font-size: 0.56rem;
   font-weight: 700;
   margin: 0.53333rem 0 0.66667rem;
 }
 .Xg-page .tip[data-v-6243ef37],
 .Xg-page .txt[data-v-6243ef37] {
-  color: #fff;
+  color: #011341;
   margin-bottom: 0.26667rem;
 }
 .Xg-page .img[data-v-6243ef37] {
@@ -6314,7 +6314,7 @@ html:lang(ar) .gverify-container-content-item-tip svg[data-v-1911143a] {
   background: var(--button_dis_color);
   text-align: center;
   border-radius: 0.26667rem 0 0.66667rem;
-  color: #fff;
+  color: #011341;
   width: 3.46667rem;
   font-size: 0.4rem;
 }
@@ -6458,7 +6458,7 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
 .Xg-list .item .box .Xg-btn-received[data-v-6243ef37] {
   background: var(--button_dis_color);
   border: none;
-  color: #fff;
+  color: #011341;
   font-size: 0.4rem;
 }
 .Xg-list .item .box .Xg-btn-expired[data-v-6243ef37] {
@@ -6842,10 +6842,10 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
 }
 .dailySignInRules__container-hero__wrapper-titlebox[data-v-08f58021] {
   background: var(--sheet_nva_color);
-  color: #fff;
+  color: #011341;
 }
 .dailySignInRules__container-hero__wrapper-title[data-v-08f58021] {
-  color: #fff;
+  color: #011341;
   background: var(--sheet_nva_color);
 }
 .dailySignInRules__container-hero li[data-v-08f58021] {
@@ -6882,7 +6882,7 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
   width: 0.6rem;
 }
 .Laundry-Record[data-v-34682eef] .van-nav-bar {
-  background-color: #f6f6f6;
+  background-color: #001C54;
 }
 .Laundry-Record[data-v-34682eef]
   .van-nav-bar
@@ -6892,7 +6892,7 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
   color: var(--text_color_L1);
 }
 .Laundry-Record .bet-container__header[data-v-34682eef] {
-  background-color: #f6f6f6;
+  background-color: #001C54;
   position: relative;
 }
 .Laundry-Record-searchBar[data-v-34682eef] {
@@ -7386,7 +7386,7 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
 }
 .StrongBoxAbout__container-header[data-v-7b17e822] {
   background: var(--light-main_gradient-color, var(--bg_color_L3));
-  color: #fff;
+  color: #011341;
   height: 0.8rem;
   line-height: 0.8rem;
   padding-left: 0.98667rem;
@@ -7549,11 +7549,11 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
   right: 0.32rem;
   height: 0.61333rem;
   line-height: 0.61333rem;
-  border: 0.00667rem solid #fff;
+  border: 0.00667rem solid #011341;
   border-radius: 0.53333rem;
   font-size: 0.37333rem;
   text-align: center;
-  color: #fff;
+  color: #011341;
   padding: 0 0.30667rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7581,7 +7581,7 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
 .StrongBoxRecord__container-overview-detail > div[data-v-566f6513] {
   width: 33.3%;
   height: 100%;
-  color: #fff;
+  color: #011341;
 }
 .StrongBoxRecord__container-overview-detail > div > div[data-v-566f6513] {
   font-weight: 500;
@@ -7658,7 +7658,7 @@ html:lang(ar) .Xg-list .item .header .tit[data-v-6243ef37] {
   min-height: 6rem;
   background: url(/assets/png/superJackpotRulebg-809c0012.png) no-repeat;
   background-size: contain;
-  color: #fff;
+  color: #011341;
   padding: 0.66667rem;
 }
 .jackpot-rule .rule-content-top[data-v-bc9939e5] {
@@ -7747,7 +7747,7 @@ html:lang(ar) .jackpot-rule .title svg[data-v-bc9939e5] {
   min-height: 1.06667rem;
   line-height: 1.06667rem;
   background: var(--sheet_nva_color);
-  color: #fff;
+  color: #011341;
 }
 .jackpot-rule .table-title > div[data-v-bc9939e5] {
   -webkit-box-flex: 1;

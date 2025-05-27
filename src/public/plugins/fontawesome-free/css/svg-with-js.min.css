@@ -131,7 +131,7 @@ svg:not(:root).svg-inline--fa {
   border-radius: 1em;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #fff;
+  color: #001C54;
   height: 1.5em;
   line-height: 1;
   max-width: 5em;
@@ -362,7 +362,7 @@ svg:not(:root).svg-inline--fa {
   width: 2.5em;
 }
 .fa-inverse {
-  color: #fff;
+  color: #001C54;
 }
 .sr-only {
   border: 0;
@@ -402,8 +402,8 @@ svg:not(:root).svg-inline--fa {
 }
 .svg-inline--fa mask .fa-primary,
 .svg-inline--fa mask .fa-secondary {
-  fill: #000;
+  fill: #e3efff;
 }
 .fad.fa-inverse {
-  color: #fff;
+  color: #001C54;
 }

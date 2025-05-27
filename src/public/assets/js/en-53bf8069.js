@@ -2472,7 +2472,7 @@ const e = {
   firstSave4:
     "The bonus (excluding the principal) given in this event requires 1.00 times the coding turnover (i.e. valid bets) before it can be withdrawn, and the coding does not limit the platform;",
   firstSave5:
-    "This event is limited to normal human operations by the account owner. It is prohibited to rent, use plug-ins, robots, gamble with different accounts, brush each other, arbitrage, interfaces, protocols, exploit loopholes, group control or other technical means to participate, otherwise it will be canceled or Rewards will be deducted, frozen, or even blacklisted;",
+    "This event is limited to normal human operations by the account owner. It is prohibited to rent, use plug-ins, robots, gamble with different accounts, brush each other, arbitrage, interfaces, protocols, exploit loopholes, group control or other technical means to participate, otherwise it will be canceled or Rewards will be deducted, frozen, or even #e3effflisted;",
   firstSave6:
     "In order to avoid differences in text understanding, the platform reserves the right of final interpretation of this event.",
   firstSaveRule: "Activity Rules",

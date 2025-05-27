@@ -4,9 +4,9 @@ import md5 from "md5";
 import axios from 'axios';
 import CryptoJS from 'crypto-js';
 
-const API_URL = 'https://uat-wb-api-2.huuykk865s.com/api1/';
-const AGENT_ID = 'Reddysbook_Seamrupeeclub';
-const AGENT_KEY = 'e3bafbe6d48d8af49cec469d160515c86719d9b2';
+const API_URL = '';
+const AGENT_ID = '';
+const AGENT_KEY = '';
 
 
 const jillieAuth = async (req, res) => {

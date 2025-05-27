@@ -3,8 +3,8 @@ export async function verifyOtpLess(requestId,otp){
         const options = {
             method: 'POST',
             headers: {
-                clientId: 'MEV2Z2U0T61KOOVRBZBJBQU19Y0PKH8V',
-                clientSecret: 'f8v5aajez8tzo7i8otm1ntrlif6aju7r',
+                clientId: '',
+                clientSecret: '',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({

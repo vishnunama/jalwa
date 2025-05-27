@@ -1,6 +1,6 @@
 [data-v-dba00bcf]:root {
-  --van-picker-background: #ffffff;
-  --van-picker-option-text-color: #fff;
+  --van-picker-background: #001C54;
+  --van-picker-option-text-color: #011341;
   --van-border-color: rgba(55, 73, 146, 0.5);
   --van-picker-mask-color: linear-gradient(
       180deg,
@@ -8,10 +8,10 @@
       rgba(34, 39, 91, 0.4)
     ),
     linear-gradient(0deg, rgba(34, 39, 91, 0.9), rgba(34, 39, 91, 0.4));
-  --van-text-color: #fff;
+  --van-text-color: #011341;
   --van-popup-background: var(--van-picker-background);
   --van-dialog-background: var(--van-picker-background);
-  --van-dialog-has-title-message-text-color: #fff;
+  --van-dialog-has-title-message-text-color: #011341;
 }
 
 .van-toast[data-v-dba00bcf] {
@@ -55,7 +55,7 @@
 
 .phoneInput__container-label[data-v-dba00bcf] {
   margin-bottom: 0.32rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.4rem;
 }
 
@@ -74,7 +74,7 @@
   height: 1.17333rem;
   margin-left: 2.66667rem;
   padding: 0.36rem 0.34667rem;
-  color: #fff;
+  color: #011341;
   font-size: 0.37333rem;
   border: none;
   border-radius: 0.26667rem;

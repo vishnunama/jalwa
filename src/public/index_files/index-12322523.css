@@ -202,7 +202,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 9999;
   width: 10rem;
   height: 100%;
-  background: #ffffff;
+  background: #001C54;
   bottom: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -276,7 +276,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .start-page div p[data-v-4ffe0462] {
   font-weight: 700;
   font-size: 0.50667rem;
-  color: #fff;
+  color: #001C54;
   margin-top: 0.4rem;
   padding: 0 0.13333rem;
   text-align: center;
@@ -309,7 +309,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .header[data-v-fc801a01] {
   min-height: 1.86667rem;
   background-color: #404040;
-  color: #fff;
+  color: #001C54;
   padding-top: 0.33333rem;
   border-radius: 0.26667rem 0.26667rem 0 0;
 }
@@ -326,7 +326,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .container[data-v-fc801a01] {
   padding: 0.26667rem 0.13333rem;
-  background-color: #ffffff;
+  background-color: #001C54;
   max-height: calc(100vh - 8.4rem);
   overflow: auto;
 }
@@ -352,8 +352,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .footer .btn[data-v-fc801a01] {
-  background: -webkit-linear-gradient(top, #f95959 0%, #ff9a8e 100%);
-  background: linear-gradient(180deg, #f95959 0%, #ff9a8e 100%);
+  background: -webkit-linear-gradient(top, #f95959 0%, #00ECBE 100%);
+  background: linear-gradient(180deg, #7AFEC3, #02AFB6);
   width: 2.66667rem;
   min-height: 0.66667rem;
   display: -webkit-box;
@@ -367,7 +367,7 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: center;
   border-radius: 0.33333rem;
   text-align: center;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.37333rem;
   font-weight: 700;
 }
@@ -446,20 +446,20 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .dialog-wrapper .dialog-title[data-v-6c5d1234] {
-  color: #fff;
+  color: #001C54;
   margin: 0.4rem 0 0.26667rem;
   font-size: 0.48rem;
   font-weight: 700;
 }
 
 .dialog-wrapper .dialog-tips[data-v-6c5d1234] {
-  color: #666;
+  color: #E3EFFF;
   font-size: 0.32rem;
   margin: 0 0 0.32rem;
 }
 
 .dialog-wrapper .dialog-para[data-v-6c5d1234] {
-  color: #666;
+  color: #E3EFFF;
   font-size: 0.32rem;
 }
 
@@ -468,11 +468,11 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 1.06667rem;
   text-align: center;
   line-height: 1.06667rem;
-  background: -webkit-linear-gradient(top, #f95959, #ff9a8e);
-  background: linear-gradient(180deg, #f95959, #ff9a8e);
+  background: -webkit-linear-gradient(top, #f95959, #00ECBE);
+  background: linear-gradient(180deg, #f95959, #00ECBE);
   border-radius: 1.06667rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #001C54;
   font-size: 0.42667rem;
   margin-top: 0.53333rem;
 }
@@ -770,9 +770,9 @@ input:focus {
   width: 8rem;
   height: 2.13333rem;
   line-height: 2.13333rem;
-  background: #ffffff;
+  background: #001C54;
   border: 0.01333rem solid #ffb3b0;
-  box-shadow: 0 0.10667rem 0.21333rem #d0d0ed5c;
+  /* box-shadow: 0 0.10667rem 0.21333rem #d0d0ed5c; */
   border-radius: 0.26667rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -798,12 +798,12 @@ input:focus {
 }
 
 .msg-window .msg-header {
-  color: #fff !important;
+  color: #001C54 !important;
   font-size: 0.32rem;
 }
 
 .msg-window .msg-footer {
-  color: #f95959;
+  color: #00ECBE;
   font-size: 0.32rem;
   padding-top: 0.32rem;
 }
@@ -834,9 +834,9 @@ input:focus {
   display: -webkit-flex;
   display: flex;
   margin: 0 auto 0.53333rem;
-  color: #fff;
+  color: #001C54;
   border-radius: 0.26667rem;
-  background: #f0f0f5;
+  background: #011341;
   overflow: hidden;
 }
 
@@ -907,7 +907,7 @@ input:focus {
   align-items: center;
   font-size: 0.37333rem;
   padding: 0.34667rem 0;
-  border-bottom: 0.01333rem solid #ffffff;
+  border-bottom: 0.01333rem solid #001C54;
 }
 
 .dailySignInRules__container-hero__wrapper-title {
@@ -917,9 +917,9 @@ input:focus {
   font-size: 0.42667rem;
   line-height: 0.32rem;
   text-align: center;
-  background: -webkit-linear-gradient(bottom, #ff9a8e 0%, #f95959 100%);
-  background: linear-gradient(0deg, #ff9a8e 0%, #f95959 100%);
-  color: #ffffff;
+  background: -webkit-linear-gradient(bottom, #00ECBE 0%, #f95959 100%);
+  background: linear-gradient(0deg, #00ECBE 0%, #f95959 100%);
+  color: #001C54;
 }
 
 .dailySignInRules__container-hero__wrapper-content {
@@ -1004,7 +1004,7 @@ textarea {
   max-width: 10rem;
   -webkit-user-select: none;
   user-select: none;
-  background: #ffffff;
+  background: #001C54;
   z-index: 100;
   padding: 0 0.29333rem;
 }
@@ -1033,7 +1033,7 @@ textarea {
   font-weight: 400;
   border: none;
   border-radius: 0.13333rem;
-  box-shadow: 0 0.10667rem 0.21333rem #d0d0ed5c;
+  /* box-shadow: 0 0.10667rem 0.21333rem #d0d0ed5c; */
 }
 
 .ar-searchbar input::-webkit-input-placeholder {
@@ -1051,14 +1051,14 @@ textarea {
   display: flex;
   width: 4.53333rem;
   height: 1.06667rem;
-  color: #666;
+  color: #E3EFFF;
 }
 
 .ar-searchbar__selector > div {
   width: 100%;
   line-height: 1.06667rem;
   border-radius: 0.13333rem;
-  background: #f0f0f5;
+  background: #011341;
 }
 
 .ar-searchbar__selector > div .noSelect {
@@ -1101,7 +1101,7 @@ textarea {
 }
 
 .ar-searchbar__selector-dropdown li.selected {
-  color: #fff;
+  color: #001C54;
   background-color: #ff7374;
 }
 
@@ -1148,8 +1148,8 @@ textarea {
   top: 0;
   right: 0;
   height: 0.01333rem;
-  border-top: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-top: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -1178,8 +1178,8 @@ textarea {
   top: 0;
   width: 0.01333rem;
   bottom: 0;
-  border-left: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-left: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleX(0.5);
@@ -1193,8 +1193,8 @@ textarea {
   top: 0;
   width: 0.01333rem;
   bottom: 0;
-  border-right: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-right: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 100% 0;
   transform-origin: 100% 0;
   -webkit-transform: scaleX(0.5);
@@ -1208,8 +1208,8 @@ textarea {
   top: 0;
   width: 0.01333rem;
   bottom: 0;
-  border-right: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-right: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 100% 0;
   transform-origin: 100% 0;
   -webkit-transform: scaleX(0.5);
@@ -1223,8 +1223,8 @@ textarea {
   bottom: 0;
   right: 0;
   height: 0.01333rem;
-  border-bottom: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-bottom: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   -webkit-transform: scaleY(0.5);
@@ -1238,8 +1238,8 @@ textarea {
   top: 0;
   right: 0;
   height: 0.01333rem;
-  border-top: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-top: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -1253,8 +1253,8 @@ textarea {
   bottom: 0;
   right: 0;
   height: 0.01333rem;
-  border-bottom: 0.01333rem solid #ffffff;
-  color: #ffffff;
+  border-bottom: 0.01333rem solid #001C54;
+  color: #001C54;
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   -webkit-transform: scaleY(0.5);
@@ -1272,21 +1272,21 @@ textarea {
 }
 
 .content {
-  background: #ffffff !important;
+  background: #001C54 !important;
 }
 
 :root {
-  --van-primary-color: #ffffff;
+  --van-primary-color: #001C54;
   --van-background-2: #1e234d;
   --van-picker-mask-color: #1e234d;
   --van-text-color: #a6a9ae;
-  --van-border-color: #ffffff;
-  --van-progress-background: #ffffff;
+  --van-border-color: #001C54;
+  --van-progress-background: #001C54;
 }
 
 .van-picker-column__item--selected,
 .van-dialog__message--has-title {
-  color: #fff;
+  color: #001C54;
 }
 
 @font-face {
@@ -1306,7 +1306,7 @@ textarea {
 }
 
 #app {
-  background: #ffffff;
+  background: #001C54;
 }
 
 .popup {
@@ -1409,12 +1409,12 @@ textarea {
 }
 
 .navbar__content-left .van-icon[data-v-58c5e826] {
-  color: #fff;
+  color: #001C54;
   font-size: 0.48rem;
 }
 
 .navbar__content-center[data-v-58c5e826] {
-  color: #fff;
+  color: #001C54;
   font-size: 0.48rem;
   line-height: 0.48rem;
 }
@@ -1466,7 +1466,7 @@ textarea {
 }
 
 .ar-loading-view[data-v-1690b988] {
-  background-color: #0000004d;
+  background-color: #e3efff4d;
   width: 100%;
   height: 100%;
   z-index: 999;
