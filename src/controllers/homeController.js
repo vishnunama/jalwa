@@ -114,7 +114,6 @@ const hundredKPagePage = async (req, res) => {
   return res.render("checkIn/100_k.ejs");
 };
 
-
 const jackpotWiningStarPage = async (req, res) => {
   return res.render("checkIn/wining_star.ejs");
 };
@@ -270,7 +269,7 @@ const rsPayWithdrawalHistoryPage = async (req, res) => {
     [auth],
   );
 
-  return res.render("manage/rsPayWithdrawalHistory.ejs",)
+  return res.render("manage/rsPayWithdrawalHistory.ejs");
 };
 
 const aboutPage = async (req, res) => {
@@ -401,10 +400,10 @@ const homeController = {
   aviatorBettingRewardPage,
   socialVideoAwardPagePage,
   worldNumberOnedPagePage,
- wingoOneMinPagePage,
-    slotGamesPagePage,
-    partnerRewarPagePage,
-    hundredKPagePage,
+  wingoOneMinPagePage,
+  slotGamesPagePage,
+  partnerRewarPagePage,
+  hundredKPagePage,
   promotionRebateRatioPage,
   settingsPage,
   rsPayWithdrawalPage,

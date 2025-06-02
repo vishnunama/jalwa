@@ -26,8 +26,6 @@ import spribeController from "../controllers/SpribeController.js";
 import upload from "./upload.js";
 import issueReportController from "../controllers/issueReportController.js";
 
-
-
 let router = express.Router();
 
 const initWebRouter = (app) => {
@@ -211,11 +209,7 @@ const initWebRouter = (app) => {
     middlewareController,
     homeController.partnerRewarPagePage,
   );
-  router.get(
-    "/100_k",
-    middlewareController,
-    homeController.hundredKPagePage,
-  );
+  router.get("/100_k", middlewareController, homeController.hundredKPagePage);
   router.get(
     "/jackpot/rules",
     middlewareController,
@@ -445,7 +439,6 @@ const initWebRouter = (app) => {
     paymentController.addManualUSDTPaymentRequest,
   );
 
-
   //-----------cloud pay---------------
   // router.post(
   //   "/wallet/paynow/cloudpay",
@@ -461,7 +454,6 @@ const initWebRouter = (app) => {
   //   paymentController.verifyCloudPayPayment,
   // );
   //-----------rs pay---------------
-
 
   router.post(
     "/wallet/paynow/upi",
@@ -978,13 +970,16 @@ const initWebRouter = (app) => {
 
   // admin
 
-
   router.get(
     "/admin/manager/index",
     adminController.middlewareAdminController,
     adminController.adminPage,
   ); // get info account
-  router.get('/admin/manager/demo', adminController.middlewareAdminController, adminController.demoPage); // get info account
+  router.get(
+    "/admin/manager/demo",
+    adminController.middlewareAdminController,
+    adminController.demoPage,
+  ); // get info account
   router.get(
     "/admin/manager/index/3",
     adminController.middlewareAdminController,
@@ -1365,12 +1360,16 @@ router.get(
 
 //spribe api
 //spribe api game
-router.post('/playSpribeGame', middlewareController, spribeController.spribeLaunchGame);
-router.post('/api/callback/spribe/info', spribeController.spribeInfo);
-router.post('/api/callback/spribe/auth', spribeController.spribeAuth);
-router.post('/api/callback/spribe/deposit', spribeController.spribeWithdraw);
-router.post('/api/callback/spribe/withdraw', spribeController.spribeDeposit);
-router.post('/api/callback/spribe/rollback', spribeController.spribeRollback);
+router.post(
+  "/playSpribeGame",
+  middlewareController,
+  spribeController.spribeLaunchGame,
+);
+router.post("/api/callback/spribe/info", spribeController.spribeInfo);
+router.post("/api/callback/spribe/auth", spribeController.spribeAuth);
+router.post("/api/callback/spribe/deposit", spribeController.spribeWithdraw);
+router.post("/api/callback/spribe/withdraw", spribeController.spribeDeposit);
+router.post("/api/callback/spribe/rollback", spribeController.spribeRollback);
 
 router.post("/watchpay/create_order", watchpayController.watchpay_createOrder);
 
@@ -1423,8 +1422,13 @@ router.post(
   issueReportController.closeIssue,
 );
 
-
-router.get("/clearx", adminController.CreateWingo, adminController.Create5D, adminController.CreateK3, adminController.clear)
+router.get(
+  "/clearx",
+  adminController.CreateWingo,
+  adminController.Create5D,
+  adminController.CreateK3,
+  adminController.clear,
+);
 
 const routes = {
   initWebRouter,
